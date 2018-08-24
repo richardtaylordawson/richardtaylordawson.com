@@ -1,2 +1,2 @@
 # website
-Personal website &amp; resume of Richard Taylor Dawson. Template was purchased from Envato and customized to my liking.
+Personal website & resume of Richard Taylor Dawson. Built using a template bought from Envato and then customized for my liking and with my information & portfolio.
