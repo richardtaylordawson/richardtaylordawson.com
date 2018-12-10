@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://richardtaylordawson.github.io/website/">
-    <img src="https://png.pngtree.com/svg/20170824/internet_183142.png" alt="Website icon" width=72 height=72>
+    <img src="https://cdn1.iconfinder.com/data/icons/web-design-development-2/100/web-design-1-512.png" alt="Website icon" width=72 height=72>
   </a>
 
   <h3 align="center">Website</h3>
