@@ -20,7 +20,7 @@
 [![GitHub followers](https://img.shields.io/github/followers/richardtaylordawson.svg?label=Follow&style=social)](https://github.com/richardtaylordawson/)
 
 ## View Project
-<https://richardtaylordawson.github.io/website/>
+<https://richarddawson.codes>
 
 ## Status
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/richardtaylordawson/website.svg)](https://github.com/richardtaylordawson/website/commits/master)
