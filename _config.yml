@@ -16,10 +16,21 @@ defaults:
     values:
       layout: "post"
 
+projects:
+  sort_by: stars
+  # sort_by options:
+  #   - pushed
+  #   - stars
+  limit: 3
+  exclude:
+    forks: true
+    projects:
+    # - repo-name
+
 social_media:
-  facebook: your_username
-  linkedin: your_username
+  linkedin: richard-dawson-482927123
   twitter: richard_codes
+  facebook: taylor.dawson.7121
 
 topics:
   - name: React
