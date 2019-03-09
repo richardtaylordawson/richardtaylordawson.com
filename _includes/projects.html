@@ -1,9 +1,11 @@
 <h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>My Projects</h2>
 <br>
 <div class="d-sm-flex flex-wrap gutter-condensed mb-4">
-  {% for repository in site.github.public_repositories %}
-    <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
-      {% include repo-card.html %}
-    </div>
+  {% for repository in site.github.public_repositories  limit:99 %}
+    {% if site.repositories contains repository.name %}
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        {% include repo-card.html %}
+      </div>
+    {% endif %}
   {% endfor %}
 </div>

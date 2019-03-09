@@ -16,17 +16,6 @@ defaults:
     values:
       layout: "post"
 
-projects:
-  sort_by: stars
-  # sort_by options:
-  #   - pushed
-  #   - stars
-  limit: 3
-  exclude:
-    forks: true
-    projects:
-    # - repo-name
-
 social_media:
   linkedin: richard-dawson-482927123
   twitter: richard_codes
@@ -44,3 +33,11 @@ topics:
   - name: Sass
     web_url: https://github.com/topics/sass
     image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
+
+repositories:
+  - gamingtrivia
+  - calculator
+  - snake
+  - chirp
+  - kaijubattlearena
+  - pingpong-scorekeeper
