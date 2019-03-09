@@ -6,7 +6,7 @@
   <h3 align="center">Website</h3>
 
   <p align="center">
-    Personal website & resume of Richard Taylor Dawson. Built using a template bought from Envato and then customized for my liking and with my information & portfolio.
+    Personal website & resume of Richard Taylor Dawson. Built using Github's handy personal-website repo.
   </p>
 </p>
 
