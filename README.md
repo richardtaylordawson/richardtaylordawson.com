@@ -1,4 +1,4 @@
-# Resume Site
+# RichardDawson.codes
 > Personal website & resume of Richard Taylor Dawson. Built using GatsbyJS.
 
 ## Credits
