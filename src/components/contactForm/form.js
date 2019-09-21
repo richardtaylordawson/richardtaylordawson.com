@@ -4,7 +4,7 @@ import NetlifyForm from "react-netlify-form"
 import { Input, Textarea, Button, Label } from ".."
 
 export const Form = () => (
-  <NetlifyForm name="Contact Form">
+  <NetlifyForm name="Contact Form" honeypotName="sorry-mr-bot">
     {({ loading, error, success }) => (
       <div>
         {loading &&
