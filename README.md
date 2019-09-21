@@ -1,4 +1,4 @@
-# Resume Website
+# RichardDawson.codes
 > My personal website & resume showcasing my experience and projects. Built using GatsbyJS, React and other open source tools & API's.
 
 ## Credits
