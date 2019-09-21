@@ -1,4 +1,9 @@
 module.exports = {
+  siteMetadata: {
+    title: `Richard Taylor Dawson`,
+    description: `My personal website & resume showcasing my experience and projects. Built using GatsbyJS, React and other open source tools & API's.`,
+    siteUrl: `https://richarddawson.codes`
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
