@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Form, Container, Columns, H2, H3, P } from ".."
+import { Form, Container, Columns, H2, H3, P } from "./../"
 
 export const ContactForm = () => {
   const data = useStaticQuery(graphql`

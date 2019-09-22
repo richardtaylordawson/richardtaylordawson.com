@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { Colors } from "../"
 
 export const Textarea = ({ id, name }) => (
   <StyledTextarea id={id} name={name}></StyledTextarea>

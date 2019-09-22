@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "@emotion/styled"
 import PropTypes from "prop-types"
-import { Colors } from "./../../theme/"
 import { Link } from "react-scroll"
+import { Colors, Breakpoints } from "./../../theme/"
 
 export const NavigationLink = ({ children, to }) => (
   <StyledNavigationLink
@@ -30,6 +30,11 @@ const StyledNavigationLink = styled(Link)`
 
   :hover, :focus {
     background-size: 100% 2px;
+  }
+
+  ${Breakpoints["medium-down"]} {
+    margin-bottom: 30px;
+    margin-left: 0;
   }
 `
 

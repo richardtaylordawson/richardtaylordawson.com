@@ -4,7 +4,12 @@
 ## Credits
 Several projects aided in inspiring this project. Notably they are:
 
-- Coming Soon
+- Gatsby
+- Emotion
+- React Hamburger Menu
+- React Helmet
+- React Scroll
+- React Netlify Form
 
 ## Things I Learned
 Coming Soon

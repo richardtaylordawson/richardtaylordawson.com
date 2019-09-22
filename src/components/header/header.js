@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { Topbar } from "./topbar/topbar"
-import { Navigation } from "./navigation/navigation"
+import { Topbar, Navigation } from "./../"
 
 export const Header = () => (
   <StyledHeader>

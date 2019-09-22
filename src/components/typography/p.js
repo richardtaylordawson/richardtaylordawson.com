@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { Colors } from "./../theme/"
+import { Colors } from "./../"
 
 export const P = ({ children }) => (
   <StyledP>{children}</StyledP>

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import NetlifyForm from "react-netlify-form"
-import { Input, Textarea, Button, Label } from ".."
+import { Input, Textarea, Button, Label } from "./../"
 
 export const Form = () => (
   <NetlifyForm name="Contact Form" honeypotName="sorry-mr-bot">

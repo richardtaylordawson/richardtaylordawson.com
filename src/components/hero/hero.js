@@ -12,7 +12,7 @@ export const Hero = () => (
         <SocialIcons />
       </Column1>
       <Column2>
-        <img src={Male} alt="test"/>
+        <img src={Male} alt="male portrait"/>
       </Column2>
     </Flex>
   </Container>

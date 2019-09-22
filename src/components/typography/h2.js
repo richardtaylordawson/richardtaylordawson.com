@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { Divider } from "./"
+import { Divider } from "./../"
 
 export const H2 = ({ children }) => (
   <>

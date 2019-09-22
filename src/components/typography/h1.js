@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { Divider } from "./"
-import { Colors } from "./../theme/"
+import { Divider, Colors } from "./../"
 
 export const H1 = ({ children }) => (
   <>
