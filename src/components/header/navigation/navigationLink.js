@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import PropTypes from "prop-types"
 import { Link } from "react-scroll"
-import { useTheme } from "./../../../context/theme/"
+import { useTheme } from "./../../../context/"
 import { Breakpoints } from "./../../theme/"
 
 export const NavigationLink = ({ children, to }) => {
@@ -34,9 +34,7 @@ const StyledNavigationLink = styled(Link)`
   background-size: 0% 2px;
   transition: background-size .3s;
 
-  :hover, :focus {
-    background-size: 100% 2px;
-  }
+  :hover, :focus { background-size: 100% 2px; }
 
   ${Breakpoints["medium-down"]} {
     margin-bottom: 30px;
@@ -46,4 +44,5 @@ const StyledNavigationLink = styled(Link)`
 
 NavigationLink.propTypes = {
   children: PropTypes.node.isRequired,
+  to: PropTypes.string.isRequired
 }

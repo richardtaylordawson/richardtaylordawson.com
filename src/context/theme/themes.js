@@ -8,7 +8,7 @@ export const Themes = {
   },
   "dark": {
     "key": "dark",
-    "primary": "#39ff14",
+    "primary": "#18A0FB",
     "secondary": "#ffffff",
     "dark": "#222222",
     "backgroundColor": "#333333"

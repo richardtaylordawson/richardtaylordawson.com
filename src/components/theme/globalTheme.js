@@ -1,6 +1,6 @@
 import React from "react"
 import { Global, css } from "@emotion/core"
-import { useTheme } from "./../../context/theme/"
+import { useTheme } from "./../../context/"
 
 export const GlobalTheme = () => {
   const [theme] = useTheme()
@@ -12,7 +12,7 @@ export const GlobalTheme = () => {
           font-family: "Montserrat", sans-serif;
           -ms-text-size-adjust: 100%;
           -webkit-text-size-adjust: 100%;
-          background-color: ${theme.backgroundColor}
+          background-color: ${theme.backgroundColor};
         }
 
         body {

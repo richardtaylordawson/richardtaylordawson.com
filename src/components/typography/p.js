@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { useTheme } from "./../../context/theme/"
+import { useTheme } from "./../../context/"
 
 export const P = ({ children }) => {
   const [theme] = useTheme()

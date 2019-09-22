@@ -1,36 +1,28 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "@emotion/styled"
-import HamburgerMenu from "react-hamburger-menu"
-import { useTheme } from "./../../../context/theme/"
-import { NavigationLogo, NavigationLinks, NavigationLink, NavigationIcon } from "./../../"
-import { Breakpoints } from "./../../theme/"
+import { useTheme } from "./../../../context/"
+import { NavigationHamburger, NavigationLinks, NavigationLink, NavigationIcon } from "./../../"
 import SunIcon from "./icons/sun.svg"
+import MoonIcon from "./icons/moon.svg"
 
 export const Navigation = () => {
   const [theme] = useTheme()
-  const [menuOpen, setMenuOpen] = useState(false)
+  let themeIcon;
+
+  if(theme.key === "light") {
+    themeIcon = <NavigationIcon src={SunIcon} alt="sun icon" />
+  } else {
+    themeIcon = <NavigationIcon src={MoonIcon} alt="moon icon" />
+  }
 
   return (
     <NavigationContainer theme={theme}>
-      <NavigationLogo />
-      <NavigationLinks menuOpen={menuOpen}>
+      <NavigationLinks>
         <NavigationLink to="about-me">About Me</NavigationLink>
         <NavigationLink to="contact">Contact</NavigationLink>
-        <NavigationIcon src={SunIcon} alt="sun icon" />
+        {themeIcon}
       </NavigationLinks>
-      <StyledHamburgerMenu>
-        <HamburgerMenu
-          isOpen={menuOpen}
-          menuClicked={() => setMenuOpen(!menuOpen)}
-          width={30}
-          height={22}
-          strokeWidth={4}
-          rotate={0}
-          color={theme.primary}
-          borderRadius={5}
-          animationDuration={0.2}
-        />
-      </StyledHamburgerMenu>
+      <NavigationHamburger />
     </NavigationContainer>
   )
 }
@@ -40,18 +32,9 @@ const NavigationContainer = styled.div`
   max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   background-color: ${props => props.theme.backgroundColor};
-`
-
-const StyledHamburgerMenu = styled.div`
-  margin-top: 20px;
-  cursor: pointer;
-
-  ${Breakpoints["large-up"]} {
-    display: none;
-  }
 `
