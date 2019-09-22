@@ -1,15 +1,17 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { Colors } from "./../"
+import { useTheme } from "./../../context/theme/"
 
-export const P = ({ children }) => (
-  <StyledP>{children}</StyledP>
-)
+export const P = ({ children }) => {
+  const [theme] = useTheme()
+
+  return <StyledP theme={theme}>{children}</StyledP>
+}
 
 const StyledP = styled.p`
   font-size: 20px;
   line-height: 24px;
   margin-bottom: 30px;
-  color: ${Colors.dark};
+  color: ${props => props.theme.dark};
 `
 

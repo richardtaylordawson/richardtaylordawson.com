@@ -2,22 +2,28 @@ import React from "react"
 import styled from "@emotion/styled"
 import PropTypes from "prop-types"
 import { Link } from "react-scroll"
-import { Colors, Breakpoints } from "./../../theme/"
+import { useTheme } from "./../../../context/theme/"
+import { Breakpoints } from "./../../theme/"
 
-export const NavigationLink = ({ children, to }) => (
-  <StyledNavigationLink
-    activeClass="active"
-    to={to}
-    spy={true}
-    smooth={true}
-    duration={500}
-  >
-    {children}
-  </StyledNavigationLink>
-)
+export const NavigationLink = ({ children, to }) => {
+  const [theme] = useTheme()
+
+  return (
+    <StyledNavigationLink
+      activeClass="active"
+      to={to}
+      spy={true}
+      smooth={true}
+      duration={500}
+      theme={theme}
+    >
+      {children}
+    </StyledNavigationLink>
+  )
+}
 
 const StyledNavigationLink = styled(Link)`
-  color: ${Colors.primary};
+  color: ${props => props.theme.primary};
   font-size: 18px;
   margin-left: 30px;
   cursor: pointer;

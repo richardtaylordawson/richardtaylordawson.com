@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { Container, H1, P, SocialIcons } from "./../"
-import Male from "./../../images/male.png"
+import Male from "./../../images/male-profile.png"
 
 export const Hero = () => (
   <Container id="about-me">

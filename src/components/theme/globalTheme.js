@@ -1,21 +1,25 @@
 import React from "react"
 import { Global, css } from "@emotion/core"
-import { Colors } from "./../"
+import { useTheme } from "./../../context/theme/"
 
-export const GlobalTheme = () => (
-  <Global
-    styles={css`
-      html {
-        font-family: "Montserrat", sans-serif;
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%;
-        color: ${Colors.secondary};
-      }
+export const GlobalTheme = () => {
+  const [theme] = useTheme()
 
-      body {
-        margin: 68px 0 0;
-        padding: 0;
-      }
-    `}
-  />
-)
+  return (
+    <Global
+      styles={css`
+        html {
+          font-family: "Montserrat", sans-serif;
+          -ms-text-size-adjust: 100%;
+          -webkit-text-size-adjust: 100%;
+          background-color: ${theme.backgroundColor}
+        }
+
+        body {
+          margin: 68px 0 0;
+          padding: 0;
+        }
+      `}
+    />
+  )
+}

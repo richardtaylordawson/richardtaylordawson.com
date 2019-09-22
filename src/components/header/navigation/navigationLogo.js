@@ -8,7 +8,7 @@ export const NavigationLogo = () => {
     query {
       placeholderImage: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          fluid(maxWidth: 100, quality: 100) {
+          fluid(maxWidth: 50, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

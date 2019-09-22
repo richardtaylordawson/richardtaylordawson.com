@@ -1,15 +1,17 @@
 import React, { useState } from "react"
 import styled from "@emotion/styled"
 import HamburgerMenu from "react-hamburger-menu"
+import { useTheme } from "./../../../context/theme/"
 import { NavigationLogo, NavigationLinks, NavigationLink, NavigationIcon } from "./../../"
-import { Breakpoints, Colors } from "./../../theme/"
+import { Breakpoints } from "./../../theme/"
 import SunIcon from "./icons/sun.svg"
 
 export const Navigation = () => {
+  const [theme] = useTheme()
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={theme}>
       <NavigationLogo />
       <NavigationLinks menuOpen={menuOpen}>
         <NavigationLink to="about-me">About Me</NavigationLink>
@@ -24,7 +26,7 @@ export const Navigation = () => {
           height={22}
           strokeWidth={4}
           rotate={0}
-          color={Colors.primary}
+          color={theme.primary}
           borderRadius={5}
           animationDuration={0.2}
         />
@@ -42,7 +44,7 @@ const NavigationContainer = styled.div`
   padding-right: 2rem;
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-color: ${props => props.theme.backgroundColor};
 `
 
 const StyledHamburgerMenu = styled.div`

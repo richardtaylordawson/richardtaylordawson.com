@@ -1,12 +1,14 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { Colors } from "./../../theme"
+import { useTheme } from "../../../context/theme/"
 
-export const Topbar = () => (
-  <TopbarContainer></TopbarContainer>
-)
+export const Topbar = () => {
+  const [theme] = useTheme()
+
+  return <TopbarContainer theme={theme}></TopbarContainer>
+}
 
 const TopbarContainer = styled.div`
-  background-color: ${Colors.primary};
+  background-color: ${props => props.theme.primary};
   height: 8px;
 `
