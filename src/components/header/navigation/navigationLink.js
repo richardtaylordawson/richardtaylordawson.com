@@ -25,6 +25,7 @@ export const NavigationLink = ({ children, to }) => {
 const StyledNavigationLink = styled(Link)`
   color: ${props => props.theme.primary};
   font-size: 18px;
+  font-weight: 500;
   margin-left: 30px;
   cursor: pointer;
   text-decoration: none;

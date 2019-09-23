@@ -1,5 +1,6 @@
 import React from "react"
-import { SocialIcon } from "./socialIcon"
+import styled from "@emotion/styled"
+import { SocialIcon } from "./../"
 import CodeWars from "./icons/codewars.svg"
 import Github from "./icons/github.svg"
 import Instagram from "./icons/instagram.svg"
@@ -7,7 +8,7 @@ import LinkedIn from "./icons/linkedin.svg"
 import Twitter from "./icons/twitter.svg"
 
 export const SocialIcons = () => (
-  <>
+  <SocialIconsContainer>
     <SocialIcon
       href="https://github.com/richardtaylordawson"
       target="_blank"
@@ -38,5 +39,9 @@ export const SocialIcons = () => (
       src={Instagram}
       alt="instagram logo"
     />
-  </>
+  </SocialIconsContainer>
 )
+
+const SocialIconsContainer = styled.div`
+  margin-bottom: 30px;
+`

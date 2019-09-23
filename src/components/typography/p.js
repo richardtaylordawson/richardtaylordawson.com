@@ -12,6 +12,7 @@ const StyledP = styled.p`
   font-size: 20px;
   line-height: 24px;
   margin-bottom: 30px;
-  color: ${props => props.theme.dark};
+  max-width: 500px;
+  color: ${props => props.theme.text};
 `
 

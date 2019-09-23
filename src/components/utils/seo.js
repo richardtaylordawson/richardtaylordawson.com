@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import Helmet from "react-helmet"
 import Favicon from "./../../images/logo.png"
 
 export const SEO = ({ title, keywords = [], meta = [] }) => {

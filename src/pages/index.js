@@ -2,7 +2,7 @@ import React from "react"
 import { MainLayout } from "../layouts/mainLayout"
 import { Hero, ContactForm, SEO } from "./../components/"
 
-const IndexPage = () => (
+const Index = () => (
   <MainLayout>
     <SEO
       title="Front End Developer"
@@ -13,4 +13,4 @@ const IndexPage = () => (
   </MainLayout>
 )
 
-export default IndexPage
+export default Index
