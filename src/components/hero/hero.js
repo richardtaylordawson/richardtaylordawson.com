@@ -10,7 +10,7 @@ export const Hero = () => (
         <H3>Front End Developer</H3>
         <P>I'm a software engineer based in Salt Lake City, UT specializing in building exceptional, high-quality websites and applications.</P>
         <SocialIcons />
-        <Button>Resume</Button>
+        <Button href="/RichardTaylorDawson.pdf">Resume</Button>
       </Column>
     </Flex>
   </Container>

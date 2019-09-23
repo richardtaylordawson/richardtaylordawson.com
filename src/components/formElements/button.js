@@ -3,13 +3,13 @@ import styled from "@emotion/styled"
 import PropTypes from "prop-types"
 import { useTheme } from "./../../context/"
 
-export const Button = ({ children, block = false }) => {
+export const Button = ({ children, block = false, href }) => {
   const [theme] = useTheme()
 
-  return <StyledButton theme={theme} block={block}>{children}</StyledButton>
+  return <StyledButton theme={theme} block={block} href={href}>{children}</StyledButton>
 }
 
-const StyledButton = styled.button`
+const StyledButton = styled.a`
   cursor: pointer;
   border-radius: 5px;
   padding: 10px 47.5px;
@@ -38,4 +38,5 @@ const StyledButton = styled.button`
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   block: PropTypes.bool,
+  href: PropTypes.string,
 }
