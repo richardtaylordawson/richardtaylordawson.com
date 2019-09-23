@@ -13,7 +13,7 @@ const StyledContainer = styled.div`
   margin-right: auto;
   padding-left: 0.975rem;
   padding-right: 0.975rem;
-  ${props => props.fullHeight && "height: calc(100vh - 68px); box-sizing: border-box; padding-top: 0;"}
+  ${props => props.fullHeight && "height: calc(100vh - 68px); box-sizing: border-box; padding: 0 0 60px;"}
 `
 
 Container.propTypes = {

@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { useTheme } from "./../../context/"
+import { Breakpoints } from "./../utils/"
 
 export const H1 = ({ children }) => {
   const [theme] = useTheme()
@@ -9,10 +10,11 @@ export const H1 = ({ children }) => {
 }
 
 const StyledH1 = styled.h1`
-  font-size: 60px;
+  font-size: 45px;
   margin-left: -5px;
   margin-bottom: 0;
   margin-top: 0;
-  color: ${props => props.theme.primary}
-`
+  color: ${props => props.theme.primary};
 
+  ${Breakpoints["large-up"]} { font-size: 60px; }
+`

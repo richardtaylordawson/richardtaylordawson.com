@@ -7,7 +7,9 @@ export const Themes = {
     "text": "#565656",
     "backgroundColor": "#fff",
     "mobileMenuColor": "#fff",
-    "mobileMenuShadow": "-5px 0 30px #bbb"
+    "mobileMenuShadow": "-5px 0 30px #bbb",
+    "footerBackgroundColor": "#efefef",
+    "inputBorderColor": "#cdcdcd"
   },
   "dark": {
     "key": "dark",
@@ -17,6 +19,8 @@ export const Themes = {
     "text": "#969696",
     "backgroundColor": "#333",
     "mobileMenuColor": "#333",
-    "mobileMenuShadow": "-5px 0 30px #111"
+    "mobileMenuShadow": "-5px 0 30px #111",
+    "footerBackgroundColor": "#222",
+    "inputBorderColor": "#666"
   }
 }

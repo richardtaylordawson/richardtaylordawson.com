@@ -11,7 +11,8 @@ export const P = ({ children }) => {
 const StyledP = styled.p`
   font-size: 20px;
   line-height: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  margin-top: 0;
   max-width: 500px;
   color: ${props => props.theme.text};
 `

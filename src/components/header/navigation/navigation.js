@@ -29,7 +29,6 @@ export const Navigation = () => {
 
 const NavigationContainer = styled.nav`
   height: 60px;
-  max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.5rem;

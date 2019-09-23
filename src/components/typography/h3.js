@@ -12,7 +12,7 @@ export const H3 = ({ children }) => {
 const StyledH3 = styled.h3`
   font-size: 30px;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 15px;
   font-weight: 600;
   color: ${props => props.theme.heading3};
 `

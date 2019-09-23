@@ -1,20 +1,27 @@
 import React from "react"
 import styled from "@emotion/styled"
 import NetlifyForm from "react-netlify-form"
-import { Input, Textarea, Button, Label } from "./../"
+import { Input, Textarea, Button, Label, H3 } from "./../"
+import { Breakpoints } from "./../utils/"
 
 export const Form = () => (
   <NetlifyForm name="Contact Form" honeypotName="sorry-mr-bot">
     {({ loading, error, success }) => (
       <div>
         {loading &&
-          <div>Loading...</div>
+          <ContainerAlt>
+            <H3>Loading...</H3>
+          </ContainerAlt>
         }
         {error &&
-          <div>Your information was not sent. Please try again later.</div>
+          <ContainerAlt>
+            <H3>Your information was not sent. Please try again later.</H3>
+          </ContainerAlt>
         }
         {success &&
-          <div>Thank you for contacting us!</div>
+          <ContainerAlt>
+            <H3>Thank you for contacting me! I'll be in touch soon.</H3>
+          </ContainerAlt>
         }
         {!loading && !success &&
           <Container>
@@ -24,7 +31,7 @@ export const Form = () => (
             <Input type="text" name="email" id="email" />
             <Label forTarget="message">Message</Label>
             <Textarea name="message" id="message" />
-            <Button>Submit</Button>
+            <Button button={true} fullWidth={true}>Submit</Button>
           </Container>
         }
       </div>
@@ -33,5 +40,11 @@ export const Form = () => (
 )
 
 const Container = styled.div`
-  padding: 40px;
+  ${Breakpoints["large-up"]} { padding: 40px; }
+`
+
+const ContainerAlt = styled.div`
+  text-align: center;
+
+  ${Breakpoints["large-up"]} { padding: 40px; }
 `

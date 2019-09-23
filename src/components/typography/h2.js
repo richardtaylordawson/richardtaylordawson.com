@@ -15,7 +15,7 @@ export const H2 = ({ children }) => {
 }
 
 const StyledH2 = styled.h2`
-  font-size: 32px;
+  font-size: 35px;
   margin-bottom: 10px;
   color: ${props => props.theme.primary};
 `

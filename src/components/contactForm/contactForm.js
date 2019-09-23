@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Form, Container, Columns, H2, H3, P } from "./../"
+import { Breakpoints } from "./../utils/"
 
 export const ContactForm = () => {
   const data = useStaticQuery(graphql`
@@ -38,4 +39,8 @@ export const ContactForm = () => {
 const ImageContainer = styled.div`
   width: 70%;
   margin: auto;
+
+  ${Breakpoints["medium-down"]} {
+    display: none;
+  }
 `

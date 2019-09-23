@@ -1,10 +1,15 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { useTheme } from "./../../context/"
 
-export const Label = ({ children, forTarget }) => (
-  <StyledLabel htmlFor={forTarget}>{children}</StyledLabel>
-)
+export const Label = ({ children, forTarget }) => {
+  const [theme] = useTheme()
+
+  return <StyledLabel theme={theme} htmlFor={forTarget}>{children}</StyledLabel>
+}
 
 const StyledLabel = styled.label`
-  margin-bottom: 20px;
+  font-weight: 500;
+  display: block;
+  color: ${props => props.theme.text};
 `
