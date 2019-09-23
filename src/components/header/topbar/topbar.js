@@ -5,7 +5,7 @@ import { useTheme } from "../../../context/"
 export const Topbar = () => {
   const [theme] = useTheme()
 
-  return <TopbarContainer theme={theme}></TopbarContainer>
+  return <TopbarContainer className="topbar" theme={theme}></TopbarContainer>
 }
 
 const TopbarContainer = styled.div`

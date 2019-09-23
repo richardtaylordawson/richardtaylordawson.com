@@ -27,7 +27,7 @@ export const Navigation = () => {
   )
 }
 
-const NavigationContainer = styled.div`
+const NavigationContainer = styled.nav`
   height: 60px;
   max-width: 1500px;
   margin-left: auto;

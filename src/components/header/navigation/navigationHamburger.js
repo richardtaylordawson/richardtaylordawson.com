@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import HamburgerMenu from "react-hamburger-menu"
 import { useMenu, useTheme } from "./../../../context/"
-import { Breakpoints } from "./../../theme/"
+import { Breakpoints } from "./../../utils"
 
 export const NavigationHamburger = () => {
   const [menu, setMenu] = useMenu()
@@ -28,6 +28,7 @@ export const NavigationHamburger = () => {
 const StyledHamburgerMenu = styled.div`
   margin-top: 20px;
   cursor: pointer;
+  z-index: 2;
 
   ${Breakpoints["large-up"]} { display: none; }
 `

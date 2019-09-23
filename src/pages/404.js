@@ -1,10 +1,13 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { MainLayout } from "./../layouts/mainLayout"
-import { H1, P, Container } from "../components"
+import { H1, P, Container, SEO } from "../components"
 
 const NotFoundPage = () => (
   <MainLayout>
+    <SEO
+      title="Not Found"
+    />
     <Wrapper>
       <Container>
         <H1>NOT FOUND</H1>

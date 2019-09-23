@@ -1,31 +1,37 @@
 import React from "react"
 import styled from "@emotion/styled"
 import PropTypes from "prop-types"
-import { useMenu } from "./../../../context/"
-import { Breakpoints } from "./../../theme/"
+import { useMenu, useTheme } from "./../../../context/"
+import { Breakpoints } from "./../../utils"
 
 export const NavigationLinks = ({ children }) => {
+  const [theme] = useTheme()
   const [menu] = useMenu()
 
-  return <StyledNavigationLinks menu={menu}>{children}</StyledNavigationLinks>
+  return <StyledNavigationLinks theme={theme} menu={menu}>{children}</StyledNavigationLinks>
 }
 
 const StyledNavigationLinks = styled.ul`
   list-style-type: none;
+  margin: 0;
   display: flex;
+  visibility: visible;
   justify-content: flex-end;
   align-items: center;
-  margin: 0;
 
   ${Breakpoints["medium-down"]} {
-    display: ${props => props.menu ? 'flex' : 'none'};
-    background-color: rgb(250,250,250);
+    visibility: ${props => props.menu ? "visible" : "hidden"};
+    transform: ${props => props.menu ? "translateX(0vw)" : "translateX(100vw)"};
+    background-color: ${props => props.theme.mobileMenuColor};
+    transition: ${props => props.menu && "all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s"};
+    box-shadow: ${props => props.theme.mobileMenuShadow};
     height: 100vh;
-    position: absolute;
+    position: fixed;
     right: 0;
-    top: 8px;
+    top: 0;
+    width: 160px;
     padding: 100px 50px;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     flex-direction: column;
   }

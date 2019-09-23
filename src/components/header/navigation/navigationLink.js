@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import PropTypes from "prop-types"
 import { Link } from "react-scroll"
 import { useTheme } from "./../../../context/"
-import { Breakpoints } from "./../../theme/"
+import { Breakpoints } from "./../../utils"
 
 export const NavigationLink = ({ children, to }) => {
   const [theme] = useTheme()
@@ -44,5 +44,5 @@ const StyledNavigationLink = styled(Link)`
 
 NavigationLink.propTypes = {
   children: PropTypes.node.isRequired,
-  to: PropTypes.string.isRequired
+  to: PropTypes.string.isRequired,
 }

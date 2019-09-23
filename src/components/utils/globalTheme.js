@@ -1,9 +1,15 @@
 import React from "react"
 import { Global, css } from "@emotion/core"
-import { useTheme } from "./../../context/"
+import { useTheme, useMenu } from "./../../context/"
 
 export const GlobalTheme = () => {
   const [theme] = useTheme()
+  const [menu] = useMenu()
+
+  let blur;
+  if(menu) {
+    blur = "main, footer { filter: blur(5px); }"
+  }
 
   return (
     <Global
@@ -19,6 +25,8 @@ export const GlobalTheme = () => {
           margin: 68px 0 0;
           padding: 0;
         }
+
+        ${blur}
       `}
     />
   )

@@ -17,4 +17,5 @@ const StyledContainer = styled.div`
 
 Container.propTypes = {
   children: PropTypes.node.isRequired,
+  id: PropTypes.string
 }

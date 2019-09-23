@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { SocialIcons } from "./../"
 
 export const Footer = () => (
   <StyledFooter>
