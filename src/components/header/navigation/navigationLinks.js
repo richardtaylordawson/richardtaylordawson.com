@@ -1,14 +1,13 @@
 import React from "react"
 import styled from "@emotion/styled"
 import PropTypes from "prop-types"
-import { useMenu, useTheme } from "./../../../context/"
+import { useMenu } from "./../../../context/"
 import { Breakpoints } from "./../../utils"
 
 export const NavigationLinks = ({ children }) => {
-  const [theme] = useTheme()
   const [menu] = useMenu()
 
-  return <StyledNavigationLinks theme={theme} menu={menu}>{children}</StyledNavigationLinks>
+  return <StyledNavigationLinks menu={menu}>{children}</StyledNavigationLinks>
 }
 
 const StyledNavigationLinks = styled.ul`
@@ -22,8 +21,8 @@ const StyledNavigationLinks = styled.ul`
   ${Breakpoints["medium-down"]} {
     visibility: ${props => props.menu ? "visible" : "hidden"};
     transform: ${props => props.menu ? "translateX(0vw)" : "translateX(100vw)"};
-    background-color: ${props => props.theme.mobileMenuColor};
-    box-shadow: ${props => props.theme.mobileMenuShadow};
+    background-color: var(--mobileMenuColor);
+    box-shadow: var(--mobileMenuShadow);
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     height: 100vh;
     position: fixed;

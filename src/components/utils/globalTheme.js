@@ -1,12 +1,12 @@
 import React from "react"
 import { Global, css } from "@emotion/core"
-import { useTheme, useMenu } from "./../../context/"
+import { useMenu } from "./../../context/"
 
 export const GlobalTheme = () => {
-  const [theme] = useTheme()
   const [menu] = useMenu()
 
-  let blur;
+  let blur
+
   if (menu) {
     blur = "main, footer { filter: blur(5px); }"
   }
@@ -18,12 +18,39 @@ export const GlobalTheme = () => {
           font-family: "Montserrat", sans-serif;
           -ms-text-size-adjust: 100%;
           -webkit-text-size-adjust: 100%;
-          background-color: ${theme.backgroundColor};
         }
 
         body {
           margin: 68px 0 0;
           padding: 0;
+
+          --primary: #18a0fb;
+          --primaryRGBA: rgba(24, 160, 251, 0.50);
+          --heading3: #444;
+          --text: #565656;
+          --backgroundColor: #fff;
+          --mobileMenuColor: #fff;
+          --mobileMenuShadow: -5px 0 30px #bbb;
+          --footerBackgroundColor: #efefef;
+          --inputBorderColor: #cdcdcd;
+
+          background-color: var(--backgroundColor);
+        }
+
+        body.dark {
+          -webkit-font-smoothing: antialiased;
+
+          --primary: #18a0fb;
+          --primaryRGBA: rgba(24, 160, 251, 0.50);
+          --heading3: #fff;
+          --text: #969696;
+          --backgroundColor: #333;
+          --mobileMenuColor: #333;
+          --mobileMenuShadow: -5px 0 30px #111;
+          --footerBackgroundColor: #222;
+          --inputBorderColor: #666;
+
+          background-color: var(--backgroundColor);
         }
 
         * { box-sizing: border-box; }

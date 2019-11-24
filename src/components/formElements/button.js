@@ -1,19 +1,17 @@
 import React from "react"
 import styled from "@emotion/styled"
 import PropTypes from "prop-types"
-import { useTheme } from "./../../context/"
 
 export const Button = ({ children, block = false, href, target, button = false, fullWidth = false, ...props }) => {
-  const [theme] = useTheme()
+  let buttonOrLink
 
-  let buttonOrLink;
-  if(button) {
+  if (button) {
     buttonOrLink = <button>{children}</button>
   } else {
     buttonOrLink = <a href={href} target={target}>{children}</a>
   }
 
-  return <ButtonContainer {...props} theme={theme} block={block} fullWidth={fullWidth}>{buttonOrLink}</ButtonContainer>
+  return <ButtonContainer {...props} block={block} fullWidth={fullWidth}>{buttonOrLink}</ButtonContainer>
 }
 
 const ButtonContainer = styled.div`
@@ -28,19 +26,19 @@ const ButtonContainer = styled.div`
     -moz-appearance: none;
     font-size: 18px;
     background-color: transparent;
-    border: 1px solid ${props => props.theme.primary};
-    color: ${props => props.theme.primary};
+    border: 1px solid var(--primary);
+    color: var(--primary);
     ${props => props.fullWidth && "width: 100%;"}
 
     &:hover {
-      background-color: ${props => props.theme.primary};
+      background-color: var(--primary);
       color: white;
       transition: all 0.3s;
     }
 
     &:focus {
       outline: 0;
-      box-shadow: 0 0 0 0.2rem ${props => props.theme.primaryRGBA};
+      box-shadow: 0 0 0 0.2rem var(--primaryRGBA);
     }
   }
 `

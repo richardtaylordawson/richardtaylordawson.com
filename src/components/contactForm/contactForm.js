@@ -43,7 +43,5 @@ const ImageContainer = styled.div`
   margin: auto;
   img { width: 400px; }
 
-  ${Breakpoints["medium-down"]} {
-    display: none;
-  }
+  ${Breakpoints["medium-down"]} { display: none; }
 `

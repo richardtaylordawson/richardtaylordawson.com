@@ -1,28 +1,16 @@
 import React from "react"
 import styled from "@emotion/styled"
 import PropTypes from "prop-types"
-import { useTheme } from "./../../context/"
 import { Breakpoints } from "./../utils/"
 
-export const H1 = ({ children, textAlign }) => {
-  const [theme] = useTheme()
-
-  return (
-    <StyledH1
-      theme={theme}
-      textAlign={textAlign}
-    >
-      {children}
-    </StyledH1>
-  )
-}
+export const H1 = ({ children, textAlign }) => <StyledH1 textAlign={textAlign}>{children}</StyledH1>
 
 const StyledH1 = styled.h1`
   font-size: 35px;
   margin-left: -5px;
   margin-bottom: 0;
   margin-top: 0;
-  color: ${props => props.theme.primary};
+  color: var(--primary);
   text-align: ${props => props.textAlign ? props.textAlign : "left"};
 
   ${Breakpoints["medium-up"]} { font-size: 45px; }

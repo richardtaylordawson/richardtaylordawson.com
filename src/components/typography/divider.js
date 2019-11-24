@@ -1,17 +1,12 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { useTheme } from "./../../context/"
 
-export const Divider = ({ children }) => {
-  const [theme] = useTheme()
-
-  return <StyledDivider theme={theme}>{children}</StyledDivider>
-}
+export const Divider = ({ children }) => <StyledDivider>{children}</StyledDivider>
 
 const StyledDivider = styled.div`
   width: 50px;
   height: 5px;
   margin-bottom: 30px;
-  background-color: ${props => props.theme.primary};
+  background-color: var(--primary);
 `
 

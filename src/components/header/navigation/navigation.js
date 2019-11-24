@@ -1,32 +1,35 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { useTheme } from "./../../../context/"
+import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import { NavigationHamburger, NavigationLinks, NavigationLink, NavigationIcon } from "./../../"
 import SunIcon from "./icons/sun.svg"
 import MoonIcon from "./icons/moon.svg"
 
-export const Navigation = () => {
-  const [theme] = useTheme()
-  let themeIcon
+export const Navigation = () => (
+  <ThemeToggler>
+    {({ theme }) => {
+      let themeIcon
 
-  if (theme.key === "light") {
-    themeIcon = <NavigationIcon src={SunIcon} alt="sun icon" />
-  } else {
-    themeIcon = <NavigationIcon src={MoonIcon} alt="moon icon" />
-  }
+      if (theme === "light") {
+        themeIcon = <NavigationIcon src={SunIcon} alt="sun icon" name="light" />
+      } else {
+        themeIcon = <NavigationIcon src={MoonIcon} alt="moon icon" name="dark" />
+      }
 
-  return (
-    <NavigationContainer theme={theme}>
-      <NavigationLinks>
-        <NavigationLink to="about-me">About Me</NavigationLink>
-        {/* <NavigationLink to="projects">Projects</NavigationLink> */}
-        <NavigationLink to="contact">Contact</NavigationLink>
-        {themeIcon}
-      </NavigationLinks>
-      <NavigationHamburger />
-    </NavigationContainer>
-  )
-}
+      return (
+        <NavigationContainer>
+          <NavigationLinks>
+            <NavigationLink to="about-me">About Me</NavigationLink>
+            {/* <NavigationLink to="projects">Projects</NavigationLink> */}
+            <NavigationLink to="contact">Contact</NavigationLink>
+            {themeIcon}
+          </NavigationLinks>
+          <NavigationHamburger />
+        </NavigationContainer>
+      )
+    }}
+  </ThemeToggler>
+)
 
 const NavigationContainer = styled.nav`
   height: 60px;
@@ -36,5 +39,5 @@ const NavigationContainer = styled.nav`
   padding-right: 1.5rem;
   display: flex;
   justify-content: flex-end;
-  background-color: ${props => props.theme.backgroundColor};
+  background-color: var(--backgroundColor);
 `
