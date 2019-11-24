@@ -14,25 +14,25 @@ const useTheme = () => {
 }
 
 const ThemeProvider = props => {
-  const [theme, setTheme] = useState(Themes.light)
+  const [theme, setTheme] = useState(window.matchMedia("(prefers-color-scheme: dark)").matches ? Themes.dark : Themes.light)
   const value = useMemo(() => [theme, setTheme], [theme])
 
   if (typeof window !== "undefined") {
-    const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
-    const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
-    const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
-    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    // const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+    // const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+    // const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+    // const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
 
-    if (isDarkMode) {
-      setTheme(Themes.dark)
-    } else if (isNotSpecified || hasNoSupport) {
-      const now = new Date()
-      const hour = now.getHours()
+    // if (isDarkMode) {
+    //   setTheme(Themes.dark)
+    // } else if (isNotSpecified || hasNoSupport) {
+    //   const now = new Date()
+    //   const hour = now.getHours()
 
-      if (hour < 4 || hour >= 16) {
-        setTheme(Themes.dark)
-      }
-    }
+    //   if (hour < 4 || hour >= 16) {
+    //     setTheme(Themes.dark)
+    //   }
+    // }
 
     window.matchMedia("(prefers-color-scheme: dark)").addListener(e => e.matches && setTheme(Themes.dark))
     window.matchMedia("(prefers-color-scheme: light)").addListener(e => e.matches && setTheme(Themes.light))
