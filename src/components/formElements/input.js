@@ -5,7 +5,7 @@ import { useTheme } from "./../../context/"
 export const Input = ({ id, name }) => {
   const [theme] = useTheme()
 
-  return <StyledInput theme={theme} name={name} id={id} required></StyledInput>
+  return <StyledInput theme={theme} name={name} id={id} required />
 }
 
 const StyledInput = styled.input`
@@ -17,10 +17,17 @@ const StyledInput = styled.input`
   margin-bottom: 15px;
   font-size: 20px;
   padding: 10px;
-  display:table-cell;
 
   &:focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem ${props => props.theme.primaryRGBA};
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    border: 1px solid ${props => props.theme.inputBorderColor};
+    -webkit-text-fill-color: ${props => props.theme.text};
+    transition: background-color 5000s ease-in-out 0s;
   }
 `

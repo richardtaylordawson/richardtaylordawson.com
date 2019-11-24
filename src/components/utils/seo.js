@@ -27,7 +27,6 @@ export const SEO = ({ title, keywords = [], meta = [] }) => {
         { rel: "shortcut icon", type: "image/png", href: `${Favicon}` },
       ]}
       title={`${pageTitle}`}
-      titleTemplate={`%s | ${pageTitle}`}
       meta={[
         {
           name: `description`,
@@ -117,9 +116,9 @@ export const SEO = ({ title, keywords = [], meta = [] }) => {
         .concat(
           keywords.length > 0
             ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
+              name: `keywords`,
+              content: keywords.join(`, `),
+            }
             : []
         )
         .concat(meta)}
