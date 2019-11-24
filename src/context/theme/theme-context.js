@@ -37,10 +37,10 @@ const ThemeProvider = props => {
   const [theme, setTheme] = useState(themeToUse)
   const value = useMemo(() => [theme, setTheme], [theme])
 
-  // if (typeof window !== "undefined") {
-  //   window.matchMedia("(prefers-color-scheme: dark)").addListener(e => e.matches && setTheme(Themes.dark))
-  //   window.matchMedia("(prefers-color-scheme: light)").addListener(e => e.matches && setTheme(Themes.light))
-  // }
+  if (typeof window !== "undefined") {
+    window.matchMedia("(prefers-color-scheme: dark)").addListener(e => e.matches && setTheme(Themes.dark))
+    window.matchMedia("(prefers-color-scheme: light)").addListener(e => e.matches && setTheme(Themes.light))
+  }
 
   return <ThemeContext.Provider value={value} {...props} />
 }
