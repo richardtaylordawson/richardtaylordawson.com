@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react"
-import styled from "@emotion/styled"
+//import styled from "@emotion/styled"
 import { Container, H2, Columns, ProjectCard } from "./../"
 import axios from "axios"
 
 export const Projects = () => {
   const [githubData, setGithubData] = useState([]);
-  const [hasError, setErrors] = useState(false);
+  //const [hasError, setErrors] = useState(false);
 
   async function fetchData() {
     axios
       .get("https://api.github.com/users/richardtaylordawson/repos")
       .then(res => setGithubData(res.data))
-      .catch(err => setErrors(err));
+    //.catch(err => setErrors(err));
   }
 
   useEffect(() => fetchData(), [])

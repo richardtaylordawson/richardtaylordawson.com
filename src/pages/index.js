@@ -1,6 +1,6 @@
 import React from "react"
 import { MainLayout } from "../layouts/mainLayout"
-import { Hero, Projects, ContactForm, SEO } from "./../components/"
+import { Hero, ContactForm, SEO } from "./../components/"
 
 const Index = () => (
   <MainLayout>

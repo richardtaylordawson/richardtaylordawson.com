@@ -4,7 +4,7 @@ import styled from "@emotion/styled"
 // import Img from "gatsby-image"
 import { Form, Container, Columns, H2, H3, P } from "./../"
 import { Breakpoints } from "./../utils/"
-import testImg from "./../../images/message-man.svg"
+import messageManImg from "./../../images/message-man.svg"
 
 export const ContactForm = () => {
   // const data = useStaticQuery(graphql`
@@ -29,7 +29,7 @@ export const ContactForm = () => {
           <P>I will get to you as soon as I can <span role="img" aria-label="call me hand emoji">🤙</span></P>
           <ImageContainer>
             {/* <Img fluid={data.placeholderImage.childImageSharp.fluid} /> */}
-            <img src={testImg} />
+            <img src={messageManImg} alt="man standing next to mail" />
           </ImageContainer>
         </div>
         <Form />

@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Header, Footer, GlobalTheme } from "./../components/"
 import { MenuProvider, ThemeProvider } from "../context/"
+import { Header, Footer, GlobalTheme } from "./../components/"
 
 export const MainLayout = ({ children }) => (
   <ThemeProvider>

@@ -48,3 +48,7 @@ const SocialIconsContainer = styled.div`
   text-align: ${props => props.textAlign ? props.textAlign : "left"};
   *:not(:last-child) { margin-right: 20px; }
 `
+
+SocialIcons.propTypes = {
+  textAlign: PropTypes.string
+}
