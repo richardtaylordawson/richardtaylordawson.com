@@ -16,31 +16,31 @@ const useTheme = () => {
 const ThemeProvider = props => {
   let themeToUse = Themes.light
 
-  if (typeof window !== "undefined") {
-    const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
-    const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
-    const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
-    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+  // if (typeof window !== "undefined") {
+  //   const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  //   const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  //   const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  //   const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
 
-    if (isDarkMode) themeToUse = Themes.dark
-    if (isLightMode) themeToUse = Themes.light
-    if (isNotSpecified || hasNoSupport) {
-      const now = new Date()
-      const hour = now.getHours()
+  //   if (isDarkMode) themeToUse = Themes.dark
+  //   if (isLightMode) themeToUse = Themes.light
+  //   if (isNotSpecified || hasNoSupport) {
+  //     const now = new Date()
+  //     const hour = now.getHours()
 
-      if (hour < 4 || hour >= 16) {
-        themeToUse = Themes.dark
-      }
-    }
-  }
+  //     if (hour < 4 || hour >= 16) {
+  //       themeToUse = Themes.dark
+  //     }
+  //   }
+  // }
 
   const [theme, setTheme] = useState(themeToUse)
   const value = useMemo(() => [theme, setTheme], [theme])
 
-  if (typeof window !== "undefined") {
-    window.matchMedia("(prefers-color-scheme: dark)").addListener(e => e.matches && setTheme(Themes.dark))
-    window.matchMedia("(prefers-color-scheme: light)").addListener(e => e.matches && setTheme(Themes.light))
-  }
+  // if (typeof window !== "undefined") {
+  //   window.matchMedia("(prefers-color-scheme: dark)").addListener(e => e.matches && setTheme(Themes.dark))
+  //   window.matchMedia("(prefers-color-scheme: light)").addListener(e => e.matches && setTheme(Themes.light))
+  // }
 
   return <ThemeContext.Provider value={value} {...props} />
 }
