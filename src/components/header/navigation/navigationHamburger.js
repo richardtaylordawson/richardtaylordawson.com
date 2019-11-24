@@ -6,11 +6,6 @@ import { Breakpoints } from "./../../utils"
 
 export const NavigationHamburger = () => {
   const [menu, setMenu] = useMenu()
-  let hamburgerColor
-
-  if (typeof document !== undefined && typeof getComputedStyle !== undefined && typeof getPropertyValue !== undefined) {
-    hamburgerColor = getComputedStyle(document.body).getPropertyValue('--primary')
-  }
 
   return (
     <StyledHamburgerMenu>
@@ -20,7 +15,7 @@ export const NavigationHamburger = () => {
         width={30}
         height={22}
         strokeWidth={4}
-        color={hamburgerColor}
+        color="#18a0fb"
         rotate={0}
         borderRadius={5}
         animationDuration={0.2}
