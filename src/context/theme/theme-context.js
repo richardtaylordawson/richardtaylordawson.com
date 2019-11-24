@@ -39,6 +39,7 @@ const ThemeProvider = props => {
 
 
   console.log("about to set state")
+  console.log(themeToUse)
   const [theme, setTheme] = useState(themeToUse)
   const value = useMemo(() => [theme, setTheme], [theme])
 
