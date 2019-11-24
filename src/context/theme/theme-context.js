@@ -14,7 +14,7 @@ const useTheme = () => {
 }
 
 const ThemeProvider = props => {
-  let themeToUse = Themes.light
+  let themeToUse
 
   if (typeof window !== "undefined") {
     const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -32,14 +32,8 @@ const ThemeProvider = props => {
         themeToUse = Themes.dark
       }
     }
-
-    console.log("done checking")
-    console.log(themeToUse)
   }
 
-
-  console.log("about to set state")
-  console.log(themeToUse)
   const [theme, setTheme] = useState(themeToUse)
   const value = useMemo(() => [theme, setTheme], [theme])
 

@@ -9,9 +9,6 @@ export const Navigation = () => {
   const [theme] = useTheme()
   let themeIcon
 
-  console.log('nav theme')
-  console.log(theme);
-
   if (theme.key === "light") {
     themeIcon = <NavigationIcon src={SunIcon} alt="sun icon" />
   } else {
