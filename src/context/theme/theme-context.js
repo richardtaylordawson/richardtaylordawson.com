@@ -14,7 +14,7 @@ const useTheme = () => {
 }
 
 const ThemeProvider = props => {
-  let themeToUse
+  let themeToUse = Themes.light
 
   if (typeof window !== "undefined") {
     const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
