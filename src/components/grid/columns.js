@@ -8,21 +8,20 @@ export const Columns = ({ children, split, max }) => (
     {
       children.length
         ?
-          children.map((child, index, children) => {
-            console.log(max);
-            let columnWidth
-            if(max) {
-              columnWidth = 100 / max
-            } else {
-              columnWidth = split ? split[index] : 100 / children.length
-            }
+        children.map((child, index, children) => {
+          let columnWidth
+          if (max) {
+            columnWidth = 100 / max
+          } else {
+            columnWidth = split ? split[index] : 100 / children.length
+          }
 
-            return (
-              <Column key={index} columnWidth={columnWidth}>
-                {child}
-              </Column>
-            )
-          })
+          return (
+            <Column key={index} columnWidth={columnWidth}>
+              {child}
+            </Column>
+          )
+        })
         : ""
     }
   </FlexContainer>

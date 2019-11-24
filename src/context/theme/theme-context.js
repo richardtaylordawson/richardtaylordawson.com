@@ -32,8 +32,13 @@ const ThemeProvider = props => {
         themeToUse = Themes.dark
       }
     }
+
+    console.log("done checking")
+    console.log(themeToUse)
   }
 
+
+  console.log("about to set state")
   const [theme, setTheme] = useState(themeToUse)
   const value = useMemo(() => [theme, setTheme], [theme])
 
