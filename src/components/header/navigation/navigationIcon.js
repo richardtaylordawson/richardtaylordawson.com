@@ -7,14 +7,14 @@ import { Breakpoints } from "./../../utils"
 export const NavigationIcon = ({ src, alt }) => {
   const [theme, setTheme] = useTheme()
   const setNewTheme = () => {
-    if(theme.key === "light") {
+    if (theme.key === "light") {
       setTheme(Themes.dark)
     } else {
       setTheme(Themes.light)
     }
   }
 
-  return <StyledNavigationIcon onClick={() => setNewTheme()} src={src} alt={alt} />
+  return <StyledNavigationIcon onClick={() => setNewTheme()} src={src} alt={alt} tabIndex="1" />
 }
 
 const StyledNavigationIcon = styled.img`

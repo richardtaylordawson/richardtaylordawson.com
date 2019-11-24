@@ -10,15 +10,16 @@ export const Textarea = ({ id, name }) => {
 
 const StyledTextarea = styled.textarea`
   width: 100%;
+  max-width: 100%;
   margin-bottom: 15px;
   border: 1px solid ${props => props.theme.inputBorderColor};
   color: ${props => props.theme.text};
-  height: 100%;
-  max-height: 300px;
+  height: 150px;
   font-size: 20px;
   padding: 10px;
   border-radius: 5px;
   background-color: transparent;
+  resize: none;
 
   &:focus {
     outline: 0;

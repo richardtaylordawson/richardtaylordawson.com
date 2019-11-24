@@ -8,6 +8,5 @@ export const SocialIcon = ({ href, target, src, alt }) => (
 )
 
 const Link = styled.a`
-  margin-right: 20px;
   cursor: pointer;
 `

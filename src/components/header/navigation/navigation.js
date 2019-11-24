@@ -9,7 +9,7 @@ export const Navigation = () => {
   const [theme] = useTheme()
   let themeIcon;
 
-  if(theme.key === "light") {
+  if (theme.key === "light") {
     themeIcon = <NavigationIcon src={SunIcon} alt="sun icon" />
   } else {
     themeIcon = <NavigationIcon src={MoonIcon} alt="moon icon" />
@@ -19,6 +19,7 @@ export const Navigation = () => {
     <NavigationContainer theme={theme}>
       <NavigationLinks>
         <NavigationLink to="about-me">About Me</NavigationLink>
+        {/* <NavigationLink to="projects">Projects</NavigationLink> */}
         <NavigationLink to="contact">Contact</NavigationLink>
         {themeIcon}
       </NavigationLinks>

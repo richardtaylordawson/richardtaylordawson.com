@@ -11,5 +11,6 @@ export const Label = ({ children, forTarget }) => {
 const StyledLabel = styled.label`
   font-weight: 500;
   display: block;
+  margin-bottom: 10px;
   color: ${props => props.theme.text};
 `

@@ -9,23 +9,26 @@ export const NavigationLink = ({ children, to }) => {
   const [theme] = useTheme()
 
   return (
-    <StyledNavigationLink
-      activeClass="active"
-      to={to}
-      spy={true}
-      smooth={true}
-      duration={500}
-      theme={theme}
-    >
-      {children}
-    </StyledNavigationLink>
+    <li>
+      <StyledNavigationLink
+        activeClass="active"
+        to={to}
+        offset={-68}
+        spy={true}
+        smooth={true}
+        duration={800}
+        theme={theme}
+        tabIndex="1"
+      >
+        {children}
+      </StyledNavigationLink>
+    </li>
   )
 }
 
 const StyledNavigationLink = styled(Link)`
   color: ${props => props.theme.primary};
   font-size: 18px;
-  font-weight: 500;
   margin-left: 30px;
   cursor: pointer;
   text-decoration: none;
@@ -40,6 +43,7 @@ const StyledNavigationLink = styled(Link)`
   ${Breakpoints["medium-down"]} {
     margin-bottom: 30px;
     margin-left: 0;
+    display: inline-block;
   }
 `
 

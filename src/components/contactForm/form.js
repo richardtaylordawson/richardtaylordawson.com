@@ -44,7 +44,14 @@ const Container = styled.div`
 `
 
 const ContainerAlt = styled.div`
-  text-align: center;
+  h3 {
+    text-align: left;
+    margin-top: 40px;
+  }
 
-  ${Breakpoints["large-up"]} { padding: 40px; }
+  ${Breakpoints["large-up"]} {
+    padding: 40px;
+
+    h3 { text-align: center; }
+  }
 `

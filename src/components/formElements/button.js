@@ -3,17 +3,17 @@ import styled from "@emotion/styled"
 import PropTypes from "prop-types"
 import { useTheme } from "./../../context/"
 
-export const Button = ({ children, block = false, href, button = false, fullWidth = false }) => {
+export const Button = ({ children, block = false, href, target, button = false, fullWidth = false, ...props }) => {
   const [theme] = useTheme()
 
   let buttonOrLink;
   if(button) {
     buttonOrLink = <button>{children}</button>
   } else {
-    buttonOrLink = <a>{children}</a>
+    buttonOrLink = <a href={href} target={target}>{children}</a>
   }
 
-  return <ButtonContainer theme={theme} block={block} href={href} fullWidth={fullWidth}>{buttonOrLink}</ButtonContainer>
+  return <ButtonContainer {...props} theme={theme} block={block} fullWidth={fullWidth}>{buttonOrLink}</ButtonContainer>
 }
 
 const ButtonContainer = styled.div`

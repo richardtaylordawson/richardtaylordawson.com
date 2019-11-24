@@ -7,7 +7,7 @@ export const GlobalTheme = () => {
   const [menu] = useMenu()
 
   let blur;
-  if(menu) {
+  if (menu) {
     blur = "main, footer { filter: blur(5px); }"
   }
 
@@ -25,6 +25,8 @@ export const GlobalTheme = () => {
           margin: 68px 0 0;
           padding: 0;
         }
+
+        * { box-sizing: border-box; }
 
         ${blur}
       `}

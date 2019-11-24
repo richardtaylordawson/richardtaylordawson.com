@@ -23,13 +23,13 @@ const StyledNavigationLinks = styled.ul`
     visibility: ${props => props.menu ? "visible" : "hidden"};
     transform: ${props => props.menu ? "translateX(0vw)" : "translateX(100vw)"};
     background-color: ${props => props.theme.mobileMenuColor};
-    transition: ${props => props.menu && "all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s"};
     box-shadow: ${props => props.theme.mobileMenuShadow};
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     height: 100vh;
     position: fixed;
     right: 0;
     top: 0;
-    width: 160px;
+    width: 200px;
     padding: 100px 50px;
     align-items: center;
     justify-content: flex-start;

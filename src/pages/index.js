@@ -1,6 +1,6 @@
 import React from "react"
 import { MainLayout } from "../layouts/mainLayout"
-import { Hero, ContactForm, SEO } from "./../components/"
+import { Hero, Projects, ContactForm, SEO } from "./../components/"
 
 const Index = () => (
   <MainLayout>
@@ -9,6 +9,7 @@ const Index = () => (
       keywords={["richard taylor dawson", "website", "portfolio", "software", "front end developer", "engineer", "software engineer"]}
     />
     <Hero />
+    {/* <Projects /> */}
     <ContactForm />
   </MainLayout>
 )

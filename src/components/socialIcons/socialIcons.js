@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import PropTypes from "prop-types"
 import { SocialIcon } from "./../"
 import CodeWars from "./icons/codewars.svg"
 import Github from "./icons/github.svg"
@@ -7,8 +8,8 @@ import Instagram from "./icons/instagram.svg"
 import LinkedIn from "./icons/linkedin.svg"
 import Twitter from "./icons/twitter.svg"
 
-export const SocialIcons = () => (
-  <SocialIconsContainer>
+export const SocialIcons = ({ textAlign }) => (
+  <SocialIconsContainer textAlign={textAlign}>
     <SocialIcon
       href="https://github.com/richardtaylordawson"
       target="_blank"
@@ -44,4 +45,6 @@ export const SocialIcons = () => (
 
 const SocialIconsContainer = styled.div`
   margin-bottom: 30px;
+  text-align: ${props => props.textAlign ? props.textAlign : "left"};
+  *:not(:last-child) { margin-right: 20px; }
 `
