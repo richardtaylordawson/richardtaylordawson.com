@@ -6,11 +6,15 @@ const ThemeContext = createContext()
 const useTheme = () => {
   const context = useContext(ThemeContext)
 
+  if (!context) {
+    throw new Error(`useTheme must be used within a ThemeProvider`)
+  }
+
   return context
 }
 
 const ThemeProvider = props => {
-  let themeToUse = Themes.light
+  let themeToUse = Themes.dark
 
   // if (typeof window !== "undefined") {
   //   const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches

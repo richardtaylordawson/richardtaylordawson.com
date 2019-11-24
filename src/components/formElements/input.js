@@ -5,7 +5,7 @@ import { useTheme } from "./../../context/"
 export const Input = ({ id, name }) => {
   const [theme] = useTheme()
 
-  return <StyledInput theme={theme} name={name} id={id}></StyledInput>
+  return <StyledInput theme={theme} name={name} id={id} required></StyledInput>
 }
 
 const StyledInput = styled.input`

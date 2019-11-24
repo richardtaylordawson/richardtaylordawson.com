@@ -1,14 +1,17 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Header, Footer, GlobalTheme } from "./../components/"
+import { ThemeProvider, MenuProvider } from "./../context/"
 
 export const MainLayout = ({ children }) => (
-  <>
-    <GlobalTheme />
-    <Header />
-    <main>{children}</main>
-    <Footer />
-  </>
+  <ThemeProvider>
+    <MenuProvider>
+      <GlobalTheme />
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </MenuProvider>
+  </ThemeProvider>
 )
 
 MainLayout.propTypes = {

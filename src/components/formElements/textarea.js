@@ -5,7 +5,7 @@ import { useTheme } from "./../../context/"
 export const Textarea = ({ id, name }) => {
   const [theme] = useTheme()
 
-  return <StyledTextarea theme={theme} id={id} name={name}></StyledTextarea>
+  return <StyledTextarea theme={theme} id={id} name={name} required></StyledTextarea>
 }
 
 const StyledTextarea = styled.textarea`
