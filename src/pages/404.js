@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { MainLayout } from "./../layouts/mainLayout"
 import { H1, P, Container, SEO } from "../components"
-import { useTheme, useMenu } from "./../../context/"
+import { useTheme, useMenu } from "./../context/"
 
 const NotFound = () => {
   const [theme] = useTheme()
