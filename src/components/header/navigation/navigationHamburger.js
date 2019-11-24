@@ -8,7 +8,7 @@ export const NavigationHamburger = () => {
   const [menu, setMenu] = useMenu()
   let hamburgerColor
 
-  if (typeof document !== undefined) {
+  if (typeof document !== undefined && typeof window !== undefined) {
     hamburgerColor = getComputedStyle(document.body).getPropertyValue('--primary')
   }
 
