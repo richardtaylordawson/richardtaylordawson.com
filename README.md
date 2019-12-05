@@ -6,6 +6,8 @@ Several projects aided in inspiring this project. Notably they are:
 
 - Gatsby
 - Emotion
+- Gatsby Plugin Dark Mode
+- Gatsby Source Github API
 - React Hamburger Menu
 - React Helmet
 - React Scroll

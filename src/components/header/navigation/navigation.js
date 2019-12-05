@@ -20,7 +20,7 @@ export const Navigation = () => (
         <NavigationContainer>
           <NavigationLinks>
             <NavigationLink to="about-me">About Me</NavigationLink>
-            {/* <NavigationLink to="projects">Projects</NavigationLink> */}
+            <NavigationLink to="projects">Projects</NavigationLink>
             <NavigationLink to="contact">Contact</NavigationLink>
             {themeIcon}
           </NavigationLinks>
