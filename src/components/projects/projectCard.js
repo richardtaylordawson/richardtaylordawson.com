@@ -38,6 +38,6 @@ const Image = styled.img`
 const Description = styled.div`
   padding: 10px 30px;
   color: var(--text);
-  height: 100px;
+  height: 120px;
 `
 
