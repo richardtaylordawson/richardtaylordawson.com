@@ -39,7 +39,6 @@ const FlexContainer = styled.div`
 
 const Column = styled.div`
   width: ${props => props.columnWidth}%;
-  margin: "30px 0";
   height: 100%;
 
   ${Breakpoints["medium-down"]} {

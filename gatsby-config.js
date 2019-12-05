@@ -1,3 +1,9 @@
+const dotenv = require('dotenv')
+
+if (process.env.NODE_ENV !== 'production') {
+  dotenv.config()
+}
+
 module.exports = {
   siteMetadata: {
     title: `Richard Taylor Dawson`,
@@ -11,6 +17,18 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-dark-mode`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Richard Taylor Dawson`,
+        short_name: `Richard Taylor Dawson`,
+        start_url: `/`,
+        background_color: `#18a0fb`,
+        theme_color: `#18a0fb`,
+        display: `standalone`,
+      },
+    },
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,6 +46,35 @@ module.exports = {
           },
         ],
       },
+    },
+    {
+      resolve: `gatsby-source-github-api`,
+      options: {
+        token: process.env.token,
+        graphQLQuery: `
+          query ($author: String = "") {
+            user(login: $author) {
+              repositories(first: 100, affiliations:[OWNER], ownerAffiliations:[OWNER], orderBy: {field: UPDATED_AT, direction: DESC}) {
+                edges {
+                  node {
+                    name
+                    description
+                    url
+                    createdAt
+                    forkCount
+                    homepageUrl
+                    projectsUrl
+                    updatedAt
+                  }
+                }
+              }
+            }
+          }
+        `,
+        variables: {
+          author: process.env.author
+        }
+      }
     },
     {
       resolve: 'gatsby-plugin-google-analytics',
