@@ -15,7 +15,7 @@ export const Projects = ({ projectData }) => {
       <H2>Projects</H2>
       <Columns max={3}>
         {
-          projectData.githubData.data.user.repositories.edges
+          projectData.data.user.repositories.edges
             .filter(currentRepo => projectsToShow.includes(currentRepo.node.name))
             .map((singleProject, index) => <ProjectCard projectData={singleProject.node} key={index} />)
         }
