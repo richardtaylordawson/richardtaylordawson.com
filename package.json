@@ -20,6 +20,8 @@
     "gatsby-plugin-sitemap": "^2.2.13",
     "gatsby-source-filesystem": "^2.1.22",
     "gatsby-source-github-api": "^0.1.4",
+    "gatsby-source-pluralsight": "^1.0.5",
+    "gatsby-source-trello-board": "^1.0.7",
     "gatsby-transformer-sharp": "^2.2.14",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
