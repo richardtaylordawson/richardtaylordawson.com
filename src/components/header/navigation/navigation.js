@@ -21,6 +21,7 @@ export const Navigation = () => (
           <NavigationLinks>
             <NavigationLink to="about-me">About Me</NavigationLink>
             <NavigationLink to="projects">Projects</NavigationLink>
+            <NavigationLink to="skills">Skills</NavigationLink>
             <NavigationLink to="contact">Contact</NavigationLink>
             {themeIcon}
           </NavigationLinks>

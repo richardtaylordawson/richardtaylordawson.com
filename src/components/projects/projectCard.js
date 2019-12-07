@@ -40,4 +40,3 @@ const Description = styled.div`
   color: var(--text);
   height: 120px;
 `
-

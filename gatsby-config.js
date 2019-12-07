@@ -50,10 +50,10 @@ module.exports = {
     {
       resolve: `gatsby-source-github-api`,
       options: {
-        token: process.env.token,
+        token: process.env.GITHUB_TOKEN,
         graphQLQuery: `
-          query ($author: String = "") {
-            user(login: $author) {
+          query {
+            user(login: "richardtaylordawson") {
               repositories(first: 100, affiliations:[OWNER], ownerAffiliations:[OWNER], orderBy: {field: UPDATED_AT, direction: DESC}) {
                 edges {
                   node {
@@ -70,11 +70,22 @@ module.exports = {
               }
             }
           }
-        `,
-        variables: {
-          author: process.env.author
-        }
+        `
       }
+    },
+    {
+      resolve: 'gatsby-source-pluralsight',
+      options: {
+        username: 'richard-dawson-80'
+      }
+    },
+    {
+      resolve: `gatsby-source-trello-board`,
+      options: {
+        key: `81423bc469470a30a91501d52fabae4f`,
+        token: `c11f678a79ec4e6a7c6e72c5642e15484c15fa7f310ff67bc5a1c1e609cb4fef`,
+        board_id: `5d850d4d16b4a00b01116938`,
+      },
     },
     {
       resolve: 'gatsby-plugin-google-analytics',

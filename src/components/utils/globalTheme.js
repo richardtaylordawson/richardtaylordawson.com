@@ -31,6 +31,7 @@ export const GlobalTheme = () => {
           --backgroundColor: #fff;
           --mobileMenuColor: #fff;
           --mobileMenuShadow: -5px 0 30px #bbb;
+          --skillCardBackgroundColor: #efefef;
           --footerBackgroundColor: #efefef;
           --inputBorderColor: #cdcdcd;
 
@@ -47,6 +48,7 @@ export const GlobalTheme = () => {
           --backgroundColor: #333;
           --mobileMenuColor: #333;
           --mobileMenuShadow: -5px 0 30px #111;
+          --skillCardBackgroundColor: #222;
           --footerBackgroundColor: #222;
           --inputBorderColor: #666;
 
