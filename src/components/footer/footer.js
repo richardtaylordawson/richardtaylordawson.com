@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 
 export const Footer = () => (
   <Container>
-    <StyledP>© 2019 Richard Taylor Dawson</StyledP>
+    <StyledP>© {new Date().getFullYear()} Richard Taylor Dawson</StyledP>
   </Container>
 )
 

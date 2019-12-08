@@ -32,18 +32,14 @@ const FlexContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
 
-  ${Breakpoints["medium-down"]} {
-    flex-direction: column;
-  }
+  ${Breakpoints["medium-down"]} { flex-direction: column; }
 `
 
 const Column = styled.div`
   width: ${props => props.columnWidth}%;
   height: 100%;
 
-  ${Breakpoints["medium-down"]} {
-    width: 100%;
-  }
+  ${Breakpoints["medium-down"]} { width: 100%; }
 `
 
 Columns.propTypes = {
