@@ -284,7 +284,9 @@ export default function Home({ articles }) {
         <title>Richard Taylor Dawson - Software Engineer</title>
         <meta
           name="description"
-          content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
+          content="I’m Richard, a software engineer and entrepreneur based near Salt
+          Lake City. I'm a highly motivated, hard working engineer that has a
+          knack for finding simple solutions to complex issues"
         />
       </Head>
       <Container className="mt-9">
