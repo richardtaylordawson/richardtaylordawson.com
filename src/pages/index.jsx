@@ -1,10 +1,10 @@
 import Head from 'next/head'
+import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { Resume } from '@/components/Resume'
-import clearlink from '@/images/logos/clearlink.jpeg'
 import { SocialLink } from '@/components/SocialLink'
 import { Instagram, Github, LinkedIn, LinkIcon } from '@/components/Icons'
 
@@ -14,14 +14,12 @@ const projects = [
     description:
       "Personalize your app's README with custom, fun, PWA shields in SVG",
     link: { href: 'https://www.pwa-shields.com', label: 'Demo' },
-    logo: clearlink,
   },
   {
     name: 'Calculator',
     description:
       'Simple calculator application built using Bootstrap 4, HTML, ES6 Modules and multiple Bootstrap Themes from Bootswatch.',
     link: { href: 'https://calculator.richardtaylordawson.com', label: 'Demo' },
-    logo: clearlink,
   },
   {
     name: 'Gaming Trivia',
@@ -31,14 +29,12 @@ const projects = [
       href: 'https://gaming-trivia.richardtaylordawson.com',
       label: 'Demo',
     },
-    logo: clearlink,
   },
   {
     name: 'Balanced Tax Solutions',
     description:
       'Website for Balanced Tax Solutions giving customers easy access to information they need, appointment booker and necessary',
     link: { href: 'https://www.balancedtaxsolutions.com', label: 'Demo' },
-    logo: clearlink,
   },
   {
     name: 'Giphy Search',
@@ -48,7 +44,6 @@ const projects = [
       href: 'https://giphy-search.richardtaylordawson.com',
       label: 'Demo',
     },
-    logo: clearlink,
   },
 ]
 
@@ -93,7 +88,6 @@ export default function Home() {
           </div>
         </div>
       </Container>
-      {/* <Photos /> */}
       <SimpleLayout title="Projects">
         <ul
           role="list"
@@ -101,14 +95,14 @@ export default function Home() {
         >
           {projects.map((project) => (
             <Card as="li" key={project.name}>
-              {/* <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                <Image
-                  src={project.logo}
-                  alt=""
-                  className="h-8 w-8 rounded-3xl"
-                  unoptimized
-                />
-              </div> */}
+              <Image
+                src={`${project.link.href}/images/social-share.png`}
+                alt="repo image"
+                className="rounded-lg"
+                unoptimized
+                width="400"
+                height="200"
+              />
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                 <Card.Link href={project.link.href}>{project.name}</Card.Link>
               </h2>

@@ -5,7 +5,10 @@ import { ChevronRightIcon } from './Icons/ChevronRight'
 
 export const Card = ({ as: Component = 'div', className, children }) => (
   <Component
-    className={clsx(className, 'group relative flex flex-col items-start')}
+    className={clsx(
+      className,
+      'group relative flex flex-col items-start rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40'
+    )}
   >
     {children}
   </Component>
@@ -14,7 +17,7 @@ export const Card = ({ as: Component = 'div', className, children }) => (
 Card.Link = ({ children, ...props }) => {
   return (
     <>
-      <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl" />
+      <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl" />
       <Link {...props}>
         <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
         <span className="relative z-10">{children}</span>
