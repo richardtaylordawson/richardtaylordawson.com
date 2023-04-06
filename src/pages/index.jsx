@@ -100,8 +100,8 @@ export default function Home() {
                 alt="repo image"
                 className="rounded-lg"
                 unoptimized
-                width="400"
-                height="200"
+                width="640"
+                height="320"
               />
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                 <Card.Link href={project.link.href}>{project.name}</Card.Link>
@@ -115,9 +115,9 @@ export default function Home() {
           ))}
         </ul>
       </SimpleLayout>
-      <Container className="mt-24 md:mt-28">
+      <SimpleLayout title="Resume">
         <Resume />
-      </Container>
+      </SimpleLayout>
     </>
   )
 }
