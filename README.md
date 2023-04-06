@@ -1,6 +1,6 @@
 # richardtaylordawson.com
 
-> My personal website & resume showcasing my experience and projects. Built using GatsbyJS, React and other open source tools & API's.
+> My personal website & resume showcasing my experience and projects. Built using TailwindUI, React, and NextJS.
 
 ## Run Project
 
@@ -15,4 +15,4 @@ $ npm start
 
 ## View Project
 
-<https://www.richardtaylordawson.com>
+<https://richardtaylordawson.com>
