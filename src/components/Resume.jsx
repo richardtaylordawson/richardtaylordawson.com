@@ -1,19 +1,28 @@
 import Image from 'next/image'
 import calldrip from '@/images/logos/calldrip.png'
 import clearlink from '@/images/logos/clearlink.jpeg'
+import audioeye from '@/images/logos/audio.png'
 import { Button } from '@/components/Button'
 import { ArrowDown, Briefcase } from '@/components/Icons'
 
 export const Resume = () => {
   let resume = [
     {
+      company: 'AudioEye',
+      title: 'Senior Software Engineer',
+      logo: audioeye,
+      start: 'May 2023',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear(),
+      },
+    },
+    {
       company: 'Clearlink',
       title: 'Senior Front End Developer',
       logo: clearlink,
       start: 'Dec 2019',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
+      end: 'May 2023',
       },
     },
     {
