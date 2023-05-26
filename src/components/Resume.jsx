@@ -23,7 +23,6 @@ export const Resume = () => {
       logo: clearlink,
       start: 'Dec 2019',
       end: 'May 2023',
-      },
     },
     {
       company: 'Clearlink',
