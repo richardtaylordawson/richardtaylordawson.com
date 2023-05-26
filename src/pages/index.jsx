@@ -24,11 +24,17 @@ const projects = [
   {
     name: 'Gaming Trivia',
     description:
-      'Gaming trivia game built using a cool CSS framework called NES.css and an open API for the trivia questions.',
+      'Gaming trivia game built using a cool CSS framework called NES.css and an open API for the trivia questions',
     link: {
       href: 'https://gaming-trivia.richardtaylordawson.com',
       label: 'Demo',
     },
+  },
+  {
+    name: 'Simply Rooted Spa',
+    description:
+      'Website for Simply Rooted Spa giving latest menu/services, appointment booking, gift card ordering, etc',
+    link: { href: 'https://www.simplyrootedspa.com', label: 'Demo' },
   },
   {
     name: 'Balanced Tax Solutions',
