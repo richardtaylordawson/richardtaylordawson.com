@@ -9,7 +9,7 @@ export const Resume = () => {
   let resume = [
     {
       company: 'AudioEye',
-      title: 'Senior Software Engineer',
+      title: 'Senior Software Engineer - Marketing',
       logo: audioeye,
       start: 'May 2023',
       end: {
