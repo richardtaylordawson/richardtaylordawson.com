@@ -45,7 +45,6 @@ export default function Document() {
         <Main />
         <NextScript />
       </body>
-      <script type="text/javascript">!function(){var b=function(){window.__AudioEyeSiteHash = "83d1789633c5caebf661515c0c071695"; var a=document.createElement("script");a.src="https://wsmcdn.audioeye.com/aem.js";a.type="text/javascript";a.setAttribute("async","");document.getElementsByTagName("body")[0].appendChild(a)};"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",b):window.attachEvent&&window.attachEvent("onload",b):b()}();</script>
     </Html>
   )
 }
