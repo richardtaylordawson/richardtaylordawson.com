@@ -17,6 +17,8 @@
     "@mdx-js/loader": "^2.1.5",
     "@mdx-js/react": "^2.1.5",
     "@next/mdx": "^13.0.2",
+    "@storyblok/js": "^2.1.6",
+    "@storyblok/react": "^2.1.4",
     "@tailwindcss/typography": "^0.5.4",
     "autoprefixer": "^10.4.12",
     "clsx": "^1.2.1",

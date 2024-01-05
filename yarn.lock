@@ -214,6 +214,20 @@
   resolved "https://npm.clearlink.com/@sindresorhus%2fis/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
   integrity sha512-9NET910DNaIPngYnLLPeg+Ogzqsi9uM4mSboU5y6p8S5DzMTVEsJZrawi+BoDNUVBa2DhJqQYUFvMDfgU062LQ==
 
+"@storyblok/js@^2.1.6":
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/@storyblok/js/-/js-2.1.6.tgz#7dbaa39fa4e124fe3ac4315222dcd4843d58b48c"
+  integrity sha512-2qxdLW44/W8yfhJn3HOerVX1lTZYIq3O/lCEWfk//NbUz02eGgJv/os6cj2OP03WujxZEDW2od8xWRLLIn/boQ==
+  dependencies:
+    storyblok-js-client "^5.10.6"
+
+"@storyblok/react@^2.1.4":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/@storyblok/react/-/react-2.1.4.tgz#f39587c3ae0eef731aee17ec4741ea30b33749fe"
+  integrity sha512-4usjPYVYalspNemX+dL7fVD3oNOWU9EOLFWPVyt5OIfGhT6nlEJ7Yyke0EGJJEnxDGTEsQGdnbkUnH9JAc5hWQ==
+  dependencies:
+    "@storyblok/js" "^2.1.6"
+
 "@swc/helpers@0.4.11":
   version "0.4.11"
   resolved "https://npm.clearlink.com/@swc%2fhelpers/-/helpers-0.4.11.tgz#db23a376761b3d31c26502122f349a21b592c8de"
@@ -4376,6 +4390,11 @@ stop-iteration-iterator@^1.0.0:
   integrity sha512-iCGQj+0l0HOdZ2AEeBADlsRC+vsnDsZsbdSiH1yNSjcfKM7fdpCMfqAL/dwF5BLiw/XhRft/Wax6zQbhq2BcjQ==
   dependencies:
     internal-slot "^1.0.4"
+
+storyblok-js-client@^5.10.6:
+  version "5.10.6"
+  resolved "https://registry.yarnpkg.com/storyblok-js-client/-/storyblok-js-client-5.10.6.tgz#df4f2fdff45e6de5874a6e1c19b6c1b062ce556f"
+  integrity sha512-rnUWMom9ePxUIbZ0mhnGePtd6agO4jmDDd9UVbeRehMTrfUKsDcpqOfTHO6zy7aq7SMaQqMB+22JCYzYbsZDuw==
 
 string-width@^2.0.0, string-width@^2.1.1:
   version "2.1.1"

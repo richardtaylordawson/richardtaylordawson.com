@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { storyblokInit, apiPlugin } from '@storyblok/react/rsc'
 
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
@@ -53,7 +54,26 @@ const projects = [
   },
 ]
 
-export default function Home() {
+// This gets called on every request
+export async function getServerSideProps() {
+  storyblokInit({
+    accessToken: 'your-preview-token',
+    use: [apiPlugin],
+  })
+
+  const { storyblokApi } = storyblokInit({
+    accessToken: 'T3nd1kNeIdn0UE23Ih2w2wtt',
+    use: [apiPlugin],
+  })
+
+  const { data } = await storyblokApi.get('cdn/stories')
+
+  return { props: { data } }
+}
+
+export default function Home({ data }) {
+  console.log(`data in page ${data}`)
+  console.log(data)
   return (
     <>
       <Head>
@@ -122,7 +142,7 @@ export default function Home() {
         </ul>
       </SimpleLayout>
       <SimpleLayout title="Resume">
-        <Resume />
+        <Resume jobs={data.stories} />
       </SimpleLayout>
     </>
   )
