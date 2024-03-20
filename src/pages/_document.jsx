@@ -59,6 +59,7 @@ export default function Document() {
     <Html className="h-full antialiased" lang="en">
       <Head>
         <script dangerouslySetInnerHTML={{ __html: modeScript }} />
+        <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/1db83cf1cb6ba899587f161f/script.js"></script>
       </Head>
       <body className="flex h-full flex-col bg-zinc-50 dark:bg-black">
         <Main />
