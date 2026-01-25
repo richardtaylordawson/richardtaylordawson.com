@@ -6,7 +6,7 @@ import { Container } from '@/components/Container'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { Resume } from '@/components/Resume'
 import { SocialLink } from '@/components/SocialLink'
-import { Instagram, Github, LinkedIn, LinkIcon } from '@/components/Icons'
+import { Github, LinkedIn, LinkIcon } from '@/components/Icons'
 
 const projects = [
   {
@@ -76,11 +76,6 @@ export default function Home() {
             knack for finding simple solutions to complex issues
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://www.instagram.com/rtdaws003/"
-              aria-label="Follow on Instagram"
-              icon={Instagram}
-            />
             <SocialLink
               href="https://www.github.com/richardtaylordawson"
               aria-label="Follow on GitHub"
