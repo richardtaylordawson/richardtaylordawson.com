@@ -7,7 +7,7 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import { ChevronDown, Close, Moon, Sun } from './Icons'
-import headshot from '@/images/headshot.jpg'
+import headshot from '@/images/headshot.png'
 
 function MobileNavItem({ href, children }) {
   return (
