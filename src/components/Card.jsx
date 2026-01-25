@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import clsx from 'clsx'
 
-import { ChevronRightIcon } from './Icons/ChevronRight'
+import { ChevronRight } from './Icons'
 
 export const Card = ({ as: Component = 'div', className, children }) => (
   <Component
@@ -44,7 +44,7 @@ Card.Cta = ({ children }) => (
     className="relative z-10 mt-4 flex items-center text-sm font-medium text-sky-500"
   >
     {children}
-    <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current" />
+    <ChevronRight className="ml-1 h-4 w-4 stroke-current" />
   </div>
 )
 
