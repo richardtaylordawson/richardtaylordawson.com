@@ -54,7 +54,6 @@ export const Resume = () => {
                 src={role.logo}
                 alt=""
                 className="h-7 w-7 rounded-3xl"
-                unoptimized
               />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">

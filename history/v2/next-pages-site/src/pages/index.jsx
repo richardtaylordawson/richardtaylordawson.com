@@ -14,12 +14,15 @@ const projects = [
     description:
       "Personalize your app's README with custom, fun, PWA shields in SVG",
     link: { href: 'https://www.pwa-shields.com', label: 'Demo' },
+    // Deployment no longer serves /images/social-share.png
+    imageSrc: '/images/project-placeholder.png',
   },
   {
     name: 'Calculator',
     description:
       'Simple calculator application built using Bootstrap 4, HTML, ES6 Modules and multiple Bootstrap Themes from Bootswatch.',
     link: { href: 'https://calculator.richardtaylordawson.com', label: 'Demo' },
+    imageSrc: '/images/project-placeholder.png',
   },
   {
     name: 'Gaming Trivia',
@@ -29,18 +32,21 @@ const projects = [
       href: 'https://gaming-trivia.richardtaylordawson.com',
       label: 'Demo',
     },
+    imageSrc: '/images/project-placeholder.png',
   },
   {
     name: 'Simply Rooted Spa',
     description:
       'Website for Simply Rooted Spa giving latest menu/services, appointment booking, gift card ordering, etc',
     link: { href: 'https://www.simplyrootedspa.com', label: 'Demo' },
+    imageSrc: 'https://www.simplyrootedspa.com/images/social-share.png',
   },
   {
     name: 'Balanced Tax Solutions',
     description:
       'Website for Balanced Tax Solutions giving customers easy access to information they need, appointment booker and necessary',
     link: { href: 'https://www.balancedtaxsolutions.com', label: 'Demo' },
+    imageSrc: 'https://balancedtaxsolutions.com/images/social-share.png',
   },
   {
     name: 'Giphy Search',
@@ -50,6 +56,7 @@ const projects = [
       href: 'https://giphy-search.richardtaylordawson.com',
       label: 'Demo',
     },
+    imageSrc: '/images/project-placeholder.png',
   },
 ]
 
@@ -97,12 +104,12 @@ export default function Home() {
           {projects.map((project) => (
             <Card as="li" key={project.name}>
               <Image
-                src={`${project.link.href}/images/social-share.png`}
-                alt="repo image"
-                className="rounded-lg"
-                unoptimized
-                width="640"
-                height="320"
+                src={project.imageSrc}
+                alt={`${project.name} preview`}
+                className="relative z-10 rounded-lg"
+                width={640}
+                height={320}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                 <Card.Link href={project.link.href}>{project.name}</Card.Link>
