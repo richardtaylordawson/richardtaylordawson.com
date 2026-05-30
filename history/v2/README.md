@@ -1,9 +1,10 @@
-# Legacy Next.js site (Pages Router)
+# Site history v2
 
-This folder contains a **reference-only** snapshot of the personal site built with Next.js Pages Router, JavaScript, and Tailwind CSS.
+This folder contains **reference-only** snapshots from the second era of the personal site.
 
 ## Contents
 
-- `next-pages-site/` — Full project (run `npm install && npm run dev` from that directory to preview the old UI).
+- `next-pages-site/` — Legacy Pages Router project.
+- `nextjs16-starter-site/` — Clean Next.js 16 App Router starter from the repository root before the 2026 rebuild.
 
-This snapshot is preserved for history and comparison. Active development continues in the repository root.
+These snapshots are preserved for history and comparison. Active development continues in the repository root.
