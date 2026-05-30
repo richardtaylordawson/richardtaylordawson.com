@@ -5,9 +5,7 @@ import {
   BrainCircuit,
   Code2,
   Download,
-  GithubIcon,
   Gauge,
-  LinkedinIcon,
   Mail,
   Network,
   Sparkles,
@@ -128,14 +126,14 @@ export default function Home() {
               className="icon-link"
               aria-label="GitHub"
             >
-              <GithubIcon />
+              <Code2 />
             </a>
             <a
               href="https://www.linkedin.com/in/taylor-dawson-482927123/"
               className="icon-link"
               aria-label="LinkedIn"
             >
-              <LinkedinIcon />
+              <Network />
             </a>
           </div>
         </nav>
