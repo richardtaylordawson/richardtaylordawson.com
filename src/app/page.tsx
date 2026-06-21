@@ -1,13 +1,10 @@
 import Image from "next/image";
 import {
-  ArrowUpRight,
   Bot,
   BrainCircuit,
-  Code2,
   Download,
+  ExternalLink,
   Gauge,
-  Mail,
-  Network,
   Sparkles,
   Workflow,
 } from "lucide-react";
@@ -36,43 +33,58 @@ const capabilities = [
 
 const projects = [
   {
-    title: "AI workbench concept",
-    tag: "Interface systems",
-    text: "A portfolio direction centered on agentic workflows, compact dashboards, and explainable automation.",
-    image: "/images/desk.jpg",
+    title: "Calculator",
+    tag: "JavaScript application",
+    text: "A focused calculator built with Bootstrap, HTML, and ES6 modules, with a set of switchable Bootswatch themes.",
+    href: "https://calculator.richardtaylordawson.com",
+    cta: "Open calculator",
   },
   {
-    title: "Accessible growth surfaces",
-    tag: "AudioEye",
-    text: "Marketing engineering work that blends performance, accessibility, and clear conversion paths.",
-    image: "/images/office.jpg",
-  },
-  {
-    title: "Independent product builds",
-    tag: "Labs",
-    text: "Small, pragmatic apps and client sites with a bias toward clean delivery and maintainable foundations.",
-    image: "/images/headshot.png",
+    title: "Gaming Trivia",
+    tag: "Interactive game",
+    text: "A retro gaming trivia experience built with NES.css and an open trivia API for a fresh set of questions each round.",
+    href: "https://gaming-trivia.richardtaylordawson.com",
+    cta: "Play gaming trivia",
   },
 ];
 
 const experience = [
   {
     company: "AudioEye",
-    role: "Senior Software Engineer, Marketing",
-    span: "2023 to present",
+    span: "May 2023 to present",
     logo: "/images/logos/audio.png",
+    roles: [
+      {
+        title: "Senior Software Engineer, Marketing",
+        span: "May 2023 to present",
+      },
+    ],
   },
   {
     company: "Clearlink",
-    role: "Senior Front End Developer",
-    span: "2019 to 2023",
+    span: "Jan 2019 to May 2023",
     logo: "/images/logos/clearlink.jpeg",
+    roles: [
+      {
+        title: "Senior Front End Developer",
+        span: "Dec 2019 to May 2023",
+      },
+      {
+        title: "Front End Developer",
+        span: "Jan 2019 to Dec 2019",
+      },
+    ],
   },
   {
     company: "Calldrip",
-    role: "Full Stack Developer",
-    span: "2016 to 2019",
+    span: "Jul 2016 to Jan 2019",
     logo: "/images/logos/calldrip.png",
+    roles: [
+      {
+        title: "Full Stack Developer",
+        span: "Jul 2016 to Jan 2019",
+      },
+    ],
   },
 ];
 
@@ -120,9 +132,6 @@ export default function Home() {
             <a className="transition hover:text-white" href="#systems">
               Systems
             </a>
-            <a className="transition hover:text-white" href="#contact">
-              Contact
-            </a>
           </div>
           <div className="flex items-center gap-2">
             <a
@@ -160,11 +169,7 @@ export default function Home() {
             product craft meet. The work is fast, pragmatic, and built for real
             people on real teams.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href="#contact" className="command-link primary-command">
-              <Mail className="size-4" />
-              Start a conversation
-            </a>
+          <div className="mt-8 flex">
             <a
               href="/documents/richardtaylordawson.pdf"
               className="command-link"
@@ -234,42 +239,69 @@ export default function Home() {
       </section>
 
       <section id="work" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="section-kicker">Selected direction</p>
-            <h2 className="mt-3 max-w-2xl text-3xl font-semibold text-white sm:text-4xl">
-              Building calm, capable software with a little electricity in it.
-            </h2>
-          </div>
-          <a href="#contact" className="command-link w-fit">
-            <ArrowUpRight className="size-4" />
-            Let&apos;s build
-          </a>
+        <div>
+          <p className="section-kicker">Selected projects</p>
+          <h2 className="mt-3 max-w-2xl text-3xl font-semibold text-white sm:text-4xl">
+            Experiments, useful tools, and playful corners of the web.
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-white/[0.58]">
+            A growing collection of things I&apos;ve designed and built outside
+            my day-to-day product work.
+          </p>
         </div>
 
-        <div className="mt-10 grid gap-5 lg:grid-cols-3">
-          {projects.map((project) => (
-            <article className="project-card group" key={project.title}>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-[8px]">
-                <Image
-                  src={project.image}
-                  alt=""
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 33vw"
-                  className="object-cover transition duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <span className="absolute bottom-4 left-4 rounded-[8px] border border-white/[0.15] bg-black/[0.45] px-3 py-1.5 text-xs font-medium text-white/80 backdrop-blur">
-                  {project.tag}
+        <div className="mt-10 grid gap-5 lg:grid-cols-2">
+          {projects.map((project, index) => (
+            <a
+              className="project-card group"
+              href={project.href}
+              target="_blank"
+              rel="noreferrer"
+              key={project.title}
+            >
+              <div
+                className={`project-preview ${index === 0 ? "calculator-preview" : "trivia-preview"}`}
+                aria-hidden="true"
+              >
+                {index === 0 ? (
+                  <div className="calculator-shell">
+                    <div className="calculator-display">1,337</div>
+                    <div className="calculator-keys">
+                      {["7", "8", "9", "+", "4", "5", "6", "−", "1", "2", "3", "="].map(
+                        (key) => (
+                          <span key={key}>{key}</span>
+                        ),
+                      )}
+                    </div>
+                  </div>
+                ) : (
+                  <div className="trivia-shell">
+                    <div className="pixel-badge">PLAYER 1</div>
+                    <p>Which console introduced the world to Mario?</p>
+                    <div className="trivia-options">
+                      <span>NES</span>
+                      <span>ATARI</span>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div className="p-3 pb-4 pt-5 sm:p-5 sm:pb-5">
+                <div className="flex items-center justify-between gap-4">
+                  <span className="project-tag">{project.tag}</span>
+                  <ExternalLink className="size-4 text-white/40 transition group-hover:text-amber-200" />
+                </div>
+                <h3 className="mt-4 text-2xl font-semibold text-white">
+                  {project.title}
+                </h3>
+                <p className="mt-3 max-w-xl text-sm leading-6 text-white/[0.62]">
+                  {project.text}
+                </p>
+                <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-emerald-200">
+                  {project.cta}
+                  <ExternalLink className="size-3.5" />
                 </span>
               </div>
-              <h3 className="mt-5 text-xl font-semibold text-white">
-                {project.title}
-              </h3>
-              <p className="mt-3 text-sm leading-6 text-white/[0.62]">
-                {project.text}
-              </p>
-            </article>
+            </a>
           ))}
         </div>
       </section>
@@ -291,60 +323,40 @@ export default function Home() {
           </div>
 
           <ol className="space-y-3">
-            {experience.map((role) => (
-              <li className="experience-row" key={`${role.company}-${role.role}`}>
-                <Image
-                  src={role.logo}
-                  alt=""
-                  width={40}
-                  height={40}
-                  className="size-10 rounded-[8px] bg-white object-contain p-1"
-                />
-                <div className="min-w-0 flex-1">
-                  <p className="font-medium text-white">{role.company}</p>
-                  <p className="mt-1 text-sm text-white/[0.56]">{role.role}</p>
+            {experience.map((job) => (
+              <li className="experience-row" key={job.company}>
+                <div className="flex items-start gap-4">
+                  <Image
+                    src={job.logo}
+                    alt=""
+                    width={40}
+                    height={40}
+                    className="size-10 shrink-0 rounded-[8px] bg-white object-contain p-1"
+                  />
+                  <div className="min-w-0 flex-1">
+                    <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+                      <p className="font-medium text-white">{job.company}</p>
+                      <time className="shrink-0 font-mono text-xs text-white/[0.42]">
+                        {job.span}
+                      </time>
+                    </div>
+                    <ol className="role-history">
+                      {job.roles.map((role) => (
+                        <li key={`${job.company}-${role.title}`}>
+                          <p className="text-sm font-medium text-white/[0.72]">
+                            {role.title}
+                          </p>
+                          <time className="mt-0.5 block font-mono text-[0.6875rem] text-white/[0.4]">
+                            {role.span}
+                          </time>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
                 </div>
-                <time className="font-mono text-xs text-white/[0.42]">
-                  {role.span}
-                </time>
               </li>
             ))}
           </ol>
-        </div>
-      </section>
-
-      <section id="contact" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="contact-band">
-          <div>
-            <p className="section-kicker">Open channel</p>
-            <h2 className="mt-3 max-w-3xl text-3xl font-semibold text-white sm:text-5xl">
-              Have an AI product, interface, or web system that needs sharper
-              engineering?
-            </h2>
-          </div>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a
-              href="mailto:hello@richardtaylordawson.com"
-              className="command-link primary-command"
-            >
-              <Mail className="size-4" />
-              Email me
-            </a>
-            <a
-              href="https://www.github.com/richardtaylordawson"
-              className="command-link"
-            >
-              <Code2 className="size-4" />
-              GitHub
-            </a>
-            <a
-              href="https://www.linkedin.com/in/taylor-dawson-482927123/"
-              className="command-link"
-            >
-              <Network className="size-4" />
-              LinkedIn
-            </a>
-          </div>
         </div>
       </section>
     </main>
