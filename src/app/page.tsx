@@ -11,8 +11,10 @@ import {
   Sparkles,
   Workflow,
 } from "lucide-react";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 
 import { AiAmbient } from "@/components/ai-ambient";
+import { BrandMark } from "@/components/brand-mark";
 
 const capabilities = [
   {
@@ -101,10 +103,12 @@ export default function Home() {
           className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
           aria-label="Primary navigation"
         >
-          <a href="#top" className="flex items-center gap-3">
-            <span className="grid size-9 place-items-center rounded-[8px] border border-emerald-300/30 bg-emerald-300/10 font-mono text-sm font-semibold text-emerald-100">
-              RTD
-            </span>
+          <a
+            href="#top"
+            className="flex items-center gap-3"
+            aria-label="Richard Taylor Dawson, home"
+          >
+            <BrandMark />
             <span className="hidden text-sm font-medium text-white/80 sm:inline">
               Richard Taylor Dawson
             </span>
@@ -126,14 +130,14 @@ export default function Home() {
               className="icon-link"
               aria-label="GitHub"
             >
-              <Code2 />
+              <FaGithub />
             </a>
             <a
               href="https://www.linkedin.com/in/taylor-dawson-482927123/"
               className="icon-link"
               aria-label="LinkedIn"
             >
-              <Network />
+              <FaLinkedinIn />
             </a>
           </div>
         </nav>
