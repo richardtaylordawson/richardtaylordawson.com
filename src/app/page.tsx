@@ -37,6 +37,8 @@ const projects = [
     tag: "JavaScript application",
     text: "A focused calculator built with Bootstrap, HTML, and ES6 modules, with a set of switchable Bootswatch themes.",
     href: "https://calculator.richardtaylordawson.com",
+    image:
+      "https://calculator.richardtaylordawson.com/images/social-share.png",
     cta: "Open calculator",
   },
   {
@@ -44,6 +46,8 @@ const projects = [
     tag: "Interactive game",
     text: "A retro gaming trivia experience built with NES.css and an open trivia API for a fresh set of questions each round.",
     href: "https://gaming-trivia.richardtaylordawson.com",
+    image:
+      "https://gaming-trivia.richardtaylordawson.com/images/social-share.png",
     cta: "Play gaming trivia",
   },
 ];
@@ -55,8 +59,12 @@ const experience = [
     logo: "/images/logos/audio.png",
     roles: [
       {
+        title: "Staff Software Engineer",
+        span: "Current",
+      },
+      {
         title: "Senior Software Engineer, Marketing",
-        span: "May 2023 to present",
+        span: "Previously",
       },
     ],
   },
@@ -251,7 +259,7 @@ export default function Home() {
         </div>
 
         <div className="mt-10 grid gap-5 lg:grid-cols-2">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <a
               className="project-card group"
               href={project.href}
@@ -259,31 +267,24 @@ export default function Home() {
               rel="noreferrer"
               key={project.title}
             >
-              <div
-                className={`project-preview ${index === 0 ? "calculator-preview" : "trivia-preview"}`}
-                aria-hidden="true"
-              >
-                {index === 0 ? (
-                  <div className="calculator-shell">
-                    <div className="calculator-display">1,337</div>
-                    <div className="calculator-keys">
-                      {["7", "8", "9", "+", "4", "5", "6", "−", "1", "2", "3", "="].map(
-                        (key) => (
-                          <span key={key}>{key}</span>
-                        ),
-                      )}
-                    </div>
-                  </div>
-                ) : (
-                  <div className="trivia-shell">
-                    <div className="pixel-badge">PLAYER 1</div>
-                    <p>Which console introduced the world to Mario?</p>
-                    <div className="trivia-options">
-                      <span>NES</span>
-                      <span>ATARI</span>
-                    </div>
-                  </div>
-                )}
+              <div className="project-preview">
+                <Image
+                  src={project.image}
+                  alt=""
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="project-preview-backdrop"
+                  aria-hidden="true"
+                />
+                <div className="project-preview-image">
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} social share artwork`}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-contain"
+                  />
+                </div>
               </div>
               <div className="p-3 pb-4 pt-5 sm:p-5 sm:pb-5">
                 <div className="flex items-center justify-between gap-4">
