@@ -178,7 +178,7 @@
   }
 
   .section-kicker {
-    @apply font-mono text-xs font-medium uppercase tracking-[0.2em] text-emerald-200/80;
+    @apply font-mono text-sm font-semibold uppercase tracking-[0.16em] text-emerald-100 sm:text-base;
   }
 
   .surface-card {
