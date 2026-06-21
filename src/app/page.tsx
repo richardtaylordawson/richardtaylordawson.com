@@ -224,12 +224,7 @@ export default function Home() {
         className="relative border-y border-white/10 bg-white/[0.025] py-16"
       >
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8">
-          <div>
-            <p className="section-kicker">Operating mode</p>
-            <h2 className="mt-3 max-w-lg text-3xl font-semibold text-white sm:text-4xl">
-              Useful AI needs taste, restraint, and strong interfaces.
-            </h2>
-          </div>
+          <h2 className="section-kicker">What I do</h2>
           <div className="grid gap-4 md:grid-cols-3">
             {capabilities.map((capability) => (
               <article className="surface-card" key={capability.label}>
@@ -248,10 +243,7 @@ export default function Home() {
 
       <section id="work" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div>
-          <p className="section-kicker">Selected projects</p>
-          <h2 className="mt-3 max-w-2xl text-3xl font-semibold text-white sm:text-4xl">
-            Experiments, useful tools, and playful corners of the web.
-          </h2>
+          <h2 className="section-kicker">Selected projects</h2>
           <p className="mt-4 max-w-2xl text-base leading-7 text-white/[0.58]">
             A growing collection of things I&apos;ve designed and built outside
             my day-to-day product work.
@@ -310,11 +302,8 @@ export default function Home() {
       <section className="border-y border-white/10 bg-white/[0.025] py-16">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div>
-            <p className="section-kicker">Career signal</p>
-            <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">
-              Senior frontend roots, full-stack instincts, AI curiosity.
-            </h2>
-            <div className="mt-8 flex flex-wrap gap-2">
+            <h2 className="section-kicker">Experience</h2>
+            <div className="mt-6 flex flex-wrap gap-2">
               {stack.map((item) => (
                 <span className="skill-chip" key={item}>
                   {item}
