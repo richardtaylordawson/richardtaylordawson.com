@@ -165,7 +165,7 @@ export default function Home() {
         className="relative mx-auto grid min-h-[92svh] max-w-7xl items-center gap-12 px-4 pb-20 pt-28 sm:px-6 lg:grid-cols-[1.03fr_0.97fr] lg:px-8"
       >
         <div className="relative z-10 max-w-3xl">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-[8px] border border-amber-300/25 bg-amber-300/10 px-3 py-2 text-sm text-amber-100">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-[8px] border border-signal-amber/30 bg-signal-amber/10 px-3 py-2 text-sm text-signal-amber">
             <Sparkles className="size-4" />
             AI-forward software engineer near Salt Lake City
           </div>
@@ -200,7 +200,7 @@ export default function Home() {
               className="relative z-10 aspect-[712/724] w-full max-w-[420px] rounded-[8px] object-cover shadow-2xl shadow-black/40"
             />
             <div className="agent-console" aria-label="AI systems status">
-              <div className="flex items-center gap-2 text-emerald-100">
+              <div className="flex items-center gap-2 text-signal-teal">
                 <Bot className="size-4" />
                 <span className="font-mono text-xs uppercase tracking-[0.18em]">
                   Agent loop
@@ -228,7 +228,7 @@ export default function Home() {
           <div className="grid gap-4 md:grid-cols-3">
             {capabilities.map((capability) => (
               <article className="surface-card" key={capability.label}>
-                <capability.icon className="size-5 text-emerald-200" />
+                <capability.icon className="size-5 text-signal-teal" />
                 <h3 className="mt-5 text-base font-semibold text-white">
                   {capability.label}
                 </h3>
@@ -281,7 +281,7 @@ export default function Home() {
               <div className="p-3 pb-4 pt-5 sm:p-5 sm:pb-5">
                 <div className="flex items-center justify-between gap-4">
                   <span className="project-tag">{project.tag}</span>
-                  <ExternalLink className="size-4 text-white/40 transition group-hover:text-amber-200" />
+                  <ExternalLink className="size-4 text-white/40 transition group-hover:text-signal-lime" />
                 </div>
                 <h3 className="mt-4 text-2xl font-semibold text-white">
                   {project.title}
@@ -289,7 +289,7 @@ export default function Home() {
                 <p className="mt-3 max-w-xl text-sm leading-6 text-white/[0.62]">
                   {project.text}
                 </p>
-                <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-emerald-200">
+                <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-signal-teal">
                   {project.cta}
                   <ExternalLink className="size-3.5" />
                 </span>
