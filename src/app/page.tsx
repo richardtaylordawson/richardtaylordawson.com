@@ -59,12 +59,12 @@ const experience = [
     logo: "/images/logos/audio.png",
     roles: [
       {
-        title: "Staff Software Engineer",
-        span: "Current",
+        title: "Staff Software Engineer - Marketing",
+        span: "Sep 2024 to present",
       },
       {
-        title: "Senior Software Engineer, Marketing",
-        span: "Previously",
+        title: "Senior Software Engineer - Marketing",
+        span: "May 2023 to Sep 2024",
       },
     ],
   },
