@@ -18,19 +18,27 @@ import { BrandMark } from "@/components/brand-mark";
 const capabilities = [
   {
     icon: BrainCircuit,
-    label: "AI-native interfaces",
-    text: "Conversation-first flows, eval-minded UX, and product surfaces that keep humans in control.",
+    label: "Accessible UI craft",
+    text: "Polished, accessible interfaces built with the details that make products feel clear, durable, and easy to use.",
   },
   {
     icon: Workflow,
-    label: "Product systems",
-    text: "Reusable frontend architecture, content models, and design systems that ship without becoming heavy.",
+    label: "Turning ambiguity into product",
+    text: "User stories, stakeholder notes, and loose requirements translated into work that is sharper than the original ask.",
   },
   {
     icon: Gauge,
-    label: "Fast web craft",
-    text: "Next.js, accessibility, performance, and polish tuned for teams that care about the last 10 percent.",
+    label: "Internal tools and web systems",
+    text: "Marketing flows, forms, CMS integrations, quoting software, infrastructure, and review workflows that help teams move.",
   },
+];
+
+const aboutCopy = [
+  "I’m a software engineer focused on building accessible, polished user interfaces. I take pride in being thoughtful and meticulous, with a sharp eye for the small details that make software feel considered.",
+  "A lot of my strength is in piecing together the real user story from requirements, stakeholder context, and rough edges, then turning that into something clearer and more useful than what was first imagined.",
+  "Currently, I work at AudioEye, where I maintain and build internal websites and apps across marketing flows, forms, headless CMS integrations, sales quoting software, and the infrastructure around those systems. I also help manage pull requests, own new project work, and keep the apps moving in the right direction.",
+  "I’ve worked across in-office, hybrid, and fully remote teams, from a larger company like Clearlink to a small startup like Calldrip. That experience has ranged from end-to-end product work with CRUD applications and databases to the marketing and sales software that helps generate leads and enables teams to sell the product.",
+  "Outside of work, you can usually find me with my wife and kids, playing golf, or watching good sports.",
 ];
 
 const projects = [
@@ -155,6 +163,9 @@ export default function Home() {
             </span>
           </a>
           <div className="hidden items-center gap-6 text-sm text-white/60 md:flex">
+            <a className="transition hover:text-white" href="#about">
+              About
+            </a>
             <a className="transition hover:text-white" href="#work">
               Work
             </a>
@@ -240,6 +251,23 @@ export default function Home() {
           </div>
         </div>
 
+      </section>
+
+      <section id="about" className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+        <div className="grid gap-8 rounded-[8px] border border-white/10 bg-white/[0.045] p-6 shadow-2xl shadow-black/10 sm:p-8 lg:grid-cols-[0.75fr_1.25fr] lg:p-10">
+          <div>
+            <h2 className="section-kicker">About me</h2>
+            <p className="mt-5 max-w-sm text-xl font-semibold leading-8 text-white">
+              I build accessible web products with a practical, detail-oriented
+              approach.
+            </p>
+          </div>
+          <div className="space-y-5 text-base leading-7 text-white/[0.68]">
+            {aboutCopy.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section
