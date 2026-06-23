@@ -110,17 +110,6 @@
     @apply relative grid h-9 w-11 shrink-0 place-items-center overflow-hidden rounded-[8px] border border-primary/35 bg-primary/10 shadow-[inset_0_0_16px_rgb(192_132_252_/_0.12)];
   }
 
-  .brand-mark::after {
-    animation: brand-scan 4.6s ease-in-out infinite;
-    background: linear-gradient(90deg, transparent, rgb(184 243 74 / 0.45), transparent);
-    content: "";
-    height: 1px;
-    left: -40%;
-    position: absolute;
-    top: 50%;
-    width: 180%;
-  }
-
   .brand-mark svg {
     @apply h-7 w-9;
   }
@@ -284,22 +273,6 @@
   }
   100% {
     transform: translateY(118vh);
-  }
-}
-
-@keyframes brand-scan {
-  0%,
-  20% {
-    opacity: 0;
-    transform: translateY(-12px) rotate(-28deg);
-  }
-  45% {
-    opacity: 0.8;
-  }
-  75%,
-  100% {
-    opacity: 0;
-    transform: translateY(12px) rotate(-28deg);
   }
 }
 
