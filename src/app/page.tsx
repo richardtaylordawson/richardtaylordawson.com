@@ -1,13 +1,16 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   BrainCircuit,
   Download,
   ExternalLink,
   Gauge,
   Sparkles,
+  Wrench,
   Workflow,
 } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import { SiApplemusic, SiEpicgames } from "react-icons/si";
 
 import { AiAmbient } from "@/components/ai-ambient";
 import { BrandMark } from "@/components/brand-mark";
@@ -141,6 +144,9 @@ export default function Home() {
             </a>
           </div>
           <div className="flex items-center gap-2">
+            <Link href="/uses" className="icon-link" aria-label="Uses">
+              <Wrench />
+            </Link>
             <a
               href="https://www.github.com/richardtaylordawson"
               className="icon-link"
@@ -154,6 +160,24 @@ export default function Home() {
               aria-label="LinkedIn"
             >
               <FaLinkedinIn />
+            </a>
+            <a
+              href="https://music.apple.com/profile/richardtaylordawson"
+              className="icon-link"
+              aria-label="Apple Music"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <SiApplemusic />
+            </a>
+            <a
+              href="https://rocketleague.tracker.network/rocket-league/profile/epic/LilWizzie/overview"
+              className="icon-link"
+              aria-label="Rocket League"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <SiEpicgames />
             </a>
           </div>
         </nav>
