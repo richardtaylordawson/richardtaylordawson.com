@@ -1,37 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  BrainCircuit,
   Download,
   ExternalLink,
-  Gauge,
   Sparkles,
   Wrench,
-  Workflow,
 } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { SiApplemusic, SiEpicgames } from "react-icons/si";
 
 import { AiAmbient } from "@/components/ai-ambient";
 import { BrandMark } from "@/components/brand-mark";
-
-const capabilities = [
-  {
-    icon: BrainCircuit,
-    label: "Accessible UI craft",
-    text: "Polished, accessible interfaces built with the details that make products feel clear, durable, and easy to use.",
-  },
-  {
-    icon: Workflow,
-    label: "Turning ambiguity into product",
-    text: "User stories, stakeholder notes, and loose requirements translated into work that is sharper than the original ask.",
-  },
-  {
-    icon: Gauge,
-    label: "Internal tools and web systems",
-    text: "Marketing flows, forms, CMS integrations, quoting software, infrastructure, and review workflows that help teams move.",
-  },
-];
 
 const aboutCopy = [
   "I’m a software engineer focused on building accessible, polished user interfaces. I take pride in being thoughtful and meticulous, with a sharp eye for the small details that make software feel considered.",
@@ -163,14 +142,14 @@ export default function Home() {
             </span>
           </a>
           <div className="hidden items-center gap-6 text-sm text-white/60 md:flex">
+            <a className="transition hover:text-white" href="#experience">
+              Experience
+            </a>
             <a className="transition hover:text-white" href="#about">
               About
             </a>
             <a className="transition hover:text-white" href="#work">
               Work
-            </a>
-            <a className="transition hover:text-white" href="#systems">
-              Systems
             </a>
           </div>
           <div className="flex items-center gap-2">
@@ -253,7 +232,61 @@ export default function Home() {
 
       </section>
 
-      <section id="about" className="mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
+      <section
+        id="experience"
+        className="border-y border-white/10 bg-white/[0.025] py-8"
+      >
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+          <div>
+            <h2 className="section-kicker">Experience</h2>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {stack.map((item) => (
+                <span className="skill-chip" key={item}>
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <ol className="space-y-3">
+            {experience.map((job) => (
+              <li className="experience-row" key={job.company}>
+                <div className="flex items-start gap-4">
+                  <Image
+                    src={job.logo}
+                    alt=""
+                    width={40}
+                    height={40}
+                    className="size-10 shrink-0 rounded-[8px] bg-white object-contain p-1"
+                  />
+                  <div className="min-w-0 flex-1">
+                    <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+                      <p className="font-medium text-white">{job.company}</p>
+                      <time className="shrink-0 font-mono text-xs text-white/[0.42]">
+                        {job.span}
+                      </time>
+                    </div>
+                    <ol className="role-history">
+                      {job.roles.map((role) => (
+                        <li key={`${job.company}-${role.title}`}>
+                          <p className="text-sm font-medium text-white/[0.72]">
+                            {role.title}
+                          </p>
+                          <time className="mt-0.5 block font-mono text-[0.6875rem] text-white/[0.4]">
+                            {role.span}
+                          </time>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section id="about" className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="grid gap-8 rounded-[8px] border border-white/10 bg-white/[0.045] p-6 shadow-2xl shadow-black/10 sm:p-8 lg:grid-cols-[0.75fr_1.25fr] lg:p-10">
           <div>
             <h2 className="section-kicker">About me</h2>
@@ -265,28 +298,6 @@ export default function Home() {
           <div className="space-y-5 text-base leading-7 text-white/[0.68]">
             {aboutCopy.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="systems"
-        className="relative border-y border-white/10 bg-white/[0.025] py-8"
-      >
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8">
-          <h2 className="section-kicker">What I do</h2>
-          <div className="grid gap-4 md:grid-cols-3">
-            {capabilities.map((capability) => (
-              <article className="surface-card" key={capability.label}>
-                <capability.icon className="size-5 text-signal-teal" />
-                <h3 className="mt-5 text-base font-semibold text-white">
-                  {capability.label}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-white/60">
-                  {capability.text}
-                </p>
-              </article>
             ))}
           </div>
         </div>
@@ -405,57 +416,6 @@ export default function Home() {
               </a>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="border-y border-white/10 bg-white/[0.025] py-8">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-          <div>
-            <h2 className="section-kicker">Experience</h2>
-            <div className="mt-6 flex flex-wrap gap-2">
-              {stack.map((item) => (
-                <span className="skill-chip" key={item}>
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <ol className="space-y-3">
-            {experience.map((job) => (
-              <li className="experience-row" key={job.company}>
-                <div className="flex items-start gap-4">
-                  <Image
-                    src={job.logo}
-                    alt=""
-                    width={40}
-                    height={40}
-                    className="size-10 shrink-0 rounded-[8px] bg-white object-contain p-1"
-                  />
-                  <div className="min-w-0 flex-1">
-                    <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
-                      <p className="font-medium text-white">{job.company}</p>
-                      <time className="shrink-0 font-mono text-xs text-white/[0.42]">
-                        {job.span}
-                      </time>
-                    </div>
-                    <ol className="role-history">
-                      {job.roles.map((role) => (
-                        <li key={`${job.company}-${role.title}`}>
-                          <p className="text-sm font-medium text-white/[0.72]">
-                            {role.title}
-                          </p>
-                          <time className="mt-0.5 block font-mono text-[0.6875rem] text-white/[0.4]">
-                            {role.span}
-                          </time>
-                        </li>
-                      ))}
-                    </ol>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ol>
         </div>
       </section>
     </main>
