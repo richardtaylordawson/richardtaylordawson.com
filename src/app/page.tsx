@@ -215,7 +215,7 @@ export default function Home() {
 
       <section
         id="top"
-        className="relative mx-auto flex min-h-[92svh] max-w-7xl items-center px-4 pb-20 pt-28 sm:px-6 lg:px-8"
+        className="relative mx-auto flex min-h-[92svh] max-w-7xl items-center px-4 pb-10 pt-20 sm:px-6 lg:px-8"
       >
         <div className="relative z-10 w-full">
           <div className="mb-6 flex items-center justify-between gap-4">
@@ -253,7 +253,7 @@ export default function Home() {
 
       </section>
 
-      <section id="about" className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+      <section id="about" className="mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
         <div className="grid gap-8 rounded-[8px] border border-white/10 bg-white/[0.045] p-6 shadow-2xl shadow-black/10 sm:p-8 lg:grid-cols-[0.75fr_1.25fr] lg:p-10">
           <div>
             <h2 className="section-kicker">About me</h2>
@@ -272,7 +272,7 @@ export default function Home() {
 
       <section
         id="systems"
-        className="relative border-y border-white/10 bg-white/[0.025] py-16"
+        className="relative border-y border-white/10 bg-white/[0.025] py-8"
       >
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8">
           <h2 className="section-kicker">What I do</h2>
@@ -292,7 +292,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="work" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <section id="work" className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div>
           <h2 className="section-kicker">Selected projects</h2>
           <p className="mt-4 max-w-2xl text-base leading-7 text-white/[0.58]">
@@ -349,7 +349,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="mt-16 border-t border-white/10 pt-12">
+        <div className="mt-8 border-t border-white/10 pt-6">
           <div>
             <h2 className="section-kicker">Business sites</h2>
             <p className="mt-4 max-w-2xl text-base leading-7 text-white/[0.58]">
@@ -408,7 +408,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.025] py-16">
+      <section className="border-y border-white/10 bg-white/[0.025] py-8">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div>
             <h2 className="section-kicker">Experience</h2>
