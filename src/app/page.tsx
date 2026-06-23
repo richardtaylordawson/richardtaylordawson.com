@@ -1,6 +1,5 @@
 import Image from "next/image";
 import {
-  Bot,
   BrainCircuit,
   Download,
   ExternalLink,
@@ -162,9 +161,18 @@ export default function Home() {
 
       <section
         id="top"
-        className="relative mx-auto grid min-h-[92svh] max-w-7xl items-center gap-12 px-4 pb-20 pt-28 sm:px-6 lg:grid-cols-[1.03fr_0.97fr] lg:px-8"
+        className="relative mx-auto flex min-h-[92svh] max-w-7xl items-center px-4 pb-20 pt-28 sm:px-6 lg:px-8"
       >
-        <div className="relative z-10 max-w-3xl">
+        <Image
+          src="/images/headshot.png"
+          alt="Portrait of Richard Taylor Dawson"
+          width={712}
+          height={724}
+          priority
+          className="absolute right-4 top-24 z-10 aspect-square size-24 rounded-full border border-white/20 object-cover object-top p-1 shadow-xl shadow-black/30 sm:right-6 sm:size-32 lg:right-8 lg:size-40"
+        />
+
+        <div className="relative z-10 mt-28 max-w-4xl sm:mt-0 sm:pr-36 lg:pr-48 xl:pr-0">
           <div className="mb-6 inline-flex items-center gap-2 rounded-[8px] border border-signal-amber/30 bg-signal-amber/10 px-3 py-2 text-sm text-signal-amber">
             <Sparkles className="size-4" />
             AI-forward software engineer near Salt Lake City
@@ -188,35 +196,6 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative z-10 lg:justify-self-end">
-          <div className="portrait-stage">
-            <div className="portrait-orbit" aria-hidden="true" />
-            <Image
-              src="/images/headshot.png"
-              alt="Portrait of Richard Taylor Dawson"
-              width={712}
-              height={724}
-              priority
-              className="relative z-10 aspect-[712/724] w-full max-w-[420px] rounded-[8px] object-cover shadow-2xl shadow-black/40"
-            />
-            <div className="agent-console" aria-label="AI systems status">
-              <div className="flex items-center gap-2 text-signal-teal">
-                <Bot className="size-4" />
-                <span className="font-mono text-xs uppercase tracking-[0.18em]">
-                  Agent loop
-                </span>
-              </div>
-              <div className="mt-4 space-y-3">
-                {["intent", "interface", "ship"].map((item, index) => (
-                  <div className="console-row" key={item}>
-                    <span>{item}</span>
-                    <span style={{ animationDelay: `${index * 0.35}s` }} />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
 
       <section
