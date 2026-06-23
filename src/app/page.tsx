@@ -142,11 +142,11 @@ export default function Home() {
             </span>
           </a>
           <div className="hidden items-center gap-6 text-sm text-white/60 md:flex">
-            <a className="transition hover:text-white" href="#experience">
-              Experience
-            </a>
             <a className="transition hover:text-white" href="#about">
               About
+            </a>
+            <a className="transition hover:text-white" href="#experience">
+              Experience
             </a>
             <a className="transition hover:text-white" href="#work">
               Work
@@ -194,7 +194,7 @@ export default function Home() {
 
       <section
         id="top"
-        className="relative mx-auto flex min-h-[92svh] max-w-7xl items-center px-4 pb-10 pt-20 sm:px-6 lg:px-8"
+        className="relative mx-auto flex min-h-[46svh] max-w-7xl items-center px-4 pb-5 pt-10 sm:px-6 lg:px-8"
       >
         <div className="relative z-10 w-full">
           <div className="mb-6 flex items-center justify-between gap-4">
@@ -230,6 +230,23 @@ export default function Home() {
           </div>
         </div>
 
+      </section>
+
+      <section id="about" className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <div className="grid gap-8 rounded-[8px] border border-white/10 bg-white/[0.045] p-6 shadow-2xl shadow-black/10 sm:p-8 lg:grid-cols-[0.75fr_1.25fr] lg:p-10">
+          <div>
+            <h2 className="section-kicker">About me</h2>
+            <p className="mt-5 max-w-sm text-xl font-semibold leading-8 text-white">
+              I build accessible web products with a practical, detail-oriented
+              approach.
+            </p>
+          </div>
+          <div className="space-y-5 text-base leading-7 text-white/[0.68]">
+            {aboutCopy.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section
@@ -283,23 +300,6 @@ export default function Home() {
               </li>
             ))}
           </ol>
-        </div>
-      </section>
-
-      <section id="about" className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <div className="grid gap-8 rounded-[8px] border border-white/10 bg-white/[0.045] p-6 shadow-2xl shadow-black/10 sm:p-8 lg:grid-cols-[0.75fr_1.25fr] lg:p-10">
-          <div>
-            <h2 className="section-kicker">About me</h2>
-            <p className="mt-5 max-w-sm text-xl font-semibold leading-8 text-white">
-              I build accessible web products with a practical, detail-oriented
-              approach.
-            </p>
-          </div>
-          <div className="space-y-5 text-base leading-7 text-white/[0.68]">
-            {aboutCopy.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
         </div>
       </section>
 
