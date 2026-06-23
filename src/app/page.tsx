@@ -233,7 +233,7 @@ export default function Home() {
             />
           </div>
           <h1 className="max-w-4xl text-balance text-5xl font-semibold leading-[0.98] tracking-normal text-white sm:text-6xl lg:text-7xl">
-            Taylor Dawson builds software.
+            Taylor Dawson.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/[0.68] sm:text-xl">
             I design and ship modern web products where AI, accessibility, and
