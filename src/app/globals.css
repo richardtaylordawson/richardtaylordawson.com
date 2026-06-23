@@ -107,12 +107,12 @@
 
 @layer components {
   .brand-mark {
-    @apply relative grid size-9 shrink-0 place-items-center overflow-hidden rounded-[8px] border border-primary/35 bg-primary/10 text-primary shadow-[inset_0_0_16px_rgb(192_132_252_/_0.12)];
+    @apply relative grid h-9 w-11 shrink-0 place-items-center overflow-hidden rounded-[8px] border border-primary/35 bg-primary/10 shadow-[inset_0_0_16px_rgb(192_132_252_/_0.12)];
   }
 
   .brand-mark::after {
     animation: brand-scan 4.6s ease-in-out infinite;
-    background: linear-gradient(90deg, transparent, rgb(184 243 74 / 0.78), transparent);
+    background: linear-gradient(90deg, transparent, rgb(184 243 74 / 0.45), transparent);
     content: "";
     height: 1px;
     left: -40%;
@@ -122,21 +122,27 @@
   }
 
   .brand-mark svg {
-    @apply size-7;
+    @apply h-7 w-9;
   }
 
-  .brand-mark-node {
-    animation: brand-node 3.6s ease-in-out infinite;
-    transform-box: fill-box;
-    transform-origin: center;
+  .brand-mark-shadow {
+    fill: rgb(12 7 17 / 0.42);
   }
 
-  .brand-mark-node:nth-of-type(3n) {
-    animation-delay: 0.6s;
+  .brand-mark-d {
+    fill: var(--primary);
   }
 
-  .brand-mark-node:nth-of-type(3n + 1) {
-    animation-delay: 1.2s;
+  .brand-mark-r {
+    fill: var(--accent);
+  }
+
+  .brand-mark-t {
+    fill: var(--foreground);
+  }
+
+  .brand-mark-lime {
+    fill: var(--secondary);
   }
 
   .icon-link {
@@ -294,18 +300,6 @@
   100% {
     opacity: 0;
     transform: translateY(12px) rotate(-28deg);
-  }
-}
-
-@keyframes brand-node {
-  0%,
-  100% {
-    opacity: 0.5;
-    transform: scale(0.78);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1);
   }
 }
 
