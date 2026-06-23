@@ -199,7 +199,7 @@ export default function Home() {
               width={712}
               height={724}
               priority
-              className="aspect-square size-20 shrink-0 rounded-full border border-white/20 object-cover object-top p-1 shadow-xl shadow-black/30 sm:size-28 lg:size-32"
+              className="aspect-square size-10 shrink-0 rounded-full border border-white/20 object-cover object-top p-1 shadow-xl shadow-black/30 sm:size-14 lg:size-16"
             />
           </div>
           <h1 className="max-w-4xl text-balance text-5xl font-semibold leading-[0.98] tracking-normal text-white sm:text-6xl lg:text-7xl">
