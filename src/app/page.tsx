@@ -54,6 +54,25 @@ const projects = [
   },
 ];
 
+const businessSites = [
+  {
+    title: "Simply Rooted Spa",
+    tag: "Business website",
+    text: "A live small-business site for services, appointment booking, gift cards, and current spa information.",
+    href: "https://www.simplyrootedspa.com",
+    image: "https://www.simplyrootedspa.com/images/social-share.png",
+    cta: "Visit site",
+  },
+  {
+    title: "Balanced Tax Solutions",
+    tag: "Business website",
+    text: "A live site that gives customers a clear path to service details, tax information, and appointment booking.",
+    href: "https://www.balancedtaxsolutions.com",
+    image: "https://www.balancedtaxsolutions.com/images/social-share.png",
+    cta: "Visit site",
+  },
+];
+
 const experience = [
   {
     company: "AudioEye",
@@ -300,6 +319,64 @@ export default function Home() {
               </div>
             </a>
           ))}
+        </div>
+
+        <div className="mt-16 border-t border-white/10 pt-12">
+          <div>
+            <h2 className="section-kicker">Business sites</h2>
+            <p className="mt-4 max-w-2xl text-base leading-7 text-white/[0.58]">
+              Live sites I&apos;ve worked on for businesses, separated from the
+              personal projects and experiments.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-5 lg:grid-cols-2">
+            {businessSites.map((site) => (
+              <a
+                className="project-card group"
+                href={site.href}
+                target="_blank"
+                rel="noreferrer"
+                key={site.title}
+              >
+                <div className="project-preview">
+                  <Image
+                    src={site.image}
+                    alt=""
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="project-preview-backdrop"
+                    aria-hidden="true"
+                  />
+                  <div className="project-preview-image">
+                    <Image
+                      src={site.image}
+                      alt={`${site.title} social share artwork`}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+                <div className="p-3 pb-4 pt-5 sm:p-5 sm:pb-5">
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="project-tag">{site.tag}</span>
+                    <ExternalLink className="size-4 text-white/40 transition group-hover:text-signal-lime" />
+                  </div>
+                  <h3 className="mt-4 text-2xl font-semibold text-white">
+                    {site.title}
+                  </h3>
+                  <p className="mt-3 max-w-xl text-sm leading-6 text-white/[0.62]">
+                    {site.text}
+                  </p>
+                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-signal-teal">
+                    {site.cta}
+                    <ExternalLink className="size-3.5" />
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 

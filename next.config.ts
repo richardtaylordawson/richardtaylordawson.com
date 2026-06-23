@@ -15,6 +15,18 @@ const nextConfig: NextConfig = {
         pathname: "/images/social-share.png",
         search: "",
       },
+      {
+        protocol: "https",
+        hostname: "www.simplyrootedspa.com",
+        pathname: "/images/social-share.png",
+        search: "",
+      },
+      {
+        protocol: "https",
+        hostname: "www.balancedtaxsolutions.com",
+        pathname: "/images/social-share.png",
+        search: "",
+      },
     ],
   },
   turbopack: {
