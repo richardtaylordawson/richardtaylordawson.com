@@ -102,6 +102,24 @@
   }
   html {
     @apply font-sans;
+    cursor:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M4.5 3.5 24 14.2 15.1 17.5 12.1 26z' fill='%23140c1c' fill-opacity='.94' stroke='%232dd4bf' stroke-linejoin='round' stroke-width='1.35'/%3E%3Cpath d='M7.8 6.7 19.5 13.3' fill='none' stroke='%23fff7f0' stroke-linecap='round' stroke-opacity='.44' stroke-width='1'/%3E%3Cpath d='M15.1 17.5 21.7 24.1' fill='none' stroke='%23b8f34a' stroke-linecap='round' stroke-opacity='.9' stroke-width='1.2'/%3E%3Ccircle cx='22.6' cy='14.2' r='1.55' fill='%23b8f34a' stroke='%23140c1c' stroke-width='.65'/%3E%3C/svg%3E")
+        5 4,
+      auto;
+  }
+  a,
+  button,
+  summary,
+  [role="button"] {
+    cursor:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M4.5 3.5 24 14.2 15.1 17.5 12.1 26z' fill='%23140c1c' fill-opacity='.94' stroke='%23b8f34a' stroke-linejoin='round' stroke-width='1.35'/%3E%3Cpath d='M7.8 6.7 19.5 13.3' fill='none' stroke='%23fff7f0' stroke-linecap='round' stroke-opacity='.44' stroke-width='1'/%3E%3Cpath d='M15.1 17.5 21.7 24.1' fill='none' stroke='%232dd4bf' stroke-linecap='round' stroke-opacity='.9' stroke-width='1.2'/%3E%3Ccircle cx='23.2' cy='23.2' r='4.4' fill='%23140c1c' fill-opacity='.78' stroke='%23c084fc' stroke-width='1.15'/%3E%3Cpath d='M23.2 18.6v2.1M23.2 25.7v2.1M18.6 23.2h2.1M25.7 23.2h2.1' stroke='%23b8f34a' stroke-linecap='round' stroke-width='1'/%3E%3C/svg%3E")
+        5 4,
+      pointer;
+  }
+  input,
+  textarea,
+  [contenteditable="true"] {
+    cursor: text;
   }
 }
 
@@ -147,15 +165,97 @@
   }
 
   .section-kicker {
-    @apply font-mono text-sm font-semibold uppercase tracking-[0.16em] text-primary sm:text-base;
+    @apply relative inline-flex pb-2 font-mono text-sm font-semibold uppercase tracking-[0.16em] text-primary sm:text-base;
+  }
+
+  .section-kicker::before,
+  .section-kicker::after {
+    border-radius: 999px;
+    content: "";
+    height: 1px;
+    inset: auto 0 0;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  .section-kicker::before {
+    background: linear-gradient(
+      90deg,
+      rgb(45 212 191 / 0.18),
+      rgb(184 243 74 / 0.2),
+      rgb(45 212 191 / 0.08)
+    );
+  }
+
+  .section-kicker::after {
+    animation: signal-eyebrow-pulse 4.8s ease-in-out infinite;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgb(45 212 191 / 0.9),
+      rgb(184 243 74 / 0.72),
+      transparent
+    );
+    transform: scaleX(0.28);
+    transform-origin: left;
   }
 
   .surface-card {
-    @apply rounded-[8px] border border-white/10 bg-white/[0.055] p-5 shadow-2xl shadow-black/10 transition duration-300 hover:-translate-y-1 hover:border-primary/35 hover:bg-white/[0.075];
+    @apply relative overflow-hidden rounded-[8px] border border-white/10 bg-white/[0.055] p-5 shadow-2xl shadow-black/10 transition duration-300 hover:-translate-y-1 hover:border-primary/35 hover:bg-white/[0.075];
+  }
+
+  .surface-card::before {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgb(45 212 191 / 0.9),
+      rgb(184 243 74 / 0.9),
+      transparent
+    );
+    content: "";
+    height: 1px;
+    inset: -1px 0 auto;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(-100%);
+  }
+
+  .surface-card:hover::before {
+    animation: signal-card-sweep 1.2s ease both;
+    opacity: 1;
   }
 
   .project-card {
-    @apply block overflow-hidden rounded-[8px] border border-white/10 bg-white/[0.045] p-3 transition duration-300 hover:-translate-y-1 hover:border-signal-lime/35 hover:bg-white/[0.065] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary;
+    @apply relative block overflow-hidden rounded-[8px] border border-white/10 bg-white/[0.045] p-3 transition duration-300 hover:-translate-y-1 hover:border-signal-lime/35 hover:bg-white/[0.065] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary;
+  }
+
+  .project-card::before {
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 4;
+  }
+
+  .project-card::before {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgb(45 212 191 / 0.95),
+      rgb(184 243 74 / 0.95),
+      transparent
+    );
+    height: 1px;
+    left: 0.75rem;
+    right: 0.75rem;
+    top: 0;
+    transform: translateX(-115%);
+  }
+
+  .project-card:hover::before {
+    animation: signal-card-sweep 1.15s ease both;
+    opacity: 1;
   }
 
   .project-preview {
@@ -189,21 +289,123 @@
     @apply rounded-[8px] border border-white/10 bg-white/[0.055] px-3 py-2 text-sm text-white/[0.72];
   }
 
+  .experience-action-link {
+    @apply inline-flex h-9 items-center justify-center gap-2 rounded-[8px] border border-white/[0.12] bg-white/[0.05] px-3 text-sm font-medium text-white/[0.72] transition hover:border-primary/35 hover:bg-primary/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary;
+  }
+
   .experience-row {
     @apply rounded-[8px] border border-white/10 bg-white/[0.045] p-4 transition hover:border-primary/35 hover:bg-white/[0.065];
   }
 
   .role-history {
-    @apply mt-4 space-y-3 border-l border-primary/25 pl-4;
+    @apply mt-4 space-y-3 pl-4;
+    position: relative;
   }
 
-  .role-history li {
+  .role-history-item {
     @apply relative;
   }
 
-  .role-history li::before {
-    @apply absolute -left-[1.1875rem] top-1.5 size-1.5 rounded-full bg-primary ring-4 ring-card;
+  .role-node {
+    display: grid;
+    height: 1rem;
+    left: -1.5rem;
+    place-items: center;
+    pointer-events: none;
+    position: absolute;
+    top: 0.25rem;
+    width: 1rem;
+    z-index: 1;
+  }
+
+  .role-node::before {
+    background: var(--primary);
+    border-radius: 999px;
+    box-shadow: 0 0 0 4px var(--card);
     content: "";
+    height: 0.375rem;
+    width: 0.375rem;
+  }
+
+  .role-node::after {
+    animation: role-node-signal 5.8s linear infinite;
+    background: conic-gradient(
+      from -90deg,
+      transparent 0deg,
+      transparent 44deg,
+      rgb(45 212 191 / 0.96) 72deg,
+      rgb(184 243 74 / 0.96) 128deg,
+      rgb(45 212 191 / 0.96) 186deg,
+      transparent 232deg,
+      transparent 360deg
+    );
+    border-radius: 999px;
+    content: "";
+    inset: 0;
+    opacity: 0;
+    padding: 1px;
+    position: absolute;
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    mask-composite: exclude;
+  }
+
+  .role-segment {
+    background: linear-gradient(
+      to bottom,
+      rgb(192 132 252 / 0.3),
+      rgb(192 132 252 / 0.3) calc(100% - 0.5rem),
+      transparent
+    );
+    bottom: -1.5rem;
+    left: -1rem;
+    pointer-events: none;
+    position: absolute;
+    top: 0.75rem;
+    width: 1px;
+  }
+
+  .role-segment::after {
+    animation: role-segment-signal 5.8s cubic-bezier(0.65, 0, 0.35, 1)
+      infinite;
+    background: linear-gradient(
+      to bottom,
+      rgb(45 212 191 / 0),
+      rgb(45 212 191 / 0.95) 18%,
+      rgb(184 243 74 / 0.86) 62%,
+      rgb(45 212 191 / 0)
+    );
+    content: "";
+    inset: 0;
+    opacity: 0;
+    position: absolute;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  .role-history-item:nth-child(1) .role-node::after {
+    animation-delay: 0s;
+  }
+
+  .role-history-item:nth-child(1) .role-segment::after {
+    animation-delay: 0.48s;
+  }
+
+  .role-history-item:nth-child(2) .role-node::after {
+    animation-delay: 1.72s;
+  }
+
+  .role-history-item:nth-child(2) .role-segment::after {
+    animation-delay: 2.2s;
+  }
+
+  .role-history-item:nth-child(3) .role-node::after {
+    animation-delay: 3.44s;
   }
 
 }
@@ -250,10 +452,10 @@
 }
 
 .signal-rail span {
-  animation: rail-signal 4.8s linear infinite;
+  animation: rail-signal 9.6s linear infinite;
   background: linear-gradient(to bottom, transparent, #2dd4bf, transparent);
   display: block;
-  height: 18vh;
+  height: 36vh;
   opacity: 0.7;
   position: absolute;
   width: 1px;
@@ -276,6 +478,105 @@
   }
 }
 
+@keyframes signal-card-sweep {
+  0% {
+    transform: translateX(-115%);
+  }
+  100% {
+    transform: translateX(115%);
+  }
+}
+
+@keyframes role-segment-signal {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  16% {
+    opacity: 1;
+    transform: scaleY(0);
+  }
+  48% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  64%,
+  100% {
+    opacity: 0;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes role-node-signal {
+  0%,
+  8% {
+    opacity: 0;
+    transform: rotate(-80deg) scale(0.82);
+  }
+  13% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+  26% {
+    opacity: 1;
+    transform: rotate(235deg) scale(1.08);
+  }
+  32%,
+  100% {
+    opacity: 0;
+    transform: rotate(360deg) scale(0.92);
+  }
+}
+
+@keyframes signal-eyebrow-pulse {
+  0%,
+  100% {
+    opacity: 0.28;
+    transform: scaleX(0.72);
+    transform-origin: left;
+  }
+  45%,
+  62% {
+    opacity: 0.86;
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@keyframes signal-page-in {
+  0% {
+    clip-path: inset(0 0 0 8%);
+    filter: drop-shadow(-20px 0 18px rgb(45 212 191 / 0.22));
+    opacity: 0.82;
+    transform: translateX(10px);
+  }
+  100% {
+    clip-path: inset(0);
+    filter: drop-shadow(0 0 0 rgb(45 212 191 / 0));
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes signal-page-out {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0.88;
+    transform: translateX(-10px);
+  }
+}
+
+::view-transition-old(.signal-page-exit) {
+  animation: signal-page-out 220ms ease both;
+}
+
+::view-transition-new(.signal-page-enter) {
+  animation: signal-page-in 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 @media (max-width: 768px) {
   .signal-rail {
     display: none;
@@ -291,5 +592,10 @@
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .role-segment::after,
+  .role-node::after {
+    display: none;
   }
 }

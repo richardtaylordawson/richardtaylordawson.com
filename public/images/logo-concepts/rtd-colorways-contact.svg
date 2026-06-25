@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="1810" viewBox="0 0 1240 1810" role="img" aria-labelledby="title desc">
+  <title id="title">RTD logo colorway contact sheet</title>
+  <desc id="desc">Six RTD monogram logo colorways using the site's plum, lavender, off-white, teal, and lime palette.</desc>
+  <defs>
+    <style>
+      .label { fill: #c2b4c9; font: 600 28px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: .01em; }
+      .sub { fill: #8f7c99; font: 500 20px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .panel { fill: #140c1c; stroke: #35213f; stroke-width: 2; }
+      .shadow { fill: #0c0711; opacity: .42; }
+    </style>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0.75 0 0 0 0.75  0 0.35 0 0 0.25  0 0 0.95 0 1  0 0 0 .35 0" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1240" height="1810" fill="#0f0716"/>
+  <text x="80" y="78" class="label" style="font-size:42px;fill:#fff7f0">RTD logo colorways</text>
+  <text x="80" y="114" class="sub">Selected concepts 1, 2, and 5; tuned to #140c1c, #fff7f0, #c084fc, #2dd4bf, and #b8f34a.</text>
+
+  <!-- Concept 1 / site primary -->
+  <g transform="translate(80 160)">
+    <rect class="panel" width="520" height="470" rx="34"/>
+    <text x="28" y="52" class="label">1A — site primary</text>
+    <text x="28" y="82" class="sub">off-white + lavender, restrained lime</text>
+    <g transform="translate(35 72)" filter="url(#softGlow)">
+      <path class="shadow" d="M82 125h142q41 0 68 28t27 70v105h-64v-94q0-23-15-37t-39-14H145v95h98v54h-98v99H82V125z"/>
+      <path fill="#fff7f0" d="M66 112h142q41 0 68 28t27 70v105h-64v-94q0-23-15-37t-39-14H129v95h98v54h-98v99H66V112z"/>
+      <path fill="#c084fc" opacity=".8" d="M129 265h74q20 0 20 19v35h-56l69 99h-76l-58-99h27z"/>
+      <path class="shadow" d="M286 125h132q43 0 71 28t28 70v95q0 42-28 70t-71 28H286v-64h117q24 0 38-15t14-39v-55q0-24-14-39t-38-15H286z"/>
+      <path fill="#fff7f0" d="M270 112h132q43 0 71 28t28 70v95q0 42-28 70t-71 28H270v-64h117q24 0 38-15t14-39v-55q0-24-14-39t-38-15H270z"/>
+      <path fill="#c084fc" d="M178 202h208v53h-77v163h-62V255h-69z"/>
+      <rect x="247" y="382" width="62" height="36" rx="9" fill="#b8f34a"/>
+    </g>
+  </g>
+
+  <!-- Concept 1 / teal signal -->
+  <g transform="translate(640 160)">
+    <rect class="panel" width="520" height="470" rx="34"/>
+    <text x="28" y="52" class="label">1B — teal signal</text>
+    <text x="28" y="82" class="sub">lavender structure, teal T, tiny lime</text>
+    <g transform="translate(35 72)" filter="url(#softGlow)">
+      <path class="shadow" d="M82 125h142q41 0 68 28t27 70v105h-64v-94q0-23-15-37t-39-14H145v95h98v54h-98v99H82V125z"/>
+      <path fill="#c084fc" d="M66 112h142q41 0 68 28t27 70v105h-64v-94q0-23-15-37t-39-14H129v95h98v54h-98v99H66V112z"/>
+      <path fill="#fff7f0" opacity=".82" d="M129 265h74q20 0 20 19v35h-56l69 99h-76l-58-99h27z"/>
+      <path class="shadow" d="M286 125h132q43 0 71 28t28 70v95q0 42-28 70t-71 28H286v-64h117q24 0 38-15t14-39v-55q0-24-14-39t-38-15H286z"/>
+      <path fill="#c084fc" d="M270 112h132q43 0 71 28t28 70v95q0 42-28 70t-71 28H270v-64h117q24 0 38-15t14-39v-55q0-24-14-39t-38-15H270z"/>
+      <path fill="#2dd4bf" d="M178 202h208v53h-77v163h-62V255h-69z"/>
+      <rect x="247" y="382" width="62" height="36" rx="9" fill="#b8f34a"/>
+    </g>
+  </g>
+
+  <!-- Concept 2 / site primary -->
+  <g transform="translate(80 690)">
+    <rect class="panel" width="520" height="470" rx="34"/>
+    <text x="28" y="52" class="label">2A — site primary</text>
+    <text x="28" y="82" class="sub">cream T, lavender aperture, lime pin</text>
+    <g transform="translate(44 82)" filter="url(#softGlow)">
+      <path class="shadow" d="M296 92h102q53 0 86 34t33 88v78q0 54-33 88t-86 34H296v-62h86q28 0 46-18t18-47v-68q0-29-18-47t-46-18h-86z"/>
+      <path fill="#c084fc" d="M280 78h102q53 0 86 34t33 88v78q0 54-33 88t-86 34H280v-62h86q28 0 46-18t18-47v-68q0-29-18-47t-46-18h-86z"/>
+      <path class="shadow" d="M96 158h139q32 0 52 19t20 50v49q0 31-20 50t-52 19h-36l70 69h-81l-90-91v-55h108q16 0 26-9t10-25q0-16-10-25t-26-9H96z"/>
+      <path fill="#c084fc" d="M80 144h139q32 0 52 19t20 50v49q0 31-20 50t-52 50h-36l70 69h-81l-90-91v-55h108q16 0 26-9t10-25q0-16-10-25t-26-9H80z"/>
+      <path fill="#fff7f0" d="M80 78h310v58H266v264h-68V136H80z"/>
+      <rect x="198" y="364" width="68" height="36" rx="9" fill="#b8f34a"/>
+    </g>
+  </g>
+
+  <!-- Concept 2 / teal signal -->
+  <g transform="translate(640 690)">
+    <rect class="panel" width="520" height="470" rx="34"/>
+    <text x="28" y="52" class="label">2B — teal signal</text>
+    <text x="28" y="82" class="sub">lavender D, teal R, off-white T</text>
+    <g transform="translate(44 82)" filter="url(#softGlow)">
+      <path class="shadow" d="M296 92h102q53 0 86 34t33 88v78q0 54-33 88t-86 34H296v-62h86q28 0 46-18t18-47v-68q0-29-18-47t-46-18h-86z"/>
+      <path fill="#c084fc" d="M280 78h102q53 0 86 34t33 88v78q0 54-33 88t-86 34H280v-62h86q28 0 46-18t18-47v-68q0-29-18-47t-46-18h-86z"/>
+      <path class="shadow" d="M96 158h139q32 0 52 19t20 50v49q0 31-20 50t-52 19h-36l70 69h-81l-90-91v-55h108q16 0 26-9t10-25q0-16-10-25t-26-9H96z"/>
+      <path fill="#2dd4bf" d="M80 144h139q32 0 52 19t20 50v49q0 31-20 50t-52 19h-36l70 69h-81l-90-91v-55h108q16 0 26-9t10-25q0-16-10-25t-26-9H80z"/>
+      <path fill="#fff7f0" d="M80 78h310v58H266v264h-68V136H80z"/>
+      <rect x="198" y="364" width="68" height="36" rx="9" fill="#b8f34a"/>
+    </g>
+  </g>
+
+  <!-- Concept 5 / site primary -->
+  <g transform="translate(80 1220)">
+    <rect class="panel" width="520" height="470" rx="34"/>
+    <text x="28" y="52" class="label">5A — site primary</text>
+    <text x="28" y="82" class="sub">lavender body, off-white top, lime terminal</text>
+    <g transform="translate(48 86)" filter="url(#softGlow)">
+      <path class="shadow" d="M85 125h122q42 0 68 25t26 66v30q0 41-26 66t-68 25h-38l66 77h-78l-76-91v-53h104q21 0 34-12t13-32q0-20-13-32t-34-12H85z"/>
+      <path fill="#c084fc" d="M69 111h122q42 0 68 25t26 66v30q0 41-26 66t-68 25h-38l66 77h-78l-76-91v-53h104q21 0 34-12t13-32q0-20-13-32t-34-12H69z"/>
+      <path class="shadow" d="M306 125h103q51 0 84 33t33 84v72q0 52-33 84t-84 32H306v-62h85q28 0 45-17t17-45v-56q0-28-17-45t-45-17h-85z"/>
+      <path fill="#c084fc" d="M290 111h103q51 0 84 33t33 84v72q0 52-33 84t-84 32H290v-62h85q28 0 45-17t17-45v-56q0-28-17-45t-45-17h-85z"/>
+      <path fill="#fff7f0" d="M86 74h337v56H289v286h-68V130H86z"/>
+      <path fill="#c084fc" d="M221 130h68v286h-68z"/>
+      <rect x="221" y="380" width="68" height="36" rx="9" fill="#b8f34a"/>
+    </g>
+  </g>
+
+  <!-- Concept 5 / teal signal -->
+  <g transform="translate(640 1220)">
+    <rect class="panel" width="520" height="470" rx="34"/>
+    <text x="28" y="52" class="label">5B — teal signal</text>
+    <text x="28" y="82" class="sub">lavender R/D, teal spine, cream crossbar</text>
+    <g transform="translate(48 86)" filter="url(#softGlow)">
+      <path class="shadow" d="M85 125h122q42 0 68 25t26 66v30q0 41-26 66t-68 25h-38l66 77h-78l-76-91v-53h104q21 0 34-12t13-32q0-20-13-32t-34-12H85z"/>
+      <path fill="#c084fc" d="M69 111h122q42 0 68 25t26 66v30q0 41-26 66t-68 25h-38l66 77h-78l-76-91v-53h104q21 0 34-12t13-32q0-20-13-32t-34-12H69z"/>
+      <path class="shadow" d="M306 125h103q51 0 84 33t33 84v72q0 52-33 84t-84 32H306v-62h85q28 0 45-17t17-45v-56q0-28-17-45t-45-17h-85z"/>
+      <path fill="#c084fc" d="M290 111h103q51 0 84 33t33 84v72q0 52-33 84t-84 32H290v-62h85q28 0 45-17t17-45v-56q0-28-17-45t-45-17h-85z"/>
+      <path fill="#fff7f0" d="M86 74h337v56H289v55h-68v-55H86z"/>
+      <path fill="#2dd4bf" d="M221 130h68v286h-68z"/>
+      <rect x="221" y="380" width="68" height="36" rx="9" fill="#b8f34a"/>
+    </g>
+  </g>
+</svg>

@@ -1,20 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowLeft,
-  Bot,
-  Code2,
-  ExternalLink,
-  Monitor,
-  Sparkles,
-} from "lucide-react";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
-import { SiApplemusic, SiEpicgames } from "react-icons/si";
-import { TbDeviceNintendo } from "react-icons/tb";
+import { ArrowLeft, ExternalLink, Monitor } from "lucide-react";
 
-import { AiAmbient } from "@/components/ai-ambient";
-import { BrandMark } from "@/components/brand-mark";
+import { ElsewhereLinks } from "@/components/elsewhere-links";
+import { SectionHeading } from "@/components/section-heading";
+import { SiteShell } from "@/components/site-shell";
+import { ToolGroupCard } from "@/components/tool-group-card";
+import { elsewhere, toolGroups } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "Uses | Richard Taylor Dawson",
@@ -22,96 +15,10 @@ export const metadata: Metadata = {
     "The software, AI tools, web stack, and workspace Richard Taylor Dawson uses to design and ship products.",
 };
 
-const groups = [
-  {
-    icon: Bot,
-    title: "AI collaboration",
-    description:
-      "Planning, implementation, review, and the occasional second opinion.",
-    items: ["Cursor", "Codex"],
-  },
-  {
-    icon: Code2,
-    title: "Web stack",
-    description:
-      "The dependable core I reach for when a product needs to move quickly and age well.",
-    items: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS"],
-  },
-  {
-    icon: Sparkles,
-    title: "Product craft",
-    description:
-      "The constraints and standards that shape the tools, not an afterthought at the end.",
-    items: ["Accessibility", "Performance", "Design systems", "AI product UX"],
-  },
-];
-
-const elsewhere = [
-  {
-    icon: SiApplemusic,
-    label: "Apple Music",
-    value: "@richardtaylordawson",
-    href: "https://music.apple.com/profile/richardtaylordawson",
-  },
-  {
-    icon: SiEpicgames,
-    label: "Rocket League",
-    value: "LilWizzie on Epic",
-    href: "https://rocketleague.tracker.network/rocket-league/profile/epic/LilWizzie/overview",
-  },
-  {
-    icon: TbDeviceNintendo,
-    label: "Nintendo",
-    value: "LilWizzie",
-  },
-];
-
 export default function UsesPage() {
   return (
-    <main className="relative isolate min-h-screen overflow-hidden bg-background text-foreground">
-      <AiAmbient />
-      <div className="site-grid" aria-hidden="true" />
-      <div className="signal-rail" aria-hidden="true">
-        <span />
-        <span />
-        <span />
-      </div>
-
-      <header className="fixed left-0 right-0 top-0 z-40 border-b border-white/10 bg-background/70 backdrop-blur-xl">
-        <nav
-          className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
-          aria-label="Primary navigation"
-        >
-          <Link
-            href="/"
-            className="flex items-center gap-3"
-            aria-label="Richard Taylor Dawson, home"
-          >
-            <BrandMark />
-            <span className="hidden text-sm font-medium text-white/80 sm:inline">
-              Richard Taylor Dawson
-            </span>
-          </Link>
-          <div className="flex items-center gap-2">
-            <a
-              href="https://www.github.com/richardtaylordawson"
-              className="icon-link"
-              aria-label="GitHub"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/taylor-dawson-482927123/"
-              className="icon-link"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedinIn />
-            </a>
-          </div>
-        </nav>
-      </header>
-
-      <section className="relative mx-auto max-w-7xl px-4 pb-20 pt-28 sm:px-6 lg:px-8">
+    <SiteShell>
+      <section className="relative mx-auto max-w-7xl px-4 pb-20 pt-12 sm:px-6 lg:px-8">
         <Link
           href="/"
           className="inline-flex items-center gap-2 text-sm text-white/55 transition hover:text-white"
@@ -149,80 +56,20 @@ export default function UsesPage() {
         </div>
 
         <div className="mt-16 grid gap-4 lg:grid-cols-3">
-          {groups.map((group) => (
-            <article className="surface-card" key={group.title}>
-              <group.icon className="size-5 text-signal-teal" />
-              <h2 className="mt-5 text-lg font-semibold text-white">
-                {group.title}
-              </h2>
-              <p className="mt-3 min-h-18 text-sm leading-6 text-white/55">
-                {group.description}
-              </p>
-              <ul className="mt-6 flex flex-wrap gap-2">
-                {group.items.map((item) => (
-                  <li className="skill-chip" key={item}>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </article>
+          {toolGroups.map((group) => (
+            <ToolGroupCard {...group} key={group.title} />
           ))}
         </div>
 
         <section className="mt-5 rounded-[8px] border border-white/10 bg-white/[0.035] p-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="section-kicker">Elsewhere</p>
-              <h2 className="mt-3 text-2xl font-semibold text-white">
-                Fun links and handles.
-              </h2>
-            </div>
+            <SectionHeading kicker="Elsewhere" title="Fun links and handles." />
             <p className="max-w-md text-sm leading-6 text-white/55">
               The stuff that does not quite belong next to GitHub, which is
               exactly why it belongs here.
             </p>
           </div>
-
-          <div className="mt-6 grid gap-3 md:grid-cols-3">
-            {elsewhere.map((item) => {
-              const Icon = item.icon;
-              const content = (
-                <>
-                  <Icon className="size-5 text-signal-teal" />
-                  <div>
-                    <p className="text-sm font-semibold text-white">
-                      {item.label}
-                    </p>
-                    <p className="mt-1 font-mono text-xs text-white/45">
-                      {item.value}
-                    </p>
-                  </div>
-                  {item.href ? (
-                    <ExternalLink className="ml-auto size-4 text-white/35" />
-                  ) : null}
-                </>
-              );
-
-              return item.href ? (
-                <a
-                  className="flex items-center gap-3 rounded-[8px] border border-white/10 bg-black/20 p-4 transition hover:border-signal-teal/40 hover:bg-white/[0.05]"
-                  href={item.href}
-                  key={item.label}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {content}
-                </a>
-              ) : (
-                <div
-                  className="flex items-center gap-3 rounded-[8px] border border-white/10 bg-black/20 p-4"
-                  key={item.label}
-                >
-                  {content}
-                </div>
-              );
-            })}
-          </div>
+          <ElsewhereLinks items={elsewhere} />
         </section>
 
         <aside className="mt-5 flex flex-col gap-5 rounded-[8px] border border-signal-amber/25 bg-signal-amber/[0.07] p-6 sm:flex-row sm:items-center sm:justify-between">
@@ -246,6 +93,6 @@ export default function UsesPage() {
           </a>
         </aside>
       </section>
-    </main>
+    </SiteShell>
   );
 }
