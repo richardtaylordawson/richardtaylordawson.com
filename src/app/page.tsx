@@ -126,7 +126,7 @@ export default function Home() {
         <span />
       </div>
 
-      <header className="fixed left-0 right-0 top-0 z-40 border-b border-white/10 bg-background/70 backdrop-blur-xl">
+      <header className="sticky top-0 z-40 border-b border-white/10 bg-background/70 backdrop-blur-xl">
         <nav
           className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
           aria-label="Primary navigation"
@@ -137,9 +137,6 @@ export default function Home() {
             aria-label="Richard Taylor Dawson, home"
           >
             <BrandMark />
-            <span className="hidden text-sm font-medium text-white/80 sm:inline">
-              Richard Taylor Dawson
-            </span>
           </a>
           <div className="hidden items-center gap-6 text-sm text-white/60 md:flex">
             <a className="transition hover:text-white" href="#about">
@@ -197,19 +194,11 @@ export default function Home() {
         className="relative mx-auto flex min-h-[46svh] max-w-7xl items-center px-4 pb-5 pt-10 sm:px-6 lg:px-8"
       >
         <div className="relative z-10 w-full">
-          <div className="mb-6 flex items-center justify-between gap-4">
+          <div className="mb-6">
             <div className="inline-flex items-center gap-2 rounded-[8px] border border-signal-amber/30 bg-signal-amber/10 px-3 py-2 text-sm text-signal-amber">
               <Sparkles className="size-4" />
               AI-forward software engineer
             </div>
-            <Image
-              src="/images/headshot.png"
-              alt="Portrait of Richard Taylor Dawson"
-              width={712}
-              height={724}
-              priority
-              className="aspect-square size-10 shrink-0 rounded-full border border-white/20 object-cover object-top p-1 shadow-xl shadow-black/30 sm:size-14 lg:size-16"
-            />
           </div>
           <h1 className="max-w-4xl text-balance text-5xl font-semibold leading-[0.98] tracking-normal text-white sm:text-6xl lg:text-7xl">
             Taylor Dawson.
