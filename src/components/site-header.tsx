@@ -4,11 +4,41 @@ import Link from "next/link";
 
 import { BrandMark } from "@/components/brand-mark";
 import { MobileMenu } from "@/components/mobile-menu";
+import { experience } from "@/lib/site-content";
 
 const primaryLinks = [
   { href: "/#experience", label: "Experience" },
   { href: "/#work", label: "Projects" },
   { href: "/#business-sites", label: "Business Sites" },
+];
+
+const mobileMenuLinks = [
+  { href: "/about", label: "About Me", internal: true },
+  { href: "/#experience", label: "Experience", internal: true },
+  { href: "/#work", label: "Projects", internal: true },
+  { href: "/#business-sites", label: "Business Sites", internal: true },
+  { href: "/uses", label: "Uses", internal: true },
+  ...experience.map((item) => ({
+    href: item.detailHref,
+    label: item.company,
+    internal: true,
+  })),
+  {
+    href: "https://www.github.com/richardtaylordawson",
+    label: "GitHub",
+  },
+  {
+    href: "https://www.linkedin.com/in/taylor-dawson-482927123/",
+    label: "LinkedIn",
+  },
+  {
+    href: "mailto:richard.taylor.dawson@gmail.com",
+    label: "Email",
+  },
+  {
+    href: "https://rocketleague.tracker.network/rocket-league/profile/epic/LilWizzie/overview",
+    label: "Rocket League",
+  },
 ];
 
 export function SiteHeader() {
@@ -38,7 +68,7 @@ export function SiteHeader() {
           ))}
         </div>
 
-        <MobileMenu links={primaryLinks} />
+        <MobileMenu links={mobileMenuLinks} />
       </nav>
     </header>
   );

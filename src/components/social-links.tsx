@@ -18,15 +18,15 @@ export const socialLinks = [
     icon: FaLinkedinIn,
   },
   {
+    href: "mailto:richard.taylor.dawson@gmail.com",
+    label: "Email",
+    icon: Mail,
+  },
+  {
     href: "/uses",
     label: "Uses",
     icon: Wrench,
     internal: true,
-  },
-  {
-    href: "mailto:richard.taylor.dawson@gmail.com",
-    label: "Email",
-    icon: Mail,
   },
   {
     href: "https://rocketleague.tracker.network/rocket-league/profile/epic/LilWizzie/overview",

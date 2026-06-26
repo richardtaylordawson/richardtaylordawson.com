@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Wrench } from "lucide-react";
+import { ArrowUpRight, Mail, Wrench } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import { SiEpicgames } from "react-icons/si";
 
 import { BrandMark } from "@/components/brand-mark";
 import { experience } from "@/lib/site-content";
@@ -29,9 +30,22 @@ const footerConnectLinks = [
     label: "LinkedIn",
     icon: FaLinkedinIn,
   },
+  {
+    href: "mailto:richard.taylor.dawson@gmail.com",
+    label: "Email",
+    icon: Mail,
+  },
 ];
 
-const footerMiscLinks = [{ href: "/uses", label: "Uses", icon: Wrench }];
+const footerMiscLinks = [
+  { href: "/uses", label: "Uses", icon: Wrench },
+  {
+    href: "https://rocketleague.tracker.network/rocket-league/profile/epic/LilWizzie/overview",
+    label: "Rocket League",
+    icon: SiEpicgames,
+    external: true,
+  },
+];
 
 const footerLinkClass =
   "flex w-full items-center gap-2 rounded-[8px] px-2 py-2 transition hover:bg-white/[0.06] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/30";
@@ -117,12 +131,25 @@ export function SiteFooter() {
               Misc
             </p>
             <ul className="mt-4 space-y-1 text-sm text-white/62">
-              {footerMiscLinks.map(({ href, label, icon: Icon }) => (
+              {footerMiscLinks.map(({ href, label, icon: Icon, external }) => (
                 <li key={href}>
-                  <Link href={href} className={footerLinkClass}>
-                    <Icon className="size-4 shrink-0" />
-                    {label}
-                  </Link>
+                  {external ? (
+                    <a
+                      href={href}
+                      className={footerLinkClass}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <Icon className="size-4 shrink-0" />
+                      {label}
+                      <ArrowUpRight className="ml-auto size-3.5 shrink-0 text-white/35" />
+                    </a>
+                  ) : (
+                    <Link href={href} className={footerLinkClass}>
+                      <Icon className="size-4 shrink-0" />
+                      {label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

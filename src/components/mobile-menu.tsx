@@ -11,6 +11,7 @@ type MobileMenuProps = {
   links: {
     href: string;
     label: string;
+    internal?: boolean;
   }[];
 };
 
@@ -64,23 +65,37 @@ export function MobileMenu({ links }: MobileMenuProps) {
         </div>
 
         <div className="mt-10">
-          <p className="font-mono text-xs uppercase tracking-[0.18em] text-signal-teal/80">
-            Navigate
-          </p>
-          <nav className="mt-5 grid gap-3" aria-label="Mobile navigation">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="mobile-menu-link"
-                onClick={() => setIsOpen(false)}
-              >
-                <span>{link.label}</span>
-                <span className="text-white/30">/</span>
-              </Link>
-            ))}
-          </nav>
-        </div>
+            <p className="font-mono text-xs uppercase tracking-[0.18em] text-signal-teal/80">
+              Navigate
+            </p>
+            <nav className="mt-5 grid gap-3" aria-label="Mobile navigation">
+              {links.map((link) => (
+                link.internal ? (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="mobile-menu-link"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <span>{link.label}</span>
+                    <span className="text-white/30">/</span>
+                  </Link>
+                ) : (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="mobile-menu-link"
+                    onClick={() => setIsOpen(false)}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span>{link.label}</span>
+                    <span className="text-white/30">/</span>
+                  </a>
+                )
+              ))}
+            </nav>
+          </div>
 
         <div className="mt-auto rounded-[8px] border border-white/10 bg-white/[0.045] p-5">
           <p className="text-sm text-white/70">
