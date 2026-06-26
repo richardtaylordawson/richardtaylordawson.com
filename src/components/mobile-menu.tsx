@@ -128,18 +128,6 @@ export function MobileMenu({ sections }: MobileMenuProps) {
           ))}
         </div>
 
-        <div className="mt-8 rounded-[8px] border border-white/10 bg-white/[0.045] p-5">
-          <a
-            href="/documents/richardtaylordawson.pdf"
-            className="command-link w-full"
-            onClick={() => setIsOpen(false)}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Resume
-            <ExternalLink className="size-4" />
-          </a>
-        </div>
       </div>
     </div>
   );

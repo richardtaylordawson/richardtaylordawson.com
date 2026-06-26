@@ -457,7 +457,6 @@
   }
 
   .role-node::after {
-    animation: role-node-signal 5.8s linear infinite;
     background: conic-gradient(
       from -90deg,
       transparent 0deg,
@@ -500,8 +499,6 @@
   }
 
   .role-segment::after {
-    animation: role-segment-signal 5.8s cubic-bezier(0.65, 0, 0.35, 1)
-      infinite;
     background: linear-gradient(
       to bottom,
       rgb(45 212 191 / 0),
@@ -515,6 +512,14 @@
     position: absolute;
     transform: scaleY(0);
     transform-origin: top;
+  }
+
+  .is-revealed .role-node::after {
+    animation: role-node-signal 5.8s linear 1 both;
+  }
+
+  .is-revealed .role-segment::after {
+    animation: role-segment-signal 5.8s cubic-bezier(0.65, 0, 0.35, 1) 1 both;
   }
 
   .role-history-item:nth-child(1) .role-node::after {

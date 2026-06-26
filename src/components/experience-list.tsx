@@ -76,17 +76,14 @@ export function ExperienceList({ items }: ExperienceListProps) {
           </li>
           {job.slug === "calldrip" ? (
             <li className="experience-resume-row" data-reveal="card">
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <p className="font-mono text-xs uppercase tracking-[0.16em] text-signal-amber">
-                  Resume
-                </p>
+              <div className="flex justify-end">
                 <a
                   href="/documents/richardtaylordawson.pdf"
                   className="experience-action-link experience-action-link-resume"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Download resume
+                  Resume
                   <ExternalLink className="size-3.5" />
                 </a>
               </div>
