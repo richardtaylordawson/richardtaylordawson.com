@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Download, Sparkles } from "lucide-react";
 
 import { ExperienceList } from "@/components/experience-list";
@@ -61,7 +62,10 @@ export default function Home() {
             product craft meet. The work is fast, pragmatic, and built for real
             people on real teams.
           </p>
-          <div className="motion-delay-3 mt-8 flex" data-reveal="hero">
+          <div
+            className="motion-delay-3 mt-8 flex flex-wrap gap-3"
+            data-reveal="hero"
+          >
             <a
               href="/documents/richardtaylordawson.pdf"
               className="command-link"
@@ -69,6 +73,9 @@ export default function Home() {
               <Download className="size-4" />
               Resume
             </a>
+            <Link href="/about" className="command-link">
+              About Me
+            </Link>
           </div>
         </div>
       </section>

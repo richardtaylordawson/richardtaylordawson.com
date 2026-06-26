@@ -15,15 +15,6 @@ export const aboutCopy = [
 
 export const projects = [
   {
-    title: "Calculator",
-    tag: "Web calculator",
-    year: "2018",
-    text: "A focused calculator built with Bootstrap, HTML, and ES6 modules, with a set of switchable Bootswatch themes.",
-    href: "https://calculator.richardtaylordawson.com",
-    image: "https://calculator.richardtaylordawson.com/images/social-share.png",
-    cta: "Open calculator",
-  },
-  {
     title: "Gaming Trivia",
     tag: "Interactive game",
     year: "2019",
@@ -31,6 +22,15 @@ export const projects = [
     href: "https://gaming-trivia.richardtaylordawson.com",
     image: "https://gaming-trivia.richardtaylordawson.com/images/social-share.png",
     cta: "Play gaming trivia",
+  },
+  {
+    title: "Calculator",
+    tag: "Web calculator",
+    year: "2018",
+    text: "A focused calculator built with Bootstrap, HTML, and ES6 modules, with a set of switchable Bootswatch themes.",
+    href: "https://calculator.richardtaylordawson.com",
+    image: "https://calculator.richardtaylordawson.com/images/social-share.png",
+    cta: "Open calculator",
   },
 ];
 
@@ -67,7 +67,11 @@ export const experience = [
       "Next.js",
       "React",
       "TypeScript",
-      "Headless CMS",
+      "Storyblok",
+      "HubSpot",
+      "Internal apps",
+      "Agentic workflows",
+      "AI automation",
       "Forms",
       "Sales quoting",
       "Accessibility",
@@ -94,12 +98,14 @@ export const experience = [
       "Front-end development for marketing and sales experiences, with a focus on lead generation, campaign pages, reusable UI, and conversion-minded interfaces.",
     technologies: [
       "React",
-      "JavaScript",
-      "Front-end architecture",
+      "Handlebars",
+      "Gatsby",
+      "Storybook",
+      "Contentful",
       "Lead generation",
-      "Marketing sites",
       "Analytics",
-      "UI systems",
+      "Netlify",
+      "Gatsby Cloud",
     ],
     roles: [
       {
@@ -127,8 +133,9 @@ export const experience = [
       "CRUD apps",
       "Databases",
       "APIs",
-      "Startup product",
-      "Customer workflows",
+      "Twilio",
+      "PHP",
+      "SQL",
     ],
     roles: [
       {
