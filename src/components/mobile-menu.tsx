@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Menu, X } from "lucide-react";
+import type { ComponentType } from "react";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 
@@ -13,6 +14,7 @@ type MobileMenuLink = {
   label: string;
   internal?: boolean;
   logo?: string;
+  icon?: ComponentType<{ className?: string }>;
 };
 
 type MobileMenuProps = {
@@ -48,19 +50,11 @@ export function MobileMenu({ sections }: MobileMenuProps) {
         <div className="flex items-center justify-between gap-4">
           <Link
             href="/"
-            className="flex items-center gap-3"
+            className="flex items-center"
             aria-label="Richard Taylor Dawson, home"
             onClick={() => setIsOpen(false)}
           >
             <BrandMark />
-            <div>
-              <p className="text-sm font-semibold text-white">
-                Richard Taylor Dawson
-              </p>
-              <p className="font-mono text-xs uppercase tracking-[0.16em] text-white/45">
-                Product-minded engineer
-              </p>
-            </div>
           </Link>
           <button
             type="button"
@@ -96,6 +90,8 @@ export function MobileMenu({ sections }: MobileMenuProps) {
                             height={16}
                             className="size-4 shrink-0 rounded-[4px] bg-white object-contain p-0.5"
                           />
+                        ) : link.icon ? (
+                          <link.icon className="size-4 shrink-0 text-white/72" />
                         ) : null}
                         <span className="truncate">{link.label}</span>
                       </span>

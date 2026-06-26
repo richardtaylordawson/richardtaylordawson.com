@@ -38,7 +38,7 @@ const footerConnectLinks = [
 ];
 
 const footerMiscLinks = [
-  { href: "/uses", label: "Uses", icon: Wrench },
+  { href: "/uses", label: "Tools", icon: Wrench },
   {
     href: "https://rocketleague.tracker.network/rocket-league/profile/epic/LilWizzie/overview",
     label: "Rocket League",

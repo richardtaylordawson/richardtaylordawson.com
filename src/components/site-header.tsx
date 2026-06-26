@@ -1,6 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { Mail, Wrench } from "lucide-react";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import { SiEpicgames } from "react-icons/si";
 
 import { BrandMark } from "@/components/brand-mark";
 import { MobileMenu } from "@/components/mobile-menu";
@@ -39,14 +42,17 @@ const mobileMenuSections = [
       {
         href: "https://www.github.com/richardtaylordawson",
         label: "GitHub",
+        icon: FaGithub,
       },
       {
         href: "https://www.linkedin.com/in/taylor-dawson-482927123/",
         label: "LinkedIn",
+        icon: FaLinkedinIn,
       },
       {
         href: "mailto:richard.taylor.dawson@gmail.com",
         label: "Email",
+        icon: Mail,
       },
     ],
   },
@@ -54,10 +60,11 @@ const mobileMenuSections = [
     title: "Misc",
     toneClassName: "text-white/48",
     links: [
-      { href: "/uses", label: "Uses", internal: true },
+      { href: "/uses", label: "Tools", internal: true, icon: Wrench },
       {
         href: "https://rocketleague.tracker.network/rocket-league/profile/epic/LilWizzie/overview",
         label: "Rocket League",
+        icon: SiEpicgames,
       },
     ],
   },

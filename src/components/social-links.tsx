@@ -24,7 +24,7 @@ export const socialLinks = [
   },
   {
     href: "/uses",
-    label: "Uses",
+    label: "Tools",
     icon: Wrench,
     internal: true,
   },
