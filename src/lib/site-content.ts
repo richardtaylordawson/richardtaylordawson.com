@@ -195,7 +195,7 @@ export const toolGroups = [
     title: "Platform stack",
     description:
       "The hosted services behind deployment, auth, data, and the email plumbing on client work.",
-    items: ["Vercel", "Clerk", "Supabase", "Transactional email"],
+    items: ["Vercel", "Clerk", "Supabase", "Resend"],
   },
 ] satisfies {
   icon: IconComponent;
