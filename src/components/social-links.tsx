@@ -1,8 +1,8 @@
 import Link from "next/link";
 import type { ComponentPropsWithoutRef } from "react";
-import { Wrench } from "lucide-react";
+import { Mail, Wrench } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
-import { SiApplemusic, SiEpicgames } from "react-icons/si";
+import { SiEpicgames } from "react-icons/si";
 
 import type { IconComponent } from "@/lib/site-content";
 
@@ -24,9 +24,9 @@ export const socialLinks = [
     internal: true,
   },
   {
-    href: "https://music.apple.com/profile/richardtaylordawson",
-    label: "Apple Music",
-    icon: SiApplemusic,
+    href: "mailto:richard.taylor.dawson@gmail.com",
+    label: "Email",
+    icon: Mail,
   },
   {
     href: "https://rocketleague.tracker.network/rocket-league/profile/epic/LilWizzie/overview",
