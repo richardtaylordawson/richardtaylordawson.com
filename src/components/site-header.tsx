@@ -7,7 +7,7 @@ import { BrandMark } from "@/components/brand-mark";
 import type { IconComponent } from "@/lib/site-content";
 
 const primaryLinks = [
-  { href: "/#about", label: "About" },
+  { href: "/#about", label: "About Me" },
   { href: "/#experience", label: "Experience" },
   { href: "/#work", label: "Projects" },
   { href: "/#business-sites", label: "Business Sites" },

@@ -43,9 +43,8 @@ export function ProjectCard({ item }: ProjectCardProps) {
         </div>
       </div>
       <div className="p-3 pb-4 pt-5 sm:p-5 sm:pb-5">
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-4">
           <span className="project-tag">{item.tag}</span>
-          <ExternalLink className="size-4 text-white/40 transition group-hover:text-signal-lime" />
         </div>
         <h3 className="mt-4 text-2xl font-semibold text-white">
           {item.title}

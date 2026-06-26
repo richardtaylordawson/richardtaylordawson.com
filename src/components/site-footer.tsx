@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Wrench } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
@@ -6,7 +7,7 @@ import { BrandMark } from "@/components/brand-mark";
 import { experience } from "@/lib/site-content";
 
 const footerSiteLinks = [
-  { href: "/#about", label: "About" },
+  { href: "/#about", label: "About Me" },
   { href: "/#work", label: "Projects" },
   { href: "/#business-sites", label: "Business Sites" },
 ];
@@ -14,6 +15,7 @@ const footerSiteLinks = [
 const footerExperienceLinks = experience.map((item) => ({
   href: item.detailHref,
   label: item.company,
+  logo: item.logo,
 }));
 
 const footerConnectLinks = [
@@ -31,6 +33,9 @@ const footerConnectLinks = [
 
 const footerMiscLinks = [{ href: "/uses", label: "Uses", icon: Wrench }];
 
+const footerLinkClass =
+  "flex w-full items-center gap-2 rounded-[8px] px-2 py-2 transition hover:bg-white/[0.06] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/30";
+
 export function SiteFooter() {
   return (
     <footer className="relative z-10 border-t border-white/10 bg-background/75 backdrop-blur-xl">
@@ -45,18 +50,15 @@ export function SiteFooter() {
           </Link>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:justify-self-end">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <nav aria-label="Footer navigation">
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-signal-teal">
               Site
             </p>
-            <ul className="mt-4 space-y-3 text-sm text-white/62">
+            <ul className="mt-4 space-y-1 text-sm text-white/62">
               {footerSiteLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="transition hover:text-white"
-                  >
+                  <Link href={link.href} className={footerLinkClass}>
                     {link.label}
                   </Link>
                 </li>
@@ -68,13 +70,17 @@ export function SiteFooter() {
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-signal-amber">
               Experience
             </p>
-            <ul className="mt-4 space-y-3 text-sm text-white/62">
+            <ul className="mt-4 space-y-1 text-sm text-white/62">
               {footerExperienceLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="transition hover:text-white"
-                  >
+                  <Link href={link.href} className={footerLinkClass}>
+                    <Image
+                      src={link.logo}
+                      alt=""
+                      width={16}
+                      height={16}
+                      className="size-4 shrink-0 rounded-[4px] bg-white object-contain p-0.5"
+                    />
                     {link.label}
                   </Link>
                 </li>
@@ -86,17 +92,19 @@ export function SiteFooter() {
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-signal-lime">
               Connect
             </p>
-            <ul className="mt-4 space-y-3 text-sm text-white/62">
+            <ul className="mt-4 space-y-1 text-sm text-white/62">
               {footerConnectLinks.map(({ href, label, icon: Icon }) => (
                 <li key={href}>
                   <a
                     href={href}
-                    className="inline-flex items-center gap-2 transition hover:text-white"
+                    className={`${footerLinkClass} justify-between`}
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <Icon className="size-4" />
-                    {label}
+                    <span className="inline-flex min-w-0 items-center gap-2">
+                      <Icon className="size-4 shrink-0" />
+                      <span className="truncate">{label}</span>
+                    </span>
                     <ArrowUpRight className="size-3.5 text-white/35" />
                   </a>
                 </li>
@@ -108,14 +116,11 @@ export function SiteFooter() {
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-white/48">
               Misc
             </p>
-            <ul className="mt-4 space-y-3 text-sm text-white/62">
+            <ul className="mt-4 space-y-1 text-sm text-white/62">
               {footerMiscLinks.map(({ href, label, icon: Icon }) => (
                 <li key={href}>
-                  <Link
-                    href={href}
-                    className="inline-flex items-center gap-2 transition hover:text-white"
-                  >
-                    <Icon className="size-4" />
+                  <Link href={href} className={footerLinkClass}>
+                    <Icon className="size-4 shrink-0" />
                     {label}
                   </Link>
                 </li>
