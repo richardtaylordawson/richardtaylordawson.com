@@ -160,6 +160,39 @@
     @apply size-4;
   }
 
+  .mobile-menu-trigger {
+    @apply grid size-10 place-items-center rounded-[8px] border border-white/10 bg-white/5 text-white/[0.72] transition hover:border-primary/45 hover:bg-primary/10 hover:text-white;
+  }
+
+  .mobile-menu-overlay {
+    background:
+      radial-gradient(circle at top right, rgb(192 132 252 / 0.2), transparent 32%),
+      linear-gradient(180deg, rgb(20 12 28 / 0.98), rgb(14 8 20 / 0.99));
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    transition:
+      opacity 220ms ease,
+      visibility 220ms ease;
+    visibility: hidden;
+    z-index: 60;
+  }
+
+  .mobile-menu-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .mobile-menu-surface {
+    @apply flex min-h-screen flex-col px-4 pb-6 pt-5 sm:px-6;
+  }
+
+  .mobile-menu-link {
+    @apply flex items-center justify-between rounded-[8px] border border-white/10 bg-white/[0.045] px-4 py-4 text-lg font-medium text-white transition hover:border-signal-teal/40 hover:bg-white/[0.075];
+  }
+
   .command-link {
     @apply inline-flex h-11 items-center justify-center gap-2 rounded-[8px] border border-white/[0.12] bg-white/[0.06] px-4 text-sm font-medium text-white/[0.82] transition hover:border-white/[0.24] hover:bg-white/10 hover:text-white;
   }
@@ -367,6 +400,14 @@
 
   .experience-row {
     @apply rounded-[8px] border border-white/10 bg-white/[0.045] p-4 transition hover:border-primary/35 hover:bg-white/[0.065];
+  }
+
+  .experience-resume-row {
+    @apply rounded-[8px] border border-signal-amber/20 bg-signal-amber/[0.06] p-4;
+  }
+
+  .experience-action-link-resume {
+    @apply border-signal-amber/25 bg-signal-amber/[0.08] text-signal-amber hover:border-signal-lime/40 hover:bg-signal-lime/[0.08] hover:text-signal-lime;
   }
 
   .role-history {

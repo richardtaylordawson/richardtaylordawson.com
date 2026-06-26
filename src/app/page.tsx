@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { Download, Sparkles } from "lucide-react";
 
 import { ExperienceList } from "@/components/experience-list";
 import { ProjectSection } from "@/components/project-section";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteShell } from "@/components/site-shell";
+import { SocialLinks } from "@/components/social-links";
 import {
   aboutCopy,
   businessSites,
@@ -43,9 +43,8 @@ export default function Home() {
       >
         <div className="relative z-10 w-full">
           <div className="mb-6" data-reveal="hero">
-            <div className="inline-flex items-center gap-2 rounded-[8px] border border-signal-amber/30 bg-signal-amber/10 px-3 py-2 text-sm text-signal-amber">
-              <Sparkles className="size-4" />
-              AI-forward software engineer
+            <div className="inline-flex items-center rounded-[8px] border border-signal-amber/30 bg-signal-amber/10 px-3 py-2 text-sm text-signal-amber">
+              Software Engineer
             </div>
           </div>
           <h1
@@ -62,21 +61,10 @@ export default function Home() {
             product craft meet. The work is fast, pragmatic, and built for real
             people on real teams.
           </p>
-          <div
-            className="motion-delay-3 mt-8 flex flex-wrap gap-3"
+          <SocialLinks
+            className="motion-delay-3 mt-8 flex flex-wrap gap-2"
             data-reveal="hero"
-          >
-            <a
-              href="/documents/richardtaylordawson.pdf"
-              className="command-link"
-            >
-              <Download className="size-4" />
-              Resume
-            </a>
-            <Link href="/about" className="command-link">
-              About Me
-            </Link>
-          </div>
+          />
         </div>
       </section>
 
@@ -121,12 +109,25 @@ export default function Home() {
                 ))}
               </dl>
             </div>
-            <div className="space-y-5 text-base leading-7 text-white/[0.68]">
-              {aboutCopy.map((paragraph) => (
-                <p data-reveal="hero" key={paragraph}>
-                  {paragraph}
-                </p>
-              ))}
+            <div>
+              <div className="relative max-h-[150px] overflow-hidden">
+                <div className="space-y-5 text-base leading-7 text-white/[0.68]">
+                  {aboutCopy.map((paragraph) => (
+                    <p data-reveal="hero" key={paragraph}>
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-linear-to-t from-[#26152f] via-[#26152f]/92 to-transparent"
+                />
+              </div>
+              <div className="mt-5" data-reveal="hero">
+                <Link href="/about" className="command-link">
+                  Read more
+                </Link>
+              </div>
             </div>
           </div>
         </div>

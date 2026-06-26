@@ -67,6 +67,7 @@ export const experience = [
       "Next.js",
       "React",
       "TypeScript",
+      "Vercel",
       "Storyblok",
       "HubSpot",
       "Internal apps",
