@@ -97,15 +97,15 @@ export function SiteFooter() {
                 <li key={href}>
                   <a
                     href={href}
-                    className={`${footerLinkClass} justify-between`}
+                    className={footerLinkClass}
                     target="_blank"
                     rel="noreferrer"
                   >
                     <span className="inline-flex min-w-0 items-center gap-2">
                       <Icon className="size-4 shrink-0" />
                       <span className="truncate">{label}</span>
+                      <ArrowUpRight className="size-3.5 shrink-0 text-white/35" />
                     </span>
-                    <ArrowUpRight className="size-3.5 text-white/35" />
                   </a>
                 </li>
               ))}

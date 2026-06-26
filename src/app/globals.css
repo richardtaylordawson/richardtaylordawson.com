@@ -350,35 +350,7 @@
   }
 
   .experience-action-link {
-    @apply relative isolate inline-flex h-9 items-center justify-center gap-2 overflow-hidden rounded-[8px] border border-signal-teal/25 bg-signal-teal/[0.07] px-3 text-sm font-medium text-signal-teal transition hover:border-signal-lime/40 hover:bg-signal-lime/[0.08] hover:text-signal-lime focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary;
-  }
-
-  .experience-action-link::before {
-    animation: signal-border-orbit 3.8s linear infinite;
-    background: conic-gradient(
-      from 0deg,
-      transparent 0deg,
-      transparent 58deg,
-      rgb(45 212 191 / 0.98) 88deg,
-      rgb(184 243 74 / 0.95) 128deg,
-      transparent 178deg,
-      transparent 360deg
-    );
-    border-radius: inherit;
-    content: "";
-    inset: 0;
-    padding: 1px;
-    pointer-events: none;
-    position: absolute;
-    z-index: 1;
-    -webkit-mask:
-      linear-gradient(#000 0 0) content-box,
-      linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-    mask:
-      linear-gradient(#000 0 0) content-box,
-      linear-gradient(#000 0 0);
-    mask-composite: exclude;
+    @apply inline-flex h-9 items-center justify-center gap-2 rounded-[8px] border border-signal-teal/25 bg-signal-teal/[0.07] px-3 text-sm font-medium text-signal-teal transition hover:border-signal-lime/40 hover:bg-signal-lime/[0.08] hover:text-signal-lime focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary;
   }
 
   .experience-action-link-site {
@@ -619,15 +591,6 @@
   }
   100% {
     transform: translateX(115%);
-  }
-}
-
-@keyframes signal-border-orbit {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
 

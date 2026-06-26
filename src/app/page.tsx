@@ -149,7 +149,7 @@ export default function Home() {
         <ProjectSection
           kicker="Business sites"
           id="business-sites"
-          description="Live sites I’ve worked on for businesses, separated from the personal projects and experiments."
+          description="Live sites I’ve worked on for businesses, separate from the personal projects and experiments."
           items={businessSites}
           divided
         />

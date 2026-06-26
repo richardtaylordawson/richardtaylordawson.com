@@ -16,7 +16,7 @@ export const aboutCopy = [
 export const projects = [
   {
     title: "Calculator",
-    tag: "JavaScript application",
+    tag: "Web calculator",
     text: "A focused calculator built with Bootstrap, HTML, and ES6 modules, with a set of switchable Bootswatch themes.",
     href: "https://calculator.richardtaylordawson.com",
     image: "https://calculator.richardtaylordawson.com/images/social-share.png",
@@ -112,7 +112,7 @@ export const experience = [
   },
   {
     company: "Calldrip",
-    span: "Jul 2016 to Jan 2019",
+    span: "Jun 2015 to Jan 2019",
     logo: "/images/logos/calldrip.png",
     slug: "calldrip",
     siteHref: "https://www.calldrip.com/",
@@ -132,6 +132,10 @@ export const experience = [
       {
         title: "Full Stack Developer",
         span: "Jul 2016 to Jan 2019",
+      },
+      {
+        title: "Helpdesk Technician",
+        span: "Jun 2015 to Jun 2016",
       },
     ],
   },
