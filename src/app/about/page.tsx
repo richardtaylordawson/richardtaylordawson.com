@@ -6,12 +6,14 @@ import { ArrowLeft } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteShell } from "@/components/site-shell";
 import { aboutCopy } from "@/lib/site-content";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About Me | Richard Taylor Dawson",
+export const metadata: Metadata = buildPageMetadata({
+  title: "About",
   description:
-    "Biography and background for Richard Taylor Dawson, a software engineer focused on accessible, polished web products.",
-};
+    "Biography, background, and working style for Richard Taylor Dawson, a software engineer focused on accessible, polished web products.",
+  pathname: "/about",
+});
 
 export default function AboutPage() {
   return (

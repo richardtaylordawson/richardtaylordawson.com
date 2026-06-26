@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+
+import { buildPageMetadata, siteUrl } from "@/lib/seo";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,31 +15,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://richardtaylordawson.com"),
-  title: "Richard Taylor Dawson | AI-forward software engineer",
+const rootMetadata = buildPageMetadata({
+  title: "Richard Taylor Dawson | Software Engineer",
   description:
-    "Richard Taylor Dawson is a software engineer building modern, AI-forward web products with sharp craft and practical systems thinking.",
-  openGraph: {
-    title: "Richard Taylor Dawson | AI-forward software engineer",
-    description:
-      "Modern web engineering, product systems, accessibility, and AI-native interfaces.",
-    images: [
-      {
-        url: "/images/social-share.png",
-        width: 1200,
-        height: 630,
-        alt: "RTD logo for Richard Taylor Dawson.",
-      },
-    ],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Richard Taylor Dawson | AI-forward software engineer",
-    description:
-      "Modern web engineering, product systems, accessibility, and AI-native interfaces.",
-    images: ["/images/social-share.png"],
+    "Richard Taylor Dawson is a software engineer building modern web products with accessibility, product craft, and practical systems thinking.",
+  pathname: "/",
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  ...rootMetadata,
+  title: {
+    default: "Richard Taylor Dawson | Software Engineer",
+    template: "%s | Richard Taylor Dawson",
   },
 };
 

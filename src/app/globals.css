@@ -166,8 +166,8 @@
 
   .mobile-menu-overlay {
     background:
-      radial-gradient(circle at top right, rgb(192 132 252 / 0.2), transparent 32%),
-      linear-gradient(180deg, rgb(20 12 28 / 0.98), rgb(14 8 20 / 0.99));
+      radial-gradient(circle at top right, rgb(192 132 252 / 0.14), transparent 28%),
+      linear-gradient(180deg, rgb(20 12 28 / 0.995), rgb(14 8 20 / 1));
     inset: 0;
     overflow-y: auto;
     opacity: 0;
@@ -187,7 +187,7 @@
   }
 
   .mobile-menu-surface {
-    @apply flex min-h-dvh flex-col px-4 pb-6 pt-5 sm:px-6;
+    @apply flex min-h-dvh flex-col bg-background/96 px-4 pb-6 pt-5 backdrop-blur-xl sm:px-6;
   }
 
   .mobile-menu-link {

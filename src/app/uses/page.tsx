@@ -8,12 +8,14 @@ import { SectionHeading } from "@/components/section-heading";
 import { SiteShell } from "@/components/site-shell";
 import { ToolGroupCard } from "@/components/tool-group-card";
 import { elsewhere, toolGroups } from "@/lib/site-content";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Uses | Richard Taylor Dawson",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Uses",
   description:
     "The software, AI tools, web stack, and workspace Richard Taylor Dawson uses to design and ship products.",
-};
+  pathname: "/uses",
+});
 
 export default function UsesPage() {
   return (

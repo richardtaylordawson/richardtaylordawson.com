@@ -8,6 +8,7 @@ import { ChipList } from "@/components/chip-list";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteShell } from "@/components/site-shell";
 import { experience, getExperienceBySlug } from "@/lib/site-content";
+import { buildPageMetadata } from "@/lib/seo";
 
 type ExperiencePageProps = {
   params: Promise<{
@@ -28,15 +29,19 @@ export async function generateMetadata({
   const job = getExperienceBySlug(slug);
 
   if (!job) {
-    return {
-      title: "Experience | Richard Taylor Dawson",
-    };
+    return buildPageMetadata({
+      title: "Experience",
+      description:
+        "Work history and role details for Richard Taylor Dawson.",
+      pathname: "/#experience",
+    });
   }
 
-  return {
-    title: `${job.company} | Experience | Richard Taylor Dawson`,
+  return buildPageMetadata({
+    title: `${job.company} Experience`,
     description: job.summary,
-  };
+    pathname: `/experience/${job.slug}`,
+  });
 }
 
 export default async function ExperienceDetailPage({

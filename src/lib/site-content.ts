@@ -1,6 +1,6 @@
 import type { ComponentType } from "react";
-import { Bot, Code2, Sparkles } from "lucide-react";
-import { SiApplemusic, SiEpicgames } from "react-icons/si";
+import { Bot, Code2, Mail, Sparkles } from "lucide-react";
+import { SiEpicgames } from "react-icons/si";
 import { TbDeviceNintendo } from "react-icons/tb";
 
 export type IconComponent = ComponentType<{ className?: string }>;
@@ -199,10 +199,10 @@ export const toolGroups = [
 
 export const elsewhere = [
   {
-    icon: SiApplemusic,
-    label: "Apple Music",
-    value: "@richardtaylordawson",
-    href: "https://music.apple.com/profile/richardtaylordawson",
+    icon: Mail,
+    label: "Email",
+    value: "richard.taylor.dawson@gmail.com",
+    href: "mailto:richard.taylor.dawson@gmail.com",
   },
   {
     icon: SiEpicgames,

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { ExperienceList } from "@/components/experience-list";
@@ -6,6 +7,14 @@ import { SectionHeading } from "@/components/section-heading";
 import { SiteShell } from "@/components/site-shell";
 import { SocialLinks } from "@/components/social-links";
 import { aboutCopy, businessSites, experience, projects } from "@/lib/site-content";
+import { buildPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "Software Engineer",
+  description:
+    "Richard Taylor Dawson designs and ships modern web products where accessibility, product craft, and AI-enabled workflows meet.",
+  pathname: "/",
+});
 
 export default function Home() {
   return (
