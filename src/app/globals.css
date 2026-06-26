@@ -395,7 +395,7 @@
   }
 
   .skill-chip {
-    @apply rounded-[8px] border border-white/10 bg-white/[0.055] px-3 py-2 text-sm text-white/[0.72];
+    @apply inline-flex rounded-[8px] border border-white/10 bg-white/[0.055] px-3 py-2 text-sm leading-none text-white/[0.72];
   }
 
   .job-card-skills .skill-chip {
@@ -423,7 +423,7 @@
   }
 
   .experience-action-link-resume {
-    @apply border-signal-amber/25 bg-signal-amber/[0.08] text-signal-amber hover:border-signal-lime/40 hover:bg-signal-lime/[0.08] hover:text-signal-lime;
+    @apply w-full border-signal-amber/25 bg-signal-amber/[0.08] text-signal-amber hover:border-signal-lime/40 hover:bg-signal-lime/[0.08] hover:text-signal-lime;
   }
 
   .role-history {

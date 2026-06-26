@@ -70,11 +70,11 @@ export const experience = [
       "Vercel",
       "Storyblok",
       "HubSpot",
-      "Internal apps",
-      "Agentic workflows",
-      "AI automation",
+      "Internal Apps",
+      "Agentic Workflows",
+      "AI Automation",
       "Forms",
-      "Sales quoting",
+      "Sales Quoting",
       "Accessibility",
     ],
     roles: [
@@ -103,7 +103,7 @@ export const experience = [
       "Gatsby",
       "Storybook",
       "Contentful",
-      "Lead generation",
+      "Lead Generation",
       "Analytics",
       "Netlify",
       "Gatsby Cloud",
@@ -129,7 +129,7 @@ export const experience = [
     summary:
       "Full-stack product work across customer-facing features, CRUD workflows, database-backed tools, and the early product systems of a growing startup.",
     technologies: [
-      "Full stack",
+      "Full Stack",
       "Product UI",
       "CRUD apps",
       "Databases",

@@ -3,11 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink, Monitor } from "lucide-react";
 
-import { ElsewhereLinks } from "@/components/elsewhere-links";
-import { SectionHeading } from "@/components/section-heading";
 import { SiteShell } from "@/components/site-shell";
 import { ToolGroupCard } from "@/components/tool-group-card";
-import { elsewhere, toolGroups } from "@/lib/site-content";
+import { toolGroups } from "@/lib/site-content";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -33,13 +31,13 @@ export default function UsesPage() {
         <div className="mt-12 grid items-end gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <p className="section-kicker motion-delay-1" data-reveal="hero">
-              Uses
+              Tools
             </p>
             <h1
               className="motion-delay-2 mt-5 text-balance text-5xl font-semibold leading-[0.98] tracking-normal text-white sm:text-6xl"
               data-reveal="hero"
             >
-              The tools behind the work.
+              What I use to build and ship.
             </h1>
             <p
               className="motion-delay-3 mt-6 max-w-xl text-lg leading-8 text-white/[0.64]"
@@ -74,20 +72,6 @@ export default function UsesPage() {
             <ToolGroupCard {...group} key={group.title} />
           ))}
         </div>
-
-        <section
-          className="mt-5 rounded-[8px] border border-white/10 bg-white/[0.035] p-6"
-          data-reveal="card"
-        >
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-            <SectionHeading kicker="Elsewhere" title="Fun links and handles." />
-            <p className="max-w-md text-sm leading-6 text-white/55">
-              The stuff that does not quite belong next to GitHub, which is
-              exactly why it belongs here.
-            </p>
-          </div>
-          <ElsewhereLinks items={elsewhere} />
-        </section>
 
         <aside
           className="mt-5 flex flex-col gap-5 rounded-[8px] border border-signal-amber/25 bg-signal-amber/[0.07] p-6 sm:flex-row sm:items-center sm:justify-between"
