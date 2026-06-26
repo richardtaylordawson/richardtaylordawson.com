@@ -538,27 +538,27 @@
   }
 
   .role-history-item:nth-child(2) .role-node-arc {
-    animation-delay: 1.72s;
+    animation-delay: 1.4s;
   }
 
   .role-history-item:nth-child(2) .role-segment::after {
-    animation-delay: 2.6s;
+    animation-delay: 2.12s;
   }
 
   .role-history-item:nth-child(3) .role-node-arc {
-    animation-delay: 3.44s;
+    animation-delay: 2.8s;
   }
 
   .role-history-item:nth-child(3) .role-segment::after {
-    animation-delay: 4.32s;
+    animation-delay: 3.52s;
   }
 
   .role-history-item:nth-child(4) .role-node-arc {
-    animation-delay: 5.16s;
+    animation-delay: 4.2s;
   }
 
   .role-history-item:nth-child(4) .role-segment::after {
-    animation-delay: 6.04s;
+    animation-delay: 4.92s;
   }
 }
 
