@@ -22,6 +22,7 @@ export default function UsesPage() {
         <Link
           href="/"
           className="inline-flex items-center gap-2 text-sm text-white/55 transition hover:text-white"
+          data-reveal="hero"
         >
           <ArrowLeft className="size-4" />
           Back home
@@ -29,17 +30,28 @@ export default function UsesPage() {
 
         <div className="mt-12 grid items-end gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <p className="section-kicker">Uses</p>
-            <h1 className="mt-5 text-balance text-5xl font-semibold leading-[0.98] tracking-normal text-white sm:text-6xl">
+            <p className="section-kicker motion-delay-1" data-reveal="hero">
+              Uses
+            </p>
+            <h1
+              className="motion-delay-2 mt-5 text-balance text-5xl font-semibold leading-[0.98] tracking-normal text-white sm:text-6xl"
+              data-reveal="hero"
+            >
               The tools behind the work.
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-white/[0.64]">
+            <p
+              className="motion-delay-3 mt-6 max-w-xl text-lg leading-8 text-white/[0.64]"
+              data-reveal="hero"
+            >
               A living list of the software, systems, and workspace details I
               use to turn an idea into something people can use.
             </p>
           </div>
 
-          <div className="relative overflow-hidden rounded-[8px] border border-white/10 bg-white/[0.04] p-3 shadow-2xl shadow-black/30">
+          <div
+            className="motion-delay-2 relative overflow-hidden rounded-[8px] border border-white/10 bg-white/[0.04] p-3 shadow-2xl shadow-black/30"
+            data-reveal="image"
+          >
             <Image
               src="/images/desk.jpg"
               alt="Richard's desk with two displays, speakers, plants, and a collection of LEGO Star Wars helmets"
@@ -55,13 +67,16 @@ export default function UsesPage() {
           </div>
         </div>
 
-        <div className="mt-16 grid gap-4 lg:grid-cols-3">
+        <div className="motion-stagger mt-16 grid gap-4 lg:grid-cols-3">
           {toolGroups.map((group) => (
             <ToolGroupCard {...group} key={group.title} />
           ))}
         </div>
 
-        <section className="mt-5 rounded-[8px] border border-white/10 bg-white/[0.035] p-6">
+        <section
+          className="mt-5 rounded-[8px] border border-white/10 bg-white/[0.035] p-6"
+          data-reveal="card"
+        >
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <SectionHeading kicker="Elsewhere" title="Fun links and handles." />
             <p className="max-w-md text-sm leading-6 text-white/55">
@@ -72,7 +87,10 @@ export default function UsesPage() {
           <ElsewhereLinks items={elsewhere} />
         </section>
 
-        <aside className="mt-5 flex flex-col gap-5 rounded-[8px] border border-signal-amber/25 bg-signal-amber/[0.07] p-6 sm:flex-row sm:items-center sm:justify-between">
+        <aside
+          className="mt-5 flex flex-col gap-5 rounded-[8px] border border-signal-amber/25 bg-signal-amber/[0.07] p-6 sm:flex-row sm:items-center sm:justify-between"
+          data-reveal="card"
+        >
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.16em] text-signal-amber/80">
               Built with this stack

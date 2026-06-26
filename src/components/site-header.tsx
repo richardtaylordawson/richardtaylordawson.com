@@ -9,7 +9,8 @@ import type { IconComponent } from "@/lib/site-content";
 const primaryLinks = [
   { href: "/#about", label: "About" },
   { href: "/#experience", label: "Experience" },
-  { href: "/#work", label: "Work" },
+  { href: "/#work", label: "Projects" },
+  { href: "/#business-sites", label: "Business Sites" },
 ];
 
 const iconLinks = [

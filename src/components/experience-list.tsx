@@ -11,9 +11,9 @@ type ExperienceListProps = {
 
 export function ExperienceList({ items }: ExperienceListProps) {
   return (
-    <ol className="space-y-3">
+    <ol className="motion-stagger space-y-3">
       {items.map((job) => (
-        <li className="experience-row" key={job.company}>
+        <li className="experience-row" data-reveal="card" key={job.company}>
           <div className="flex items-start gap-4">
             <Image
               src={job.logo}
@@ -48,20 +48,23 @@ export function ExperienceList({ items }: ExperienceListProps) {
                   </li>
                 ))}
               </ol>
-              <div className="mt-5 flex flex-wrap gap-2">
+              <div className="job-card-skills mt-5 flex flex-wrap gap-1.5">
                 <ChipList items={job.technologies} />
               </div>
               <div className="mt-5 flex flex-wrap gap-2">
                 <a
                   href={job.siteHref}
-                  className="experience-action-link"
+                  className="experience-action-link experience-action-link-site"
                   target="_blank"
                   rel="noreferrer"
                 >
                   Company site
                   <ExternalLink className="size-3.5" />
                 </a>
-                <Link href={job.detailHref} className="experience-action-link">
+                <Link
+                  href={job.detailHref}
+                  className="experience-action-link experience-action-link-details"
+                >
                   Work details
                   <ArrowRight className="size-3.5" />
                 </Link>

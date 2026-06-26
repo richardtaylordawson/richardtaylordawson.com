@@ -15,7 +15,7 @@ type ElsewhereLinksProps = {
 
 export function ElsewhereLinks({ items }: ElsewhereLinksProps) {
   return (
-    <div className="mt-6 grid gap-3 md:grid-cols-3">
+    <div className="motion-stagger mt-6 grid gap-3 md:grid-cols-3">
       {items.map((item) => (
         <ElsewhereLink item={item} key={item.label} />
       ))}
@@ -41,12 +41,17 @@ function ElsewhereLink({ item }: { item: ElsewhereItem }) {
     "flex items-center gap-3 rounded-[8px] border border-white/10 bg-black/20 p-4";
 
   if (!item.href) {
-    return <div className={className}>{content}</div>;
+    return (
+      <div className={className} data-reveal="card">
+        {content}
+      </div>
+    );
   }
 
   return (
     <a
       className={`${className} transition hover:border-signal-teal/40 hover:bg-white/[0.05]`}
+      data-reveal="card"
       href={item.href}
       target="_blank"
       rel="noreferrer"

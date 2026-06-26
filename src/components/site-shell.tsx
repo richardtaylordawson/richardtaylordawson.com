@@ -1,6 +1,7 @@
 import { ViewTransition } from "react";
 
 import { AiAmbient } from "@/components/ai-ambient";
+import { RevealOnScroll } from "@/components/reveal-on-scroll";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
@@ -18,6 +19,7 @@ export function SiteShell({ children }: SiteShellProps) {
         <span />
         <span />
       </div>
+      <RevealOnScroll />
       <SiteHeader />
       <main>
         <ViewTransition

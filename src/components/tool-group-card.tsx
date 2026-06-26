@@ -15,7 +15,7 @@ export function ToolGroupCard({
   items,
 }: ToolGroupCardProps) {
   return (
-    <article className="surface-card">
+    <article className="surface-card" data-reveal="card">
       <Icon className="size-5 text-signal-teal" />
       <h2 className="mt-5 text-lg font-semibold text-white">{title}</h2>
       <p className="mt-3 min-h-18 text-sm leading-6 text-white/55">

@@ -55,6 +55,7 @@ export default async function ExperienceDetailPage({
         <Link
           href="/#experience"
           className="inline-flex items-center gap-2 text-sm text-white/55 transition hover:text-white"
+          data-reveal="hero"
         >
           <ArrowLeft className="size-4" />
           Back to experience
@@ -62,8 +63,13 @@ export default async function ExperienceDetailPage({
 
         <header className="mt-12 grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
           <div>
-            <SectionHeading kicker="Experience" />
-            <div className="mt-6 flex items-center gap-4">
+            <div data-reveal="hero">
+              <SectionHeading kicker="Experience" />
+            </div>
+            <div
+              className="motion-delay-1 mt-6 flex items-center gap-4"
+              data-reveal="hero"
+            >
               <Image
                 src={job.logo}
                 alt=""
@@ -83,18 +89,24 @@ export default async function ExperienceDetailPage({
             </div>
           </div>
 
-          <div className="rounded-[8px] border border-white/10 bg-white/[0.045] p-6">
+          <div
+            className="motion-delay-2 rounded-[8px] border border-white/10 bg-white/[0.045] p-6"
+            data-reveal="card"
+          >
             <p className="text-lg leading-8 text-white/[0.68]">
               {job.summary}
             </p>
-            <div className="mt-6 flex flex-wrap gap-2">
+            <div className="motion-stagger mt-6 flex flex-wrap gap-2">
               <ChipList items={job.technologies} />
             </div>
           </div>
         </header>
 
         <div className="mt-10 grid gap-5 lg:grid-cols-[0.82fr_1.18fr]">
-          <aside className="rounded-[8px] border border-white/10 bg-white/[0.035] p-6">
+          <aside
+            className="rounded-[8px] border border-white/10 bg-white/[0.035] p-6"
+            data-reveal="card"
+          >
             <p className="font-mono text-xs uppercase tracking-[0.16em] text-primary">
               Roles
             </p>
@@ -123,7 +135,10 @@ export default async function ExperienceDetailPage({
             </div>
           </aside>
 
-          <section className="rounded-[8px] border border-signal-teal/25 bg-signal-teal/[0.07] p-6 sm:p-8">
+          <section
+            className="motion-delay-1 rounded-[8px] border border-signal-teal/25 bg-signal-teal/[0.07] p-6 sm:p-8"
+            data-reveal="card"
+          >
             <p className="font-mono text-xs uppercase tracking-[0.16em] text-signal-teal">
               Deeper writeup
             </p>

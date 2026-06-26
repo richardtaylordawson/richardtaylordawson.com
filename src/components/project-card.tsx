@@ -18,6 +18,7 @@ export function ProjectCard({ item }: ProjectCardProps) {
   return (
     <a
       className="project-card group"
+      data-reveal="card"
       href={item.href}
       target="_blank"
       rel="noreferrer"
