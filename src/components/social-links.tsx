@@ -8,12 +8,6 @@ import type { IconComponent } from "@/lib/site-content";
 
 export const socialLinks = [
   {
-    href: "/uses",
-    label: "Uses",
-    icon: Wrench,
-    internal: true,
-  },
-  {
     href: "https://www.github.com/richardtaylordawson",
     label: "GitHub",
     icon: FaGithub,
@@ -22,6 +16,12 @@ export const socialLinks = [
     href: "https://www.linkedin.com/in/taylor-dawson-482927123/",
     label: "LinkedIn",
     icon: FaLinkedinIn,
+  },
+  {
+    href: "/uses",
+    label: "Uses",
+    icon: Wrench,
+    internal: true,
   },
   {
     href: "https://music.apple.com/profile/richardtaylordawson",
