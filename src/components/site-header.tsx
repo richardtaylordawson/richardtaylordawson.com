@@ -12,32 +12,53 @@ const primaryLinks = [
   { href: "/#business-sites", label: "Business Sites" },
 ];
 
-const mobileMenuLinks = [
-  { href: "/about", label: "About Me", internal: true },
-  { href: "/#experience", label: "Experience", internal: true },
-  { href: "/#work", label: "Projects", internal: true },
-  { href: "/#business-sites", label: "Business Sites", internal: true },
-  { href: "/uses", label: "Uses", internal: true },
-  ...experience.map((item) => ({
-    href: item.detailHref,
-    label: item.company,
-    internal: true,
-  })),
+const mobileMenuSections = [
   {
-    href: "https://www.github.com/richardtaylordawson",
-    label: "GitHub",
+    title: "Site",
+    toneClassName: "text-signal-teal/80",
+    links: [
+      { href: "/about", label: "About Me", internal: true },
+      { href: "/#work", label: "Projects", internal: true },
+      { href: "/#business-sites", label: "Business Sites", internal: true },
+    ],
   },
   {
-    href: "https://www.linkedin.com/in/taylor-dawson-482927123/",
-    label: "LinkedIn",
+    title: "Experience",
+    toneClassName: "text-signal-amber/80",
+    links: experience.map((item) => ({
+      href: item.detailHref,
+      label: item.company,
+      internal: true,
+    })),
   },
   {
-    href: "mailto:richard.taylor.dawson@gmail.com",
-    label: "Email",
+    title: "Connect",
+    toneClassName: "text-signal-lime/80",
+    links: [
+      {
+        href: "https://www.github.com/richardtaylordawson",
+        label: "GitHub",
+      },
+      {
+        href: "https://www.linkedin.com/in/taylor-dawson-482927123/",
+        label: "LinkedIn",
+      },
+      {
+        href: "mailto:richard.taylor.dawson@gmail.com",
+        label: "Email",
+      },
+    ],
   },
   {
-    href: "https://rocketleague.tracker.network/rocket-league/profile/epic/LilWizzie/overview",
-    label: "Rocket League",
+    title: "Misc",
+    toneClassName: "text-white/48",
+    links: [
+      { href: "/uses", label: "Uses", internal: true },
+      {
+        href: "https://rocketleague.tracker.network/rocket-league/profile/epic/LilWizzie/overview",
+        label: "Rocket League",
+      },
+    ],
   },
 ];
 
@@ -68,7 +89,7 @@ export function SiteHeader() {
           ))}
         </div>
 
-        <MobileMenu links={mobileMenuLinks} />
+        <MobileMenu sections={mobileMenuSections} />
       </nav>
     </header>
   );
