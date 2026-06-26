@@ -47,7 +47,7 @@ export function MobileMenu({ sections }: MobileMenuProps) {
       className={`mobile-menu-overlay md:hidden ${isOpen ? "is-open" : ""}`}
     >
       <div className="mobile-menu-surface">
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex h-16 items-center justify-between gap-4">
           <Link
             href="/"
             className="flex items-center"
@@ -129,13 +129,9 @@ export function MobileMenu({ sections }: MobileMenuProps) {
         </div>
 
         <div className="mt-8 rounded-[8px] border border-white/10 bg-white/[0.045] p-5">
-          <p className="text-sm text-white/70">
-            Modern web products with AI, accessibility, and thoughtful UI
-            craft.
-          </p>
           <a
             href="/documents/richardtaylordawson.pdf"
-            className="command-link mt-5 w-full"
+            className="command-link w-full"
             onClick={() => setIsOpen(false)}
           >
             Resume

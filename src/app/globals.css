@@ -187,7 +187,7 @@
   }
 
   .mobile-menu-surface {
-    @apply flex min-h-dvh flex-col bg-background/96 px-4 pb-6 pt-5 backdrop-blur-xl sm:px-6;
+    @apply flex min-h-dvh flex-col bg-background/96 px-4 pb-6 pt-0 backdrop-blur-xl sm:px-6;
   }
 
   .mobile-menu-link {
