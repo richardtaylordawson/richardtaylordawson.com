@@ -37,7 +37,30 @@ export function ExperienceList({ items }: ExperienceListProps) {
                       className="role-history-item"
                       key={`${job.company}-${role.title}`}
                     >
-                      <span className="role-node" aria-hidden="true" />
+                      <span className="role-node" aria-hidden="true">
+                        <svg
+                          viewBox="0 0 16 16"
+                          className="role-node-signal"
+                          aria-hidden="true"
+                        >
+                          <circle
+                            className="role-node-outline"
+                            cx="8"
+                            cy="8"
+                            r="7"
+                          />
+                          <path
+                            className="role-node-arc role-node-arc-left"
+                            d="M 8 1 A 7 7 0 0 0 8 15"
+                            pathLength="100"
+                          />
+                          <path
+                            className="role-node-arc role-node-arc-right"
+                            d="M 8 1 A 7 7 0 0 1 8 15"
+                            pathLength="100"
+                          />
+                        </svg>
+                      </span>
                       {roleIndex < job.roles.length - 1 ? (
                         <span className="role-segment" aria-hidden="true" />
                       ) : null}

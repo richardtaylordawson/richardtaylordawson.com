@@ -436,10 +436,8 @@
   }
 
   .role-node {
-    display: grid;
     height: 1rem;
     left: -1.5rem;
-    place-items: center;
     pointer-events: none;
     position: absolute;
     top: 0.25rem;
@@ -453,34 +451,43 @@
     box-shadow: 0 0 0 4px var(--card);
     content: "";
     height: 0.375rem;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 0.375rem;
+    z-index: 2;
   }
 
-  .role-node::after {
-    background: conic-gradient(
-      from -90deg,
-      transparent 0deg,
-      transparent 44deg,
-      rgb(45 212 191 / 0.96) 72deg,
-      rgb(184 243 74 / 0.96) 128deg,
-      rgb(45 212 191 / 0.96) 186deg,
-      transparent 232deg,
-      transparent 360deg
-    );
-    border-radius: 999px;
-    content: "";
+  .role-node-signal {
+    display: block;
+    height: 100%;
     inset: 0;
-    opacity: 0;
-    padding: 1px;
     position: absolute;
-    -webkit-mask:
-      linear-gradient(#000 0 0) content-box,
-      linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-    mask:
-      linear-gradient(#000 0 0) content-box,
-      linear-gradient(#000 0 0);
-    mask-composite: exclude;
+    width: 100%;
+  }
+
+  .role-node-outline {
+    fill: none;
+    stroke: rgb(192 132 252 / 0.34);
+    stroke-width: 1;
+  }
+
+  .role-node-arc {
+    fill: none;
+    opacity: 0;
+    stroke-linecap: round;
+    stroke-width: 1.35;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+  }
+
+  .role-node-arc-left {
+    stroke: rgb(45 212 191 / 0.96);
+  }
+
+  .role-node-arc-right {
+    stroke: rgb(184 243 74 / 0.96);
   }
 
   .role-segment {
@@ -514,34 +521,45 @@
     transform-origin: top;
   }
 
-  .is-revealed .role-node::after {
-    animation: role-node-signal 5.8s linear 1 both;
+  .is-revealed .role-node-arc {
+    animation: role-node-arc-signal 0.72s cubic-bezier(0.65, 0, 0.35, 1) 1 both;
   }
 
   .is-revealed .role-segment::after {
-    animation: role-segment-signal 5.8s cubic-bezier(0.65, 0, 0.35, 1) 1 both;
+    animation: role-segment-signal 0.5s cubic-bezier(0.65, 0, 0.35, 1) 1 both;
   }
 
-  .role-history-item:nth-child(1) .role-node::after {
+  .role-history-item:nth-child(1) .role-node-arc {
     animation-delay: 0s;
   }
 
   .role-history-item:nth-child(1) .role-segment::after {
-    animation-delay: 0.48s;
+    animation-delay: 0.72s;
   }
 
-  .role-history-item:nth-child(2) .role-node::after {
-    animation-delay: 1.72s;
+  .role-history-item:nth-child(2) .role-node-arc {
+    animation-delay: 1.38s;
   }
 
   .role-history-item:nth-child(2) .role-segment::after {
-    animation-delay: 2.2s;
+    animation-delay: 2.1s;
   }
 
-  .role-history-item:nth-child(3) .role-node::after {
-    animation-delay: 3.44s;
+  .role-history-item:nth-child(3) .role-node-arc {
+    animation-delay: 2.76s;
   }
 
+  .role-history-item:nth-child(3) .role-segment::after {
+    animation-delay: 3.48s;
+  }
+
+  .role-history-item:nth-child(4) .role-node-arc {
+    animation-delay: 4.14s;
+  }
+
+  .role-history-item:nth-child(4) .role-segment::after {
+    animation-delay: 4.86s;
+  }
 }
 
 @layer utilities {
@@ -665,39 +683,37 @@
     opacity: 0;
     transform: scaleY(0);
   }
-  16% {
+  12% {
     opacity: 1;
     transform: scaleY(0);
   }
-  48% {
+  84% {
     opacity: 1;
     transform: scaleY(1);
   }
-  64%,
   100% {
     opacity: 0;
     transform: scaleY(1);
   }
 }
 
-@keyframes role-node-signal {
+@keyframes role-node-arc-signal {
   0%,
-  8% {
+  6% {
     opacity: 0;
-    transform: rotate(-80deg) scale(0.82);
+    stroke-dashoffset: 100;
   }
-  13% {
+  16% {
     opacity: 1;
-    transform: rotate(0deg) scale(1);
+    stroke-dashoffset: 100;
   }
-  26% {
+  76% {
     opacity: 1;
-    transform: rotate(235deg) scale(1.08);
+    stroke-dashoffset: 0;
   }
-  32%,
   100% {
     opacity: 0;
-    transform: rotate(360deg) scale(0.92);
+    stroke-dashoffset: 0;
   }
 }
 
@@ -768,7 +784,7 @@
   }
 
   .role-segment::after,
-  .role-node::after {
+  .role-node-arc {
     display: none;
   }
 }
