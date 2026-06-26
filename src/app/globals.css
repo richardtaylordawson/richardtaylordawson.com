@@ -487,7 +487,7 @@
   }
 
   .role-node-arc-right {
-    stroke: rgb(184 243 74 / 0.96);
+    stroke: rgb(45 212 191 / 0.96);
   }
 
   .role-segment {
@@ -509,8 +509,8 @@
     background: linear-gradient(
       to bottom,
       rgb(45 212 191 / 0),
-      rgb(45 212 191 / 0.95) 18%,
-      rgb(184 243 74 / 0.86) 62%,
+      rgb(45 212 191 / 0.9) 18%,
+      rgb(45 212 191 / 0.98) 62%,
       rgb(45 212 191 / 0)
     );
     content: "";
@@ -522,11 +522,11 @@
   }
 
   .is-revealed .role-node-arc {
-    animation: role-node-arc-signal 0.72s cubic-bezier(0.65, 0, 0.35, 1) 1 both;
+    animation: role-node-arc-signal 1.35s cubic-bezier(0.65, 0, 0.35, 1) 1 both;
   }
 
   .is-revealed .role-segment::after {
-    animation: role-segment-signal 0.5s cubic-bezier(0.65, 0, 0.35, 1) 1 both;
+    animation: role-segment-signal 0.9s cubic-bezier(0.65, 0, 0.35, 1) 1 both;
   }
 
   .role-history-item:nth-child(1) .role-node-arc {
@@ -534,31 +534,31 @@
   }
 
   .role-history-item:nth-child(1) .role-segment::after {
-    animation-delay: 0.72s;
+    animation-delay: 0.98s;
   }
 
   .role-history-item:nth-child(2) .role-node-arc {
-    animation-delay: 1.38s;
+    animation-delay: 1.72s;
   }
 
   .role-history-item:nth-child(2) .role-segment::after {
-    animation-delay: 2.1s;
+    animation-delay: 2.7s;
   }
 
   .role-history-item:nth-child(3) .role-node-arc {
-    animation-delay: 2.76s;
+    animation-delay: 3.44s;
   }
 
   .role-history-item:nth-child(3) .role-segment::after {
-    animation-delay: 3.48s;
+    animation-delay: 4.42s;
   }
 
   .role-history-item:nth-child(4) .role-node-arc {
-    animation-delay: 4.14s;
+    animation-delay: 5.16s;
   }
 
   .role-history-item:nth-child(4) .role-segment::after {
-    animation-delay: 4.86s;
+    animation-delay: 6.14s;
   }
 }
 
@@ -683,11 +683,11 @@
     opacity: 0;
     transform: scaleY(0);
   }
-  12% {
+  8% {
     opacity: 1;
     transform: scaleY(0);
   }
-  84% {
+  82% {
     opacity: 1;
     transform: scaleY(1);
   }
@@ -703,11 +703,11 @@
     opacity: 0;
     stroke-dashoffset: 100;
   }
-  16% {
+  12% {
     opacity: 1;
     stroke-dashoffset: 100;
   }
-  76% {
+  82% {
     opacity: 1;
     stroke-dashoffset: 0;
   }

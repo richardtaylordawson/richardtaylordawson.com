@@ -67,7 +67,7 @@ export default function UsesPage() {
           </div>
         </div>
 
-        <div className="motion-stagger mt-16 grid gap-4 lg:grid-cols-3">
+        <div className="motion-stagger mt-16 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {toolGroups.map((group) => (
             <ToolGroupCard {...group} key={group.title} />
           ))}

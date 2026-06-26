@@ -1,5 +1,5 @@
 import type { ComponentType } from "react";
-import { Bot, Code2, Mail, Sparkles } from "lucide-react";
+import { Bot, Code2, Database, Mail, Sparkles } from "lucide-react";
 import { SiEpicgames } from "react-icons/si";
 import { TbDeviceNintendo } from "react-icons/tb";
 
@@ -189,6 +189,13 @@ export const toolGroups = [
     description:
       "The constraints and standards that shape the tools, not an afterthought at the end.",
     items: ["Accessibility", "Performance", "Design systems", "AI product UX"],
+  },
+  {
+    icon: Database,
+    title: "Platform stack",
+    description:
+      "The hosted services behind deployment, auth, data, and the email plumbing on client work.",
+    items: ["Vercel", "Clerk", "Supabase", "Transactional email"],
   },
 ] satisfies {
   icon: IconComponent;
