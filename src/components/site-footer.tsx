@@ -50,7 +50,7 @@ export function SiteFooter() {
           </Link>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 min-[430px]:grid-cols-2 lg:grid-cols-4">
           <nav aria-label="Footer navigation">
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-signal-teal">
               Site

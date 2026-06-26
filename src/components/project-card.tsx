@@ -4,6 +4,7 @@ import { ExternalLink } from "lucide-react";
 export type ProjectCardItem = {
   title: string;
   tag: string;
+  year?: string;
   text: string;
   href: string;
   image: string;
@@ -43,8 +44,11 @@ export function ProjectCard({ item }: ProjectCardProps) {
         </div>
       </div>
       <div className="p-3 pb-4 pt-5 sm:p-5 sm:pb-5">
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap items-center gap-2">
           <span className="project-tag">{item.tag}</span>
+          {item.year ? (
+            <span className="project-year">Built {item.year}</span>
+          ) : null}
         </div>
         <h3 className="mt-4 text-2xl font-semibold text-white">
           {item.title}

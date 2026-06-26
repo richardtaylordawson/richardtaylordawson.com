@@ -17,6 +17,7 @@ export const projects = [
   {
     title: "Calculator",
     tag: "Web calculator",
+    year: "2018",
     text: "A focused calculator built with Bootstrap, HTML, and ES6 modules, with a set of switchable Bootswatch themes.",
     href: "https://calculator.richardtaylordawson.com",
     image: "https://calculator.richardtaylordawson.com/images/social-share.png",
@@ -25,6 +26,7 @@ export const projects = [
   {
     title: "Gaming Trivia",
     tag: "Interactive game",
+    year: "2019",
     text: "A retro gaming trivia experience built with NES.css and an open trivia API for a fresh set of questions each round.",
     href: "https://gaming-trivia.richardtaylordawson.com",
     image: "https://gaming-trivia.richardtaylordawson.com/images/social-share.png",

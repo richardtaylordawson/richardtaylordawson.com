@@ -341,6 +341,10 @@
     @apply rounded-[6px] border border-white/[0.12] bg-white/[0.05] px-2.5 py-1 font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-white/60;
   }
 
+  .project-year {
+    @apply rounded-[6px] border border-signal-amber/20 bg-signal-amber/[0.07] px-2.5 py-1 font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-signal-amber/75;
+  }
+
   .skill-chip {
     @apply rounded-[8px] border border-white/10 bg-white/[0.055] px-3 py-2 text-sm text-white/[0.72];
   }
