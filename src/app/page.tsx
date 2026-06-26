@@ -63,7 +63,7 @@ export default function Home() {
               <SectionHeading kicker="About me" />
             </div>
             <div>
-              <div className="relative max-h-[216px] overflow-hidden">
+              <div className="about-preview-fade max-h-[216px] overflow-hidden">
                 <div className="space-y-5 text-base leading-7 text-white/[0.68]">
                   {aboutCopy.map((paragraph) => (
                     <p data-reveal="hero" key={paragraph}>
@@ -71,10 +71,6 @@ export default function Home() {
                     </p>
                   ))}
                 </div>
-                <div
-                  aria-hidden="true"
-                  className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-[#26152f] via-[#26152f]/70 via-35% to-transparent"
-                />
               </div>
               <div className="mt-5" data-reveal="hero">
                 <Link href="/about" className="command-link">

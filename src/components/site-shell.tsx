@@ -21,7 +21,7 @@ export function SiteShell({ children }: SiteShellProps) {
       </div>
       <RevealOnScroll />
       <SiteHeader />
-      <main>
+      <main className="pt-16">
         <ViewTransition
           enter="signal-page-enter"
           exit="signal-page-exit"

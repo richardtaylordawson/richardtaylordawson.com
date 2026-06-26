@@ -87,19 +87,19 @@ export function MobileMenu({ sections }: MobileMenuProps) {
                 {section.links.map((link) => {
                   const content = (
                     <>
-                      {link.logo ? (
-                        <Image
-                          src={link.logo}
-                          alt=""
-                          width={16}
-                          height={16}
-                          className="size-4 shrink-0 rounded-[4px] bg-white object-contain p-0.5"
-                        />
-                      ) : null}
-                      <span>{link.label}</span>
-                      {link.internal ? (
-                        <span className="ml-auto text-white/30">/</span>
-                      ) : (
+                      <span className="flex min-w-0 items-center gap-3">
+                        {link.logo ? (
+                          <Image
+                            src={link.logo}
+                            alt=""
+                            width={16}
+                            height={16}
+                            className="size-4 shrink-0 rounded-[4px] bg-white object-contain p-0.5"
+                          />
+                        ) : null}
+                        <span className="truncate">{link.label}</span>
+                      </span>
+                      {link.internal ? null : (
                         <ArrowUpRight className="ml-auto size-3.5 shrink-0 text-white/35" />
                       )}
                     </>
@@ -132,7 +132,7 @@ export function MobileMenu({ sections }: MobileMenuProps) {
           ))}
         </div>
 
-        <div className="mt-auto rounded-[8px] border border-white/10 bg-white/[0.045] p-5">
+        <div className="mt-8 rounded-[8px] border border-white/10 bg-white/[0.045] p-5">
           <p className="text-sm text-white/70">
             Modern web products with AI, accessibility, and thoughtful UI
             craft.
