@@ -29,6 +29,7 @@ const mobileMenuSections = [
       href: item.detailHref,
       label: item.company,
       internal: true,
+      logo: item.logo,
     })),
   },
   {

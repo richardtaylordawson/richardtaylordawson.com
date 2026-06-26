@@ -21,7 +21,7 @@ export default function Home() {
     <SiteShell>
       <section
         id="top"
-        className="relative mx-auto flex min-h-[60vh] max-w-7xl items-center px-4 pb-5 pt-10 sm:px-6 lg:px-8"
+        className="relative mx-auto flex min-h-[calc(68vh-4rem)] max-w-7xl items-center px-4 pb-5 pt-14 sm:px-6 lg:px-8"
       >
         <div className="relative z-10 w-full">
           <div className="mb-6" data-reveal="hero">
@@ -52,7 +52,7 @@ export default function Home() {
 
       <section
         id="about"
-        className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8"
+        className="scroll-mt-24 mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8"
       >
         <div
           className="rounded-[8px] border border-white/10 bg-white/[0.045] p-6 shadow-2xl shadow-black/10 sm:p-8 lg:p-10"
@@ -63,7 +63,7 @@ export default function Home() {
               <SectionHeading kicker="About me" />
             </div>
             <div>
-              <div className="relative max-h-[200px] overflow-hidden">
+              <div className="relative max-h-[216px] overflow-hidden">
                 <div className="space-y-5 text-base leading-7 text-white/[0.68]">
                   {aboutCopy.map((paragraph) => (
                     <p data-reveal="hero" key={paragraph}>
@@ -73,7 +73,7 @@ export default function Home() {
                 </div>
                 <div
                   aria-hidden="true"
-                  className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-[#26152f] via-[#26152f]/78 via-45% to-transparent blur-[2px]"
+                  className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-[#26152f] via-[#26152f]/70 via-35% to-transparent"
                 />
               </div>
               <div className="mt-5" data-reveal="hero">
@@ -88,7 +88,7 @@ export default function Home() {
 
       <section
         id="experience"
-        className="border-y border-white/10 bg-white/[0.025] py-8"
+        className="scroll-mt-24 border-y border-white/10 bg-white/[0.025] py-8"
       >
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div data-reveal="hero">
@@ -100,7 +100,7 @@ export default function Home() {
 
       <section
         id="work"
-        className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8"
+        className="scroll-mt-24 mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8"
       >
         <ProjectSection
           kicker="Projects"

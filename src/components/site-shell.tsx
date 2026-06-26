@@ -11,7 +11,7 @@ type SiteShellProps = {
 
 export function SiteShell({ children }: SiteShellProps) {
   return (
-    <div className="relative isolate min-h-screen overflow-hidden bg-background text-foreground">
+    <div className="relative isolate min-h-screen overflow-x-hidden bg-background text-foreground">
       <AiAmbient />
       <div className="site-grid" aria-hidden="true" />
       <div className="signal-rail" aria-hidden="true">

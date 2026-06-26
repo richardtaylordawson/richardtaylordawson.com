@@ -1,7 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 
@@ -11,6 +12,7 @@ type MobileMenuLink = {
   href: string;
   label: string;
   internal?: boolean;
+  logo?: string;
 };
 
 type MobileMenuProps = {
@@ -82,16 +84,35 @@ export function MobileMenu({ sections }: MobileMenuProps) {
                 className="mt-4 grid gap-3"
                 aria-label={`${section.title} mobile navigation`}
               >
-                {section.links.map((link) =>
-                  link.internal ? (
+                {section.links.map((link) => {
+                  const content = (
+                    <>
+                      {link.logo ? (
+                        <Image
+                          src={link.logo}
+                          alt=""
+                          width={16}
+                          height={16}
+                          className="size-4 shrink-0 rounded-[4px] bg-white object-contain p-0.5"
+                        />
+                      ) : null}
+                      <span>{link.label}</span>
+                      {link.internal ? (
+                        <span className="ml-auto text-white/30">/</span>
+                      ) : (
+                        <ArrowUpRight className="ml-auto size-3.5 shrink-0 text-white/35" />
+                      )}
+                    </>
+                  );
+
+                  return link.internal ? (
                     <Link
                       key={link.href}
                       href={link.href}
                       className="mobile-menu-link"
                       onClick={() => setIsOpen(false)}
                     >
-                      <span>{link.label}</span>
-                      <span className="text-white/30">/</span>
+                      {content}
                     </Link>
                   ) : (
                     <a
@@ -102,11 +123,10 @@ export function MobileMenu({ sections }: MobileMenuProps) {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <span>{link.label}</span>
-                      <span className="text-white/30">/</span>
+                      {content}
                     </a>
-                  )
-                )}
+                  );
+                })}
               </nav>
             </section>
           ))}
