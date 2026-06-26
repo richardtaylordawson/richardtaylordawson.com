@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, Wrench } from "lucide-react";
+import { FileText, Mail, Wrench } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { SiEpicgames } from "react-icons/si";
 
@@ -61,6 +61,11 @@ const mobileMenuSections = [
     toneClassName: "text-white/48",
     links: [
       { href: "/uses", label: "Tools", internal: true, icon: Wrench },
+      {
+        href: "/documents/richardtaylordawson.pdf",
+        label: "Resume",
+        icon: FileText,
+      },
       {
         href: "https://rocketleague.tracker.network/rocket-league/profile/epic/LilWizzie/overview",
         label: "Rocket League",

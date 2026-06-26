@@ -83,8 +83,11 @@ export function ExperienceList({ items }: ExperienceListProps) {
                 <a
                   href="/documents/richardtaylordawson.pdf"
                   className="experience-action-link experience-action-link-resume"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   Download resume
+                  <ExternalLink className="size-3.5" />
                 </a>
               </div>
             </li>

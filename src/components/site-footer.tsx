@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Mail, Wrench } from "lucide-react";
+import { ExternalLink, FileText, Mail, Wrench } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { SiEpicgames } from "react-icons/si";
 
@@ -39,6 +39,12 @@ const footerConnectLinks = [
 
 const footerMiscLinks = [
   { href: "/uses", label: "Tools", icon: Wrench },
+  {
+    href: "/documents/richardtaylordawson.pdf",
+    label: "Resume",
+    icon: FileText,
+    external: true,
+  },
   {
     href: "https://rocketleague.tracker.network/rocket-league/profile/epic/LilWizzie/overview",
     label: "Rocket League",
@@ -118,7 +124,7 @@ export function SiteFooter() {
                     <span className="inline-flex min-w-0 items-center gap-2">
                       <Icon className="size-4 shrink-0" />
                       <span className="truncate">{label}</span>
-                      <ArrowUpRight className="size-3.5 shrink-0 text-white/35" />
+                      <ExternalLink className="size-3.5 shrink-0 text-white/35" />
                     </span>
                   </a>
                 </li>
@@ -142,7 +148,7 @@ export function SiteFooter() {
                     >
                       <Icon className="size-4 shrink-0" />
                       {label}
-                      <ArrowUpRight className="ml-auto size-3.5 shrink-0 text-white/35" />
+                      <ExternalLink className="ml-auto size-3.5 shrink-0 text-white/35" />
                     </a>
                   ) : (
                     <Link href={href} className={footerLinkClass}>

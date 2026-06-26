@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { ExternalLink, Menu, X } from "lucide-react";
 import type { ComponentType } from "react";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
@@ -96,7 +96,7 @@ export function MobileMenu({ sections }: MobileMenuProps) {
                         <span className="truncate">{link.label}</span>
                       </span>
                       {link.internal ? null : (
-                        <ArrowUpRight className="ml-auto size-3.5 shrink-0 text-white/35" />
+                        <ExternalLink className="ml-auto size-3.5 shrink-0 text-white/35" />
                       )}
                     </>
                   );
@@ -133,8 +133,11 @@ export function MobileMenu({ sections }: MobileMenuProps) {
             href="/documents/richardtaylordawson.pdf"
             className="command-link w-full"
             onClick={() => setIsOpen(false)}
+            target="_blank"
+            rel="noreferrer"
           >
             Resume
+            <ExternalLink className="size-4" />
           </a>
         </div>
       </div>
