@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     default: "Taylor Dawson - Software Engineer",
     template: "%s - Taylor Dawson",
   },
+  verification: {
+    google: "8xVt6B5nYoIzSXiJEU_R3lmGrtnsyPvT6EDqmVQ9wsw",
+  },
 };
 
 export default function RootLayout({
