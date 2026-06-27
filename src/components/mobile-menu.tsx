@@ -4,7 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink, Menu, X } from "lucide-react";
 import type { ComponentType } from "react";
-import { useEffect, useState, useSyncExternalStore } from "react";
+import {
+  useEffect,
+  useEffectEvent,
+  useRef,
+  useState,
+  useSyncExternalStore,
+} from "react";
 import { createPortal } from "react-dom";
 
 import { BrandMark } from "@/components/brand-mark";
@@ -27,17 +33,86 @@ type MobileMenuProps = {
 
 export function MobileMenu({ sections }: MobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
   const isMounted = useSyncExternalStore(
     () => () => {},
     () => true,
     () => false
   );
 
+  const handleKeydown = useEffectEvent((event: KeyboardEvent) => {
+    if (!isOpen) {
+      return;
+    }
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+      setIsOpen(false);
+      return;
+    }
+
+    if (event.key !== "Tab") {
+      return;
+    }
+
+    const menu = document.getElementById("mobile-site-menu");
+
+    if (!menu) {
+      return;
+    }
+
+    const focusable = Array.from(
+      menu.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )
+    ).filter((element) => !element.hasAttribute("hidden"));
+
+    if (focusable.length === 0) {
+      return;
+    }
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    const active = document.activeElement;
+
+    if (event.shiftKey && active === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && active === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+
   useEffect(() => {
+    const shellRoot = document.querySelector<HTMLElement>("[data-site-shell-root]");
+    const triggerElement = triggerRef.current;
+
     document.body.style.overflow = isOpen ? "hidden" : "";
 
+    if (!isOpen) {
+      shellRoot?.removeAttribute("inert");
+      previousFocusRef.current = null;
+      return () => {
+        document.body.style.overflow = "";
+      };
+    }
+
+    previousFocusRef.current = document.activeElement as HTMLElement | null;
+    shellRoot?.setAttribute("inert", "");
+    closeButtonRef.current?.focus();
+    document.addEventListener("keydown", handleKeydown);
+
     return () => {
+      shellRoot?.removeAttribute("inert");
       document.body.style.overflow = "";
+      document.removeEventListener("keydown", handleKeydown);
+
+      if (isOpen) {
+        (previousFocusRef.current ?? triggerElement)?.focus();
+      }
     };
   }, [isOpen]);
 
@@ -45,6 +120,9 @@ export function MobileMenu({ sections }: MobileMenuProps) {
     <div
       id="mobile-site-menu"
       className={`mobile-menu-overlay md:hidden ${isOpen ? "is-open" : ""}`}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Site menu"
     >
       <div className="mobile-menu-surface">
         <div className="flex h-16 items-center justify-between gap-4">
@@ -57,6 +135,7 @@ export function MobileMenu({ sections }: MobileMenuProps) {
             <BrandMark />
           </Link>
           <button
+            ref={closeButtonRef}
             type="button"
             className="mobile-menu-trigger"
             aria-label="Close menu"
@@ -115,11 +194,13 @@ export function MobileMenu({ sections }: MobileMenuProps) {
                       key={link.href}
                       href={link.href}
                       className="mobile-menu-link"
+                      aria-label={`${link.label} (opens in a new tab)`}
                       onClick={() => setIsOpen(false)}
                       target="_blank"
                       rel="noreferrer"
                     >
                       {content}
+                      <span className="sr-only">(opens in a new tab)</span>
                     </a>
                   );
                 })}
@@ -135,6 +216,7 @@ export function MobileMenu({ sections }: MobileMenuProps) {
   return (
     <>
       <button
+        ref={triggerRef}
         type="button"
         className="mobile-menu-trigger md:hidden"
         aria-expanded={isOpen}

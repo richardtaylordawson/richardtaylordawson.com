@@ -118,12 +118,14 @@ export function SiteFooter() {
                   <a
                     href={href}
                     className={footerLinkClass}
+                    aria-label={`${label} (opens in a new tab)`}
                     target="_blank"
                     rel="noreferrer"
                   >
                     <span className="inline-flex min-w-0 items-center gap-2">
                       <Icon className="size-4 shrink-0" />
                       <span className="truncate">{label}</span>
+                      <span className="sr-only">(opens in a new tab)</span>
                       <ExternalLink className="size-3.5 shrink-0 text-white/35" />
                     </span>
                   </a>
@@ -143,11 +145,13 @@ export function SiteFooter() {
                     <a
                       href={href}
                       className={footerLinkClass}
+                      aria-label={`${label} (opens in a new tab)`}
                       target="_blank"
                       rel="noreferrer"
                     >
                       <Icon className="size-4 shrink-0" />
                       {label}
+                      <span className="sr-only">(opens in a new tab)</span>
                       <ExternalLink className="ml-auto size-3.5 shrink-0 text-white/35" />
                     </a>
                   ) : (
@@ -162,7 +166,7 @@ export function SiteFooter() {
           </nav>
         </div>
       </div>
-      <div className="mx-auto flex max-w-7xl flex-col gap-3 border-t border-white/[0.08] px-4 py-4 font-mono text-xs uppercase tracking-[0.14em] text-white/38 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl flex-col gap-3 border-t border-white/[0.08] px-4 py-4 font-mono text-xs uppercase tracking-[0.14em] text-white/[0.48] sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
         <p>Copyright {new Date().getFullYear()}</p>
       </div>
     </footer>

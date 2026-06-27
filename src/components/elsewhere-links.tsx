@@ -30,7 +30,7 @@ function ElsewhereLink({ item }: { item: ElsewhereItem }) {
       <Icon className="size-5 text-signal-teal" />
       <div>
         <p className="text-sm font-semibold text-white">{item.label}</p>
-        <p className="mt-1 font-mono text-xs text-white/45">{item.value}</p>
+        <p className="mt-1 font-mono text-xs text-white/[0.55]">{item.value}</p>
       </div>
       {item.href ? (
         <ExternalLink className="ml-auto size-4 text-white/35" />
@@ -50,13 +50,15 @@ function ElsewhereLink({ item }: { item: ElsewhereItem }) {
 
   return (
     <a
-      className={`${className} transition hover:border-signal-teal/40 hover:bg-white/[0.05]`}
+      className={`${className} transition hover:border-signal-teal/40 hover:bg-white/[0.05] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary`}
       data-reveal="card"
       href={item.href}
+      aria-label={`${item.label}: ${item.value} (opens in a new tab)`}
       target="_blank"
       rel="noreferrer"
     >
       {content}
+      <span className="sr-only">(opens in a new tab)</span>
     </a>
   );
 }

@@ -11,16 +11,19 @@ export const socialLinks = [
     href: "https://www.github.com/richardtaylordawson",
     label: "GitHub",
     icon: FaGithub,
+    external: true,
   },
   {
     href: "https://www.linkedin.com/in/taylor-dawson-482927123/",
     label: "LinkedIn",
     icon: FaLinkedinIn,
+    external: true,
   },
   {
     href: "mailto:richard.taylor.dawson@gmail.com",
     label: "Email",
     icon: Mail,
+    external: true,
   },
   {
     href: "/tools",
@@ -32,12 +35,14 @@ export const socialLinks = [
     href: "https://rocketleague.tracker.network/rocket-league/profile/epic/LilWizzie/overview",
     label: "Rocket League",
     icon: SiEpicgames,
+    external: true,
   },
 ] satisfies {
   href: string;
   label: string;
   icon: IconComponent;
   internal?: boolean;
+  external?: boolean;
 }[];
 
 type SocialLinksProps = {
@@ -58,6 +63,7 @@ function SocialLink({
   label,
   icon: Icon,
   internal,
+  external,
 }: (typeof socialLinks)[number]) {
   const content = <Icon />;
 
@@ -73,7 +79,7 @@ function SocialLink({
     <a
       href={href}
       className="icon-link"
-      aria-label={label}
+      aria-label={external ? `${label} (opens in a new tab)` : label}
       target="_blank"
       rel="noreferrer"
     >

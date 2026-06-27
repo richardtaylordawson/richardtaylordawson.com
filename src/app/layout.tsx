@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 
 import { buildPageMetadata, siteUrl } from "@/lib/seo";
 
@@ -41,7 +42,17 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} dark h-full scroll-smooth antialiased`}
     >
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        {children}
+        <Script id="audioeye-config" strategy="afterInteractive">
+          {`window.__AudioEyeSiteHash = "2105ede915b1a1fbef1672abc0f6487e";`}
+        </Script>
+        <Script
+          id="audioeye-loader"
+          src="https://wsmcdn.audioeye.com/aem.js"
+          strategy="lazyOnload"
+        />
+      </body>
     </html>
   );
 }

@@ -27,7 +27,7 @@ export function ExperienceList({ items }: ExperienceListProps) {
               <div className="min-w-0 flex-1">
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
                   <p className="font-medium text-white">{job.company}</p>
-                  <time className="shrink-0 font-mono text-xs text-white/[0.42]">
+                  <time className="shrink-0 font-mono text-xs text-white/[0.48]">
                     {job.span}
                   </time>
                 </div>
@@ -67,7 +67,7 @@ export function ExperienceList({ items }: ExperienceListProps) {
                       <p className="text-sm font-medium text-white/[0.72]">
                         {role.title}
                       </p>
-                      <time className="mt-0.5 block font-mono text-[0.6875rem] text-white/[0.4]">
+                      <time className="mt-0.5 block font-mono text-[0.6875rem] text-white/[0.48]">
                         {role.span}
                       </time>
                     </li>
@@ -80,10 +80,12 @@ export function ExperienceList({ items }: ExperienceListProps) {
                   <a
                     href={job.siteHref}
                     className="experience-action-link experience-action-link-site"
+                    aria-label={`Visit ${job.company} company site (opens in a new tab)`}
                     target="_blank"
                     rel="noreferrer"
                   >
                     Company site
+                    <span className="sr-only">(opens in a new tab)</span>
                     <ExternalLink className="size-3.5" />
                   </a>
                   <Link
@@ -103,10 +105,12 @@ export function ExperienceList({ items }: ExperienceListProps) {
                 <a
                   href="/documents/richardtaylordawson.pdf"
                   className="experience-action-link experience-action-link-resume"
+                  aria-label="Open resume PDF (opens in a new tab)"
                   target="_blank"
                   rel="noreferrer"
                 >
                   Resume
+                  <span className="sr-only">(opens in a new tab)</span>
                   <ExternalLink className="size-3.5" />
                 </a>
               </div>

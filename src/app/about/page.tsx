@@ -21,12 +21,23 @@ export default function AboutPage() {
       <section className="relative mx-auto max-w-7xl px-4 pb-20 pt-12 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-sm text-white/55 transition hover:text-white"
+          className="back-link"
           data-reveal="hero"
         >
           <ArrowLeft className="size-4" />
           Back home
         </Link>
+
+        <header className="mt-10 max-w-3xl" data-reveal="hero">
+          <p className="section-kicker">About me</p>
+          <h1 className="mt-5 text-balance text-4xl font-semibold leading-tight text-white sm:text-5xl">
+            The fuller story behind the work.
+          </h1>
+          <p className="mt-5 max-w-2xl text-base leading-7 text-white/[0.68] sm:text-lg sm:leading-8">
+            Background, working style, and the details that shape how I build
+            polished, accessible web products.
+          </p>
+        </header>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
           <div
@@ -47,7 +58,7 @@ export default function AboutPage() {
             className="rounded-[8px] border border-white/10 bg-white/[0.045] p-6 shadow-2xl shadow-black/10 sm:p-8 lg:p-10"
             data-reveal="card"
           >
-            <SectionHeading kicker="About me" />
+            <SectionHeading kicker="Biography" />
             <div className="mt-8 space-y-5 text-base leading-7 text-white/[0.68] sm:text-lg sm:leading-8">
               {aboutCopy.map((paragraph) => (
                 <p data-reveal="hero" key={paragraph}>

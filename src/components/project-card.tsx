@@ -21,6 +21,7 @@ export function ProjectCard({ item }: ProjectCardProps) {
       className="project-card group"
       data-reveal="card"
       href={item.href}
+      aria-label={`${item.title}: ${item.cta} (opens in a new tab)`}
       target="_blank"
       rel="noreferrer"
     >
@@ -58,6 +59,7 @@ export function ProjectCard({ item }: ProjectCardProps) {
         </p>
         <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-signal-teal">
           {item.cta}
+          <span className="sr-only">(opens in a new tab)</span>
           <ExternalLink className="size-3.5" />
         </span>
       </div>

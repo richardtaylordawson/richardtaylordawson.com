@@ -100,6 +100,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  ::selection {
+    @apply bg-signal-teal/35 text-white;
+  }
   html {
     @apply font-sans;
     cursor:
@@ -153,7 +156,7 @@
   }
 
   .icon-link {
-    @apply grid size-9 place-items-center rounded-[8px] border border-white/10 bg-white/5 text-white/[0.62] transition hover:border-primary/45 hover:bg-primary/10 hover:text-white;
+    @apply grid size-11 place-items-center rounded-[8px] border border-white/10 bg-white/5 text-white/[0.72] transition hover:border-primary/45 hover:bg-primary/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary;
   }
 
   .icon-link svg {
@@ -161,7 +164,7 @@
   }
 
   .mobile-menu-trigger {
-    @apply grid size-10 place-items-center rounded-[8px] border border-white/10 bg-white/5 text-white/[0.72] transition hover:border-primary/45 hover:bg-primary/10 hover:text-white;
+    @apply grid size-11 place-items-center rounded-[8px] border border-white/10 bg-white/5 text-white/[0.82] transition hover:border-primary/45 hover:bg-primary/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary;
   }
 
   .mobile-menu-overlay {
@@ -191,7 +194,7 @@
   }
 
   .mobile-menu-link {
-    @apply flex items-center justify-between rounded-[8px] border border-white/10 bg-white/[0.045] px-4 py-4 text-lg font-medium text-white transition hover:border-signal-teal/40 hover:bg-white/[0.075];
+    @apply flex items-center justify-between rounded-[8px] border border-white/10 bg-white/[0.045] px-4 py-4 text-lg font-medium text-white transition hover:border-signal-teal/40 hover:bg-white/[0.075] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary;
   }
 
   .about-preview-fade {
@@ -210,7 +213,15 @@
   }
 
   .command-link {
-    @apply inline-flex h-11 items-center justify-center gap-2 rounded-[8px] border border-white/[0.12] bg-white/[0.06] px-4 text-sm font-medium text-white/[0.82] transition hover:border-white/[0.24] hover:bg-white/10 hover:text-white;
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-[8px] border border-white/[0.12] bg-white/[0.06] px-4 py-2 text-sm font-medium text-white/[0.88] transition hover:border-white/[0.24] hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary;
+  }
+
+  .skip-link {
+    @apply sr-only focus:not-sr-only fixed left-4 top-4 z-[100] rounded-[8px] border border-signal-teal/40 bg-background px-4 py-3 text-sm font-medium text-white shadow-lg focus:outline focus:outline-2 focus:outline-offset-4 focus:outline-primary;
+  }
+
+  .back-link {
+    @apply inline-flex items-center gap-2 rounded-[8px] px-1 py-1 text-sm text-white/72 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary;
   }
 
   .motion-delay-1 {

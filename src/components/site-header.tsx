@@ -93,7 +93,7 @@ export function SiteHeader() {
         <div className="hidden items-center gap-6 text-sm text-white/60 md:flex">
           {primaryLinks.map((link) => (
             <Link
-              className="transition hover:text-white"
+              className="rounded-[6px] px-1.5 py-1 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
               href={link.href}
               key={link.href}
             >

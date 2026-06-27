@@ -21,7 +21,7 @@ export default function ToolsPage() {
       <section className="relative mx-auto max-w-7xl px-4 pb-20 pt-12 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-sm text-white/55 transition hover:text-white"
+          className="back-link"
           data-reveal="hero"
         >
           <ArrowLeft className="size-4" />
@@ -89,10 +89,12 @@ export default function ToolsPage() {
           <a
             href="https://github.com/richardtaylordawson/richardtaylordawson.com"
             className="command-link shrink-0"
+            aria-label="View source on GitHub (opens in a new tab)"
             target="_blank"
             rel="noreferrer"
           >
             View source
+            <span className="sr-only">(opens in a new tab)</span>
             <ExternalLink className="size-4" />
           </a>
         </aside>

@@ -59,7 +59,7 @@ export default async function ExperienceDetailPage({
       <article className="relative mx-auto max-w-7xl px-4 pb-20 pt-12 sm:px-6 lg:px-8">
         <Link
           href="/#experience"
-          className="inline-flex items-center gap-2 text-sm text-white/55 transition hover:text-white"
+          className="back-link"
           data-reveal="hero"
         >
           <ArrowLeft className="size-4" />
@@ -121,7 +121,7 @@ export default async function ExperienceDetailPage({
                   <p className="text-sm font-medium text-white/[0.72]">
                     {role.title}
                   </p>
-                  <time className="mt-0.5 block font-mono text-[0.6875rem] text-white/[0.4]">
+                  <time className="mt-0.5 block font-mono text-[0.6875rem] text-white/[0.48]">
                     {role.span}
                   </time>
                 </li>
@@ -131,10 +131,12 @@ export default async function ExperienceDetailPage({
               <a
                 href={job.siteHref}
                 className="experience-action-link"
+                aria-label={`Visit ${job.company} company site (opens in a new tab)`}
                 target="_blank"
                 rel="noreferrer"
               >
                 Company site
+                <span className="sr-only">(opens in a new tab)</span>
                 <ExternalLink className="size-3.5" />
               </a>
             </div>
