@@ -38,7 +38,7 @@ const footerConnectLinks = [
 ];
 
 const footerMiscLinks = [
-  { href: "/uses", label: "Tools", icon: Wrench },
+  { href: "/tools", label: "Tools", icon: Wrench },
   {
     href: "/documents/richardtaylordawson.pdf",
     label: "Resume",

@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 const rootMetadata = buildPageMetadata({
-  title: "Richard Taylor Dawson | Software Engineer",
+  title: "Taylor Dawson - Software Engineer",
   description:
     "Richard Taylor Dawson is a software engineer building modern web products with accessibility, product craft, and practical systems thinking.",
   pathname: "/",
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   ...rootMetadata,
   title: {
-    default: "Richard Taylor Dawson | Software Engineer",
-    template: "%s | Richard Taylor Dawson",
+    default: "Taylor Dawson - Software Engineer",
+    template: "%s - Taylor Dawson",
   },
 };
 

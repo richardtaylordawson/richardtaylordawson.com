@@ -9,7 +9,7 @@ import { aboutCopy } from "@/lib/site-content";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "About",
+  title: "About Me",
   description:
     "Biography, background, and working style for Richard Taylor Dawson, a software engineer focused on accessible, polished web products.",
   pathname: "/about",

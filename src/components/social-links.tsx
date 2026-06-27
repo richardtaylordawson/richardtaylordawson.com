@@ -23,7 +23,7 @@ export const socialLinks = [
     icon: Mail,
   },
   {
-    href: "/uses",
+    href: "/tools",
     label: "Tools",
     icon: Wrench,
     internal: true,

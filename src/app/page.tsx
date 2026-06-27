@@ -9,12 +9,17 @@ import { SocialLinks } from "@/components/social-links";
 import { aboutCopy, businessSites, experience, projects } from "@/lib/site-content";
 import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = buildPageMetadata({
-  title: "Software Engineer",
-  description:
-    "Richard Taylor Dawson designs and ships modern web products where accessibility, product craft, and AI-enabled workflows meet.",
-  pathname: "/",
-});
+export const metadata: Metadata = {
+  ...buildPageMetadata({
+    title: "Software Engineer",
+    description:
+      "Richard Taylor Dawson designs and ships modern web products where accessibility, product craft, and AI-enabled workflows meet.",
+    pathname: "/",
+  }),
+  title: {
+    absolute: "Taylor Dawson - Software Engineer",
+  },
+};
 
 export default function Home() {
   return (

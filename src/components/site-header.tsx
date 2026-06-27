@@ -60,7 +60,7 @@ const mobileMenuSections = [
     title: "Misc",
     toneClassName: "text-white/48",
     links: [
-      { href: "/uses", label: "Tools", internal: true, icon: Wrench },
+      { href: "/tools", label: "Tools", internal: true, icon: Wrench },
       {
         href: "/documents/richardtaylordawson.pdf",
         label: "Resume",
