@@ -59,7 +59,7 @@ const footerLinkClass =
 export function SiteFooter() {
   return (
     <footer className="relative z-10 border-t border-white/10 bg-background/75 backdrop-blur-xl">
-      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-8 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-8 sm:px-6 lg:grid-cols-[0.7fr_1.3fr] lg:px-8">
         <div>
           <Link
             href="/"
@@ -70,7 +70,7 @@ export function SiteFooter() {
           </Link>
         </div>
 
-        <div className="grid gap-6 min-[430px]:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 min-[430px]:grid-cols-2 lg:grid-cols-[0.9fr_1fr_0.95fr_1.15fr]">
           <nav aria-label="Footer navigation">
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-signal-teal">
               Site
@@ -150,14 +150,14 @@ export function SiteFooter() {
                       rel="noreferrer"
                     >
                       <Icon className="size-4 shrink-0" />
-                      {label}
+                      <span className="whitespace-nowrap">{label}</span>
                       <span className="sr-only">(opens in a new tab)</span>
                       <ExternalLink className="ml-auto size-3.5 shrink-0 text-white/35" />
                     </a>
                   ) : (
                     <Link href={href} className={footerLinkClass}>
                       <Icon className="size-4 shrink-0" />
-                      {label}
+                      <span className="whitespace-nowrap">{label}</span>
                     </Link>
                   )}
                 </li>

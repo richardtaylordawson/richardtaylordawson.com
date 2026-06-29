@@ -606,32 +606,6 @@
   z-index: 0;
 }
 
-.signal-rail {
-  inset: 0 auto 0 1.25rem;
-  pointer-events: none;
-  position: fixed;
-  width: 1px;
-  z-index: 2;
-}
-
-.signal-rail span {
-  animation: rail-signal 9.6s linear infinite;
-  background: linear-gradient(to bottom, transparent, #2dd4bf, transparent);
-  display: block;
-  height: 36vh;
-  opacity: 0.7;
-  position: absolute;
-  width: 1px;
-}
-
-.signal-rail span:nth-child(2) {
-  animation-delay: 1.6s;
-}
-
-.signal-rail span:nth-child(3) {
-  animation-delay: 3.2s;
-}
-
 @media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
   [data-reveal] {
     opacity: 0;
@@ -668,15 +642,6 @@
     filter: blur(0) saturate(1);
     opacity: 1;
     transform: translate3d(0, 0, 0) scale(1);
-  }
-}
-
-@keyframes rail-signal {
-  0% {
-    transform: translateY(-24vh);
-  }
-  100% {
-    transform: translateY(118vh);
   }
 }
 
@@ -775,13 +740,6 @@
 
 ::view-transition-new(.signal-page-enter) {
   animation: signal-page-in 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-@media (max-width: 768px) {
-  .signal-rail {
-    display: none;
-  }
-
 }
 
 @media (prefers-reduced-motion: reduce) {

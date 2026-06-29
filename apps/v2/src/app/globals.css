@@ -153,11 +153,11 @@
   }
 
   .surface-card {
-    @apply rounded-[8px] border border-white/10 bg-white/[0.055] p-5 shadow-2xl shadow-black/10 transition duration-300 hover:-translate-y-1 hover:border-emerald-200/30 hover:bg-white/[0.075];
+    @apply rounded-[8px] border border-white/10 bg-white/[0.055] p-5 shadow-2xl shadow-black/10 transition-[transform,background-color,box-shadow,border-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:bg-white/[0.075];
   }
 
   .project-card {
-    @apply rounded-[8px] border border-white/10 bg-white/[0.045] p-3 transition duration-300 hover:-translate-y-1 hover:border-amber-200/30 hover:bg-white/[0.065];
+    @apply rounded-[8px] border border-white/10 bg-white/[0.045] p-3 transition-[transform,background-color,box-shadow,border-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:bg-white/[0.065];
   }
 
   .skill-chip {
@@ -165,7 +165,7 @@
   }
 
   .experience-row {
-    @apply flex items-center gap-4 rounded-[8px] border border-white/10 bg-white/[0.045] p-4 transition hover:border-emerald-200/30 hover:bg-white/[0.065];
+    @apply flex items-center gap-4 rounded-[8px] border border-white/10 bg-white/[0.045] p-4 transition-[transform,background-color,box-shadow,border-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:bg-white/[0.065];
   }
 
   .contact-band {

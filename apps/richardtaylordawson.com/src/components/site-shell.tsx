@@ -20,11 +20,6 @@ export function SiteShell({ children }: SiteShellProps) {
       </a>
       <AiAmbient />
       <div className="site-grid" aria-hidden="true" />
-      <div className="signal-rail" aria-hidden="true">
-        <span />
-        <span />
-        <span />
-      </div>
       <RevealOnScroll />
       <SiteHeader />
       <main className="pt-16 focus:outline-none" id="main-content" tabIndex={-1}>
