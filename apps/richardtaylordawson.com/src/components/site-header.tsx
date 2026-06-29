@@ -19,7 +19,7 @@ const versionLinks = [
   {
     href: "https://v1.richardtaylordawson.com",
     label: "v1",
-    builtAt: "2020",
+    builtAt: "2019",
   },
   {
     href: "https://v2.richardtaylordawson.com",
