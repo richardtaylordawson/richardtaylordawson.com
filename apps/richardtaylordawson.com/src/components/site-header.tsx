@@ -19,12 +19,12 @@ const versionLinks = [
   {
     href: "https://v1.richardtaylordawson.com",
     label: "v1",
-    builtAt: "Apr 4, 2023",
+    builtAt: "2020",
   },
   {
     href: "https://v2.richardtaylordawson.com",
     label: "v2",
-    builtAt: "May 30, 2026",
+    builtAt: "2023",
   },
 ];
 
@@ -79,16 +79,20 @@ const mobileMenuSections = [
         label: "Resume",
         icon: FileText,
       },
-      ...versionLinks.map((link) => ({
-        href: link.href,
-        label: `${link.label} (${link.builtAt})`,
-      })),
       {
         href: "https://rocketleague.tracker.network/rocket-league/profile/epic/LilWizzie/overview",
         label: "Rocket League",
         icon: SiEpicgames,
       },
     ],
+  },
+  {
+    title: "Versions",
+    toneClassName: "text-white/48",
+    links: versionLinks.map((link) => ({
+      href: link.href,
+      label: `${link.label} (${link.builtAt})`,
+    })),
   },
 ];
 
