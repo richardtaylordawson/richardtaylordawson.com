@@ -1,7 +1,12 @@
 export function BrandMark() {
   return (
     <span className="brand-mark" aria-hidden="true">
-      <svg viewBox="48 58 470 370" fill="none">
+      <svg
+        viewBox="48 58 470 370"
+        fill="none"
+        aria-hidden="true"
+        focusable="false"
+      >
         <path
           className="brand-mark-shadow"
           d="M296 92h102q53 0 86 34t33 88v78q0 54-33 88t-86 34H296v-62h86q28 0 46-18t18-47v-68q0-29-18-47t-46-18h-86z"

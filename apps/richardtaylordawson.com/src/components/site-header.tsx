@@ -85,7 +85,7 @@ export function SiteHeader() {
         <Link
           href="/"
           className="flex items-center gap-3"
-          aria-label="Richard Taylor Dawson, home"
+          aria-label="Richard Taylor Dawson home page"
         >
           <BrandMark />
         </Link>

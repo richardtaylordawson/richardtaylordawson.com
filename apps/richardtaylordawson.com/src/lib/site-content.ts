@@ -1,9 +1,9 @@
-import type { ComponentType } from "react";
+import type { ComponentType, SVGProps } from "react";
 import { Bot, Code2, Database, Mail, Sparkles } from "lucide-react";
 import { SiEpicgames } from "react-icons/si";
 import { TbDeviceNintendo } from "react-icons/tb";
 
-export type IconComponent = ComponentType<{ className?: string }>;
+export type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
 
 export const aboutCopy = [
   "I’m a software engineer focused on building accessible, polished user interfaces. I take pride in being thoughtful and meticulous, with a sharp eye for the small details that make software feel considered.",

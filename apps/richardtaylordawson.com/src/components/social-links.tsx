@@ -9,31 +9,31 @@ import type { IconComponent } from "@/lib/site-content";
 export const socialLinks = [
   {
     href: "https://www.github.com/richardtaylordawson",
-    label: "GitHub",
+    label: "GitHub profile",
     icon: FaGithub,
     external: true,
   },
   {
     href: "https://www.linkedin.com/in/taylor-dawson-482927123/",
-    label: "LinkedIn",
+    label: "LinkedIn profile",
     icon: FaLinkedinIn,
     external: true,
   },
   {
     href: "mailto:richard.taylor.dawson@gmail.com",
-    label: "Email",
+    label: "Email Richard Taylor Dawson",
     icon: Mail,
     external: true,
   },
   {
     href: "/tools",
-    label: "Tools",
+    label: "View tools page",
     icon: Wrench,
     internal: true,
   },
   {
     href: "https://rocketleague.tracker.network/rocket-league/profile/epic/LilWizzie/overview",
-    label: "Rocket League",
+    label: "Rocket League profile",
     icon: SiEpicgames,
     external: true,
   },
@@ -65,11 +65,17 @@ function SocialLink({
   internal,
   external,
 }: (typeof socialLinks)[number]) {
-  const content = <Icon />;
+  const accessibleText = external ? `${label} (opens in a new tab)` : label;
+  const content = (
+    <>
+      <Icon aria-hidden="true" focusable="false" />
+      <span className="sr-only">{accessibleText}</span>
+    </>
+  );
 
   if (internal) {
     return (
-      <Link href={href} className="icon-link" aria-label={label}>
+      <Link href={href} className="icon-link">
         {content}
       </Link>
     );
@@ -79,7 +85,6 @@ function SocialLink({
     <a
       href={href}
       className="icon-link"
-      aria-label={external ? `${label} (opens in a new tab)` : label}
       target="_blank"
       rel="noreferrer"
     >

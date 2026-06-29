@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink, Menu, X } from "lucide-react";
-import type { ComponentType } from "react";
 import {
   useEffect,
   useEffectEvent,
@@ -14,13 +13,14 @@ import {
 import { createPortal } from "react-dom";
 
 import { BrandMark } from "@/components/brand-mark";
+import type { IconComponent } from "@/lib/site-content";
 
 type MobileMenuLink = {
   href: string;
   label: string;
   internal?: boolean;
   logo?: string;
-  icon?: ComponentType<{ className?: string }>;
+  icon?: IconComponent;
 };
 
 type MobileMenuProps = {
@@ -129,7 +129,7 @@ export function MobileMenu({ sections }: MobileMenuProps) {
           <Link
             href="/"
             className="flex items-center"
-            aria-label="Richard Taylor Dawson, home"
+            aria-label="Richard Taylor Dawson home page"
             onClick={() => setIsOpen(false)}
           >
             <BrandMark />
@@ -170,12 +170,20 @@ export function MobileMenu({ sections }: MobileMenuProps) {
                             className="size-4 shrink-0 rounded-[4px] bg-white object-contain p-0.5"
                           />
                         ) : link.icon ? (
-                          <link.icon className="size-4 shrink-0 text-white/72" />
+                          <link.icon
+                            className="size-4 shrink-0 text-white/72"
+                            aria-hidden="true"
+                            focusable="false"
+                          />
                         ) : null}
                         <span className="truncate">{link.label}</span>
                       </span>
                       {link.internal ? null : (
-                        <ExternalLink className="ml-auto size-3.5 shrink-0 text-white/35" />
+                        <ExternalLink
+                          className="ml-auto size-3.5 shrink-0 text-white/35"
+                          aria-hidden="true"
+                          focusable="false"
+                        />
                       )}
                     </>
                   );

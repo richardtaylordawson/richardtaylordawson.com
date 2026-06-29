@@ -64,7 +64,7 @@ export function SiteFooter() {
           <Link
             href="/"
             className="inline-flex items-center gap-3"
-            aria-label="Home"
+            aria-label="Richard Taylor Dawson home page"
           >
             <BrandMark />
           </Link>
@@ -123,10 +123,18 @@ export function SiteFooter() {
                     rel="noreferrer"
                   >
                     <span className="inline-flex min-w-0 items-center gap-2">
-                      <Icon className="size-4 shrink-0" />
+                      <Icon
+                        className="size-4 shrink-0"
+                        aria-hidden="true"
+                        focusable="false"
+                      />
                       <span className="truncate">{label}</span>
                       <span className="sr-only">(opens in a new tab)</span>
-                      <ExternalLink className="size-3.5 shrink-0 text-white/35" />
+                      <ExternalLink
+                        className="size-3.5 shrink-0 text-white/35"
+                        aria-hidden="true"
+                        focusable="false"
+                      />
                     </span>
                   </a>
                 </li>
@@ -149,14 +157,26 @@ export function SiteFooter() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <Icon className="size-4 shrink-0" />
+                      <Icon
+                        className="size-4 shrink-0"
+                        aria-hidden="true"
+                        focusable="false"
+                      />
                       <span className="whitespace-nowrap">{label}</span>
                       <span className="sr-only">(opens in a new tab)</span>
-                      <ExternalLink className="ml-auto size-3.5 shrink-0 text-white/35" />
+                      <ExternalLink
+                        className="ml-auto size-3.5 shrink-0 text-white/35"
+                        aria-hidden="true"
+                        focusable="false"
+                      />
                     </a>
                   ) : (
                     <Link href={href} className={footerLinkClass}>
-                      <Icon className="size-4 shrink-0" />
+                      <Icon
+                        className="size-4 shrink-0"
+                        aria-hidden="true"
+                        focusable="false"
+                      />
                       <span className="whitespace-nowrap">{label}</span>
                     </Link>
                   )}
