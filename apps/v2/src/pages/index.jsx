@@ -13,16 +13,16 @@ const projects = [
     name: 'PWA Shields',
     description:
       "Personalize your app's README with custom, fun, PWA shields in SVG",
-    link: { href: 'https://www.pwa-shields.com', label: 'Demo' },
-    // Deployment no longer serves /images/social-share.png
-    imageSrc: '/images/project-placeholder.png',
+    link: {
+      href: 'https://pwa-shields.richardtaylordawson.com',
+      label: 'Demo',
+    },
   },
   {
     name: 'Calculator',
     description:
       'Simple calculator application built using Bootstrap 4, HTML, ES6 Modules and multiple Bootstrap Themes from Bootswatch.',
     link: { href: 'https://calculator.richardtaylordawson.com', label: 'Demo' },
-    imageSrc: '/images/project-placeholder.png',
   },
   {
     name: 'Gaming Trivia',
@@ -32,7 +32,6 @@ const projects = [
       href: 'https://gaming-trivia.richardtaylordawson.com',
       label: 'Demo',
     },
-    imageSrc: '/images/project-placeholder.png',
   },
   {
     name: 'Simply Rooted Spa',
@@ -56,7 +55,6 @@ const projects = [
       href: 'https://giphy-search.richardtaylordawson.com',
       label: 'Demo',
     },
-    imageSrc: '/images/project-placeholder.png',
   },
 ]
 
@@ -103,15 +101,21 @@ export default function Home() {
         >
           {projects.map((project) => (
             <Card as="li" key={project.name}>
-              <Image
-                src={project.imageSrc}
-                alt={`${project.name} preview`}
-                className="relative z-10 rounded-lg"
-                width={640}
-                height={320}
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-              <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+              {project.imageSrc && (
+                <Image
+                  src={project.imageSrc}
+                  alt={`${project.name} preview`}
+                  className="relative z-10 rounded-lg"
+                  width={640}
+                  height={320}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              )}
+              <h2
+                className={`text-base font-semibold text-zinc-800 dark:text-zinc-100 ${
+                  project.imageSrc ? 'mt-6' : ''
+                }`}
+              >
                 <Card.Link href={project.link.href}>{project.name}</Card.Link>
               </h2>
               <Card.Description>{project.description}</Card.Description>

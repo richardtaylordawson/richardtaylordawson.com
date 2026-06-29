@@ -7,7 +7,6 @@ const nextConfig = {
   },
   images: {
     remotePatterns: [
-      { protocol: 'https', hostname: 'www.pwa-shields.com', pathname: '/**' },
       {
         protocol: 'https',
         hostname: 'calculator.richardtaylordawson.com',
