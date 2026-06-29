@@ -20,6 +20,7 @@ module.exports = {
         background_color: `#18a0fb`,
         theme_color: `#18a0fb`,
         display: `standalone`,
+        icon: `src/images/logo.png`,
       },
     },
     `gatsby-plugin-offline`,
@@ -28,17 +29,6 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Montserrat`,
-            variants: [`400`, `500`, `600`, `700`]
-          },
-        ],
       },
     },
     {

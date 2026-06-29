@@ -58,6 +58,10 @@ export default function Document() {
   return (
     <Html className="h-full antialiased" lang="en">
       <Head>
+        <meta
+          name="google-site-verification"
+          content="8xVt6B5nYoIzSXiJEU_R3lmGrtnsyPvT6EDqmVQ9wsw"
+        />
         <script dangerouslySetInnerHTML={{ __html: modeScript }} />
       </Head>
       <body className="flex h-full flex-col bg-zinc-50 dark:bg-black">

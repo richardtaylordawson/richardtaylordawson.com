@@ -33,6 +33,10 @@ export const SEO = ({ title, keywords = [], meta = [] }) => {
           content: site.siteMetadata.description,
         },
         {
+          name: `google-site-verification`,
+          content: `8xVt6B5nYoIzSXiJEU_R3lmGrtnsyPvT6EDqmVQ9wsw`,
+        },
+        {
           property: `og:title`,
           content: pageTitle,
         },
