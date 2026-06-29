@@ -2,7 +2,7 @@
   "name": "richardtaylordawson",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "npm@11.11.0",
+  "packageManager": "yarn@4.9.1",
   "workspaces": [
     "apps/*"
   ],
