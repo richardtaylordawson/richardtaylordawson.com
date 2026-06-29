@@ -9,6 +9,11 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'pwa-shields.richardtaylordawson.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
         hostname: 'calculator.richardtaylordawson.com',
         pathname: '/**',
       },

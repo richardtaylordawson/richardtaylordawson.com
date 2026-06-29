@@ -17,12 +17,15 @@ const projects = [
       href: 'https://pwa-shields.richardtaylordawson.com',
       label: 'Demo',
     },
+    imageSrc:
+      'https://pwa-shields.richardtaylordawson.com/images/social-share.png',
   },
   {
     name: 'Calculator',
     description:
       'Simple calculator application built using Bootstrap 4, HTML, ES6 Modules and multiple Bootstrap Themes from Bootswatch.',
     link: { href: 'https://calculator.richardtaylordawson.com', label: 'Demo' },
+    imageSrc: 'https://calculator.richardtaylordawson.com/images/social-share.png',
   },
   {
     name: 'Gaming Trivia',
@@ -32,6 +35,8 @@ const projects = [
       href: 'https://gaming-trivia.richardtaylordawson.com',
       label: 'Demo',
     },
+    imageSrc:
+      'https://gaming-trivia.richardtaylordawson.com/images/social-share.png',
   },
   {
     name: 'Simply Rooted Spa',
@@ -55,6 +60,8 @@ const projects = [
       href: 'https://giphy-search.richardtaylordawson.com',
       label: 'Demo',
     },
+    imageSrc:
+      'https://giphy-search.richardtaylordawson.com/images/social-share.png',
   },
 ]
 
