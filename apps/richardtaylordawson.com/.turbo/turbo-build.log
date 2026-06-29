@@ -1,0 +1,41 @@
+
+> richardtaylordawson.com@0.1.0 build
+> next build
+
+▲ Next.js 16.2.9 (Turbopack)
+- Experiments (use with caution):
+  ✓ viewTransition
+
+  Creating an optimized production build ...
+Turbopack build encountered 2 warnings:
+[next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+
+[next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+
+
+> Build error occurred
+Error: Turbopack build failed with 2 errors:
+[next]/internal/font/google/geist_a71539c9.module.css
+next/font: error:
+Failed to fetch `Geist` from Google Fonts.
+
+
+[next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: error:
+Failed to fetch `Geist Mono` from Google Fonts.
+
+
+    at ignore-listed frames
+npm error Lifecycle script `build` failed with error:
+npm error code 1
+npm error path /Users/richardtaylordawson/Documents/richardtaylordawson.com/apps/richardtaylordawson.com
+npm error workspace richardtaylordawson.com@0.1.0
+npm error location /Users/richardtaylordawson/Documents/richardtaylordawson.com/apps/richardtaylordawson.com
+npm error command failed
+npm error command sh -c next build

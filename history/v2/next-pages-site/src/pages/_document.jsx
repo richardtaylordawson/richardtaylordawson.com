@@ -38,7 +38,7 @@ const modeScript = `
 const audioEyeScript = `
   !(function () {
     var b = function () {
-      window.__AudioEyeSiteHash = '2105ede915b1a1fbef1672abc0f6487e';
+      window.__AudioEyeSiteHash = '83d1789633c5caebf661515c0c071695';
       var a = document.createElement('script');
       a.src = 'https://wsmcdn.audioeye.com/aem.js';
       a.type = 'text/javascript';
