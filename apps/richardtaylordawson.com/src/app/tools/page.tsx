@@ -3,9 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink, Monitor } from "lucide-react";
 
-import { Chip } from "@/components/chip-list";
 import { SiteShell } from "@/components/site-shell";
-import { deskSetupFacts, setupSections, softwareSections } from "@/lib/site-content";
+import { setupSections, softwareSections } from "@/lib/site-content";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -63,15 +62,9 @@ export default function ToolsPage() {
             />
             <div className="absolute bottom-6 left-6 inline-flex items-center gap-2 rounded-[6px] border border-white/15 bg-black/65 px-3 py-2 font-mono text-xs text-white/75 backdrop-blur-md">
               <Monitor className="size-3.5 text-signal-teal" />
-              Current setup
+              Current Setup
             </div>
           </div>
-        </div>
-
-        <div className="motion-stagger mt-8 flex flex-wrap gap-2">
-          {deskSetupFacts.map((fact) => (
-            <Chip key={fact} label={fact} />
-          ))}
         </div>
 
         <section className="mt-16 grid gap-8 lg:grid-cols-[0.44fr_1.56fr]">

@@ -168,13 +168,6 @@ export const stack = [
   "Design systems",
 ];
 
-export const deskSetupFacts = [
-  "Dual 27-inch Dell displays",
-  "Custom maple butcher block desk",
-  "Fully mechanical standing legs",
-  "MacBook Pro + Mac mini",
-];
-
 export const setupSections = [
   {
     title: "Displays",
@@ -182,7 +175,7 @@ export const setupSections = [
   },
   {
     title: "Input",
-    items: ["Logitech MX Master 3S", "Logitech MX Mechanical Keys"],
+    items: ["Logitech MX Master 3S", "Logitech MX Mechanical Keys", "Logitech MX Palm Rest"],
   },
   {
     title: "Audio",
@@ -190,18 +183,18 @@ export const setupSections = [
   },
   {
     title: "Camera",
-    items: ["Logitech StreamCam (temporary name)"],
+    items: ["Logitech StreamCam"],
   },
   {
     title: "Compute",
-    items: ["MacBook Pro", "Mac mini"],
+    items: ["MacBook Pro", "Mac Mini"],
   },
   {
     title: "Desk",
     items: [
-      "Custom maple butcher block desktop",
-      "Fully mechanical standing legs",
-      "Custom desk shelf",
+      "Custom finished Maple Butcher Block Countertop",
+      "custom Maple Desk",
+      "Fully brand mechanical standing desk legs",
     ],
   },
 ] as const;
@@ -209,7 +202,7 @@ export const setupSections = [
 export const softwareSections = [
   {
     title: "AI",
-    items: ["Cursor", "Codex"],
+    items: ["Codex", "Cursor"],
   },
   {
     title: "Build stack",
