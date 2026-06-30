@@ -4,10 +4,8 @@ import Link from "next/link";
 import { ArrowLeft, ExternalLink, Monitor } from "lucide-react";
 
 import { Chip } from "@/components/chip-list";
-import { SetupItemCard } from "@/components/setup-item-card";
 import { SiteShell } from "@/components/site-shell";
-import { ToolGroupCard } from "@/components/tool-group-card";
-import { deskSetupFacts, setupItems, toolGroups } from "@/lib/site-content";
+import { deskSetupFacts, setupSections, softwareSections } from "@/lib/site-content";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -98,8 +96,20 @@ export default function ToolsPage() {
           </div>
 
           <div className="motion-stagger grid gap-4 md:grid-cols-2">
-            {setupItems.map((item) => (
-              <SetupItemCard {...item} key={item.title} />
+            {setupSections.map((section) => (
+              <div className="surface-card" data-reveal="card" key={section.title}>
+                <h2 className="text-lg font-semibold text-white">{section.title}</h2>
+                <ul className="mt-4 space-y-3 text-sm leading-6 text-white/68">
+                  {section.items.map((item) => (
+                    <li
+                      className="border-b border-white/8 pb-3 last:border-b-0 last:pb-0"
+                      key={item}
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </section>
@@ -132,20 +142,32 @@ export default function ToolsPage() {
               className="mt-5 max-w-sm text-3xl font-semibold leading-tight text-white"
               data-reveal="hero"
             >
-              The tools behind the workstation.
+              The software behind the workstation.
             </h2>
             <p
               className="mt-4 max-w-md text-base leading-7 text-white/[0.6]"
               data-reveal="hero"
             >
-              Once the desk is dialed in, this is the software layer I reach for
-              to plan, build, review, and ship.
+              The short version of what I actually reach for to plan, build,
+              review, and ship.
             </p>
           </div>
 
-          <div className="motion-stagger grid gap-4 md:grid-cols-2 xl:grid-cols-2">
-            {toolGroups.map((group) => (
-              <ToolGroupCard {...group} key={group.title} />
+          <div className="motion-stagger grid gap-4 md:grid-cols-2">
+            {softwareSections.map((section) => (
+              <div className="surface-card" data-reveal="card" key={section.title}>
+                <h2 className="text-lg font-semibold text-white">{section.title}</h2>
+                <ul className="mt-4 space-y-3 text-sm leading-6 text-white/68">
+                  {section.items.map((item) => (
+                    <li
+                      className="border-b border-white/8 pb-3 last:border-b-0 last:pb-0"
+                      key={item}
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </section>
