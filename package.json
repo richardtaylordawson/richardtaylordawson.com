@@ -16,6 +16,9 @@
     "start:v1": "turbo start --filter=v1",
     "start:v2": "turbo start --filter=v2"
   },
+  "resolutions": {
+    "sharp": "0.34.5"
+  },
   "devDependencies": {
     "turbo": "^2.10.0"
   },
@@ -33,6 +36,7 @@
     "ip-address": "10.2.0",
     "js-yaml": "5.2.0",
     "postcss": "8.5.16",
-    "qs": "6.15.3"
+    "qs": "6.15.3",
+    "sharp": "0.34.5"
   }
 }
