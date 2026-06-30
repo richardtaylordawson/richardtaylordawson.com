@@ -171,7 +171,7 @@ export const stack = [
 export const setupSections = [
   {
     title: "Displays",
-    items: ["Dell 27-inch monitors x2"],
+    items: ["Dell 27-inch Monitors x2"],
   },
   {
     title: "Input",
@@ -192,9 +192,9 @@ export const setupSections = [
   {
     title: "Desk",
     items: [
-      "Custom finished Maple Butcher Block Countertop",
-      "custom Maple Desk",
-      "Fully brand mechanical standing desk legs",
+      "Custom Maple Butcher Block Countertop",
+      "Custom Maple Desk Shelf",
+      "“Fully” Mechanical Standing Desk Legs",
     ],
   },
 ] as const;

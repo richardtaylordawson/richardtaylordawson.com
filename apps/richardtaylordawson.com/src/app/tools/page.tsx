@@ -43,8 +43,8 @@ export default function ToolsPage() {
               data-reveal="hero"
             >
               The monitors, desk, Macs, audio, and daily software I genuinely
-              use. This page is part workstation tour, part stack breakdown,
-              and eventually part affiliate setup guide.
+              use. This page is part workstation tour and part stack
+              breakdown.
             </p>
           </div>
 
@@ -82,9 +82,8 @@ export default function ToolsPage() {
               className="mt-4 max-w-md text-base leading-7 text-white/[0.6]"
               data-reveal="hero"
             >
-              This is the real setup, not a generic roundup. Some names are
-              temporary until I lock down the exact models, but the workstation
-              itself is accurate.
+              This is the real setup, not a generic roundup. The workstation
+              and gear listed here are the setup I actually use.
             </p>
           </div>
 
@@ -106,25 +105,6 @@ export default function ToolsPage() {
             ))}
           </div>
         </section>
-
-        <aside
-          className="mt-5 flex flex-col gap-5 rounded-[8px] border border-signal-amber/25 bg-signal-amber/[0.07] p-6 sm:flex-row sm:items-center sm:justify-between"
-          data-reveal="card"
-        >
-          <div>
-            <p className="font-mono text-xs uppercase tracking-[0.16em] text-signal-amber/80">
-              Affiliate note
-            </p>
-            <p className="mt-2 max-w-3xl text-sm leading-6 text-white/60">
-              Some links on this page will become affiliate links once the exact
-              models are confirmed. The setup recommendations will stay based on
-              the real gear I use, not random roundup filler.
-            </p>
-          </div>
-          <span className="inline-flex min-h-11 items-center rounded-[8px] border border-signal-amber/20 bg-signal-amber/[0.08] px-4 py-2 text-sm font-medium text-signal-amber">
-            Exact product links coming soon
-          </span>
-        </aside>
 
         <section className="mt-16 grid gap-8 lg:grid-cols-[0.44fr_1.56fr]">
           <div>
