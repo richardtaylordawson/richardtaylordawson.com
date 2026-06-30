@@ -104,6 +104,19 @@ export default async function ExperienceDetailPage({
             <div className="motion-stagger mt-6 flex flex-wrap gap-2">
               <ChipList items={job.technologies} />
             </div>
+            <div className="mt-6 flex flex-wrap gap-2">
+              <a
+                href={job.siteHref}
+                className="experience-action-link experience-action-link-site"
+                aria-label={`Visit ${job.company} company site (opens in a new tab)`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Company site
+                <span className="sr-only">(opens in a new tab)</span>
+                <ExternalLink className="size-3.5" />
+              </a>
+            </div>
           </div>
         </header>
 
@@ -116,8 +129,38 @@ export default async function ExperienceDetailPage({
               Roles
             </p>
             <ol className="role-history">
-              {job.roles.map((role) => (
-                <li key={`${job.company}-${role.title}`}>
+              {job.roles.map((role, roleIndex) => (
+                <li
+                  className="role-history-item"
+                  key={`${job.company}-${role.title}`}
+                >
+                  <span className="role-node" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 16 16"
+                      className="role-node-signal"
+                      aria-hidden="true"
+                    >
+                      <circle
+                        className="role-node-outline"
+                        cx="8"
+                        cy="8"
+                        r="7"
+                      />
+                      <path
+                        className="role-node-arc role-node-arc-left"
+                        d="M 8 1 A 7 7 0 0 0 8 15"
+                        pathLength="100"
+                      />
+                      <path
+                        className="role-node-arc role-node-arc-right"
+                        d="M 8 1 A 7 7 0 0 1 8 15"
+                        pathLength="100"
+                      />
+                    </svg>
+                  </span>
+                  {roleIndex < job.roles.length - 1 ? (
+                    <span className="role-segment" aria-hidden="true" />
+                  ) : null}
                   <p className="text-sm font-medium text-white/[0.72]">
                     {role.title}
                   </p>
@@ -127,19 +170,6 @@ export default async function ExperienceDetailPage({
                 </li>
               ))}
             </ol>
-            <div className="mt-6 flex flex-wrap gap-2">
-              <a
-                href={job.siteHref}
-                className="experience-action-link"
-                aria-label={`Visit ${job.company} company site (opens in a new tab)`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Company site
-                <span className="sr-only">(opens in a new tab)</span>
-                <ExternalLink className="size-3.5" />
-              </a>
-            </div>
           </aside>
 
           <section
