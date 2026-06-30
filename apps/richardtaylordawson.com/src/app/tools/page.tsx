@@ -3,15 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink, Monitor } from "lucide-react";
 
+import { Chip } from "@/components/chip-list";
+import { SetupItemCard } from "@/components/setup-item-card";
 import { SiteShell } from "@/components/site-shell";
 import { ToolGroupCard } from "@/components/tool-group-card";
-import { toolGroups } from "@/lib/site-content";
+import { deskSetupFacts, setupItems, toolGroups } from "@/lib/site-content";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Tools",
   description:
-    "The software, AI tools, web stack, and workspace Richard Taylor Dawson uses to design and ship products.",
+    "The actual desk setup, hardware, software, and build stack Richard Taylor Dawson uses to design and ship products.",
   pathname: "/tools",
 });
 
@@ -37,14 +39,15 @@ export default function ToolsPage() {
               className="motion-delay-2 mt-5 text-balance text-5xl font-semibold leading-[0.98] tracking-normal text-white sm:text-6xl"
               data-reveal="hero"
             >
-              What I use to build and ship.
+              The actual setup behind the work.
             </h1>
             <p
               className="motion-delay-3 mt-6 max-w-xl text-lg leading-8 text-white/[0.64]"
               data-reveal="hero"
             >
-              A living list of the software, systems, and workspace details I
-              use to turn an idea into something people can use.
+              The monitors, desk, Macs, audio, and daily software I genuinely
+              use. This page is part workstation tour, part stack breakdown,
+              and eventually part affiliate setup guide.
             </p>
           </div>
 
@@ -67,11 +70,39 @@ export default function ToolsPage() {
           </div>
         </div>
 
-        <div className="motion-stagger mt-16 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {toolGroups.map((group) => (
-            <ToolGroupCard {...group} key={group.title} />
+        <div className="motion-stagger mt-8 flex flex-wrap gap-2">
+          {deskSetupFacts.map((fact) => (
+            <Chip key={fact} label={fact} />
           ))}
         </div>
+
+        <section className="mt-16 grid gap-8 lg:grid-cols-[0.44fr_1.56fr]">
+          <div>
+            <p className="section-kicker" data-reveal="hero">
+              Desk setup
+            </p>
+            <h2
+              className="mt-5 max-w-sm text-3xl font-semibold leading-tight text-white"
+              data-reveal="hero"
+            >
+              Hardware that actually lives on the desk.
+            </h2>
+            <p
+              className="mt-4 max-w-md text-base leading-7 text-white/[0.6]"
+              data-reveal="hero"
+            >
+              This is the real setup, not a generic roundup. Some names are
+              temporary until I lock down the exact models, but the workstation
+              itself is accurate.
+            </p>
+          </div>
+
+          <div className="motion-stagger grid gap-4 md:grid-cols-2">
+            {setupItems.map((item) => (
+              <SetupItemCard {...item} key={item.title} />
+            ))}
+          </div>
+        </section>
 
         <aside
           className="mt-5 flex flex-col gap-5 rounded-[8px] border border-signal-amber/25 bg-signal-amber/[0.07] p-6 sm:flex-row sm:items-center sm:justify-between"
@@ -79,6 +110,52 @@ export default function ToolsPage() {
         >
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.16em] text-signal-amber/80">
+              Affiliate note
+            </p>
+            <p className="mt-2 max-w-3xl text-sm leading-6 text-white/60">
+              Some links on this page will become affiliate links once the exact
+              models are confirmed. The setup recommendations will stay based on
+              the real gear I use, not random roundup filler.
+            </p>
+          </div>
+          <span className="inline-flex min-h-11 items-center rounded-[8px] border border-signal-amber/20 bg-signal-amber/[0.08] px-4 py-2 text-sm font-medium text-signal-amber">
+            Exact product links coming soon
+          </span>
+        </aside>
+
+        <section className="mt-16 grid gap-8 lg:grid-cols-[0.44fr_1.56fr]">
+          <div>
+            <p className="section-kicker" data-reveal="hero">
+              Software stack
+            </p>
+            <h2
+              className="mt-5 max-w-sm text-3xl font-semibold leading-tight text-white"
+              data-reveal="hero"
+            >
+              The tools behind the workstation.
+            </h2>
+            <p
+              className="mt-4 max-w-md text-base leading-7 text-white/[0.6]"
+              data-reveal="hero"
+            >
+              Once the desk is dialed in, this is the software layer I reach for
+              to plan, build, review, and ship.
+            </p>
+          </div>
+
+          <div className="motion-stagger grid gap-4 md:grid-cols-2 xl:grid-cols-2">
+            {toolGroups.map((group) => (
+              <ToolGroupCard {...group} key={group.title} />
+            ))}
+          </div>
+        </section>
+
+        <aside
+          className="mt-5 flex flex-col gap-5 rounded-[8px] border border-signal-teal/25 bg-signal-teal/[0.06] p-6 sm:flex-row sm:items-center sm:justify-between"
+          data-reveal="card"
+        >
+          <div>
+            <p className="font-mono text-xs uppercase tracking-[0.16em] text-signal-teal/80">
               Built with this stack
             </p>
             <p className="mt-2 text-sm leading-6 text-white/60">

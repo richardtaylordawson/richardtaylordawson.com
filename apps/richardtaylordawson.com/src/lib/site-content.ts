@@ -168,33 +168,123 @@ export const stack = [
   "Design systems",
 ];
 
+export const deskSetupFacts = [
+  "Dual 27-inch Dell displays",
+  "Custom maple butcher block desk",
+  "Fully mechanical standing legs",
+  "MacBook Pro + Mac mini",
+];
+
+export const setupItems = [
+  {
+    category: "Displays",
+    title: "Dell 27-inch monitors x2",
+    description:
+      "The exact models are getting confirmed later, but the real win is the dual-screen layout: one display for building, one for review, docs, or side-by-side QA.",
+    whyItStays:
+      "This is the setup choice that keeps context-switching under control.",
+    items: ["Dual-monitor workflow", "Code + browser", "Temporary model label"],
+    affiliateLabel: "Affiliate link coming when model is confirmed",
+  },
+  {
+    category: "Pointer",
+    title: "Logitech MX Master 3S",
+    description:
+      "Comfortable enough for long workdays and precise enough for UI details, layout checks, and design-minded front-end work.",
+    whyItStays:
+      "It feels like a workhorse mouse, not a flashy one.",
+    items: ["Ergonomic", "Daily driver", "Front-end friendly"],
+    affiliateLabel: "Affiliate link coming soon",
+  },
+  {
+    category: "Keyboard",
+    title: "Logitech MX Mechanical Keys",
+    description:
+      "A solid typing board that fits the desk without pushing the setup into loud gamer territory.",
+    whyItStays:
+      "Fast enough for coding, clean enough for the room.",
+    items: ["Mechanical", "Low-profile feel", "Work setup"],
+    affiliateLabel: "Affiliate link coming soon",
+  },
+  {
+    category: "Audio",
+    title: "AirPods Max + HomePod",
+    description:
+      "The mix depends on the day. AirPods Max for focus and isolation, HomePod when the room itself should feel better.",
+    whyItStays:
+      "Good audio changes how a desk feels more than most upgrades.",
+    items: ["Focus mode", "Room audio", "Apple ecosystem"],
+    affiliateLabel: "Affiliate link coming soon",
+  },
+  {
+    category: "Camera",
+    title: "Logitech StreamCam",
+    description:
+      "The exact naming is still getting double-checked, but this is the camera currently handling the desk-side video setup.",
+    whyItStays:
+      "Good enough for calls without becoming a production studio.",
+    items: ["Video calls", "Temporary model label", "Desk camera"],
+    affiliateLabel: "Affiliate link coming when model is confirmed",
+  },
+  {
+    category: "Compute",
+    title: "MacBook Pro",
+    description:
+      "The main portable machine. It keeps the workflow consistent whether the work happens at the desk or away from it.",
+    whyItStays:
+      "It is the anchor for the everyday build environment.",
+    items: ["Portable", "Primary machine", "Apple workflow"],
+    affiliateLabel: "Affiliate link coming soon",
+  },
+  {
+    category: "Compute",
+    title: "Mac mini",
+    description:
+      "A second Mac in the setup keeps the workstation flexible and gives the desk a little more room to behave like a dedicated home base.",
+    whyItStays:
+      "It makes the setup feel intentional instead of temporary.",
+    items: ["Desk machine", "Flexible setup", "Apple workflow"],
+    affiliateLabel: "Affiliate link coming soon",
+  },
+  {
+    category: "Desk",
+    title: "Custom maple butcher block desk",
+    description:
+      "Custom-built with maple butcher block, Fully mechanical standing legs, and a matching desk shelf. This is the part of the setup with the most personality.",
+    whyItStays:
+      "A custom desk changes the whole mood before a single app opens.",
+    items: ["Maple top", "Standing desk", "Custom shelf"],
+    affiliateLabel: "Affiliate links planned for desk parts",
+  },
+] as const;
+
 export const toolGroups = [
   {
     icon: Bot,
     title: "AI collaboration",
     description:
-      "Planning, implementation, review, and the occasional second opinion.",
+      "The pair-programming layer I reach for when I want speed without giving up product judgment.",
     items: ["Cursor", "Codex"],
   },
   {
     icon: Code2,
-    title: "Web stack",
+    title: "Core build stack",
     description:
-      "The dependable core I reach for when a product needs to move quickly and age well.",
+      "The dependable front-end stack behind most of the personal work and a lot of how I think about shipping polished UI.",
     items: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS"],
   },
   {
     icon: Sparkles,
-    title: "Product craft",
+    title: "Product standards",
     description:
-      "The constraints and standards that shape the tools, not an afterthought at the end.",
+      "The guardrails that keep the work sharp, usable, and worth revisiting later.",
     items: ["Accessibility", "Performance", "Design systems", "AI product UX"],
   },
   {
     icon: Database,
     title: "Platform stack",
     description:
-      "The hosted services behind deployment, auth, data, and the email plumbing on client work.",
+      "The services that usually handle deployment, auth, data, and communication once the interface is doing its job.",
     items: ["Vercel", "Clerk", "Supabase", "Resend"],
   },
 ] satisfies {
