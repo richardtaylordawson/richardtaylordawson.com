@@ -54,7 +54,7 @@ export default function ToolsPage() {
           >
             <Image
               src="/images/desk.jpg"
-              alt="Richard's desk with two displays, speakers, plants, and a collection of LEGO Star Wars helmets"
+              alt="Richard's desk setup with dual ultrawide displays, a wood desk shelf, keyboard, mouse, headphones, and ambient blue lighting"
               width={2048}
               height={1536}
               priority
