@@ -8,6 +8,8 @@ import { Resume } from '@/components/Resume'
 import { SocialLink } from '@/components/SocialLink'
 import { Github, LinkedIn, LinkIcon } from '@/components/Icons'
 
+const siteUrl = 'https://v2.richardtaylordawson.com'
+
 const projects = [
   {
     name: 'PWA Shields',
@@ -76,6 +78,8 @@ export default function Home() {
           Lake City. I'm a highly motivated, hard working engineer that has a
           knack for finding simple solutions to complex issues"
         />
+        <link rel="canonical" href={siteUrl} />
+        <meta property="og:url" content={siteUrl} />
       </Head>
       <Container className="mt-9">
         <div className="max-w-2xl">

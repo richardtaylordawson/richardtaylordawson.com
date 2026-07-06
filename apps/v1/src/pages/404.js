@@ -5,7 +5,11 @@ import { H1, P, Container, SEO } from "../components"
 
 const NotFound = () => (
   <MainLayout>
-    <SEO title="Not Found" />
+    <SEO
+      title="Not Found"
+      pathname="/404"
+      meta={[{ name: "robots", content: "noindex, follow" }]}
+    />
     <Wrapper>
       <Container>
         <H1>NOT FOUND</H1>

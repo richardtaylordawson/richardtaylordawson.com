@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Helmet from "react-helmet"
 import Favicon from "../../images/logo.png"
 
-export const SEO = ({ title, keywords = [], meta = [] }) => {
+export const SEO = ({ title, keywords = [], meta = [], pathname = `/` }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -22,10 +22,14 @@ export const SEO = ({ title, keywords = [], meta = [] }) => {
   const pageTitle = `Richard Taylor Dawson | ${
     title || site.siteMetadata.title
   }`
+  const canonicalUrl = new URL(pathname, site.siteMetadata.siteUrl).href
 
   return (
     <Helmet
-      link={[{ rel: "shortcut icon", type: "image/png", href: `${Favicon}` }]}
+      link={[
+        { rel: "shortcut icon", type: "image/png", href: `${Favicon}` },
+        { rel: "canonical", href: canonicalUrl },
+      ]}
       title={`${pageTitle}`}
       meta={[
         {
@@ -134,4 +138,5 @@ SEO.propTypes = {
   title: PropTypes.string.isRequired,
   keywords: PropTypes.array.isRequired,
   meta: PropTypes.array,
+  pathname: PropTypes.string,
 }

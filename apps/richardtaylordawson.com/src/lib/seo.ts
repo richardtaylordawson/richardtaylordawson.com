@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const siteUrl = "https://richardtaylordawson.com";
+const siteUrl = "https://www.richardtaylordawson.com";
 const siteName = "Richard Taylor Dawson";
 const defaultImage = {
   url: `${siteUrl}/images/social-share.png`,

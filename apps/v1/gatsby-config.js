@@ -3,7 +3,7 @@ module.exports = {
     title: `Richard Taylor Dawson`,
     twitterHandle: `@richard_codes`,
     description: `My personal website & resume showcasing my experience and projects. Built using GatsbyJS, React and other open source tools & API's.`,
-    siteUrl: `https://www.richardtaylordawson.com`
+    siteUrl: `https://v1.richardtaylordawson.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -40,8 +40,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://www.richardtaylordawson.com',
-        sitemap: 'https://www.richardtaylordawson.com/sitemap.xml',
+        host: 'https://v1.richardtaylordawson.com',
+        sitemap: 'https://v1.richardtaylordawson.com/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/', }]
       }
     },
