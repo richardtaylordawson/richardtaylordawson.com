@@ -24,6 +24,15 @@ export const projects = [
     cta: "Play gaming trivia",
   },
   {
+    title: "Calculator",
+    tag: "Web calculator",
+    year: "2018",
+    text: "A focused calculator built with Bootstrap, HTML, and ES6 modules, with a set of switchable Bootswatch themes.",
+    href: "https://calculator.richardtaylordawson.com",
+    image: "https://calculator.richardtaylordawson.com/images/social-share.png",
+    cta: "Open calculator",
+  },
+  {
     title: "Snake",
     tag: "Browser game",
     year: "2018",
@@ -40,15 +49,6 @@ export const projects = [
     href: "https://giphy-search.richardtaylordawson.com",
     image: "https://giphy-search.richardtaylordawson.com/images/social-share.png",
     cta: "Search Giphy",
-  },
-  {
-    title: "Calculator",
-    tag: "Web calculator",
-    year: "2018",
-    text: "A focused calculator built with Bootstrap, HTML, and ES6 modules, with a set of switchable Bootswatch themes.",
-    href: "https://calculator.richardtaylordawson.com",
-    image: "https://calculator.richardtaylordawson.com/images/social-share.png",
-    cta: "Open calculator",
   },
 ];
 
