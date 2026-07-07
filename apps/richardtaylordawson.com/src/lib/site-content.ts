@@ -26,6 +26,7 @@ export const projects = [
   {
     title: "Snake",
     tag: "Browser game",
+    year: "2018",
     text: "A browser-based take on Snake built around simple controls, fast feedback, and a lightweight arcade loop.",
     href: "https://snake.richardtaylordawson.com",
     image: "https://snake.richardtaylordawson.com/images/social-share.png",
@@ -34,6 +35,7 @@ export const projects = [
   {
     title: "Giphy Search",
     tag: "Search app",
+    year: "2021",
     text: "A simple Create React App project for searching Giphy's open API and browsing animated results.",
     href: "https://giphy-search.richardtaylordawson.com",
     image: "https://giphy-search.richardtaylordawson.com/images/social-share.png",
