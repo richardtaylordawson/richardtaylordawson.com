@@ -1,5 +1,5 @@
 import type { ComponentType, SVGProps } from "react";
-import { Bot, Code2, Database, Mail, Sparkles } from "lucide-react";
+import { Mail } from "lucide-react";
 import { SiEpicgames } from "react-icons/si";
 import { TbDeviceNintendo } from "react-icons/tb";
 
@@ -22,6 +22,22 @@ export const projects = [
     href: "https://gaming-trivia.richardtaylordawson.com",
     image: "https://gaming-trivia.richardtaylordawson.com/images/social-share.png",
     cta: "Play gaming trivia",
+  },
+  {
+    title: "Snake",
+    tag: "Browser game",
+    text: "A browser-based take on Snake built around simple controls, fast feedback, and a lightweight arcade loop.",
+    href: "https://snake.richardtaylordawson.com",
+    image: "https://snake.richardtaylordawson.com/images/social-share.png",
+    cta: "Play snake",
+  },
+  {
+    title: "Giphy Search",
+    tag: "Search app",
+    text: "A simple Create React App project for searching Giphy's open API and browsing animated results.",
+    href: "https://giphy-search.richardtaylordawson.com",
+    image: "https://giphy-search.richardtaylordawson.com/images/social-share.png",
+    cta: "Search Giphy",
   },
   {
     title: "Calculator",

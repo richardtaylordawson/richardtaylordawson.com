@@ -25,6 +25,18 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "snake.richardtaylordawson.com",
+        pathname: "/images/social-share.png",
+        search: "",
+      },
+      {
+        protocol: "https",
+        hostname: "giphy-search.richardtaylordawson.com",
+        pathname: "/images/social-share.png",
+        search: "",
+      },
+      {
+        protocol: "https",
         hostname: "www.simplyrootedspa.com",
         pathname: "/images/social-share.png",
         search: "",
