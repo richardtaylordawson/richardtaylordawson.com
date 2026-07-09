@@ -34,7 +34,7 @@ export const projects = [
   },
   {
     title: "PWA Shields",
-    tag: "SVG generator",
+    tag: "Badge Generator",
     year: "2019",
     text: "A small tool for creating custom PWA badges that make app READMEs feel more personal and polished.",
     href: "https://pwa-shields.richardtaylordawson.com",
