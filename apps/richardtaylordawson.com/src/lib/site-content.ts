@@ -33,6 +33,15 @@ export const projects = [
     cta: "Open calculator",
   },
   {
+    title: "PWA Shields",
+    tag: "SVG generator",
+    year: "2019",
+    text: "A small tool for creating custom PWA badges that make app READMEs feel more personal and polished.",
+    href: "https://pwa-shields.richardtaylordawson.com",
+    image: "https://pwa-shields.richardtaylordawson.com/images/social-share.png",
+    cta: "Create PWA shields",
+  },
+  {
     title: "Snake",
     tag: "Browser game",
     year: "2018",

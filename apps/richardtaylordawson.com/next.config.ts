@@ -25,6 +25,12 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "pwa-shields.richardtaylordawson.com",
+        pathname: "/images/social-share.png",
+        search: "",
+      },
+      {
+        protocol: "https",
         hostname: "snake.richardtaylordawson.com",
         pathname: "/images/social-share.png",
         search: "",
