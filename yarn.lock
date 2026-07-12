@@ -9296,20 +9296,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-google-analytics@npm:^2.1.16":
-  version: 2.11.0
-  resolution: "gatsby-plugin-google-analytics@npm:2.11.0"
-  dependencies:
-    "@babel/runtime": "npm:^7.12.5"
-    minimatch: "npm:3.0.4"
-  peerDependencies:
-    gatsby: ^2.0.0
-    react: ^16.4.2 || ^17.0.0
-    react-dom: ^16.4.2 || ^17.0.0
-  checksum: 10c0/2f47dce32ed7873f5813ce656a26574976efdfbe3c93787ce20b7bda5385991c428dd4ae35d222938e8ffdb7802183d497e619d4c3aaab1869e4ffe5222d3155
-  languageName: node
-  linkType: hard
-
 "gatsby-plugin-manifest@npm:^5.16.0":
   version: 5.16.0
   resolution: "gatsby-plugin-manifest@npm:5.16.0"
@@ -17097,7 +17083,6 @@ __metadata:
     "@emotion/styled": "npm:^10.0.10"
     gatsby: "npm:^5.15.0"
     gatsby-plugin-dark-mode: "npm:^1.1.0"
-    gatsby-plugin-google-analytics: "npm:^2.1.16"
     gatsby-plugin-manifest: "npm:^5.16.0"
     gatsby-plugin-offline: "npm:^2.2.10"
     gatsby-plugin-react-helmet: "npm:^3.1.7"

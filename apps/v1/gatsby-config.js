@@ -32,12 +32,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: 'UA-142412414-7',
-      },
-    },
-    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://v1.richardtaylordawson.com',
