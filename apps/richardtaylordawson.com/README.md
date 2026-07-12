@@ -5,8 +5,8 @@
 ## Run Project
 
 ```shell
-$ yarn install
-$ yarn dev
+$ yarn
+$ yarn develop
 ```
 
 ## Apps
