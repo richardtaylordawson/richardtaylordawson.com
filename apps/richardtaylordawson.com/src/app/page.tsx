@@ -5,6 +5,7 @@ import { ExperienceList } from "@/components/experience-list";
 import { ProjectSection } from "@/components/project-section";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteShell } from "@/components/site-shell";
+import { StartedProjectsSearch } from "@/components/started-projects-search";
 import { SocialLinks } from "@/components/social-links";
 import { aboutCopy, businessSites, experience, projects } from "@/lib/site-content";
 import { buildPageMetadata } from "@/lib/seo";
@@ -115,6 +116,7 @@ export default function Home() {
           items={businessSites}
           divided
         />
+        <StartedProjectsSearch />
       </section>
     </SiteShell>
   );

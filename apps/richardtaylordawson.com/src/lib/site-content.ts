@@ -80,6 +80,87 @@ export const businessSites = [
   },
 ];
 
+export const startedProjects = [
+  {
+    title: "Coin",
+    tag: "Objective-C",
+    text: "An iPhone bill-tracking app with a Heroku and Parse Server backend.",
+    href: "https://github.com/richardtaylordawson/coin",
+  },
+  {
+    title: "Chirp",
+    tag: "CSS",
+    text: "A Twitter API and Google Natural Language API experiment for analyzing tweets.",
+    href: "https://github.com/richardtaylordawson/chirp",
+  },
+  {
+    title: "Kaiju Battle Arena",
+    tag: "PHP",
+    text: "A Twilio-powered messaging multiplayer game where players battled their Kaiju by SMS.",
+    href: "https://github.com/richardtaylordawson/kaiju-battle-arena",
+  },
+  {
+    title: "Chat App",
+    tag: "HTML",
+    text: "A chat application built with Pusher ChatKit, Firebase, and a custom front-end.",
+    href: "https://github.com/richardtaylordawson/chat-app",
+  },
+  {
+    title: "Giphy Search",
+    tag: "JavaScript",
+    text: "A small Create React App project for searching Giphy's public API.",
+    href: "https://github.com/richardtaylordawson/giphy-search",
+  },
+  {
+    title: "Snake",
+    tag: "JavaScript",
+    text: "A simple HTML5 Canvas Snake game.",
+    href: "https://github.com/richardtaylordawson/snake",
+  },
+  {
+    title: "Calculator",
+    tag: "JavaScript",
+    text: "A Bootstrap calculator with ES modules and switchable Bootswatch themes.",
+    href: "https://github.com/richardtaylordawson/calculator",
+  },
+  {
+    title: "Gaming Trivia",
+    tag: "JavaScript",
+    text: "A trivia game built with NES.css and open trivia questions.",
+    href: "https://github.com/richardtaylordawson/gaming-trivia",
+  },
+  {
+    title: "Yahtz",
+    tag: "TypeScript",
+    text: "An early TypeScript dice game project.",
+    href: "https://github.com/richardtaylordawson/yahtz",
+  },
+  {
+    title: "Apple Music Activity",
+    tag: "JavaScript",
+    text: "A reporting app for Apple Music listening history using Chart.js, Sass, and Gulp.",
+    href: "https://github.com/richardtaylordawson/apple-music-activity",
+  },
+  {
+    title: "Pingpong Scorekeeper",
+    tag: "Objective-C",
+    text: "An iPhone scorekeeping app for ping pong with portrait and landscape modes.",
+    href: "https://github.com/richardtaylordawson/pingpong-scorekeeper",
+  },
+  {
+    title: "Mahjong",
+    tag: "Java",
+    text: "Object-oriented Mahjong tile modeling in Java, without full game logic.",
+    href: "https://github.com/richardtaylordawson/mahjong",
+  },
+  {
+    title: "Simple Todo",
+    tag: "JavaScript",
+    text: "A simple todo app built with React, Firebase, and Semantic UI.",
+    href: "https://github.com/richardtaylordawson/simple-todo",
+  },
+] as const;
+
 export const experience = [
   {
     company: "AudioEye",
