@@ -37,6 +37,12 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "easy-as-pie-ui.richardtaylordawson.com",
+        pathname: "/images/social-share.png",
+        search: "",
+      },
+      {
+        protocol: "https",
         hostname: "button-creator.richardtaylordawson.com",
         pathname: "/images/social-share.png",
         search: "",
