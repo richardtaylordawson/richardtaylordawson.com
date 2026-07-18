@@ -7,7 +7,6 @@ import { ExperienceList } from "@/components/experience-list";
 import { ProjectSection } from "@/components/project-section";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteShell } from "@/components/site-shell";
-import { StartedProjectsLoadMore } from "@/components/started-projects-load-more";
 import { SocialLinks } from "@/components/social-links";
 import {
   aboutCopy,
@@ -152,7 +151,6 @@ export default function Home() {
           columns={2}
           divided
         />
-        <StartedProjectsLoadMore />
       </section>
     </SiteShell>
   );
