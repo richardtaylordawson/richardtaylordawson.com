@@ -20,7 +20,7 @@ export function ProjectSection({
 }: ProjectSectionProps) {
   const className = [
     id ? "scroll-mt-24" : null,
-    divided ? "mt-8 border-t border-white/10 pt-6" : null,
+    divided ? "mt-8 border-t border-white/10 pt-10" : null,
   ]
     .filter(Boolean)
     .join(" ");
