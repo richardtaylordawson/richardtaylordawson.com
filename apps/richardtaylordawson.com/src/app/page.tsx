@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { EducationList } from "@/components/education-list";
 import { ExperienceList } from "@/components/experience-list";
 import { ProjectSection } from "@/components/project-section";
 import { SectionHeading } from "@/components/section-heading";
@@ -85,6 +86,21 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section
+        id="education"
+        className="scroll-mt-24 mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8"
+      >
+        <div className="grid gap-8 lg:grid-cols-[0.45fr_1.55fr]">
+          <div data-reveal="hero">
+            <SectionHeading
+              kicker="Education"
+              description="Computer Science degrees from Weber State University, with diploma PDFs available to view."
+            />
+          </div>
+          <EducationList compact />
         </div>
       </section>
 

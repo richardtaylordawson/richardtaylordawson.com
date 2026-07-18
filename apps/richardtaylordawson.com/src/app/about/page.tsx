@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
+import { EducationList } from "@/components/education-list";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteShell } from "@/components/site-shell";
 import { aboutCopy } from "@/lib/site-content";
@@ -68,6 +69,18 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
+
+        <section className="mt-12" data-reveal="hero">
+          <div className="rounded-[8px] border border-white/10 bg-white/[0.045] p-6 shadow-2xl shadow-black/10 sm:p-8 lg:p-10">
+            <div className="grid gap-8 lg:grid-cols-[0.45fr_1.55fr]">
+              <SectionHeading
+                kicker="Education"
+                description="Both degrees are in Computer Science from Weber State University."
+              />
+              <EducationList />
+            </div>
+          </div>
+        </section>
       </section>
     </SiteShell>
   );
