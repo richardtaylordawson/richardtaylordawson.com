@@ -8,7 +8,7 @@ import { BrandMark } from "@/components/brand-mark";
 import { experience } from "@/lib/site-content";
 
 const footerSiteLinks = [
-  { href: "/#about", label: "About Me" },
+  { href: "/about", label: "About Me" },
   { href: "/#work", label: "Projects" },
   { href: "/#business-sites", label: "Business Sites" },
 ];

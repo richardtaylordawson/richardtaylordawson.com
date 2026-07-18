@@ -9,15 +9,6 @@ const nextConfig: NextConfig = {
   experimental: {
     viewTransition: true,
   },
-  async redirects() {
-    return [
-      {
-        source: "/about",
-        destination: "/#about",
-        permanent: true,
-      },
-    ];
-  },
   images: {
     remotePatterns: [
       {

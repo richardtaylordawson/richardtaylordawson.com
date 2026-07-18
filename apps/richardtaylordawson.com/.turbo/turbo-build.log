@@ -3,21 +3,20 @@
   ✓ viewTransition
 
   Creating an optimized production build ...
-✓ Compiled successfully in 4.4s
+✓ Compiled successfully in 4.7s
   Running TypeScript ...
-  Finished TypeScript in 1904ms ...
+  Finished TypeScript in 1728ms ...
   Collecting page data using 7 workers ...
-  Generating static pages using 7 workers (0/12) ...
-  Generating static pages using 7 workers (3/12) 
-  Generating static pages using 7 workers (6/12) 
-  Generating static pages using 7 workers (9/12) 
-✓ Generating static pages using 7 workers (12/12) in 170ms
+  Generating static pages using 7 workers (0/11) ...
+  Generating static pages using 7 workers (2/11) 
+  Generating static pages using 7 workers (5/11) 
+  Generating static pages using 7 workers (8/11) 
+✓ Generating static pages using 7 workers (11/11) in 156ms
   Finalizing page optimization ...
 
 Route (app)
 ┌ ○ /
 ├ ○ /_not-found
-├ ○ /about
 ├ ● /experience/[slug]
 │ ├ /experience/audioeye
 │ ├ /experience/clearlink
