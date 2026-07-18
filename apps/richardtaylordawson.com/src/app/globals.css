@@ -197,6 +197,21 @@
     @apply flex items-center justify-between rounded-[8px] border border-white/10 bg-white/[0.045] px-4 py-4 text-lg font-medium text-white transition hover:border-signal-teal/40 hover:bg-white/[0.075] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary;
   }
 
+  .about-preview-fade {
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      black 0,
+      black calc(100% - 64px),
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      black 0,
+      black calc(100% - 64px),
+      transparent 100%
+    );
+  }
+
   .command-link {
     @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-[8px] border border-white/[0.12] bg-white/[0.06] px-4 py-2 text-sm font-medium text-white/[0.88] transition hover:border-white/[0.24] hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary;
   }
