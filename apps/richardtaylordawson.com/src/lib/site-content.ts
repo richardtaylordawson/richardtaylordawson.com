@@ -78,6 +78,33 @@ export const projects = [
     image: "https://giphy-search.richardtaylordawson.com/images/social-share.png",
     cta: "Search Giphy",
   },
+  {
+    title: "Bruner Dynamics",
+    tag: "Marketing site",
+    year: "2020",
+    text: "A Gatsby and React demo site built with strong visual hierarchy, clear package messaging, and a custom UI system.",
+    href: "https://bruner-dynamics.richardtaylordawson.com",
+    image: "https://bruner-dynamics.richardtaylordawson.com/images/social-share.png",
+    cta: "Visit Bruner Dynamics",
+  },
+  {
+    title: "Easy as Pie UI",
+    tag: "Component library",
+    year: "2020",
+    text: "A themeable React component library exploring reusable layout primitives, styled UI pieces, and flexible site composition.",
+    href: "https://easy-as-pie-ui.richardtaylordawson.com",
+    image: "https://easy-as-pie-ui.richardtaylordawson.com/images/social-share.png",
+    cta: "View Easy as Pie UI",
+  },
+  {
+    title: "Button Creator",
+    tag: "Design tool",
+    year: "2021",
+    text: "A real-time button styling tool for adjusting visual details and generating CSS that can be copied into a project.",
+    href: "https://button-creator.richardtaylordawson.com",
+    image: "https://button-creator.richardtaylordawson.com/images/social-share.png",
+    cta: "Create a button",
+  },
 ];
 
 export const businessSites = [

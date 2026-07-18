@@ -7,7 +7,12 @@ import { ProjectSection } from "@/components/project-section";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteShell } from "@/components/site-shell";
 import { SocialLinks } from "@/components/social-links";
-import { aboutCopy, businessSites, experience } from "@/lib/site-content";
+import {
+  aboutCopy,
+  businessSites,
+  experience,
+  projects,
+} from "@/lib/site-content";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -124,10 +129,17 @@ export default function Home() {
         className="scroll-mt-24 mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8"
       >
         <ProjectSection
+          kicker="Projects"
+          description="A growing collection of things I’ve designed and built outside my day-to-day product work."
+          items={projects}
+        />
+        <ProjectSection
           kicker="Business sites"
           id="business-sites"
-          description="Live sites I’ve worked on for businesses, with clear paths to services, booking, and customer information."
+          description="Live sites I’ve worked on for businesses, separate from the personal projects and experiments."
           items={businessSites}
+          columns={2}
+          divided
         />
       </section>
     </SiteShell>

@@ -7,6 +7,7 @@ type ProjectSectionProps = {
   description: string;
   items: ProjectCardItem[];
   divided?: boolean;
+  columns?: 2 | 3;
 };
 
 export function ProjectSection({
@@ -15,6 +16,7 @@ export function ProjectSection({
   description,
   items,
   divided,
+  columns = 3,
 }: ProjectSectionProps) {
   const className = [
     id ? "scroll-mt-24" : null,
@@ -22,13 +24,14 @@ export function ProjectSection({
   ]
     .filter(Boolean)
     .join(" ");
+  const gridClass = columns === 2 ? "lg:grid-cols-2" : "lg:grid-cols-3";
 
   return (
     <div id={id} className={className || undefined}>
       <div data-reveal="hero">
         <SectionHeading kicker={kicker} description={description} />
       </div>
-      <div className="motion-stagger mt-10 grid gap-5 lg:grid-cols-2">
+      <div className={`motion-stagger mt-10 grid gap-5 ${gridClass}`}>
         {items.map((item) => (
           <ProjectCard item={item} key={item.title} />
         ))}
