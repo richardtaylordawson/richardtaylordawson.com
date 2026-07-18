@@ -21,14 +21,18 @@ export function EducationList({
       }
     >
       {education.map((item) => (
-        <article
+        <Link
+          href={item.href}
           className={
             isInline
-              ? "rounded-[8px] border border-white/[0.08] bg-white/[0.025] p-4"
-              : "rounded-[8px] border border-white/10 bg-white/[0.04] p-5"
+              ? "group block rounded-[8px] border border-white/[0.08] bg-white/[0.025] p-4 transition hover:border-primary/35 hover:bg-white/[0.055] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+              : "group block rounded-[8px] border border-white/10 bg-white/[0.04] p-5 transition hover:border-primary/35 hover:bg-white/[0.06] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
           }
           data-reveal="card"
           key={item.degree}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`${item.cta} ${item.degree} from ${item.school} (opens in a new tab)`}
         >
           <div className="flex items-start gap-4">
             <div
@@ -53,22 +57,19 @@ export function EducationList({
               <p className="mt-1 text-sm leading-6 text-white/55">
                 {item.school} · Graduated {item.year}
               </p>
-              <Link
-                href={item.href}
+              <span
                 className={
                   isInline
-                    ? "mt-3 inline-flex items-center gap-2 text-sm font-medium text-primary transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
-                    : "mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+                    ? "mt-3 inline-flex items-center gap-2 text-sm font-medium text-primary transition group-hover:text-white"
+                    : "mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary transition group-hover:text-white"
                 }
-                target="_blank"
-                rel="noreferrer"
               >
                 {item.cta}
                 <ExternalLink className="size-3.5" aria-hidden="true" />
-              </Link>
+              </span>
             </div>
           </div>
-        </article>
+        </Link>
       ))}
     </div>
   );

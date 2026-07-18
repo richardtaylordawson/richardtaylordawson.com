@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ExternalLink } from "lucide-react";
 
 import { EducationList } from "@/components/education-list";
 import { ExperienceList } from "@/components/experience-list";
@@ -107,6 +108,21 @@ export default function Home() {
               </p>
               <div className="mt-4">
                 <EducationList compact variant="inline" />
+              </div>
+            </div>
+            <div className="experience-resume-row" data-reveal="card">
+              <div className="flex">
+                <a
+                  href="/documents/richardtaylordawson.pdf"
+                  className="experience-action-link experience-action-link-resume"
+                  aria-label="Open resume PDF (opens in a new tab)"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Resume
+                  <span className="sr-only">(opens in a new tab)</span>
+                  <ExternalLink className="size-3.5" />
+                </a>
               </div>
             </div>
           </div>
