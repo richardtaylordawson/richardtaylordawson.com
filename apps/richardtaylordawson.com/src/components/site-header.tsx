@@ -12,7 +12,6 @@ import { experience } from "@/lib/site-content";
 const primaryLinks = [
   { href: "/#about", label: "About Me" },
   { href: "/#experience", label: "Experience" },
-  { href: "/#work", label: "Projects" },
   { href: "/#business-sites", label: "Business Sites" },
 ];
 

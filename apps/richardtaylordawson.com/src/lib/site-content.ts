@@ -15,18 +15,20 @@ export const aboutCopy = [
 
 export const education = [
   {
-    degree: "Bachelor’s Degree in Computer Science",
+    degreeType: "Bachelor’s Degree",
+    field: "Computer Science",
     school: "Weber State University",
     year: "2017",
     href: "/documents/bachelors-degree-computer-science.pdf",
-    cta: "View",
+    cta: "View degree",
   },
   {
-    degree: "Associate’s Degree in Computer Science",
+    degreeType: "Associate’s Degree",
+    field: "Computer Science",
     school: "Weber State University",
     year: "2017",
     href: "/documents/associates-degree-computer-science.pdf",
-    cta: "View",
+    cta: "View degree",
   },
 ] as const;
 
@@ -91,6 +93,7 @@ export const projects = [
     year: "2020",
     text: "A themeable React component library exploring reusable layout primitives, styled UI pieces, and flexible site composition.",
     href: "https://easy-as-pie-ui.richardtaylordawson.com",
+    image: "https://easy-as-pie-ui.richardtaylordawson.com/images/social-share.png",
     cta: "View Easy as Pie UI",
   },
   {

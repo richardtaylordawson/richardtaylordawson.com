@@ -18,13 +18,16 @@ export function ProjectSection({
   divided,
   columns = 3,
 }: ProjectSectionProps) {
+  const className = [
+    id ? "scroll-mt-24" : null,
+    divided ? "mt-8 border-t border-white/10 pt-6" : null,
+  ]
+    .filter(Boolean)
+    .join(" ");
   const gridClass = columns === 2 ? "lg:grid-cols-2" : "lg:grid-cols-3";
 
   return (
-    <div
-      id={id}
-      className={divided ? "mt-8 border-t border-white/10 pt-6" : undefined}
-    >
+    <div id={id} className={className || undefined}>
       <div data-reveal="hero">
         <SectionHeading kicker={kicker} description={description} />
       </div>

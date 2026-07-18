@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 
 import { EducationList } from "@/components/education-list";
@@ -9,7 +8,12 @@ import { SectionHeading } from "@/components/section-heading";
 import { SiteShell } from "@/components/site-shell";
 import { StartedProjectsLoadMore } from "@/components/started-projects-load-more";
 import { SocialLinks } from "@/components/social-links";
-import { aboutCopy, businessSites, experience, projects } from "@/lib/site-content";
+import {
+  aboutCopy,
+  businessSites,
+  experience,
+  projects,
+} from "@/lib/site-content";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -70,21 +74,12 @@ export default function Home() {
             <div>
               <SectionHeading kicker="About me" />
             </div>
-            <div>
-              <div className="about-preview-fade max-h-[216px] overflow-hidden">
-                <div className="space-y-5 text-base leading-7 text-white/[0.68]">
-                  {aboutCopy.map((paragraph) => (
-                    <p data-reveal="hero" key={paragraph}>
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              </div>
-              <div className="mt-5" data-reveal="hero">
-                <Link href="/about" className="command-link">
-                  Read more
-                </Link>
-              </div>
+            <div className="space-y-5 text-base leading-7 text-white/[0.68]">
+              {aboutCopy.map((paragraph) => (
+                <p data-reveal="hero" key={paragraph}>
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </div>
         </div>

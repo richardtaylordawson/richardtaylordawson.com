@@ -29,10 +29,10 @@ export function EducationList({
               : "group block rounded-[8px] border border-white/10 bg-white/[0.04] p-5 transition hover:border-primary/35 hover:bg-white/[0.06] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
           }
           data-reveal="card"
-          key={item.degree}
+          key={item.degreeType}
           target="_blank"
           rel="noreferrer"
-          aria-label={`${item.cta} ${item.degree} from ${item.school} (opens in a new tab)`}
+          aria-label={`${item.cta} ${item.degreeType}, ${item.field}, from ${item.school} (opens in a new tab)`}
         >
           <div className="flex items-start gap-4">
             <div
@@ -52,8 +52,11 @@ export function EducationList({
                     : "text-base font-semibold leading-6 text-white"
                 }
               >
-                {item.degree}
+                {item.degreeType}
               </h3>
+              <p className="mt-0.5 text-sm font-medium leading-6 text-white/72">
+                {item.field}
+              </p>
               <p className="mt-1 text-sm leading-6 text-white/55">
                 {item.school} · Graduated {item.year}
               </p>
