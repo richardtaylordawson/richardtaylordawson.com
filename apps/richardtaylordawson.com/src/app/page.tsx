@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { ExternalLink } from "lucide-react";
 
+import { EducationList } from "@/components/education-list";
 import { ExperienceList } from "@/components/experience-list";
 import { ProjectSection } from "@/components/project-section";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteShell } from "@/components/site-shell";
 import { SocialLinks } from "@/components/social-links";
-import { aboutCopy, businessSites, experience, projects } from "@/lib/site-content";
+import { aboutCopy, businessSites, experience } from "@/lib/site-content";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -67,21 +68,12 @@ export default function Home() {
             <div>
               <SectionHeading kicker="About me" />
             </div>
-            <div>
-              <div className="about-preview-fade max-h-[216px] overflow-hidden">
-                <div className="space-y-5 text-base leading-7 text-white/[0.68]">
-                  {aboutCopy.map((paragraph) => (
-                    <p data-reveal="hero" key={paragraph}>
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              </div>
-              <div className="mt-5" data-reveal="hero">
-                <Link href="/about" className="command-link">
-                  Read more
-                </Link>
-              </div>
+            <div className="space-y-5 text-base leading-7 text-white/[0.68]">
+              {aboutCopy.map((paragraph) => (
+                <p data-reveal="hero" key={paragraph}>
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </div>
         </div>
@@ -95,7 +87,35 @@ export default function Home() {
           <div data-reveal="hero">
             <SectionHeading kicker="Experience" />
           </div>
-          <ExperienceList items={experience} />
+          <div className="space-y-3">
+            <ExperienceList items={experience} />
+            <div
+              className="rounded-[8px] border border-white/10 bg-white/[0.045] p-4"
+              data-reveal="card"
+            >
+              <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+                Education
+              </p>
+              <div className="mt-4">
+                <EducationList compact variant="inline" />
+              </div>
+            </div>
+            <div className="experience-resume-row" data-reveal="card">
+              <div className="flex">
+                <a
+                  href="/documents/richardtaylordawson.pdf"
+                  className="experience-action-link experience-action-link-resume"
+                  aria-label="Open resume PDF (opens in a new tab)"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Resume
+                  <span className="sr-only">(opens in a new tab)</span>
+                  <ExternalLink className="size-3.5" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -104,16 +124,10 @@ export default function Home() {
         className="scroll-mt-24 mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8"
       >
         <ProjectSection
-          kicker="Projects"
-          description="A growing collection of things I’ve designed and built outside my day-to-day product work."
-          items={projects}
-        />
-        <ProjectSection
           kicker="Business sites"
           id="business-sites"
-          description="Live sites I’ve worked on for businesses, separate from the personal projects and experiments."
+          description="Live sites I’ve worked on for businesses, with clear paths to services, booking, and customer information."
           items={businessSites}
-          divided
         />
       </section>
     </SiteShell>

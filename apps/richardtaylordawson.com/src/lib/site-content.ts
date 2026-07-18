@@ -13,6 +13,25 @@ export const aboutCopy = [
   "Outside of work, you can usually find me with my wife and kids, playing golf, or watching good sports.",
 ];
 
+export const education = [
+  {
+    degreeType: "Bachelor’s Degree",
+    field: "Computer Science",
+    school: "Weber State University",
+    year: "2017",
+    href: "/documents/bachelors-degree-computer-science.pdf",
+    cta: "View degree",
+  },
+  {
+    degreeType: "Associate’s Degree",
+    field: "Computer Science",
+    school: "Weber State University",
+    year: "2017",
+    href: "/documents/associates-degree-computer-science.pdf",
+    cta: "View degree",
+  },
+] as const;
+
 export const projects = [
   {
     title: "Gaming Trivia",

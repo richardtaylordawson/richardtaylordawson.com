@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ExternalLink } from "lucide-react";
@@ -14,109 +13,90 @@ export function ExperienceList({ items }: ExperienceListProps) {
   return (
     <ol className="motion-stagger space-y-3">
       {items.map((job) => (
-        <Fragment key={job.company}>
-          <li className="experience-row" data-reveal="card">
-            <div className="flex items-start gap-4">
-              <Image
-                src={job.logo}
-                alt=""
-                width={40}
-                height={40}
-                className="size-10 shrink-0 rounded-[8px] bg-white object-contain p-1"
-              />
-              <div className="min-w-0 flex-1">
-                <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
-                  <p className="font-medium text-white">{job.company}</p>
-                  <time className="shrink-0 font-mono text-xs text-white/[0.48]">
-                    {job.span}
-                  </time>
-                </div>
-                <ol className="role-history">
-                  {job.roles.map((role, roleIndex) => (
-                    <li
-                      className="role-history-item"
-                      key={`${job.company}-${role.title}`}
-                    >
-                      <span className="role-node" aria-hidden="true">
-                        <svg
-                          viewBox="0 0 16 16"
-                          className="role-node-signal"
-                          aria-hidden="true"
-                        >
-                          <circle
-                            className="role-node-outline"
-                            cx="8"
-                            cy="8"
-                            r="7"
-                          />
-                          <path
-                            className="role-node-arc role-node-arc-left"
-                            d="M 8 1 A 7 7 0 0 0 8 15"
-                            pathLength="100"
-                          />
-                          <path
-                            className="role-node-arc role-node-arc-right"
-                            d="M 8 1 A 7 7 0 0 1 8 15"
-                            pathLength="100"
-                          />
-                        </svg>
-                      </span>
-                      {roleIndex < job.roles.length - 1 ? (
-                        <span className="role-segment" aria-hidden="true" />
-                      ) : null}
-                      <p className="text-sm font-medium text-white/[0.72]">
-                        {role.title}
-                      </p>
-                      <time className="mt-0.5 block font-mono text-[0.6875rem] text-white/[0.48]">
-                        {role.span}
-                      </time>
-                    </li>
-                  ))}
-                </ol>
-                <div className="job-card-skills mt-5 flex flex-wrap gap-1.5">
-                  <ChipList items={job.technologies} />
-                </div>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  <a
-                    href={job.siteHref}
-                    className="experience-action-link experience-action-link-site"
-                    aria-label={`Visit ${job.company} company site (opens in a new tab)`}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Company site
-                    <span className="sr-only">(opens in a new tab)</span>
-                    <ExternalLink className="size-3.5" />
-                  </a>
-                  <Link
-                    href={job.detailHref}
-                    className="experience-action-link experience-action-link-details"
-                  >
-                    Work details
-                    <ArrowRight className="size-3.5" />
-                  </Link>
-                </div>
+        <li className="experience-row" data-reveal="card" key={job.company}>
+          <div className="flex items-start gap-4">
+            <Image
+              src={job.logo}
+              alt=""
+              width={40}
+              height={40}
+              className="size-10 shrink-0 rounded-[8px] bg-white object-contain p-1"
+            />
+            <div className="min-w-0 flex-1">
+              <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+                <p className="font-medium text-white">{job.company}</p>
+                <time className="shrink-0 font-mono text-xs text-white/[0.48]">
+                  {job.span}
+                </time>
               </div>
-            </div>
-          </li>
-          {job.slug === "calldrip" ? (
-            <li className="experience-resume-row" data-reveal="card">
-              <div className="flex">
+              <ol className="role-history">
+                {job.roles.map((role, roleIndex) => (
+                  <li
+                    className="role-history-item"
+                    key={`${job.company}-${role.title}`}
+                  >
+                    <span className="role-node" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 16 16"
+                        className="role-node-signal"
+                        aria-hidden="true"
+                      >
+                        <circle
+                          className="role-node-outline"
+                          cx="8"
+                          cy="8"
+                          r="7"
+                        />
+                        <path
+                          className="role-node-arc role-node-arc-left"
+                          d="M 8 1 A 7 7 0 0 0 8 15"
+                          pathLength="100"
+                        />
+                        <path
+                          className="role-node-arc role-node-arc-right"
+                          d="M 8 1 A 7 7 0 0 1 8 15"
+                          pathLength="100"
+                        />
+                      </svg>
+                    </span>
+                    {roleIndex < job.roles.length - 1 ? (
+                      <span className="role-segment" aria-hidden="true" />
+                    ) : null}
+                    <p className="text-sm font-medium text-white/[0.72]">
+                      {role.title}
+                    </p>
+                    <time className="mt-0.5 block font-mono text-[0.6875rem] text-white/[0.48]">
+                      {role.span}
+                    </time>
+                  </li>
+                ))}
+              </ol>
+              <div className="job-card-skills mt-5 flex flex-wrap gap-1.5">
+                <ChipList items={job.technologies} />
+              </div>
+              <div className="mt-5 flex flex-wrap gap-2">
                 <a
-                  href="/documents/richardtaylordawson.pdf"
-                  className="experience-action-link experience-action-link-resume"
-                  aria-label="Open resume PDF (opens in a new tab)"
+                  href={job.siteHref}
+                  className="experience-action-link experience-action-link-site"
+                  aria-label={`Visit ${job.company} company site (opens in a new tab)`}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Resume
+                  Company site
                   <span className="sr-only">(opens in a new tab)</span>
                   <ExternalLink className="size-3.5" />
                 </a>
+                <Link
+                  href={job.detailHref}
+                  className="experience-action-link experience-action-link-details"
+                >
+                  Work details
+                  <ArrowRight className="size-3.5" />
+                </Link>
               </div>
-            </li>
-          ) : null}
-        </Fragment>
+            </div>
+          </div>
+        </li>
       ))}
     </ol>
   );

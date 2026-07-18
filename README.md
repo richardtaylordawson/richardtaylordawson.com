@@ -11,9 +11,9 @@ $ yarn develop
 
 ## Apps
 
-- `apps/richardtaylordawson.com` - current production site
-- `apps/v1` - first historical site snapshot from `history/v1`
-- `apps/v2` - May 30, 2026 site snapshot from the repo history
+- `apps/richardtaylordawson.com` (current production site)
+- `apps/v1` (2020)
+- `apps/v2` (2026)
 
 ## View Project
 
