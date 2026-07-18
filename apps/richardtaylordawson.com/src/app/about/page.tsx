@@ -71,10 +71,6 @@ export default function AboutPage() {
               <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-primary">
                 Education
               </p>
-              <p className="mt-3 max-w-2xl text-base leading-7 text-white/[0.58]">
-                Both degrees are in Computer Science from Weber State
-                University.
-              </p>
               <div className="mt-5">
                 <EducationList variant="inline" />
               </div>

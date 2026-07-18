@@ -24,7 +24,7 @@ export function ProjectSection({
       <div data-reveal="hero">
         <SectionHeading kicker={kicker} description={description} />
       </div>
-      <div className="motion-stagger mt-10 grid gap-5 lg:grid-cols-2">
+      <div className="motion-stagger mt-10 grid gap-5 lg:grid-cols-3">
         {items.map((item) => (
           <ProjectCard item={item} key={item.title} />
         ))}
