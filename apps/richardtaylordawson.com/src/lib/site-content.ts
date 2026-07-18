@@ -8,7 +8,6 @@ export type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
 export const aboutCopy = [
   "I’m a software engineer focused on building accessible, polished user interfaces. I take pride in being thoughtful and meticulous, with a sharp eye for the small details that make software feel considered.",
   "A lot of my strength is in piecing together the real user story from requirements, stakeholder context, and rough edges, then turning that into something clearer and more useful than what was first imagined.",
-  "I graduated from Weber State University with both an Associate’s Degree and a Bachelor’s Degree in Computer Science, which gave me the technical foundation I still build on in day-to-day product work.",
   "Currently, I work at AudioEye, where I maintain and build internal websites and apps across marketing flows, forms, headless CMS integrations, sales quoting software, and the infrastructure around those systems. I also help manage pull requests, own new project work, and keep the apps moving in the right direction.",
   "I’ve worked across in-office, hybrid, and fully remote teams, from a larger company like Clearlink to a small startup like Calldrip. That experience has ranged from end-to-end product work with CRUD applications and databases to the marketing and sales software that helps generate leads and enables teams to sell the product.",
   "Outside of work, you can usually find me with my wife and kids, playing golf, or watching good sports.",
@@ -58,6 +57,29 @@ export const projects = [
     href: "https://pwa-shields.richardtaylordawson.com",
     image: "https://pwa-shields.richardtaylordawson.com/images/social-share.png",
     cta: "Create PWA shields",
+  },
+  {
+    title: "Bruner Dynamics",
+    tag: "Marketing site",
+    text: "A Gatsby and React demo site built with strong visual hierarchy, clear package messaging, and a custom UI system.",
+    href: "https://bruner-dynamics.richardtaylordawson.com",
+    image: "https://bruner-dynamics.richardtaylordawson.com/images/social-share.png",
+    cta: "Visit Bruner Dynamics",
+  },
+  {
+    title: "Easy as Pie UI",
+    tag: "Component library",
+    text: "A themeable React component library exploring reusable layout primitives, styled UI pieces, and flexible site composition.",
+    href: "https://easy-as-pie-ui.richardtaylordawson.com",
+    cta: "View Easy as Pie UI",
+  },
+  {
+    title: "Button Creator",
+    tag: "Design tool",
+    text: "A real-time button styling tool for adjusting visual details and generating CSS that can be copied into a project.",
+    href: "https://button-creator.richardtaylordawson.com",
+    image: "https://button-creator.richardtaylordawson.com/images/social-share.png",
+    cta: "Create a button",
   },
   {
     title: "Snake",

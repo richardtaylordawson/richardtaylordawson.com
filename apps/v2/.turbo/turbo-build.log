@@ -1,0 +1,28 @@
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/richardtaylordawson/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /Users/richardtaylordawson/Documents/coding/richardtaylordawson/richardtaylordawson.com/apps/v2/package-lock.json
+   * /Users/richardtaylordawson/Documents/coding/richardtaylordawson/richardtaylordawson.com/yarn.lock
+
+▲ Next.js 16.2.9 (Turbopack)
+- Experiments (use with caution):
+  ✓ scrollRestoration
+
+  Running TypeScript ...
+  Finished TypeScript in 44ms ...
+  Creating an optimized production build ...
+✓ Compiled successfully in 2.4s
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/3) ...
+✓ Generating static pages using 5 workers (3/3) in 175ms
+  Finalizing page optimization ...
+
+Route (pages)
+┌ ○ /
+├   /_app
+└ ○ /404
+
+○  (Static)  prerendered as static content
+

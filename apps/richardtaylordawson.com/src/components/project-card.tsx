@@ -7,7 +7,7 @@ export type ProjectCardItem = {
   year?: string;
   text: string;
   href: string;
-  image: string;
+  image?: string;
   cta: string;
 };
 
@@ -26,23 +26,31 @@ export function ProjectCard({ item }: ProjectCardProps) {
       rel="noreferrer"
     >
       <div className="project-preview">
-        <Image
-          src={item.image}
-          alt=""
-          fill
-          sizes="(max-width: 1024px) 100vw, 50vw"
-          className="project-preview-backdrop"
-          aria-hidden="true"
-        />
-        <div className="project-preview-image">
-          <Image
-            src={item.image}
-            alt={`${item.title} social share artwork`}
-            fill
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-contain"
-          />
-        </div>
+        {item.image ? (
+          <>
+            <Image
+              src={item.image}
+              alt=""
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="project-preview-backdrop"
+              aria-hidden="true"
+            />
+            <div className="project-preview-image">
+              <Image
+                src={item.image}
+                alt={`${item.title} social share artwork`}
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-contain"
+              />
+            </div>
+          </>
+        ) : (
+          <div className="project-preview-fallback">
+            <span>{item.title}</span>
+          </div>
+        )}
       </div>
       <div className="p-3 pb-4 pt-5 sm:p-5 sm:pb-5">
         <div className="flex flex-wrap items-center justify-between gap-2">

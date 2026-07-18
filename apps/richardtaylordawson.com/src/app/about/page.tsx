@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
-import { EducationList } from "@/components/education-list";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteShell } from "@/components/site-shell";
 import { aboutCopy } from "@/lib/site-content";
@@ -66,14 +65,6 @@ export default function AboutPage() {
                   {paragraph}
                 </p>
               ))}
-            </div>
-            <div className="mt-10 border-t border-white/10 pt-7">
-              <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                Education
-              </p>
-              <div className="mt-5">
-                <EducationList variant="inline" />
-              </div>
             </div>
           </div>
         </div>
