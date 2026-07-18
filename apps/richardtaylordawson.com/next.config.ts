@@ -31,6 +31,18 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "bruner-dynamics.richardtaylordawson.com",
+        pathname: "/images/social-share.png",
+        search: "",
+      },
+      {
+        protocol: "https",
+        hostname: "button-creator.richardtaylordawson.com",
+        pathname: "/images/social-share.png",
+        search: "",
+      },
+      {
+        protocol: "https",
         hostname: "snake.richardtaylordawson.com",
         pathname: "/images/social-share.png",
         search: "",

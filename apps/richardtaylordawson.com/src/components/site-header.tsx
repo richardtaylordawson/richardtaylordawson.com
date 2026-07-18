@@ -10,6 +10,7 @@ import { MobileMenu } from "@/components/mobile-menu";
 import { experience } from "@/lib/site-content";
 
 const primaryLinks = [
+  { href: "/about", label: "About Me" },
   { href: "/#experience", label: "Experience" },
   { href: "/#work", label: "Projects" },
   { href: "/#business-sites", label: "Business Sites" },
@@ -32,11 +33,7 @@ const mobileMenuSections = [
   {
     title: "Site",
     toneClassName: "text-signal-teal/80",
-    links: [
-      { href: "/about", label: "About Me", internal: true },
-      { href: "/#work", label: "Projects", internal: true },
-      { href: "/#business-sites", label: "Business Sites", internal: true },
-    ],
+    links: primaryLinks.map((link) => ({ ...link, internal: true })),
   },
   {
     title: "Experience",

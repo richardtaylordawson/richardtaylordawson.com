@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { EducationList } from "@/components/education-list";
 import { ExperienceList } from "@/components/experience-list";
 import { ProjectSection } from "@/components/project-section";
 import { SectionHeading } from "@/components/section-heading";
@@ -95,7 +96,20 @@ export default function Home() {
           <div data-reveal="hero">
             <SectionHeading kicker="Experience" />
           </div>
-          <ExperienceList items={experience} />
+          <div className="space-y-3">
+            <ExperienceList items={experience} />
+            <div
+              className="rounded-[8px] border border-white/10 bg-white/[0.045] p-4"
+              data-reveal="card"
+            >
+              <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+                Education
+              </p>
+              <div className="mt-4">
+                <EducationList compact variant="inline" />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -113,6 +127,7 @@ export default function Home() {
           id="business-sites"
           description="Live sites I’ve worked on for businesses, separate from the personal projects and experiments."
           items={businessSites}
+          columns={2}
           divided
         />
       </section>

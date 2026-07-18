@@ -347,7 +347,7 @@
   }
 
   .project-preview {
-    @apply relative min-h-72 overflow-hidden rounded-[8px] border border-white/10 bg-black/30 transition duration-500 sm:min-h-80;
+    @apply relative min-h-56 overflow-hidden rounded-[8px] border border-white/10 bg-black/30 transition duration-500 sm:min-h-64;
   }
 
   .project-preview::after {
@@ -367,6 +367,30 @@
 
   .project-preview-image {
     @apply absolute inset-5 z-[1] overflow-hidden rounded-[6px] shadow-2xl shadow-black/40 transition duration-500 sm:inset-7;
+  }
+
+  .project-preview-fallback {
+    @apply absolute inset-5 z-[1] grid place-items-center overflow-hidden rounded-[6px] border border-white/10 bg-white/[0.055] p-6 text-center shadow-2xl shadow-black/30 transition duration-500 sm:inset-7;
+    background:
+      linear-gradient(135deg, rgb(45 212 191 / 0.18), transparent 36%),
+      linear-gradient(315deg, rgb(184 243 74 / 0.16), transparent 42%),
+      rgb(20 12 28 / 0.88);
+  }
+
+  .project-preview-fallback::before {
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.08) 1px, transparent 1px);
+    background-size: 28px 28px;
+    content: "";
+    inset: 0;
+    mask-image: linear-gradient(to bottom, black, transparent 86%);
+    opacity: 0.56;
+    position: absolute;
+  }
+
+  .project-preview-fallback span {
+    @apply relative max-w-56 text-2xl font-semibold leading-tight text-white sm:text-3xl;
   }
 
   .project-tag {
