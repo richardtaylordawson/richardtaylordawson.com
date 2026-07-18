@@ -18,12 +18,14 @@ export const education = [
   {
     degree: "Bachelor’s Degree in Computer Science",
     school: "Weber State University",
+    year: "2017",
     href: "/documents/bachelors-degree-computer-science.pdf",
     cta: "View bachelor’s degree",
   },
   {
     degree: "Associate’s Degree in Computer Science",
     school: "Weber State University",
+    year: "2017",
     href: "/documents/associates-degree-computer-science.pdf",
     cta: "View associate’s degree",
   },

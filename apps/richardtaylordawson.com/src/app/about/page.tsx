@@ -67,20 +67,20 @@ export default function AboutPage() {
                 </p>
               ))}
             </div>
-          </div>
-        </div>
-
-        <section className="mt-12" data-reveal="hero">
-          <div className="rounded-[8px] border border-white/10 bg-white/[0.045] p-6 shadow-2xl shadow-black/10 sm:p-8 lg:p-10">
-            <div className="grid gap-8 lg:grid-cols-[0.45fr_1.55fr]">
-              <SectionHeading
-                kicker="Education"
-                description="Both degrees are in Computer Science from Weber State University."
-              />
-              <EducationList />
+            <div className="mt-10 border-t border-white/10 pt-7">
+              <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+                Education
+              </p>
+              <p className="mt-3 max-w-2xl text-base leading-7 text-white/[0.58]">
+                Both degrees are in Computer Science from Weber State
+                University.
+              </p>
+              <div className="mt-5">
+                <EducationList variant="inline" />
+              </div>
             </div>
           </div>
-        </section>
+        </div>
       </section>
     </SiteShell>
   );

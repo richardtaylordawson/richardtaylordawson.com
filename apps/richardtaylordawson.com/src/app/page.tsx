@@ -84,23 +84,19 @@ export default function Home() {
                   Read more
                 </Link>
               </div>
+              <div
+                className="mt-8 border-t border-white/10 pt-6"
+                data-reveal="hero"
+              >
+                <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+                  Education
+                </p>
+                <div className="mt-4">
+                  <EducationList compact variant="inline" />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section
-        id="education"
-        className="scroll-mt-24 mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8"
-      >
-        <div className="grid gap-8 lg:grid-cols-[0.45fr_1.55fr]">
-          <div data-reveal="hero">
-            <SectionHeading
-              kicker="Education"
-              description="Computer Science degrees from Weber State University, with diploma PDFs available to view."
-            />
-          </div>
-          <EducationList compact />
         </div>
       </section>
 
