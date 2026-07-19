@@ -398,7 +398,7 @@
   }
 
   .project-year {
-    @apply rounded-[6px] border border-signal-amber/20 bg-signal-amber/[0.07] px-2.5 py-1 font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-signal-amber/75;
+    @apply rounded-[6px] border border-white/[0.12] bg-white/[0.05] px-2.5 py-1 font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-white/60;
   }
 
   .skill-chip {
