@@ -126,7 +126,53 @@ export const businessSites = [
   },
 ];
 
-export const experience = [
+export type ExperienceProject = {
+  title: string;
+  eyebrow: string;
+  description: string;
+  ownership: string;
+  impact: string;
+  technologies: string[];
+  confidentialityNote?: string;
+  href?: string;
+  cta?: string;
+};
+
+export type ExperienceDetail = {
+  overview: string[];
+  scopeHighlights: string[];
+  ownershipHighlights: string[];
+  impactHighlights: string[];
+  constraintHighlights: string[];
+  projects: ExperienceProject[];
+  visualNotes?: {
+    title: string;
+    description: string;
+    href?: string;
+    cta?: string;
+  }[];
+};
+
+export type ExperienceRole = {
+  title: string;
+  span: string;
+  note?: string;
+};
+
+export type ExperienceItem = {
+  company: string;
+  span: string;
+  logo: string;
+  slug: string;
+  siteHref: string;
+  detailHref: string;
+  summary: string;
+  technologies: string[];
+  roles: ExperienceRole[];
+  detail?: ExperienceDetail;
+};
+
+export const experience: ExperienceItem[] = [
   {
     company: "AudioEye",
     span: "May 2023 to present",
@@ -154,12 +200,132 @@ export const experience = [
       {
         title: "Staff Software Engineer - Marketing",
         span: "Sep 2024 to present",
+        note: "A continuation of the same cross-functional platform ownership, with the title reflecting the scope and impact already in motion.",
       },
       {
         title: "Senior Software Engineer - Marketing",
         span: "May 2023 to Sep 2024",
       },
     ],
+    detail: {
+      overview: [
+        "At AudioEye, I own much of the engineering surface area behind the company's marketing, lead generation, sales, and revenue operations. That work spans public web properties, CMS architecture, sales quoting software, CRM workflows, and internal tooling that helps non-engineering teams move faster.",
+        "My role sits at the intersection of engineering, demand generation, design, sales, and operations. The job is not just to ship interfaces, but to turn ambiguous business needs into durable systems that support accessibility, content velocity, and revenue workflows.",
+      ],
+      scopeHighlights: [
+        "Primary engineering owner for marketing and revenue-adjacent web systems.",
+        "Public website, CMS, design system, forms, quoting software, CRM workflows, and related internal tools.",
+        "Cross-functional partner to demand generation, design, sales, revenue operations, and content stakeholders.",
+        "Effectively a one-person engineering team for this surface area, balancing speed, independence, maintainability, and stakeholder alignment.",
+      ],
+      ownershipHighlights: [
+        "Translated ambiguous business and operational needs into practical technical plans.",
+        "Owned implementation across frontend, CMS modeling, platform architecture, deployment workflows, and internal integrations.",
+        "Kept accessibility and editor experience central while modernizing the underlying platform.",
+        "Protected confidential workflows by describing internal systems at a high level while still making the engineering scope clear.",
+      ],
+      impactHighlights: [
+        "Modernized the public web platform and content operations stack.",
+        "Improved editor quality of life and gave content teams more control without requiring engineering support for every change.",
+        "Created reusable foundations for scanner experiences across public and partner-facing surfaces.",
+        "Used AI-assisted internal tooling to speed up operational workflows in systems teams already use.",
+      ],
+      constraintHighlights: [
+        "Maintained momentum across marketing, sales, CMS, CRM, and internal tooling needs with a very small engineering footprint.",
+        "Balanced public-facing polish with internal workflow requirements and confidentiality boundaries.",
+        "Built around third-party platform limitations when native CMS or integration behavior did not cover the team's real workflows.",
+      ],
+      projects: [
+        {
+          title: "CMS Migration and Web Platform Rebuild",
+          eyebrow: "Platform modernization",
+          description:
+            "Migrated the marketing site from a Gatsby and Prismic stack to a Next.js, Storyblok, Turborepo, and Vercel platform. The migration also created room to refresh the brand and design system, improve deployment workflows, and give editors a more flexible CMS model.",
+          ownership:
+            "Owned the engineering path across the application architecture, CMS modeling, shared UI package extraction, Vercel deployment model, and stakeholder coordination with demand generation and design.",
+          impact:
+            "The new foundation improved maintainability, gave editors better day-to-day quality of life, and helped content operations move faster without sacrificing engineering control.",
+          technologies: [
+            "Next.js",
+            "Storyblok",
+            "Turborepo",
+            "Vercel",
+            "React",
+            "TypeScript",
+            "Design Systems",
+          ],
+          href: "https://www.audioeye.com/bloks/cms-migration-case-study/",
+          cta: "Read the public case study",
+        },
+        {
+          title: "Custom MCP Servers",
+          eyebrow: "AI-assisted operations",
+          description:
+            "Built custom MCP servers for internal HubSpot and Storyblok workflows before first-party options were available. Even after first-party servers emerged, the custom HubSpot work remained useful because the team's account manager and contract workflows needed deeper functionality.",
+          ownership:
+            "Designed and implemented the bridge between AI-assisted workflows and the real systems used by marketing, sales, and operations teams.",
+          impact:
+            "Helped internal teams use AI against practical business workflows while keeping system-specific behavior accurate and controlled.",
+          technologies: [
+            "MCP",
+            "HubSpot",
+            "Storyblok",
+            "AI Automation",
+            "Internal Tools",
+          ],
+          confidentialityNote:
+            "Specific account, contract, and CRM workflows are intentionally described at a high level.",
+        },
+        {
+          title: "Partner Scanner",
+          eyebrow: "Reusable product surface",
+          description:
+            "Helped create a white-label partner scanner by extracting scanner functionality into a shared package that powers both AudioEye's public website scanner and a separate partner-facing scanner application.",
+          ownership:
+            "Separated scanner logic from a single branded implementation and shaped it into a reusable package that could support multiple scanner experiences.",
+          impact:
+            "Reduced duplication and created a more durable scanner foundation for public marketing and partner-facing use cases.",
+          technologies: [
+            "React",
+            "TypeScript",
+            "Shared Packages",
+            "Accessibility",
+            "Lead Generation",
+          ],
+        },
+        {
+          title: "AI Translation Layer",
+          eyebrow: "Localized content operations",
+          description:
+            "Built a custom AI-powered translation layer inside Storyblok so the team could publish localized pages in minutes without adding translation headcount. The system handles complex CMS structures rather than only translating simple text fields.",
+          ownership:
+            "Designed the translation workflow around the actual Storyblok page model, including localized page text, global component swaps, and preservation of editor-friendly CMS patterns.",
+          impact:
+            "Made localization faster and more practical for content teams while working around Storyblok's native translation limitations.",
+          technologies: [
+            "Storyblok",
+            "AI Automation",
+            "Localization",
+            "CMS Architecture",
+            "TypeScript",
+          ],
+        },
+      ],
+      visualNotes: [
+        {
+          title: "Public Case Study",
+          description:
+            "The CMS migration has a public AudioEye case study that is safe to link and gives outside context for the platform work.",
+          href: "https://www.audioeye.com/bloks/cms-migration-case-study/",
+          cta: "Open case study",
+        },
+        {
+          title: "Internal Systems",
+          description:
+            "Screenshots of sales, CRM, quoting, MCP, and contract-related systems are omitted or described at a high level to avoid exposing confidential workflows.",
+        },
+      ],
+    },
   },
   {
     company: "Clearlink",
@@ -223,8 +389,6 @@ export const experience = [
     ],
   },
 ];
-
-export type ExperienceItem = (typeof experience)[number];
 
 export function getExperienceBySlug(slug: string) {
   return experience.find((item) => item.slug === slug);

@@ -2,12 +2,16 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, ExternalLink } from "lucide-react";
 
 import { ChipList } from "@/components/chip-list";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteShell } from "@/components/site-shell";
-import { experience, getExperienceBySlug } from "@/lib/site-content";
+import {
+  experience,
+  getExperienceBySlug,
+  type ExperienceProject,
+} from "@/lib/site-content";
 import { buildPageMetadata } from "@/lib/seo";
 
 type ExperiencePageProps = {
@@ -53,6 +57,8 @@ export default async function ExperienceDetailPage({
   if (!job) {
     notFound();
   }
+
+  const detail = job.detail;
 
   return (
     <SiteShell>
@@ -167,31 +173,207 @@ export default async function ExperienceDetailPage({
                   <time className="mt-0.5 block font-mono text-[0.6875rem] text-white/[0.48]">
                     {role.span}
                   </time>
+                  {role.note ? (
+                    <p className="mt-2 max-w-sm text-sm leading-6 text-white/[0.58]">
+                      {role.note}
+                    </p>
+                  ) : null}
                 </li>
               ))}
             </ol>
           </aside>
 
-          <section
-            className="motion-delay-1 rounded-[8px] border border-signal-teal/25 bg-signal-teal/[0.07] p-6 sm:p-8"
-            data-reveal="card"
-          >
-            <p className="font-mono text-xs uppercase tracking-[0.16em] text-signal-teal">
-              Deeper writeup
-            </p>
-            <h2 className="mt-4 text-2xl font-semibold text-white">
-              More detail is coming here.
-            </h2>
-            <p className="mt-4 max-w-2xl text-base leading-7 text-white/[0.64]">
-              This page is ready for the fuller story: the specific products,
-              systems, constraints, wins, and lessons from my work at{" "}
-              {job.company}. For now, it keeps the company context, role
-              history, and working tags in one place so the richer notes have a
-              home when I add them.
-            </p>
-          </section>
+          {detail ? (
+            <ExperienceRichDetail detail={detail} />
+          ) : (
+            <ExperiencePlaceholder company={job.company} />
+          )}
         </div>
       </article>
     </SiteShell>
+  );
+}
+
+function ExperienceRichDetail({
+  detail,
+}: {
+  detail: NonNullable<ReturnType<typeof getExperienceBySlug>>["detail"];
+}) {
+  if (!detail) {
+    return null;
+  }
+
+  return (
+    <div className="motion-delay-1 space-y-5" data-reveal="card">
+      <section className="rounded-[8px] border border-signal-teal/25 bg-signal-teal/[0.07] p-6 sm:p-8">
+        <p className="font-mono text-xs uppercase tracking-[0.16em] text-signal-teal">
+          Overview
+        </p>
+        <div className="mt-4 space-y-4 text-base leading-7 text-white/[0.68]">
+          {detail.overview.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
+      </section>
+
+      <div className="grid gap-5 md:grid-cols-2">
+        <DetailList title="Role and scope" items={detail.scopeHighlights} />
+        <DetailList title="My ownership" items={detail.ownershipHighlights} />
+        <DetailList title="Outcomes" items={detail.impactHighlights} />
+        <DetailList title="Constraints" items={detail.constraintHighlights} />
+      </div>
+
+      <section className="space-y-4">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="font-mono text-xs uppercase tracking-[0.16em] text-primary">
+              Key projects
+            </p>
+            <h2 className="mt-3 text-2xl font-semibold text-white">
+              Systems I owned or helped shape
+            </h2>
+          </div>
+        </div>
+        <div className="grid gap-4">
+          {detail.projects.map((project) => (
+            <ProjectDetailCard project={project} key={project.title} />
+          ))}
+        </div>
+      </section>
+
+      {detail.visualNotes?.length ? (
+        <section className="rounded-[8px] border border-white/10 bg-white/[0.035] p-6">
+          <p className="font-mono text-xs uppercase tracking-[0.16em] text-primary">
+            Screenshots and visuals
+          </p>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {detail.visualNotes.map((note) => (
+              <div
+                className="rounded-[8px] border border-white/10 bg-black/15 p-4"
+                key={note.title}
+              >
+                <h3 className="font-medium text-white">{note.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-white/[0.62]">
+                  {note.description}
+                </p>
+                {note.href ? (
+                  <a
+                    href={note.href}
+                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-signal-teal transition hover:text-signal-lime focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {note.cta ?? "Open link"}
+                    <span className="sr-only">(opens in a new tab)</span>
+                    <ArrowUpRight className="size-3.5" />
+                  </a>
+                ) : null}
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : null}
+    </div>
+  );
+}
+
+function DetailList({ title, items }: { title: string; items: string[] }) {
+  return (
+    <section className="rounded-[8px] border border-white/10 bg-white/[0.035] p-5">
+      <h2 className="font-mono text-xs uppercase tracking-[0.16em] text-primary">
+        {title}
+      </h2>
+      <ul className="mt-4 space-y-3">
+        {items.map((item) => (
+          <li
+            className="flex gap-3 text-sm leading-6 text-white/[0.64]"
+            key={item}
+          >
+            <span
+              className="mt-2 size-1.5 shrink-0 rounded-full bg-signal-lime"
+              aria-hidden="true"
+            />
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function ProjectDetailCard({ project }: { project: ExperienceProject }) {
+  return (
+    <article className="rounded-[8px] border border-white/10 bg-white/[0.045] p-5">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+          <p className="font-mono text-xs uppercase tracking-[0.16em] text-signal-amber">
+            {project.eyebrow}
+          </p>
+          <h3 className="mt-2 text-xl font-semibold text-white">
+            {project.title}
+          </h3>
+        </div>
+        {project.href ? (
+          <a
+            href={project.href}
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-signal-teal transition hover:text-signal-lime focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {project.cta ?? "Open link"}
+            <span className="sr-only">(opens in a new tab)</span>
+            <ArrowUpRight className="size-3.5" />
+          </a>
+        ) : null}
+      </div>
+      <p className="mt-4 text-base leading-7 text-white/[0.68]">
+        {project.description}
+      </p>
+      <div className="mt-5 grid gap-4 md:grid-cols-2">
+        <ProjectDetailNote title="Ownership" text={project.ownership} />
+        <ProjectDetailNote title="Impact" text={project.impact} />
+      </div>
+      {project.confidentialityNote ? (
+        <p className="mt-4 rounded-[8px] border border-signal-amber/20 bg-signal-amber/[0.06] p-3 text-sm leading-6 text-signal-amber/80">
+          {project.confidentialityNote}
+        </p>
+      ) : null}
+      <div className="mt-5 flex flex-wrap gap-1.5">
+        <ChipList items={project.technologies} />
+      </div>
+    </article>
+  );
+}
+
+function ProjectDetailNote({ title, text }: { title: string; text: string }) {
+  return (
+    <div className="rounded-[8px] border border-white/10 bg-black/15 p-4">
+      <h4 className="font-mono text-xs uppercase tracking-[0.16em] text-white/[0.5]">
+        {title}
+      </h4>
+      <p className="mt-2 text-sm leading-6 text-white/[0.62]">{text}</p>
+    </div>
+  );
+}
+
+function ExperiencePlaceholder({ company }: { company: string }) {
+  return (
+    <section
+      className="motion-delay-1 rounded-[8px] border border-signal-teal/25 bg-signal-teal/[0.07] p-6 sm:p-8"
+      data-reveal="card"
+    >
+      <p className="font-mono text-xs uppercase tracking-[0.16em] text-signal-teal">
+        Deeper writeup
+      </p>
+      <h2 className="mt-4 text-2xl font-semibold text-white">
+        More detail is coming here.
+      </h2>
+      <p className="mt-4 max-w-2xl text-base leading-7 text-white/[0.64]">
+        This page is ready for the fuller story: the specific products, systems,
+        constraints, wins, and lessons from my work at {company}. For now, it
+        keeps the company context, role history, and working tags in one place
+        so the richer notes have a home when I add them.
+      </p>
+    </section>
   );
 }
