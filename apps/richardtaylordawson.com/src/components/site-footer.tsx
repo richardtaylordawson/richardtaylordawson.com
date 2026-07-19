@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink, FileText, GraduationCap, Mail, Wrench } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
-import { SiEpicgames } from "react-icons/si";
 
 import { BrandMark } from "@/components/brand-mark";
 import { experience } from "@/lib/site-content";
@@ -56,12 +55,6 @@ const footerMiscLinks = [
     href: "/documents/bachelors-degree-computer-science.pdf",
     label: "Bachelor's Degree",
     icon: GraduationCap,
-    external: true,
-  },
-  {
-    href: "https://rocketleague.tracker.network/rocket-league/profile/epic/LilWizzie/overview",
-    label: "Rocket League",
-    icon: SiEpicgames,
     external: true,
   },
 ];

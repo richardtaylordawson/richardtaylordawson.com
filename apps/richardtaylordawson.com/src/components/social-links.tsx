@@ -1,8 +1,7 @@
 import Link from "next/link";
 import type { ComponentPropsWithoutRef } from "react";
-import { Mail, Wrench } from "lucide-react";
+import { GraduationCap, Mail, Wrench } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
-import { SiEpicgames } from "react-icons/si";
 
 import type { IconComponent } from "@/lib/site-content";
 
@@ -26,16 +25,16 @@ export const socialLinks = [
     external: true,
   },
   {
+    href: "/documents/bachelors-degree-computer-science.pdf",
+    label: "Bachelor's Degree",
+    icon: GraduationCap,
+    external: true,
+  },
+  {
     href: "/tools",
     label: "View tools page",
     icon: Wrench,
     internal: true,
-  },
-  {
-    href: "https://rocketleague.tracker.network/rocket-league/profile/epic/LilWizzie/overview",
-    label: "Rocket League profile",
-    icon: SiEpicgames,
-    external: true,
   },
 ] satisfies {
   href: string;
