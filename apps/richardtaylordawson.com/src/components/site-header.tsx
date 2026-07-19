@@ -1,7 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { ChevronDown, ExternalLink, FileText, Mail, Wrench } from "lucide-react";
+import {
+  ChevronDown,
+  ExternalLink,
+  FileText,
+  GraduationCap,
+  Mail,
+  Wrench,
+} from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { SiEpicgames } from "react-icons/si";
 
@@ -26,6 +33,30 @@ const versionLinks = [
     href: "https://v2.richardtaylordawson.com",
     label: "v2",
     builtAt: "2023",
+  },
+];
+
+const miscLinks = [
+  { href: "/tools", label: "Tools", internal: true, icon: Wrench },
+  {
+    href: "/documents/richardtaylordawson.pdf",
+    label: "Resume",
+    icon: FileText,
+  },
+  {
+    href: "/documents/associates-degree-computer-science.pdf",
+    label: "Associate's Degree",
+    icon: GraduationCap,
+  },
+  {
+    href: "/documents/bachelors-degree-computer-science.pdf",
+    label: "Bachelor's Degree",
+    icon: GraduationCap,
+  },
+  {
+    href: "https://rocketleague.tracker.network/rocket-league/profile/epic/LilWizzie/overview",
+    label: "Rocket League",
+    icon: SiEpicgames,
   },
 ];
 
@@ -69,19 +100,7 @@ const mobileMenuSections = [
   {
     title: "Misc",
     toneClassName: "text-white/48",
-    links: [
-      { href: "/tools", label: "Tools", internal: true, icon: Wrench },
-      {
-        href: "/documents/richardtaylordawson.pdf",
-        label: "Resume",
-        icon: FileText,
-      },
-      {
-        href: "https://rocketleague.tracker.network/rocket-league/profile/epic/LilWizzie/overview",
-        label: "Rocket League",
-        icon: SiEpicgames,
-      },
-    ],
+    links: miscLinks,
   },
   {
     title: "Versions",
@@ -118,6 +137,42 @@ export function SiteHeader() {
               {link.label}
             </Link>
           ))}
+          <details className="group relative">
+            <summary className="flex cursor-pointer list-none items-center gap-1.5 rounded-[6px] px-1.5 py-1 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
+              <span>Misc</span>
+              <ChevronDown
+                className="size-3.5 transition group-open:rotate-180"
+                aria-hidden="true"
+              />
+            </summary>
+            <div className="absolute right-0 top-full mt-3 w-64 overflow-hidden rounded-2xl border border-white/10 bg-black/95 p-2 shadow-2xl shadow-black/30 backdrop-blur-xl">
+              {miscLinks.map(({ href, label, internal, icon: Icon }) =>
+                internal ? (
+                  <Link
+                    key={href}
+                    href={href}
+                    className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm text-white/70 transition hover:bg-white/5 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  >
+                    <Icon className="size-4 shrink-0" aria-hidden="true" />
+                    <span>{label}</span>
+                  </Link>
+                ) : (
+                  <a
+                    key={href}
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm text-white/70 transition hover:bg-white/5 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    aria-label={`${label} (opens in a new tab)`}
+                  >
+                    <Icon className="size-4 shrink-0" aria-hidden="true" />
+                    <span>{label}</span>
+                    <ExternalLink className="ml-auto size-3.5 shrink-0" aria-hidden="true" />
+                  </a>
+                )
+              )}
+            </div>
+          </details>
           <details className="group relative">
             <summary className="flex cursor-pointer list-none items-center gap-1.5 rounded-[6px] px-1.5 py-1 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
               <span>Versions</span>

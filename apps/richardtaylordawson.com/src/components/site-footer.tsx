@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink, FileText, Mail, Wrench } from "lucide-react";
+import { ExternalLink, FileText, GraduationCap, Mail, Wrench } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { SiEpicgames } from "react-icons/si";
 
@@ -44,6 +44,18 @@ const footerMiscLinks = [
     href: "/documents/richardtaylordawson.pdf",
     label: "Resume",
     icon: FileText,
+    external: true,
+  },
+  {
+    href: "/documents/associates-degree-computer-science.pdf",
+    label: "Associate's Degree",
+    icon: GraduationCap,
+    external: true,
+  },
+  {
+    href: "/documents/bachelors-degree-computer-science.pdf",
+    label: "Bachelor's Degree",
+    icon: GraduationCap,
     external: true,
   },
   {
