@@ -79,15 +79,6 @@ export const projects = [
     cta: "Search Giphy",
   },
   {
-    title: "Bruner Dynamics",
-    tag: "Marketing site",
-    year: "2020",
-    text: "A Gatsby and React demo site built with strong visual hierarchy, clear package messaging, and a custom UI system.",
-    href: "https://bruner-dynamics.richardtaylordawson.com",
-    image: "https://bruner-dynamics.richardtaylordawson.com/images/social-share.png",
-    cta: "Visit Bruner Dynamics",
-  },
-  {
     title: "Easy as Pie UI",
     tag: "Component library",
     year: "2020",
@@ -95,6 +86,15 @@ export const projects = [
     href: "https://easy-as-pie-ui.richardtaylordawson.com",
     image: "https://easy-as-pie-ui.richardtaylordawson.com/images/social-share.png",
     cta: "View Easy as Pie UI",
+  },
+  {
+    title: "Bruner Dynamics",
+    tag: "Marketing site",
+    year: "2020",
+    text: "A Gatsby and React demo site built with strong visual hierarchy, clear package messaging, and a custom UI system.",
+    href: "https://bruner-dynamics.richardtaylordawson.com",
+    image: "https://bruner-dynamics.richardtaylordawson.com/images/social-share.png",
+    cta: "Visit Bruner Dynamics",
   },
   {
     title: "Button Creator",
