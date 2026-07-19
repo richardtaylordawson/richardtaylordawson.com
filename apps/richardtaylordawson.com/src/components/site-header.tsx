@@ -33,6 +33,11 @@ const versionLinks = [
     label: "v2",
     builtAt: "2023",
   },
+  {
+    href: "https://www.richardtaylordawson.com",
+    label: "v3",
+    builtAt: "2026",
+  },
 ];
 
 const miscLinks = [
