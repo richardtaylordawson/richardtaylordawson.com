@@ -34,6 +34,24 @@ export const education = [
 
 export const projects = [
   {
+    title: "Yahtz",
+    tag: "Dice game",
+    year: "2026",
+    text: "A polished web version of a classic dice game, built around quick rounds, clear scoring, and a smooth play flow.",
+    href: "https://yahtz.richardtaylordawson.com",
+    image: "https://yahtz.richardtaylordawson.com/images/social-share.png",
+    cta: "Play Yahtz",
+  },
+  {
+    title: "Dawson Dome",
+    tag: "Family hub",
+    year: "2026",
+    text: "A personal family hub shaped for the Dawson household, bringing useful details and shared rhythms into one friendly place.",
+    href: "https://dawson-dome.richardtaylordawson.com",
+    image: "https://dawson-dome.richardtaylordawson.com/images/social-share.png",
+    cta: "Open Dawson Dome",
+  },
+  {
     title: "Gaming Trivia",
     tag: "Interactive game",
     year: "2019",
