@@ -46,7 +46,7 @@ export const projects = [
     title: "Dawson Dome",
     tag: "Family hub",
     year: "2026",
-    text: "A personal family hub shaped for the Dawson household, bringing useful details and shared rhythms into one friendly place.",
+    text: "A personal family hub for leaderboards, stats, etc of various Dawson Family games",
     href: "https://dawson-dome.richardtaylordawson.com",
     image: "https://dawson-dome.richardtaylordawson.com/images/social-share.png",
     cta: "Open Dawson Dome",
