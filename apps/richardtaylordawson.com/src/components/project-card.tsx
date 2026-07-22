@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 
+import { cn } from "@/lib/utils";
+
 export type ProjectCardItem = {
   title: string;
   tag: string;
@@ -13,12 +15,13 @@ export type ProjectCardItem = {
 
 type ProjectCardProps = {
   item: ProjectCardItem;
+  className?: string;
 };
 
-export function ProjectCard({ item }: ProjectCardProps) {
+export function ProjectCard({ item, className }: ProjectCardProps) {
   return (
     <a
-      className="project-card group"
+      className={cn("project-card group", className)}
       data-reveal="card"
       href={item.href}
       aria-label={`${item.title}: ${item.cta} (opens in a new tab)`}

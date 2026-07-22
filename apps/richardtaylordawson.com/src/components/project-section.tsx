@@ -1,5 +1,8 @@
+import Link from "next/link";
+
 import { ProjectCard, type ProjectCardItem } from "@/components/project-card";
 import { SectionHeading } from "@/components/section-heading";
+import { cn } from "@/lib/utils";
 
 type ProjectSectionProps = {
   id?: string;
@@ -8,6 +11,10 @@ type ProjectSectionProps = {
   items: ProjectCardItem[];
   divided?: boolean;
   columns?: 2 | 3;
+  previewHref?: string;
+  previewLabel?: string;
+  desktopLimit?: number;
+  mobileLimit?: number;
 };
 
 export function ProjectSection({
@@ -17,6 +24,10 @@ export function ProjectSection({
   items,
   divided,
   columns = 3,
+  previewHref,
+  previewLabel = "See more",
+  desktopLimit,
+  mobileLimit,
 }: ProjectSectionProps) {
   const className = [
     id ? "scroll-mt-24" : null,
@@ -25,6 +36,7 @@ export function ProjectSection({
     .filter(Boolean)
     .join(" ");
   const gridClass = columns === 2 ? "lg:grid-cols-2" : "lg:grid-cols-3";
+  const visibleItems = desktopLimit ? items.slice(0, desktopLimit) : items;
 
   return (
     <div id={id} className={className || undefined}>
@@ -32,10 +44,23 @@ export function ProjectSection({
         <SectionHeading kicker={kicker} description={description} />
       </div>
       <div className={`motion-stagger mt-10 grid gap-5 ${gridClass}`}>
-        {items.map((item) => (
-          <ProjectCard item={item} key={item.title} />
+        {visibleItems.map((item, index) => (
+          <ProjectCard
+            className={cn(
+              mobileLimit && index >= mobileLimit ? "hidden lg:block" : null
+            )}
+            item={item}
+            key={item.title}
+          />
         ))}
       </div>
+      {previewHref ? (
+        <div className="mt-6" data-reveal="hero">
+          <Link href={previewHref} className="command-link">
+            {previewLabel}
+          </Link>
+        </div>
+      ) : null}
     </div>
   );
 }

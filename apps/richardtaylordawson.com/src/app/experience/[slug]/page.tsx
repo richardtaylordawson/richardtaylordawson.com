@@ -216,13 +216,6 @@ function ExperienceRichDetail({
         </div>
       </section>
 
-      <div className="grid gap-5 md:grid-cols-2">
-        <DetailList title="Role and scope" items={detail.scopeHighlights} />
-        <DetailList title="My ownership" items={detail.ownershipHighlights} />
-        <DetailList title="Outcomes" items={detail.impactHighlights} />
-        <DetailList title="Constraints" items={detail.constraintHighlights} />
-      </div>
-
       <section className="space-y-4">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
@@ -240,64 +233,7 @@ function ExperienceRichDetail({
           ))}
         </div>
       </section>
-
-      {detail.visualNotes?.length ? (
-        <section className="rounded-[8px] border border-white/10 bg-white/[0.035] p-6">
-          <p className="font-mono text-xs uppercase tracking-[0.16em] text-primary">
-            Screenshots and visuals
-          </p>
-          <div className="mt-4 grid gap-3 sm:grid-cols-2">
-            {detail.visualNotes.map((note) => (
-              <div
-                className="rounded-[8px] border border-white/10 bg-black/15 p-4"
-                key={note.title}
-              >
-                <h3 className="font-medium text-white">{note.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-white/[0.62]">
-                  {note.description}
-                </p>
-                {note.href ? (
-                  <a
-                    href={note.href}
-                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-signal-teal transition hover:text-signal-lime focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {note.cta ?? "Open link"}
-                    <span className="sr-only">(opens in a new tab)</span>
-                    <ArrowUpRight className="size-3.5" />
-                  </a>
-                ) : null}
-              </div>
-            ))}
-          </div>
-        </section>
-      ) : null}
     </div>
-  );
-}
-
-function DetailList({ title, items }: { title: string; items: string[] }) {
-  return (
-    <section className="rounded-[8px] border border-white/10 bg-white/[0.035] p-5">
-      <h2 className="font-mono text-xs uppercase tracking-[0.16em] text-primary">
-        {title}
-      </h2>
-      <ul className="mt-4 space-y-3">
-        {items.map((item) => (
-          <li
-            className="flex gap-3 text-sm leading-6 text-white/[0.64]"
-            key={item}
-          >
-            <span
-              className="mt-2 size-1.5 shrink-0 rounded-full bg-signal-lime"
-              aria-hidden="true"
-            />
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
-    </section>
   );
 }
 

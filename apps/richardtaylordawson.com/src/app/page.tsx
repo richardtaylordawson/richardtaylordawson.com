@@ -142,6 +142,10 @@ export default function Home() {
           kicker="Projects"
           description="A growing collection of things I’ve designed and built outside my day-to-day product work."
           items={projects}
+          desktopLimit={6}
+          mobileLimit={3}
+          previewHref="/projects"
+          previewLabel="See more projects"
         />
         <ProjectSection
           kicker="Business sites"
