@@ -79,6 +79,16 @@ export const projects = [
     cta: "Create PWA shields",
   },
   {
+    title: "Apple Music Activity",
+    tag: "Music app",
+    year: "2026",
+    text: "A personal Apple Music activity viewer for exploring recent listening history, artists, albums, and playback stats.",
+    href: "https://apple-music-activity.richardtaylordawson.com",
+    image:
+      "https://apple-music-activity.richardtaylordawson.com/images/social-share.png",
+    cta: "View Apple Music activity",
+  },
+  {
     title: "Snake",
     tag: "Browser game",
     year: "2018",

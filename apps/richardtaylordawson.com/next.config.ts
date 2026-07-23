@@ -43,6 +43,12 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "apple-music-activity.richardtaylordawson.com",
+        pathname: "/images/social-share.png",
+        search: "",
+      },
+      {
+        protocol: "https",
         hostname: "bruner-dynamics.richardtaylordawson.com",
         pathname: "/images/social-share.png",
         search: "",
