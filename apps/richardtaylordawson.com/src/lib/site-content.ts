@@ -37,7 +37,6 @@ export const projects = [
   {
     title: "Yahtz",
     tag: "Dice game",
-    status: "deployed",
     year: "2026",
     text: "A polished web version of a classic dice game, built around quick rounds, clear scoring, and a smooth play flow.",
     href: "https://yahtz.richardtaylordawson.com",
@@ -47,7 +46,6 @@ export const projects = [
   {
     title: "Dawson Dome",
     tag: "Family hub",
-    status: "deployed",
     year: "2026",
     text: "A personal family hub for leaderboards, stats, etc of various Dawson Family games",
     href: "https://dawson-dome.richardtaylordawson.com",
@@ -57,7 +55,6 @@ export const projects = [
   {
     title: "Gaming Trivia",
     tag: "Interactive game",
-    status: "deployed",
     year: "2019",
     text: "A retro gaming trivia experience built with NES.css and an open trivia API for a fresh set of questions each round.",
     href: "https://gaming-trivia.richardtaylordawson.com",
@@ -67,7 +64,6 @@ export const projects = [
   {
     title: "Calculator",
     tag: "Web calculator",
-    status: "deployed",
     year: "2018",
     text: "A focused calculator built with Bootstrap, HTML, and ES6 modules, with a set of switchable Bootswatch themes.",
     href: "https://calculator.richardtaylordawson.com",
@@ -77,7 +73,6 @@ export const projects = [
   {
     title: "PWA Shields",
     tag: "Badge Generator",
-    status: "deployed",
     year: "2019",
     text: "A small tool for creating custom PWA badges that make app READMEs feel more personal and polished.",
     href: "https://pwa-shields.richardtaylordawson.com",
@@ -87,7 +82,6 @@ export const projects = [
   {
     title: "Apple Music Activity",
     tag: "Music app",
-    status: "deployed",
     year: "2019",
     text: "A personal Apple Music activity viewer for exploring recent listening history, artists, albums, and playback stats.",
     href: "https://apple-music-activity.richardtaylordawson.com",
@@ -98,7 +92,6 @@ export const projects = [
   {
     title: "Snake",
     tag: "Browser game",
-    status: "deployed",
     year: "2018",
     text: "A browser-based take on Snake built around simple controls, fast feedback, and a lightweight arcade loop.",
     href: "https://snake.richardtaylordawson.com",
@@ -108,7 +101,6 @@ export const projects = [
   {
     title: "Giphy Search",
     tag: "Search app",
-    status: "deployed",
     year: "2021",
     text: "A simple Create React App project for searching Giphy's open API and browsing animated results.",
     href: "https://giphy-search.richardtaylordawson.com",
@@ -118,7 +110,6 @@ export const projects = [
   {
     title: "Easy as Pie UI",
     tag: "Component library",
-    status: "deployed",
     year: "2020",
     text: "A themeable React component library exploring reusable layout primitives, styled UI pieces, and flexible site composition.",
     href: "https://easy-as-pie-ui.richardtaylordawson.com",
@@ -128,7 +119,6 @@ export const projects = [
   {
     title: "Bruner Dynamics",
     tag: "Marketing site",
-    status: "deployed",
     year: "2020",
     text: "A Gatsby and React demo site built with strong visual hierarchy, clear package messaging, and a custom UI system.",
     href: "https://bruner-dynamics.richardtaylordawson.com",
@@ -138,7 +128,6 @@ export const projects = [
   {
     title: "Button Creator",
     tag: "Design tool",
-    status: "deployed",
     year: "2021",
     text: "A real-time button styling tool for adjusting visual details and generating CSS that can be copied into a project.",
     href: "https://button-creator.richardtaylordawson.com",
@@ -146,10 +135,29 @@ export const projects = [
     cta: "Create a button",
   },
   {
+    title: "Mahjong",
+    tag: "Java exercise",
+    text: "A Java object-oriented programming exercise for modeling Mahjong tiles without full game logic.",
+    href: "https://github.com/richardtaylordawson/mahjong",
+    cta: "View on GitHub",
+  },
+  {
+    title: "Ping Pong Scorekeeper",
+    tag: "iOS app",
+    text: "An Objective-C iPhone scorekeeper for ping pong games with portrait and landscape layouts.",
+    href: "https://github.com/richardtaylordawson/pingpong-scorekeeper",
+    cta: "View on GitHub",
+  },
+  {
+    title: "Coin",
+    tag: "iOS app",
+    text: "An Objective-C iPhone app for tracking and managing bills, backed by Heroku and Parse Server.",
+    href: "https://github.com/richardtaylordawson/coin",
+    cta: "View on GitHub",
+  },
+  {
     title: "Chat App",
     tag: "Chat app",
-    status: "deployed",
-    year: "2019",
     text: "A chat application built with Pusher Chatkit, Firebase, and a custom front-end interface.",
     href: "https://chat-app.richardtaylordawson.com",
     cta: "Open chat app",
@@ -157,26 +165,13 @@ export const projects = [
   {
     title: "Simple Todo",
     tag: "Productivity app",
-    status: "deployed",
-    year: "2019",
     text: "A focused todo app built with React, Firebase, and Semantic UI for lightweight task management.",
     href: "https://simple-todo.richardtaylordawson.com",
     cta: "Open Simple Todo",
   },
   {
-    title: "Coin",
-    tag: "iOS app",
-    status: "in-progress",
-    year: "2018",
-    text: "An Objective-C iPhone app for tracking and managing bills, backed by Heroku and Parse Server.",
-    href: "https://github.com/richardtaylordawson/coin",
-    cta: "View on GitHub",
-  },
-  {
     title: "Chirp",
     tag: "API experiment",
-    status: "in-progress",
-    year: "2018",
     text: "An app experiment that combines the Twitter API and Google Natural Language API to analyze tweets.",
     href: "https://github.com/richardtaylordawson/chirp",
     cta: "View on GitHub",
@@ -184,8 +179,6 @@ export const projects = [
   {
     title: "Kaiju Battle Arena",
     tag: "Messaging game",
-    status: "in-progress",
-    year: "2018",
     text: "A Twilio-powered multiplayer messaging game where players battle their Kaiju in an arena.",
     href: "https://github.com/richardtaylordawson/kaiju-battle-arena",
     cta: "View on GitHub",
@@ -193,28 +186,8 @@ export const projects = [
   {
     title: "Coding Challenges",
     tag: "Practice archive",
-    status: "in-progress",
-    year: "2018",
     text: "A collection of coding challenges completed through school, Codewars, HackerRank, and similar practice sources.",
     href: "https://github.com/richardtaylordawson/coding-challenges",
-    cta: "View on GitHub",
-  },
-  {
-    title: "Ping Pong Scorekeeper",
-    tag: "iOS app",
-    status: "in-progress",
-    year: "2018",
-    text: "An Objective-C iPhone scorekeeper for ping pong games with portrait and landscape layouts.",
-    href: "https://github.com/richardtaylordawson/pingpong-scorekeeper",
-    cta: "View on GitHub",
-  },
-  {
-    title: "Mahjong",
-    tag: "Java exercise",
-    status: "in-progress",
-    year: "2018",
-    text: "A Java object-oriented programming exercise for modeling Mahjong tiles without full game logic.",
-    href: "https://github.com/richardtaylordawson/mahjong",
     cta: "View on GitHub",
   },
 ] satisfies ProjectCardItem[];

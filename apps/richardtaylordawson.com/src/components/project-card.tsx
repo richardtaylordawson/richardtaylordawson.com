@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 export type ProjectCardItem = {
   title: string;
   tag: string;
-  status?: "deployed" | "in-progress";
   year?: string;
   text: string;
   href: string;
@@ -65,9 +64,6 @@ export function ProjectCard({
         {item.year ? (
           <div className="flex flex-wrap items-center gap-2">
             <span className="project-year">Built {item.year}</span>
-            {item.status === "in-progress" ? (
-              <span className="project-year">In progress / non-web</span>
-            ) : null}
           </div>
         ) : null}
         <h3
