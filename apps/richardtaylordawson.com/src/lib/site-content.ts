@@ -81,7 +81,7 @@ export const projects = [
   {
     title: "Apple Music Activity",
     tag: "Music app",
-    year: "2026",
+    year: "2019",
     text: "A personal Apple Music activity viewer for exploring recent listening history, artists, albums, and playback stats.",
     href: "https://apple-music-activity.richardtaylordawson.com",
     image:

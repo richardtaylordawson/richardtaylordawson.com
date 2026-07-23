@@ -46,8 +46,9 @@ export function ProjectBrowser({ items }: ProjectBrowserProps) {
     return matchesQuery && matchesTag && matchesYear;
   });
 
-  const hasActiveFilters =
-    normalizedQuery || tag !== allFilter || year !== allFilter;
+  const hasActiveFilters = Boolean(
+    normalizedQuery || tag !== allFilter || year !== allFilter
+  );
 
   return (
     <div>
@@ -119,6 +120,7 @@ export function ProjectBrowser({ items }: ProjectBrowserProps) {
               )}
               type="button"
               onClick={() => setTag(itemTag)}
+              aria-pressed={itemTag === tag}
               key={itemTag}
             >
               {itemTag}
@@ -150,7 +152,7 @@ export function ProjectBrowser({ items }: ProjectBrowserProps) {
       {filteredItems.length ? (
         <div className="motion-stagger mt-8 grid gap-5 lg:grid-cols-3">
           {filteredItems.map((item) => (
-            <ProjectCard item={item} key={item.title} />
+            <ProjectCard item={item} reveal={false} key={item.title} />
           ))}
         </div>
       ) : (

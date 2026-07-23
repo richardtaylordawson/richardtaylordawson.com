@@ -16,13 +16,18 @@ export type ProjectCardItem = {
 type ProjectCardProps = {
   item: ProjectCardItem;
   className?: string;
+  reveal?: boolean;
 };
 
-export function ProjectCard({ item, className }: ProjectCardProps) {
+export function ProjectCard({
+  item,
+  className,
+  reveal = true,
+}: ProjectCardProps) {
   return (
     <a
       className={cn("project-card group", className)}
-      data-reveal="card"
+      data-reveal={reveal ? "card" : undefined}
       href={item.href}
       aria-label={`${item.title}: ${item.cta} (opens in a new tab)`}
       target="_blank"
