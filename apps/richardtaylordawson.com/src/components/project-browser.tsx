@@ -4,21 +4,36 @@ import { useMemo, useState } from "react";
 import { Search, SlidersHorizontal, X } from "lucide-react";
 
 import { ProjectCard, type ProjectCardItem } from "@/components/project-card";
-import { cn } from "@/lib/utils";
 
 type ProjectBrowserProps = {
   items: ProjectCardItem[];
 };
 
-const allFilter = "All";
+const allFilter = "All" as const;
+type ProjectStatus = NonNullable<ProjectCardItem["status"]>;
+type StatusFilter = ProjectStatus | typeof allFilter;
+
+const statusLabels = {
+  deployed: "Deployed",
+  "in-progress": "In progress / non-web",
+} as const;
+
+function isProjectStatus(status: ProjectCardItem["status"]): status is ProjectStatus {
+  return Boolean(status);
+}
 
 export function ProjectBrowser({ items }: ProjectBrowserProps) {
   const [query, setQuery] = useState("");
-  const [tag, setTag] = useState(allFilter);
-  const [year, setYear] = useState(allFilter);
+  const [status, setStatus] = useState<StatusFilter>(allFilter);
+  const [year, setYear] = useState<string>(allFilter);
 
-  const tags = useMemo(
-    () => [allFilter, ...Array.from(new Set(items.map((item) => item.tag)))],
+  const statuses = useMemo<StatusFilter[]>(
+    () => [
+      allFilter,
+      ...Array.from(
+        new Set(items.map((item) => item.status).filter(isProjectStatus))
+      ),
+    ],
     [items]
   );
   const years = useMemo(
@@ -33,21 +48,28 @@ export function ProjectBrowser({ items }: ProjectBrowserProps) {
 
   const normalizedQuery = query.trim().toLowerCase();
   const filteredItems = items.filter((item) => {
+    const itemStatus = item.status ?? "deployed";
     const matchesQuery = normalizedQuery
-      ? [item.title, item.tag, item.year, item.text]
+      ? [
+          item.title,
+          item.tag,
+          item.year,
+          statusLabels[itemStatus],
+          item.text,
+        ]
           .filter(Boolean)
           .join(" ")
           .toLowerCase()
           .includes(normalizedQuery)
       : true;
-    const matchesTag = tag === allFilter || item.tag === tag;
+    const matchesStatus = status === allFilter || itemStatus === status;
     const matchesYear = year === allFilter || item.year === year;
 
-    return matchesQuery && matchesTag && matchesYear;
+    return matchesQuery && matchesStatus && matchesYear;
   });
 
   const hasActiveFilters = Boolean(
-    normalizedQuery || tag !== allFilter || year !== allFilter
+    normalizedQuery || status !== allFilter || year !== allFilter
   );
 
   return (
@@ -71,7 +93,7 @@ export function ProjectBrowser({ items }: ProjectBrowserProps) {
                 type="search"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder="Search by title, type, year, or detail"
+                placeholder="Search by title, year, status, or detail"
               />
               {query ? (
                 <button
@@ -86,46 +108,46 @@ export function ProjectBrowser({ items }: ProjectBrowserProps) {
             </span>
           </label>
 
-          <div>
-            <span className="mb-2 flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.16em] text-white/48">
-              <SlidersHorizontal className="size-3.5" aria-hidden="true" />
-              Year
-            </span>
-            <select
-              className="h-11 min-w-36 rounded-[8px] border border-white/10 bg-black/40 px-3 text-sm text-white outline-none transition hover:border-white/20 focus:border-primary/60 focus:ring-2 focus:ring-primary/20"
-              value={year}
-              onChange={(event) => setYear(event.target.value)}
-              aria-label="Filter projects by year"
-            >
-              {years.map((itemYear) => (
-                <option value={itemYear} key={itemYear}>
-                  {itemYear === allFilter ? "All years" : itemYear}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div>
+              <span className="mb-2 flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.16em] text-white/48">
+                <SlidersHorizontal className="size-3.5" aria-hidden="true" />
+                Status
+              </span>
+              <select
+                className="h-11 w-full min-w-44 rounded-[8px] border border-white/10 bg-black/40 px-3 text-sm text-white outline-none transition hover:border-white/20 focus:border-primary/60 focus:ring-2 focus:ring-primary/20"
+                value={status}
+                onChange={(event) => setStatus(event.target.value as StatusFilter)}
+                aria-label="Filter projects by status"
+              >
+                {statuses.map((itemStatus) => (
+                  <option value={itemStatus} key={itemStatus}>
+                    {itemStatus === allFilter
+                      ? "All projects"
+                      : statusLabels[itemStatus]}
+                  </option>
+                ))}
+              </select>
+            </div>
 
-        <div
-          className="mt-4 flex flex-wrap gap-2"
-          aria-label="Filter projects by type"
-        >
-          {tags.map((itemTag) => (
-            <button
-              className={cn(
-                "rounded-[8px] border px-3 py-2 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary",
-                itemTag === tag
-                  ? "border-signal-teal/45 bg-signal-teal/[0.12] text-signal-teal"
-                  : "border-white/10 bg-white/[0.045] text-white/64 hover:border-white/22 hover:bg-white/[0.07] hover:text-white"
-              )}
-              type="button"
-              onClick={() => setTag(itemTag)}
-              aria-pressed={itemTag === tag}
-              key={itemTag}
-            >
-              {itemTag}
-            </button>
-          ))}
+            <div>
+              <span className="mb-2 flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.16em] text-white/48">
+                Year
+              </span>
+              <select
+                className="h-11 w-full min-w-36 rounded-[8px] border border-white/10 bg-black/40 px-3 text-sm text-white outline-none transition hover:border-white/20 focus:border-primary/60 focus:ring-2 focus:ring-primary/20"
+                value={year}
+                onChange={(event) => setYear(event.target.value)}
+                aria-label="Filter projects by year"
+              >
+                {years.map((itemYear) => (
+                  <option value={itemYear} key={itemYear}>
+                    {itemYear === allFilter ? "All years" : itemYear}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
         </div>
 
         <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-white/10 pt-4">
@@ -138,7 +160,7 @@ export function ProjectBrowser({ items }: ProjectBrowserProps) {
               type="button"
               onClick={() => {
                 setQuery("");
-                setTag(allFilter);
+                setStatus(allFilter);
                 setYear(allFilter);
               }}
             >
