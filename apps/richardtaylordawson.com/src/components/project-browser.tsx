@@ -44,7 +44,7 @@ export function ProjectBrowser({ items }: ProjectBrowserProps) {
                 aria-hidden="true"
               />
               <input
-                className="h-11 w-full rounded-[8px] border border-white/10 bg-black/20 pl-10 pr-10 text-sm text-white outline-none transition placeholder:text-white/32 hover:border-white/20 focus:border-primary/60 focus:ring-2 focus:ring-primary/20"
+                className="project-search-input h-11 w-full rounded-[8px] border border-white/10 bg-black/20 pl-10 pr-10 text-sm text-white outline-none transition placeholder:text-white/32 hover:border-white/20 focus:border-primary/60 focus:ring-2 focus:ring-primary/20"
                 type="search"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}

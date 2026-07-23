@@ -124,6 +124,10 @@
   [contenteditable="true"] {
     cursor: text;
   }
+
+  .project-search-input::-webkit-search-cancel-button {
+    display: none;
+  }
 }
 
 @layer components {
