@@ -17,7 +17,66 @@
     "start:v2": "turbo start --filter=v2"
   },
   "resolutions": {
-    "sharp": "0.34.5"
+    "@hono/node-server": "2.0.12",
+    "@parcel/bundler-default": "2.16.4",
+    "@parcel/cache": "2.16.4",
+    "@parcel/codeframe": "2.16.4",
+    "@parcel/compressor-raw": "2.16.4",
+    "@parcel/core": "2.16.4",
+    "@parcel/diagnostic": "2.16.4",
+    "@parcel/events": "2.16.4",
+    "@parcel/feature-flags": "2.16.4",
+    "@parcel/fs": "2.16.4",
+    "@parcel/fs-search": "2.9.3",
+    "@parcel/graph": "3.6.4",
+    "@parcel/hash": "2.9.3",
+    "@parcel/logger": "2.16.4",
+    "@parcel/markdown-ansi": "2.16.4",
+    "@parcel/namer-default": "2.16.4",
+    "@parcel/node-resolver-core": "3.7.4",
+    "@parcel/optimizer-terser": "2.16.4",
+    "@parcel/package-manager": "2.16.4",
+    "@parcel/packager-js": "2.16.4",
+    "@parcel/packager-raw": "2.16.4",
+    "@parcel/plugin": "2.16.4",
+    "@parcel/profiler": "2.16.4",
+    "@parcel/reporter-dev-server": "2.16.4",
+    "@parcel/resolver-default": "2.16.4",
+    "@parcel/runtime-js": "2.16.4",
+    "@parcel/transformer-js": "2.16.4",
+    "@parcel/transformer-json": "2.16.4",
+    "@parcel/types": "2.16.4",
+    "@parcel/types-internal": "2.16.4",
+    "@parcel/utils": "2.16.4",
+    "@parcel/workers": "2.16.4",
+    "body-parser@npm:~1.20.5": "1.20.6",
+    "brace-expansion": "patch:brace-expansion@npm%3A5.0.8#~/.yarn/patches/brace-expansion-npm-5.0.8-08bf144160.patch",
+    "brace-expansion@npm:^1.1.7": "patch:brace-expansion@npm%3A5.0.8#~/.yarn/patches/brace-expansion-npm-5.0.8-08bf144160.patch",
+    "brace-expansion@npm:^5.0.5": "patch:brace-expansion@npm%3A5.0.8#~/.yarn/patches/brace-expansion-npm-5.0.8-08bf144160.patch",
+    "cookie@npm:^0.5.0": "0.7.2",
+    "fast-uri@npm:^3.0.1": "3.1.4",
+    "file-type@npm:^16.5.4": "22.0.1",
+    "immutable@npm:~3.7.6": "4.3.9",
+    "lodash@npm:~4.17.0": "4.18.1",
+    "minimatch": "patch:minimatch@npm%3A9.0.9#~/.yarn/patches/minimatch-npm-9.0.9-3ee8f15008.patch",
+    "node-fetch@npm:^1.0.1": "2.7.0",
+    "path-to-regexp@npm:0.1.12": "0.1.13",
+    "postcss": "8.5.23",
+    "serialize-javascript@npm:^5.0.1": "7.0.7",
+    "sharp": "0.35.3",
+    "svgo@npm:^2.7.0": "2.8.3",
+    "tar@npm:^7.5.4": "7.5.22",
+    "tmp@npm:^0.0.33": "0.2.7",
+    "uuid@npm:^8.3.2": "11.1.1",
+    "webpack@npm:~5.98.0": "5.109.0",
+    "brace-expansion@npm:^2.0.2": "patch:brace-expansion@npm%3A5.0.8#~/.yarn/patches/brace-expansion-npm-5.0.8-08bf144160.patch",
+    "minimatch@npm:^3.1.2": "patch:minimatch@npm%3A9.0.9#~/.yarn/patches/minimatch-npm-9.0.9-3ee8f15008.patch",
+    "minimatch@npm:^3.1.1": "patch:minimatch@npm%3A9.0.9#~/.yarn/patches/minimatch-npm-9.0.9-3ee8f15008.patch",
+    "minimatch@npm:^10.2.2": "patch:minimatch@npm%3A9.0.9#~/.yarn/patches/minimatch-npm-9.0.9-3ee8f15008.patch",
+    "minimatch@npm:^3.1.5": "patch:minimatch@npm%3A9.0.9#~/.yarn/patches/minimatch-npm-9.0.9-3ee8f15008.patch",
+    "minimatch@npm:^10.0.1": "patch:minimatch@npm%3A9.0.9#~/.yarn/patches/minimatch-npm-9.0.9-3ee8f15008.patch",
+    "minimatch@npm:^3.0.5": "patch:minimatch@npm%3A9.0.9#~/.yarn/patches/minimatch-npm-9.0.9-3ee8f15008.patch",
+    "minimatch@npm:^3.0.4": "patch:minimatch@npm%3A9.0.9#~/.yarn/patches/minimatch-npm-9.0.9-3ee8f15008.patch"
   },
   "devDependencies": {
     "turbo": "^2.10.0"
@@ -25,18 +84,18 @@
   "overrides": {
     "@babel/core": "7.29.7",
     "@ts-morph/common": {
-      "brace-expansion": "5.0.7"
+      "brace-expansion": "5.0.8"
     },
     "@typescript-eslint/typescript-estree": {
-      "brace-expansion": "5.0.7"
+      "brace-expansion": "5.0.8"
     },
     "express-rate-limit": "8.5.2",
-    "fast-uri": "4.1.0",
+    "fast-uri": "4.1.1",
     "hono": "4.12.27",
     "ip-address": "10.2.0",
     "js-yaml": "5.2.0",
-    "postcss": "8.5.16",
+    "postcss": "8.5.23",
     "qs": "6.15.3",
-    "sharp": "0.34.5"
+    "sharp": "0.35.3"
   }
 }

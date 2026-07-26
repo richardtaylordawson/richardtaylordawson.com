@@ -1,0 +1,44 @@
+diff --git a/dist/commonjs/index.d.ts b/dist/commonjs/index.d.ts
+index f3e2de9d87e1ce462517e49f35733bed8bdf85af..6c84d87835182d0670981dc15f488c2a7d061c98 100644
+--- a/dist/commonjs/index.d.ts
++++ b/dist/commonjs/index.d.ts
+@@ -5,4 +5,5 @@ export type BraceExpansionOptions = {
+     maxLength?: number;
+ };
+ export declare function expand(str: string, options?: BraceExpansionOptions): string[];
++export default expand;
+ //# sourceMappingURL=index.d.ts.map
+diff --git a/dist/commonjs/index.js b/dist/commonjs/index.js
+index be9df86be09c7655787a65c55ae6da01858894c3..20ad94b12fd268a41209b259a715ebf647650dcd 100644
+--- a/dist/commonjs/index.js
++++ b/dist/commonjs/index.js
+@@ -91,6 +91,7 @@ function expand(str, options = {}) {
+     }
+     return expand_(escapeBraces(str), max, maxLength, true).map(unescapeBraces);
+ }
++exports.default = expand;
+ function embrace(str) {
+     return '{' + str + '}';
+ }
+diff --git a/dist/esm/index.d.ts b/dist/esm/index.d.ts
+index f3e2de9d87e1ce462517e49f35733bed8bdf85af..6c84d87835182d0670981dc15f488c2a7d061c98 100644
+--- a/dist/esm/index.d.ts
++++ b/dist/esm/index.d.ts
+@@ -5,4 +5,5 @@ export type BraceExpansionOptions = {
+     maxLength?: number;
+ };
+ export declare function expand(str: string, options?: BraceExpansionOptions): string[];
++export default expand;
+ //# sourceMappingURL=index.d.ts.map
+diff --git a/dist/esm/index.js b/dist/esm/index.js
+index 6dc0392fc0feedb811e63d70a30be2736af17a3a..6a02bbf95d0526dcd54defd0938dbc985f8ba1e0 100644
+--- a/dist/esm/index.js
++++ b/dist/esm/index.js
+@@ -87,6 +87,7 @@ export function expand(str, options = {}) {
+     }
+     return expand_(escapeBraces(str), max, maxLength, true).map(unescapeBraces);
+ }
++export default expand;
+ function embrace(str) {
+     return '{' + str + '}';
+ }

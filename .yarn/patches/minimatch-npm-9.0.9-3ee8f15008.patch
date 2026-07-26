@@ -1,0 +1,44 @@
+diff --git a/dist/commonjs/index.d.ts b/dist/commonjs/index.d.ts
+index e725c0df228cb62ffea4be6fc950bb3efde0ec68..d47c99382908f15b72b37adac8b1b573f7e2226a 100644
+--- a/dist/commonjs/index.d.ts
++++ b/dist/commonjs/index.d.ts
+@@ -38,6 +38,7 @@ export declare const minimatch: {
+     escape: (s: string, { windowsPathsNoEscape, }?: Pick<MinimatchOptions, "windowsPathsNoEscape">) => string;
+     unescape: (s: string, { windowsPathsNoEscape, }?: Pick<MinimatchOptions, "windowsPathsNoEscape">) => string;
+ };
++export default minimatch;
+ type Sep = '\\' | '/';
+ export declare const sep: Sep;
+ export declare const GLOBSTAR: unique symbol;
+diff --git a/dist/commonjs/index.js b/dist/commonjs/index.js
+index c12dc5e6476874f9dbba429a19e445a4a688e1df..18d0d322cfe6b37403e6ecec86a2653d8654ec2f 100644
+--- a/dist/commonjs/index.js
++++ b/dist/commonjs/index.js
+@@ -1020,4 +1020,5 @@ exports.minimatch.AST = ast_js_1.AST;
+ exports.minimatch.Minimatch = Minimatch;
+ exports.minimatch.escape = escape_js_1.escape;
+ exports.minimatch.unescape = unescape_js_1.unescape;
++exports.default = exports.minimatch;
+ //# sourceMappingURL=index.js.map
+diff --git a/dist/esm/index.d.ts b/dist/esm/index.d.ts
+index e725c0df228cb62ffea4be6fc950bb3efde0ec68..d47c99382908f15b72b37adac8b1b573f7e2226a 100644
+--- a/dist/esm/index.d.ts
++++ b/dist/esm/index.d.ts
+@@ -38,6 +38,7 @@ export declare const minimatch: {
+     escape: (s: string, { windowsPathsNoEscape, }?: Pick<MinimatchOptions, "windowsPathsNoEscape">) => string;
+     unescape: (s: string, { windowsPathsNoEscape, }?: Pick<MinimatchOptions, "windowsPathsNoEscape">) => string;
+ };
++export default minimatch;
+ type Sep = '\\' | '/';
+ export declare const sep: Sep;
+ export declare const GLOBSTAR: unique symbol;
+diff --git a/dist/esm/index.js b/dist/esm/index.js
+index 737c8095415235e69e4717b505d0ee4ea3c0b6fa..bc0d7ee8e547c466eaf57fb04ba06992069c4447 100644
+--- a/dist/esm/index.js
++++ b/dist/esm/index.js
+@@ -1004,4 +1004,5 @@ minimatch.AST = AST;
+ minimatch.Minimatch = Minimatch;
+ minimatch.escape = escape;
+ minimatch.unescape = unescape;
++export default minimatch;
+ //# sourceMappingURL=index.js.map
