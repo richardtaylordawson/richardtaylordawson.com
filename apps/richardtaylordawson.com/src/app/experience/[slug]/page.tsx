@@ -126,75 +126,79 @@ export default async function ExperienceDetailPage({
           </div>
         </header>
 
-        <div className="mt-10 grid gap-5 lg:grid-cols-[0.82fr_1.18fr]">
-          <aside
-            className="rounded-[8px] border border-white/10 bg-white/[0.035] p-6"
-            data-reveal="card"
-          >
-            <p className="font-mono text-xs uppercase tracking-[0.16em] text-primary">
-              Roles
-            </p>
-            <ol className="role-history">
-              {job.roles.map((role, roleIndex) => (
-                <li
-                  className="role-history-item"
-                  key={`${job.company}-${role.title}`}
-                >
-                  <span className="role-node" aria-hidden="true">
-                    <svg
-                      viewBox="0 0 16 16"
-                      className="role-node-signal"
-                      aria-hidden="true"
-                    >
-                      <circle
-                        className="role-node-outline"
-                        cx="8"
-                        cy="8"
-                        r="7"
-                      />
-                      <path
-                        className="role-node-arc role-node-arc-left"
-                        d="M 8 1 A 7 7 0 0 0 8 15"
-                        pathLength="100"
-                      />
-                      <path
-                        className="role-node-arc role-node-arc-right"
-                        d="M 8 1 A 7 7 0 0 1 8 15"
-                        pathLength="100"
-                      />
-                    </svg>
-                  </span>
-                  {roleIndex < job.roles.length - 1 ? (
-                    <span className="role-segment" aria-hidden="true" />
-                  ) : null}
-                  <p className="text-sm font-medium text-white/[0.72]">
-                    {role.title}
-                  </p>
-                  <time className="mt-0.5 block font-mono text-[0.6875rem] text-white/[0.48]">
-                    {role.span}
-                  </time>
-                  {role.note ? (
-                    <p className="mt-2 max-w-sm text-sm leading-6 text-white/[0.58]">
-                      {role.note}
+        <div className="mt-10 space-y-10">
+          <div className="grid gap-5 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+            <aside
+              className="rounded-[8px] border border-white/10 bg-white/[0.035] p-6"
+              data-reveal="card"
+            >
+              <p className="font-mono text-xs uppercase tracking-[0.16em] text-primary">
+                Roles
+              </p>
+              <ol className="role-history">
+                {job.roles.map((role, roleIndex) => (
+                  <li
+                    className="role-history-item"
+                    key={`${job.company}-${role.title}`}
+                  >
+                    <span className="role-node" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 16 16"
+                        className="role-node-signal"
+                        aria-hidden="true"
+                      >
+                        <circle
+                          className="role-node-outline"
+                          cx="8"
+                          cy="8"
+                          r="7"
+                        />
+                        <path
+                          className="role-node-arc role-node-arc-left"
+                          d="M 8 1 A 7 7 0 0 0 8 15"
+                          pathLength="100"
+                        />
+                        <path
+                          className="role-node-arc role-node-arc-right"
+                          d="M 8 1 A 7 7 0 0 1 8 15"
+                          pathLength="100"
+                        />
+                      </svg>
+                    </span>
+                    {roleIndex < job.roles.length - 1 ? (
+                      <span className="role-segment" aria-hidden="true" />
+                    ) : null}
+                    <p className="text-sm font-medium text-white/[0.72]">
+                      {role.title}
                     </p>
-                  ) : null}
-                </li>
-              ))}
-            </ol>
-          </aside>
+                    <time className="mt-0.5 block font-mono text-[0.6875rem] text-white/[0.48]">
+                      {role.span}
+                    </time>
+                    {role.note ? (
+                      <p className="mt-2 max-w-sm text-sm leading-6 text-white/[0.58]">
+                        {role.note}
+                      </p>
+                    ) : null}
+                  </li>
+                ))}
+              </ol>
+            </aside>
 
-          {detail ? (
-            <ExperienceRichDetail detail={detail} />
-          ) : (
-            <ExperiencePlaceholder company={job.company} />
-          )}
+            {detail ? (
+              <ExperienceOverview detail={detail} />
+            ) : (
+              <ExperiencePlaceholder company={job.company} />
+            )}
+          </div>
+
+          {detail ? <ExperienceProjects detail={detail} /> : null}
         </div>
       </article>
     </SiteShell>
   );
 }
 
-function ExperienceRichDetail({
+function ExperienceOverview({
   detail,
 }: {
   detail: NonNullable<ReturnType<typeof getExperienceBySlug>>["detail"];
@@ -204,36 +208,49 @@ function ExperienceRichDetail({
   }
 
   return (
-    <div className="motion-delay-1 space-y-5" data-reveal="card">
-      <section className="rounded-[8px] border border-signal-teal/25 bg-signal-teal/[0.07] p-6 sm:p-8">
-        <p className="font-mono text-xs uppercase tracking-[0.16em] text-signal-teal">
-          Overview
-        </p>
-        <div className="mt-4 space-y-4 text-base leading-7 text-white/[0.68]">
-          {detail.overview.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
-      </section>
+    <section
+      className="motion-delay-1 rounded-[8px] border border-signal-teal/25 bg-signal-teal/[0.07] p-6 sm:p-8"
+      data-reveal="card"
+    >
+      <p className="font-mono text-xs uppercase tracking-[0.16em] text-signal-teal">
+        Overview
+      </p>
+      <div className="mt-4 space-y-4 text-base leading-7 text-white/[0.68]">
+        {detail.overview.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
+      </div>
+    </section>
+  );
+}
 
-      <section className="space-y-4">
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="font-mono text-xs uppercase tracking-[0.16em] text-primary">
-              Key projects
-            </p>
-            <h2 className="mt-3 text-2xl font-semibold text-white">
-              Systems I owned or helped shape
-            </h2>
-          </div>
+function ExperienceProjects({
+  detail,
+}: {
+  detail: NonNullable<ReturnType<typeof getExperienceBySlug>>["detail"];
+}) {
+  if (!detail) {
+    return null;
+  }
+
+  return (
+    <section className="space-y-4">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="font-mono text-xs uppercase tracking-[0.16em] text-primary">
+            Key projects
+          </p>
+          <h2 className="mt-3 text-2xl font-semibold text-white">
+            Systems I owned or helped shape
+          </h2>
         </div>
-        <div className="grid gap-4">
-          {detail.projects.map((project) => (
-            <ProjectDetailCard project={project} key={project.title} />
-          ))}
-        </div>
-      </section>
-    </div>
+      </div>
+      <div className="grid gap-4 lg:grid-cols-2">
+        {detail.projects.map((project) => (
+          <ProjectDetailCard project={project} key={project.title} />
+        ))}
+      </div>
+    </section>
   );
 }
 
