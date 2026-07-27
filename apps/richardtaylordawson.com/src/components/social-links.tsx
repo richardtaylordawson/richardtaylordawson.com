@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ComponentPropsWithoutRef } from "react";
-import { Mail, Wrench } from "lucide-react";
+import { FileText, Mail, Wrench } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 
 import type { IconComponent } from "@/lib/site-content";
@@ -22,6 +22,12 @@ export const socialLinks = [
     href: "mailto:richard.taylor.dawson@gmail.com",
     label: "Email Richard Taylor Dawson",
     icon: Mail,
+    external: true,
+  },
+  {
+    href: "/documents/richardtaylordawson.pdf",
+    label: "Open resume PDF",
+    icon: FileText,
     external: true,
   },
   {
