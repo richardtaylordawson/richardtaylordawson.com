@@ -539,14 +539,16 @@ export const experience: ExperienceItem[] = [
         "I started on helpdesk work and moved into full-stack development, which gave me a practical view of customer problems before I was building the product features that solved them. The engineering work spanned database-backed workflows, APIs, customer-facing UI, and integrations with phone and billing systems.",
       ],
       scopeHighlights: [
-        "Full-stack product development for lead response, call tracking, reporting, and agent management workflows.",
-        "Customer-facing tools, admin workflows, reporting dashboards, database changes, API integrations, and production support in a startup environment.",
-        "Direct exposure to customer needs through helpdesk work before moving into a developer role.",
+        "Full-stack product development for lead response, call tracking, reporting, agent management, responsive app UI, and support workflows.",
+        "Customer-facing tools, admin workflows, reporting dashboards, internal support tools, database changes, API integrations, and production support in a startup environment.",
+        "Direct exposure to customer needs through helpdesk work before moving into a developer role, including building tools for the support team's own account setup process.",
       ],
       ownershipHighlights: [
         "Worked with two other engineers to rebuild inbound and dynamic number tracking, a core Calldrip product area.",
         "Owned multiple reporting projects end to end, from data discovery and SQL queries to UI design, front-end implementation, and email report delivery.",
         "Rebuilt the agent management experience across database naming, back-end image handling, front-end upload and crop flows, and profile image display across the app.",
+        "Helped make the web application usable across screen sizes by rewriting UI flows that previously only worked well above a fixed desktop breakpoint.",
+        "Built a support portal from scratch while on the helpdesk team, using the same platform technologies and database patterns as the main Calldrip app.",
         "Helped redesign the database structure, migrate existing data, and rebuild the front-end configuration experience.",
         "Integrated number search and purchasing flows with Twilio and Chargify.",
       ],
@@ -554,6 +556,8 @@ export const experience: ExperienceItem[] = [
         "Improved a core product workflow used to configure tracking numbers and measure call traffic.",
         "Gave accounts and dealer groups clearer visibility into lead volume, response times, call activity, source performance, and organization-level account metrics.",
         "Made agent records easier to manage and gave callable users clearer identity across the product with profile images.",
+        "Improved product usability for smaller screens by making the app flow and collapse more predictably across responsive breakpoints.",
+        "Helped the support team track new account setup status and avoid missed steps in a recurring operational workflow.",
         "Created a cleaner customer setup experience with a guided modal walkthrough.",
         "Helped modernize the infrastructure behind inbound tracking and dynamic website number tracking.",
       ],
@@ -615,6 +619,40 @@ export const experience: ExperienceItem[] = [
             "PHP",
             "SQL",
             "Databases",
+          ],
+        },
+        {
+          title: "Responsive Web App Rebuild",
+          eyebrow: "Mobile-friendly product UI",
+          description:
+            "Helped make the Calldrip web app more mobile friendly after joining a product that only worked well at a certain desktop screen size and above.",
+          ownership:
+            "Rewrote parts of the UI so layouts flowed better and collapsed cleanly across screen sizes, preserving access to product workflows no matter the viewport.",
+          impact:
+            "Made the application more usable beyond a narrow desktop layout and improved the experience for users working from smaller screens.",
+          technologies: [
+            "Responsive UI",
+            "Product UI",
+            "CSS",
+            "PHP",
+            "CRUD apps",
+          ],
+        },
+        {
+          title: "Support Portal",
+          eyebrow: "Internal support tooling",
+          description:
+            "Built an internal support portal while working as a helpdesk technician. The portal helped the support team track the status of new account setups, a common recurring workflow that had several steps to complete correctly.",
+          ownership:
+            "Designed and built the tool from scratch using the same technologies, database patterns, and platform conventions as the main Calldrip application.",
+          impact:
+            "Gave the support team a clearer way to track setup progress and reduce the chance of missing steps during new account onboarding.",
+          technologies: [
+            "Internal Tools",
+            "PHP",
+            "SQL",
+            "Databases",
+            "CRUD apps",
           ],
         },
         {
