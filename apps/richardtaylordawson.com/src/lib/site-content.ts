@@ -539,19 +539,21 @@ export const experience: ExperienceItem[] = [
         "I started on helpdesk work and moved into full-stack development, which gave me a practical view of customer problems before I was building the product features that solved them. The engineering work spanned database-backed workflows, APIs, customer-facing UI, and integrations with phone and billing systems.",
       ],
       scopeHighlights: [
-        "Full-stack product development for lead response and call tracking workflows.",
+        "Full-stack product development for lead response, call tracking, reporting, and agent management workflows.",
         "Customer-facing tools, admin workflows, reporting dashboards, database changes, API integrations, and production support in a startup environment.",
         "Direct exposure to customer needs through helpdesk work before moving into a developer role.",
       ],
       ownershipHighlights: [
         "Worked with two other engineers to rebuild inbound and dynamic number tracking, a core Calldrip product area.",
         "Owned multiple reporting projects end to end, from data discovery and SQL queries to UI design, front-end implementation, and email report delivery.",
+        "Rebuilt the agent management experience across database naming, back-end image handling, front-end upload and crop flows, and profile image display across the app.",
         "Helped redesign the database structure, migrate existing data, and rebuild the front-end configuration experience.",
         "Integrated number search and purchasing flows with Twilio and Chargify.",
       ],
       impactHighlights: [
         "Improved a core product workflow used to configure tracking numbers and measure call traffic.",
         "Gave accounts and dealer groups clearer visibility into lead volume, response times, call activity, source performance, and organization-level account metrics.",
+        "Made agent records easier to manage and gave callable users clearer identity across the product with profile images.",
         "Created a cleaner customer setup experience with a guided modal walkthrough.",
         "Helped modernize the infrastructure behind inbound tracking and dynamic website number tracking.",
       ],
@@ -595,6 +597,24 @@ export const experience: ExperienceItem[] = [
             "Email Reports",
             "Product UI",
             "Analytics",
+          ],
+        },
+        {
+          title: "Agents Rebuild",
+          eyebrow: "User management",
+          description:
+            "Rebuilt and redesigned Calldrip's agent experience. Agents were the system users who could be called, so the work touched a core product concept rather than only a profile settings screen.",
+          ownership:
+            "Cleaned up the database with better naming conventions, rebuilt the UI, and implemented the full image workflow for uploading, cropping, storing, and redisplaying profile pictures across the app.",
+          impact:
+            "Created a cleaner agent management experience and gave callable users a more recognizable identity wherever their profile image appeared in the product.",
+          technologies: [
+            "Product UI",
+            "Image Uploads",
+            "Image Cropping",
+            "PHP",
+            "SQL",
+            "Databases",
           ],
         },
         {
