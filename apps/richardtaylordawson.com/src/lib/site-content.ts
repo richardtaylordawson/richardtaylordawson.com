@@ -270,7 +270,7 @@ export const experience: ExperienceItem[] = [
     technologies: [
       "Next.js",
       "React",
-      "TypeScript",
+      "Typescript",
       "Vercel",
       "Storyblok",
       "Hubspot",
@@ -344,7 +344,7 @@ export const experience: ExperienceItem[] = [
             "Turborepo",
             "Vercel",
             "React",
-            "TypeScript",
+            "Typescript",
             "Design Systems",
           ],
           href: "https://www.audioeye.com/bloks/cms-migration-case-study/",
@@ -364,7 +364,7 @@ export const experience: ExperienceItem[] = [
             "AI Automation",
             "Localization",
             "CMS Architecture",
-            "TypeScript",
+            "Typescript",
           ],
         },
         {
@@ -380,7 +380,7 @@ export const experience: ExperienceItem[] = [
             "Storyblok",
             "Next.js",
             "React",
-            "TypeScript",
+            "Typescript",
             "Structured Data",
             "CMS Architecture",
             "Accessibility",
@@ -399,7 +399,7 @@ export const experience: ExperienceItem[] = [
             "Reduced duplication and created a more durable scanner foundation for public marketing and partner-facing use cases.",
           technologies: [
             "React",
-            "TypeScript",
+            "Typescript",
             "Shared Packages",
             "Accessibility",
             "Lead Generation",
@@ -451,7 +451,7 @@ export const experience: ExperienceItem[] = [
             "Improved a key marketing product surface by making scan results more useful to visitors and better connected to revenue-focused demo and trial forms.",
           technologies: [
             "React",
-            "TypeScript",
+            "Typescript",
             "Lead Generation",
             "Forms",
             "Accessibility",
@@ -767,7 +767,7 @@ export function getExperienceBySlug(slug: string) {
 export const stack = [
   "Next.js 16",
   "React 19",
-  "TypeScript",
+  "Typescript",
   "Tailwind CSS",
   "AI product UX",
   "Accessibility",
@@ -813,7 +813,7 @@ export const softwareSections = [
   },
   {
     title: "Build stack",
-    items: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS"],
+    items: ["Next.js 16", "React 19", "Typescript", "Tailwind CSS"],
   },
   {
     title: "Product standards",

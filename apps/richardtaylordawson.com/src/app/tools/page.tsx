@@ -154,7 +154,7 @@ export default function ToolsPage() {
               Built with this stack
             </p>
             <p className="mt-2 text-sm leading-6 text-white/60">
-              This site is the working example: Next.js, React, TypeScript,
+              This site is the working example: Next.js, React, Typescript,
               Tailwind, and AI-assisted iteration.
             </p>
           </div>
