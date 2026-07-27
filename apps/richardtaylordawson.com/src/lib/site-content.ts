@@ -351,24 +351,21 @@ export const experience: ExperienceItem[] = [
           cta: "Read the case study",
         },
         {
-          title: "BOIA Migration",
-          eyebrow: "HubSpot content migration",
+          title: "AI Translation Layer",
+          eyebrow: "Localized content operations",
           description:
-            "Migrated BOIA.org, an acquired accessibility website that was running in a separate HubSpot instance, into AudioEye's own HubSpot infrastructure as part of account consolidation and cost reduction.",
+            "Built a custom AI-powered translation layer inside Storyblok so the team could publish localized pages in minutes without adding translation headcount. The system handles complex CMS structures rather than only translating simple text fields.",
           ownership:
-            "Wrote migration scripts with the HubSpot SDK to read content from BOIA's HubSpot account and recreate it under AudioEye's HubSpot account, preserving the site content while moving it into the shared infrastructure.",
+            "Designed the translation workflow around the actual Storyblok page model, including localized page text, global component swaps, and preservation of editor-friendly CMS patterns.",
           impact:
-            "Helped reduce operating costs and simplify platform ownership by bringing acquired website content under a single AudioEye-managed HubSpot account.",
+            "Made localization faster and more practical for content teams while working around Storyblok's native translation limitations.",
           technologies: [
-            "HubSpot",
-            "HubSpot SDK",
-            "Migration Scripts",
-            "Content Migration",
-            "CMS",
-            "Platform Operations",
+            "Storyblok",
+            "AI Automation",
+            "Localization",
+            "CMS Architecture",
+            "TypeScript",
           ],
-          href: "https://www.boia.org/",
-          cta: "View BOIA",
         },
         {
           title: "AudioEye Learning",
@@ -392,41 +389,6 @@ export const experience: ExperienceItem[] = [
           cta: "View courses",
         },
         {
-          title: "AI Translation Layer",
-          eyebrow: "Localized content operations",
-          description:
-            "Built a custom AI-powered translation layer inside Storyblok so the team could publish localized pages in minutes without adding translation headcount. The system handles complex CMS structures rather than only translating simple text fields.",
-          ownership:
-            "Designed the translation workflow around the actual Storyblok page model, including localized page text, global component swaps, and preservation of editor-friendly CMS patterns.",
-          impact:
-            "Made localization faster and more practical for content teams while working around Storyblok's native translation limitations.",
-          technologies: [
-            "Storyblok",
-            "AI Automation",
-            "Localization",
-            "CMS Architecture",
-            "TypeScript",
-          ],
-        },
-        {
-          title: "Marketing Scanner Rebuilds",
-          eyebrow: "Lead generation product experience",
-          description:
-            "Helped rebuild AudioEye's marketing scanner into multiple new versions over time. Each iteration was aimed at giving end users better accessibility scan results while creating stronger paths for high-intent visitors to request a demo or start a trial.",
-          ownership:
-            "Worked closely with strategy and design through planning and implementation, translating conversion goals, result presentation, and scanner UX decisions into production experiences.",
-          impact:
-            "Improved a key marketing product surface by making scan results more useful to visitors and better connected to revenue-focused demo and trial forms.",
-          technologies: [
-            "React",
-            "TypeScript",
-            "Lead Generation",
-            "Forms",
-            "Accessibility",
-            "Product Strategy",
-          ],
-        },
-        {
           title: "Partner Scanner",
           eyebrow: "Reusable product surface",
           description:
@@ -441,6 +403,23 @@ export const experience: ExperienceItem[] = [
             "Shared Packages",
             "Accessibility",
             "Lead Generation",
+          ],
+        },
+        {
+          title: "Custom MCP Servers",
+          eyebrow: "AI-assisted operations",
+          description:
+            "Built custom MCP servers for internal HubSpot and Storyblok workflows before first-party options were available. Even after first-party servers emerged, the custom HubSpot work remained useful because the team's account manager and contract workflows needed deeper functionality.",
+          ownership:
+            "Designed and implemented the bridge between AI-assisted workflows and the real systems used by marketing, sales, and operations teams.",
+          impact:
+            "Helped internal teams use AI against practical business workflows while keeping system-specific behavior accurate and controlled.",
+          technologies: [
+            "MCP",
+            "HubSpot",
+            "Storyblok",
+            "AI Automation",
+            "Internal Tools",
           ],
         },
         {
@@ -464,21 +443,42 @@ export const experience: ExperienceItem[] = [
             "Specific CPQ, contract, and revenue operations workflows are described at a high level.",
         },
         {
-          title: "Custom MCP Servers",
-          eyebrow: "AI-assisted operations",
+          title: "Marketing Scanner Rebuilds",
+          eyebrow: "Lead generation product experience",
           description:
-            "Built custom MCP servers for internal HubSpot and Storyblok workflows before first-party options were available. Even after first-party servers emerged, the custom HubSpot work remained useful because the team's account manager and contract workflows needed deeper functionality.",
+            "Helped rebuild AudioEye's marketing scanner into multiple new versions over time. Each iteration was aimed at giving end users better accessibility scan results while creating stronger paths for high-intent visitors to request a demo or start a trial.",
           ownership:
-            "Designed and implemented the bridge between AI-assisted workflows and the real systems used by marketing, sales, and operations teams.",
+            "Worked closely with strategy and design through planning and implementation, translating conversion goals, result presentation, and scanner UX decisions into production experiences.",
           impact:
-            "Helped internal teams use AI against practical business workflows while keeping system-specific behavior accurate and controlled.",
+            "Improved a key marketing product surface by making scan results more useful to visitors and better connected to revenue-focused demo and trial forms.",
           technologies: [
-            "MCP",
-            "HubSpot",
-            "Storyblok",
-            "AI Automation",
-            "Internal Tools",
+            "React",
+            "TypeScript",
+            "Lead Generation",
+            "Forms",
+            "Accessibility",
+            "Product Strategy",
           ],
+        },
+        {
+          title: "BOIA Migration",
+          eyebrow: "HubSpot content migration",
+          description:
+            "Migrated BOIA.org, an acquired accessibility website that was running in a separate HubSpot instance, into AudioEye's own HubSpot infrastructure as part of account consolidation and cost reduction.",
+          ownership:
+            "Wrote migration scripts with the HubSpot SDK to read content from BOIA's HubSpot account and recreate it under AudioEye's HubSpot account, preserving the site content while moving it into the shared infrastructure.",
+          impact:
+            "Helped reduce operating costs and simplify platform ownership by bringing acquired website content under a single AudioEye-managed HubSpot account.",
+          technologies: [
+            "HubSpot",
+            "HubSpot SDK",
+            "Migration Scripts",
+            "Content Migration",
+            "CMS",
+            "Platform Operations",
+          ],
+          href: "https://www.boia.org/",
+          cta: "View BOIA",
         },
       ],
       visualNotes: [
