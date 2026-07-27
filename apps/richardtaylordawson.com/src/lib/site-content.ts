@@ -573,17 +573,82 @@ export const experience: ExperienceItem[] = [
           title: "Performance Marketing Sites",
           eyebrow: "Lead generation",
           description:
-            "Built and maintained marketing experiences for third-party affiliate sites connected to major brands, including telecom and internet providers.",
+            "Built and maintained marketing experiences for third-party affiliate sites connected to major brands, including telecom and internet providers. Across the Performance Marketing portfolio, I built 246 bespoke pages and 126 reusable components across 34 different websites.",
           ownership:
-            "Implemented front-end experiences, reusable UI patterns, and content-backed pages for campaign and affiliate workflows.",
+            "Implemented front-end experiences, reusable UI patterns, and content-backed pages for campaign and affiliate workflows across a large group of brand-specific sites.",
           impact:
-            "Supported revenue-focused marketing funnels where page quality, content speed, and conversion paths were core to the business.",
+            "Supported revenue-focused marketing funnels at scale, where page quality, content speed, and conversion paths were core to the business.",
           technologies: [
             "React",
             "Handlebars",
             "Analytics",
             "Lead Generation",
             "Contentful",
+          ],
+        },
+        {
+          title: "Cuttlefish",
+          eyebrow: "Internal component package",
+          description:
+            "Contributed to Cuttlefish, an internal Handlebars component package that gave Performance Marketing teams shared layout components and reusable functionality for building higher-level components across specific sites.",
+          ownership:
+            "Built five core components for the package, including two related to Mega Forms and three related to data tables.",
+          impact:
+            "Gave teams a more consistent foundation for assembling site-specific experiences without rebuilding the same layout and behavior patterns from scratch.",
+          technologies: [
+            "Handlebars",
+            "Component Systems",
+            "Reusable UI",
+            "Mega Forms",
+            "Data Tables",
+          ],
+        },
+        {
+          title: "Mega Forms",
+          eyebrow: "Dynamic lead forms",
+          description:
+            "Owned a major lead-generation form project with highly bespoke designs, phone number CTAs, large directional arrows, and a step-by-step package walkthrough for collecting more information from visitors.",
+          ownership:
+            "Built branching form behavior where the next question and total question count could change based on a visitor's previous answers, then integrated that experience with Eloqua despite the constraints of the form CMS.",
+          impact:
+            "Turned a complex one-off form system into a core Cuttlefish component that could be reused across Performance Marketing sites.",
+          technologies: [
+            "Handlebars",
+            "JavaScript",
+            "Eloqua",
+            "Lead Generation",
+            "Forms",
+            "Cuttlefish",
+          ],
+        },
+        {
+          title: "Frontpoint Security",
+          eyebrow: "Brand site work",
+          description:
+            "Project details for Frontpoint Security are coming soon.",
+          ownership:
+            "Additional ownership details will be added here.",
+          impact:
+            "Additional impact details will be added here.",
+          technologies: [
+            "Handlebars",
+            "Lead Generation",
+            "Performance Marketing",
+          ],
+        },
+        {
+          title: "Component Pages",
+          eyebrow: "Reusable content pages",
+          description:
+            "Project details for Component Pages are coming soon.",
+          ownership:
+            "Additional ownership details will be added here.",
+          impact:
+            "Additional impact details will be added here.",
+          technologies: [
+            "Handlebars",
+            "Reusable UI",
+            "Performance Marketing",
           ],
         },
       ],
