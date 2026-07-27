@@ -14,7 +14,7 @@ export const Card = ({ as: Component = 'div', className, children }) => (
   </Component>
 )
 
-Card.Link = ({ children, ...props }) => {
+function CardLink({ children, ...props }) {
   return (
     <>
       <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl" />
@@ -26,51 +26,65 @@ Card.Link = ({ children, ...props }) => {
   )
 }
 
-Card.Title = ({ as: Component = 'h2', href, children }) => (
-  <Component className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
-    {href ? <Card.Link href={href}>{children}</Card.Link> : children}
-  </Component>
-)
+function CardTitle({ as: Component = 'h2', href, children }) {
+  return (
+    <Component className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+      {href ? <Card.Link href={href}>{children}</Card.Link> : children}
+    </Component>
+  )
+}
 
-Card.Description = ({ children }) => (
-  <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-    {children}
-  </p>
-)
+function CardDescription({ children }) {
+  return (
+    <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+      {children}
+    </p>
+  )
+}
 
-Card.Cta = ({ children }) => (
-  <div
-    aria-hidden="true"
-    className="relative z-10 mt-4 flex items-center text-sm font-medium text-sky-500"
-  >
-    {children}
-    <ChevronRight className="ml-1 h-4 w-4 stroke-current" />
-  </div>
-)
+function CardCta({ children }) {
+  return (
+    <div
+      aria-hidden="true"
+      className="relative z-10 mt-4 flex items-center text-sm font-medium text-sky-500"
+    >
+      {children}
+      <ChevronRight className="ml-1 h-4 w-4 stroke-current" />
+    </div>
+  )
+}
 
-Card.Eyebrow = ({
+function CardEyebrow({
   as: Component = 'p',
   decorate = false,
   className,
   children,
   ...props
-}) => (
-  <Component
-    className={clsx(
-      className,
-      'relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500',
-      decorate && 'pl-3.5'
-    )}
-    {...props}
-  >
-    {decorate && (
-      <span
-        className="absolute inset-y-0 left-0 flex items-center"
-        aria-hidden="true"
-      >
-        <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
-      </span>
-    )}
-    {children}
-  </Component>
-)
+}) {
+  return (
+    <Component
+      className={clsx(
+        className,
+        'relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500',
+        decorate && 'pl-3.5'
+      )}
+      {...props}
+    >
+      {decorate && (
+        <span
+          className="absolute inset-y-0 left-0 flex items-center"
+          aria-hidden="true"
+        >
+          <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
+        </span>
+      )}
+      {children}
+    </Component>
+  )
+}
+
+Card.Link = CardLink
+Card.Title = CardTitle
+Card.Description = CardDescription
+Card.Cta = CardCta
+Card.Eyebrow = CardEyebrow

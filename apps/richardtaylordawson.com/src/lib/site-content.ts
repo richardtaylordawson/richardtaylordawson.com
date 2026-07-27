@@ -340,26 +340,24 @@ export const experience: ExperienceItem[] = [
             "Design Systems",
           ],
           href: "https://www.audioeye.com/bloks/cms-migration-case-study/",
-          cta: "Read the public case study",
+          cta: "Read the case study",
         },
         {
-          title: "Custom MCP Servers",
-          eyebrow: "AI-assisted operations",
+          title: "AI Translation Layer",
+          eyebrow: "Localized content operations",
           description:
-            "Built custom MCP servers for internal HubSpot and Storyblok workflows before first-party options were available. Even after first-party servers emerged, the custom HubSpot work remained useful because the team's account manager and contract workflows needed deeper functionality.",
+            "Built a custom AI-powered translation layer inside Storyblok so the team could publish localized pages in minutes without adding translation headcount. The system handles complex CMS structures rather than only translating simple text fields.",
           ownership:
-            "Designed and implemented the bridge between AI-assisted workflows and the real systems used by marketing, sales, and operations teams.",
+            "Designed the translation workflow around the actual Storyblok page model, including localized page text, global component swaps, and preservation of editor-friendly CMS patterns.",
           impact:
-            "Helped internal teams use AI against practical business workflows while keeping system-specific behavior accurate and controlled.",
+            "Made localization faster and more practical for content teams while working around Storyblok's native translation limitations.",
           technologies: [
-            "MCP",
-            "HubSpot",
             "Storyblok",
             "AI Automation",
-            "Internal Tools",
+            "Localization",
+            "CMS Architecture",
+            "TypeScript",
           ],
-          confidentialityNote:
-            "Specific account, contract, and CRM workflows are intentionally described at a high level.",
         },
         {
           title: "Partner Scanner",
@@ -379,20 +377,20 @@ export const experience: ExperienceItem[] = [
           ],
         },
         {
-          title: "AI Translation Layer",
-          eyebrow: "Localized content operations",
+          title: "Custom MCP Servers",
+          eyebrow: "AI-assisted operations",
           description:
-            "Built a custom AI-powered translation layer inside Storyblok so the team could publish localized pages in minutes without adding translation headcount. The system handles complex CMS structures rather than only translating simple text fields.",
+            "Built custom MCP servers for internal HubSpot and Storyblok workflows before first-party options were available. Even after first-party servers emerged, the custom HubSpot work remained useful because the team's account manager and contract workflows needed deeper functionality.",
           ownership:
-            "Designed the translation workflow around the actual Storyblok page model, including localized page text, global component swaps, and preservation of editor-friendly CMS patterns.",
+            "Designed and implemented the bridge between AI-assisted workflows and the real systems used by marketing, sales, and operations teams.",
           impact:
-            "Made localization faster and more practical for content teams while working around Storyblok's native translation limitations.",
+            "Helped internal teams use AI against practical business workflows while keeping system-specific behavior accurate and controlled.",
           technologies: [
+            "MCP",
+            "HubSpot",
             "Storyblok",
             "AI Automation",
-            "Localization",
-            "CMS Architecture",
-            "TypeScript",
+            "Internal Tools",
           ],
         },
       ],
@@ -442,6 +440,69 @@ export const experience: ExperienceItem[] = [
         span: "Jan 2019 to Dec 2019",
       },
     ],
+    detail: {
+      overview: [
+        "At Clearlink, I worked in the Performance Marketing department, building the affiliate and brand-specific experiences that sat closer to revenue generation than the broader consumer marketing properties. Consumer Marketing focused on larger generic domains and top-level funnels, while Performance Marketing supported third-party affiliate sites for well-known brands like AT&T, CenturyLink, and Verizon.",
+        "The work centered on fast-moving marketing and sales experiences where content flexibility, reusable UI, site performance, and lead generation all mattered. Over time I moved from front-end implementation into project ownership, especially around the next generation content platform for Performance Marketing sites.",
+      ],
+      scopeHighlights: [
+        "Performance Marketing engineering across third-party affiliate and brand-specific marketing sites.",
+        "Lead-generation pages, campaign surfaces, reusable UI systems, CMS-backed content workflows, and marketer-facing tooling.",
+        "Cross-functional work with marketers and stakeholders who needed to launch and edit content without waiting on developer support.",
+      ],
+      ownershipHighlights: [
+        "Led CMSv3 without close oversight and became the subject matter expert for the platform.",
+        "Designed front-end architecture and content workflows around marketer independence and reusable implementation patterns.",
+        "Balanced production site needs with a longer-term platform rebuild that replaced the existing CMS workflow.",
+      ],
+      impactHighlights: [
+        "Helped give marketers the ability to build, create, and edit site content without developer involvement for every change.",
+        "Created a more modern platform foundation using React, Gatsby, Contentful, Storybook, Lerna, and Gatsby Cloud.",
+        "Supported conversion-minded Performance Marketing sites for major telecom and service brands.",
+      ],
+      constraintHighlights: [
+        "Worked across brand-driven affiliate sites where content velocity and lead-generation performance were central.",
+        "Built inside a department split between broad consumer funnels and more targeted Performance Marketing properties.",
+        "Had to replace existing content workflows while keeping marketing teams moving.",
+      ],
+      projects: [
+        {
+          title: "CMSv3",
+          eyebrow: "Content platform rebuild",
+          description:
+            "Led the buildout of a new content management platform for Clearlink's Performance Marketing sites. The platform replaced the existing CMS approach and gave marketers a way to create, build, and edit content without needing a developer for routine site updates.",
+          ownership:
+            "Served as lead engineer, drove the implementation without close oversight, and became the subject matter expert for CMSv3 across the team.",
+          impact:
+            "Improved marketer autonomy and created a more flexible foundation for content-driven lead-generation sites.",
+          technologies: [
+            "Contentful",
+            "React",
+            "Gatsby",
+            "Storybook",
+            "Lerna",
+            "Gatsby Cloud",
+          ],
+        },
+        {
+          title: "Performance Marketing Sites",
+          eyebrow: "Lead generation",
+          description:
+            "Built and maintained marketing experiences for third-party affiliate sites connected to major brands, including telecom and internet providers.",
+          ownership:
+            "Implemented front-end experiences, reusable UI patterns, and content-backed pages for campaign and affiliate workflows.",
+          impact:
+            "Supported revenue-focused marketing funnels where page quality, content speed, and conversion paths were core to the business.",
+          technologies: [
+            "React",
+            "Handlebars",
+            "Analytics",
+            "Lead Generation",
+            "Contentful",
+          ],
+        },
+      ],
+    },
   },
   {
     company: "Calldrip",
@@ -472,6 +533,69 @@ export const experience: ExperienceItem[] = [
         span: "Jun 2015 to Jun 2016",
       },
     ],
+    detail: {
+      overview: [
+        "Calldrip was built around faster lead response: helping businesses contact interested customers while intent was still fresh. The strongest product fit was car dealerships, where responding quickly could realistically pay for the software with even one additional sale per month.",
+        "I started on helpdesk work and moved into full-stack development, which gave me a practical view of customer problems before I was building the product features that solved them. The engineering work spanned database-backed workflows, APIs, customer-facing UI, and integrations with phone and billing systems.",
+      ],
+      scopeHighlights: [
+        "Full-stack product development for lead response and call tracking workflows.",
+        "Customer-facing tools, admin workflows, database changes, API integrations, and production support in a startup environment.",
+        "Direct exposure to customer needs through helpdesk work before moving into a developer role.",
+      ],
+      ownershipHighlights: [
+        "Worked with two other engineers to rebuild inbound and dynamic number tracking, a core Calldrip product area.",
+        "Helped redesign the database structure, migrate existing data, and rebuild the front-end configuration experience.",
+        "Integrated number search and purchasing flows with Twilio and Chargify.",
+      ],
+      impactHighlights: [
+        "Improved a core product workflow used to configure tracking numbers and measure call traffic.",
+        "Created a cleaner customer setup experience with a guided modal walkthrough.",
+        "Helped modernize the infrastructure behind inbound tracking and dynamic website number tracking.",
+      ],
+      constraintHighlights: [
+        "Built in a startup context where engineers worked close to customer problems and product needs.",
+        "Reworked existing product data while preserving historical records through migration scripts.",
+        "Connected product UX to third-party phone and billing APIs that needed to behave reliably inside customer workflows.",
+      ],
+      projects: [
+        {
+          title: "Inbound and Dynamic Number Tracking",
+          eyebrow: "Core product rebuild",
+          description:
+            "Rebuilt a core Calldrip product area that let customers purchase and configure inbound tracking numbers. Those numbers could measure call traffic and dynamically track customers on a website.",
+          ownership:
+            "Worked with two other engineers on the rebuild, including database restructuring, migration scripts for existing data, and a new front-end setup flow.",
+          impact:
+            "Made a critical tracking workflow more durable and easier for customers to configure while preserving existing customer data.",
+          technologies: [
+            "Twilio",
+            "Chargify",
+            "PHP",
+            "SQL",
+            "APIs",
+            "Database Migrations",
+          ],
+        },
+        {
+          title: "Customer Setup Walkthrough",
+          eyebrow: "Product UI",
+          description:
+            "Built a cleaner modal walkthrough for configuring inbound tracking numbers, tying together number search, purchase, and setup steps in one customer-facing flow.",
+          ownership:
+            "Implemented the front-end experience and connected it to Twilio's number search API and Chargify's purchasing workflow.",
+          impact:
+            "Reduced setup friction for a revenue-critical feature and made the configuration path easier to understand.",
+          technologies: [
+            "Product UI",
+            "Twilio",
+            "Chargify",
+            "APIs",
+            "CRUD apps",
+          ],
+        },
+      ],
+    },
   },
 ];
 
