@@ -540,16 +540,18 @@ export const experience: ExperienceItem[] = [
       ],
       scopeHighlights: [
         "Full-stack product development for lead response and call tracking workflows.",
-        "Customer-facing tools, admin workflows, database changes, API integrations, and production support in a startup environment.",
+        "Customer-facing tools, admin workflows, reporting dashboards, database changes, API integrations, and production support in a startup environment.",
         "Direct exposure to customer needs through helpdesk work before moving into a developer role.",
       ],
       ownershipHighlights: [
         "Worked with two other engineers to rebuild inbound and dynamic number tracking, a core Calldrip product area.",
+        "Owned multiple reporting projects end to end, from data discovery and SQL queries to UI design, front-end implementation, and email report delivery.",
         "Helped redesign the database structure, migrate existing data, and rebuild the front-end configuration experience.",
         "Integrated number search and purchasing flows with Twilio and Chargify.",
       ],
       impactHighlights: [
         "Improved a core product workflow used to configure tracking numbers and measure call traffic.",
+        "Gave accounts and dealer groups clearer visibility into lead volume, response times, call activity, source performance, and organization-level account metrics.",
         "Created a cleaner customer setup experience with a guided modal walkthrough.",
         "Helped modernize the infrastructure behind inbound tracking and dynamic website number tracking.",
       ],
@@ -575,6 +577,24 @@ export const experience: ExperienceItem[] = [
             "SQL",
             "APIs",
             "Database Migrations",
+          ],
+        },
+        {
+          title: "Reporting",
+          eyebrow: "Analytics and dashboards",
+          description:
+            "Built multiple reporting tools for account and organization-level performance. The work started with a dashboard for lead stats, response times, call volume, date ranges, and lead source filters, then grew into KPI-specific sub reports and email reports for dealer groups.",
+          ownership:
+            "Owned the reporting work as a solo project, including figuring out what data could be shown, writing the SQL queries, implementing the back end and front end, and designing the layout and visual presentation.",
+          impact:
+            "Helped individual accounts and larger organizations understand how their dealers were performing across lead response, call activity, lead sources, and account-level metrics.",
+          technologies: [
+            "Reporting",
+            "SQL",
+            "Dashboards",
+            "Email Reports",
+            "Product UI",
+            "Analytics",
           ],
         },
         {
