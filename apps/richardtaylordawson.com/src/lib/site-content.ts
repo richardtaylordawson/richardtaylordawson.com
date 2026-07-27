@@ -299,7 +299,7 @@ export const experience: ExperienceItem[] = [
       ],
       scopeHighlights: [
         "Primary engineering owner for marketing and revenue-adjacent web systems.",
-        "Public website, CMS, design system, forms, quoting software, learning content, CRM workflows, and related internal tools.",
+        "Public website, CMS, design system, forms, quoting software, learning content, HubSpot migrations, CRM workflows, and related internal tools.",
         "Cross-functional partner to demand generation, design, sales, revenue operations, content, and learning stakeholders.",
         "Effectively a one-person engineering team for this surface area, balancing speed, independence, maintainability, and stakeholder alignment.",
       ],
@@ -308,6 +308,7 @@ export const experience: ExperienceItem[] = [
         "Owned implementation across frontend, CMS modeling, platform architecture, deployment workflows, and internal integrations.",
         "Modeled CMS-powered learning content around the components, quiz patterns, embedded media, and structured data needs of real course production.",
         "Partnered with strategy and design on multiple scanner rebuilds that balanced end-user accessibility results with high-intent demo and trial conversion paths.",
+        "Wrote migration scripts that moved acquired BOIA website content between HubSpot instances as part of account consolidation and infrastructure cleanup.",
         "Kept accessibility and editor experience central while modernizing the underlying platform.",
         "Protected confidential workflows by describing internal systems at a high level while still making the engineering scope clear.",
       ],
@@ -316,6 +317,7 @@ export const experience: ExperienceItem[] = [
         "Improved editor quality of life and gave content teams more control without requiring engineering support for every change.",
         "Helped turn accessibility education into a public, CMS-managed course experience with reusable foundations for ongoing content production.",
         "Improved the marketing scanner experience through multiple iterations focused on clearer results and stronger lead capture.",
+        "Reduced platform overhead by helping consolidate BOIA content into AudioEye's HubSpot infrastructure.",
         "Created reusable foundations for scanner experiences across public and partner-facing surfaces.",
         "Used AI-assisted internal tooling to speed up operational workflows in systems teams already use.",
       ],
@@ -345,6 +347,26 @@ export const experience: ExperienceItem[] = [
           ],
           href: "https://www.audioeye.com/bloks/cms-migration-case-study/",
           cta: "Read the case study",
+        },
+        {
+          title: "BOIA Migration",
+          eyebrow: "HubSpot content migration",
+          description:
+            "Migrated BOIA.org, an acquired accessibility website that was running in a separate HubSpot instance, into AudioEye's own HubSpot infrastructure as part of account consolidation and cost reduction.",
+          ownership:
+            "Wrote migration scripts with the HubSpot SDK to read content from BOIA's HubSpot account and recreate it under AudioEye's HubSpot account, preserving the site content while moving it into the shared infrastructure.",
+          impact:
+            "Helped reduce operating costs and simplify platform ownership by bringing acquired website content under a single AudioEye-managed HubSpot account.",
+          technologies: [
+            "HubSpot",
+            "HubSpot SDK",
+            "Migration Scripts",
+            "Content Migration",
+            "CMS",
+            "Platform Operations",
+          ],
+          href: "https://www.boia.org/",
+          cta: "View BOIA",
         },
         {
           title: "AudioEye Learning",
