@@ -557,7 +557,7 @@ export const experience: ExperienceItem[] = [
           description:
             "Led the buildout of a new content management platform for Clearlink's Performance Marketing sites. The platform replaced the existing CMS approach and gave marketers a way to create, build, and edit content without needing a developer for routine site updates.",
           ownership:
-            "Served as lead engineer, drove the implementation without close oversight, and became the subject matter expert for CMSv3 across the team.",
+            "Took over the project from Clearlink's Marketing Technology team after the original effort had taken too long, completed the remaining requirements, and drove it over the finish line in less than a month.",
           impact:
             "Improved marketer autonomy and created a more flexible foundation for content-driven lead-generation sites.",
           technologies: [
@@ -584,23 +584,6 @@ export const experience: ExperienceItem[] = [
             "Analytics",
             "Lead Generation",
             "Contentful",
-          ],
-        },
-        {
-          title: "Cuttlefish",
-          eyebrow: "Internal component package",
-          description:
-            "Contributed to Cuttlefish, an internal Handlebars component package that gave Performance Marketing teams shared layout components and reusable functionality for building higher-level components across specific sites.",
-          ownership:
-            "Built five core components for the package, including two related to Mega Forms and three related to data tables.",
-          impact:
-            "Gave teams a more consistent foundation for assembling site-specific experiences without rebuilding the same layout and behavior patterns from scratch.",
-          technologies: [
-            "Handlebars",
-            "Component Systems",
-            "Reusable UI",
-            "Mega Forms",
-            "Data Tables",
           ],
         },
         {
@@ -649,6 +632,21 @@ export const experience: ExperienceItem[] = [
             "Handlebars",
             "Reusable UI",
             "Performance Marketing",
+          ],
+        },
+        {
+          title: "Cuttlefish",
+          eyebrow: "Internal component package",
+          description:
+            "Contributed to Cuttlefish, an internal Handlebars component package that gave Performance Marketing teams shared layout components and reusable functionality for building higher-level components across specific sites.",
+          ownership:
+            "Built five core components for the package, including two related to Mega Forms and three related to data tables.",
+          impact:
+            "Gave teams a more consistent foundation for assembling site-specific experiences without rebuilding the same layout and behavior patterns from scratch.",
+          technologies: [
+            "Handlebars",
+            "Component Systems",
+            "Reusable UI",
           ],
         },
       ],
