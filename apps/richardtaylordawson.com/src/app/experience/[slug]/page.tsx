@@ -13,6 +13,7 @@ import {
   type ExperienceProject,
 } from "@/lib/site-content";
 import { buildPageMetadata } from "@/lib/seo";
+import { cn } from "@/lib/utils";
 
 type ExperiencePageProps = {
   params: Promise<{
@@ -127,9 +128,9 @@ export default async function ExperienceDetailPage({
         </header>
 
         <div className="mt-10 space-y-10">
-          <div className="grid gap-5 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+          <div className="grid gap-5 lg:grid-cols-[0.82fr_1.18fr] lg:items-stretch">
             <aside
-              className="rounded-[8px] border border-white/10 bg-white/[0.035] p-6"
+              className="flex h-full flex-col rounded-[8px] border border-white/10 bg-white/[0.035] p-6"
               data-reveal="card"
             >
               <p className="font-mono text-xs uppercase tracking-[0.16em] text-primary">
@@ -256,43 +257,61 @@ function ExperienceProjects({
 
 function ProjectDetailCard({ project }: { project: ExperienceProject }) {
   return (
-    <article className="rounded-[8px] border border-white/10 bg-white/[0.045] p-5">
-      <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-        <div>
-          <p className="font-mono text-xs uppercase tracking-[0.16em] text-signal-amber">
-            {project.eyebrow}
-          </p>
-          <h3 className="mt-2 text-xl font-semibold text-white">
-            {project.title}
-          </h3>
-        </div>
-        {project.href ? (
-          <a
-            href={project.href}
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-signal-teal transition hover:text-signal-lime focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {project.cta ?? "Open link"}
-            <span className="sr-only">(opens in a new tab)</span>
-            <ArrowUpRight className="size-3.5" />
-          </a>
-        ) : null}
-      </div>
-      <p className="mt-4 text-base leading-7 text-white/[0.68]">
-        {project.description}
-      </p>
-      <div className="mt-5 grid gap-4 md:grid-cols-2">
-        <ProjectDetailNote title="Ownership" text={project.ownership} />
-        <ProjectDetailNote title="Impact" text={project.impact} />
-      </div>
-      {project.confidentialityNote ? (
-        <p className="mt-4 rounded-[8px] border border-signal-amber/20 bg-signal-amber/[0.06] p-3 text-sm leading-6 text-signal-amber/80">
-          {project.confidentialityNote}
-        </p>
+    <article
+      className={cn(
+        "relative flex h-full flex-col justify-between overflow-hidden rounded-[8px] border p-5 transition duration-300",
+        project.href
+          ? "border-signal-teal/35 bg-signal-teal/[0.065] shadow-[inset_0_1px_0_rgb(255_255_255_/_0.08),0_18px_60px_rgb(45_212_191_/_0.08)] hover:border-signal-lime/45 hover:bg-signal-teal/[0.085]"
+          : "border-white/10 bg-white/[0.045]",
+      )}
+    >
+      {project.href ? (
+        <span
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-signal-teal/90 to-transparent"
+          aria-hidden="true"
+        />
       ) : null}
-      <div className="mt-5 flex flex-wrap gap-1.5">
-        <ChipList items={project.technologies} />
+      <div>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <p className="font-mono text-xs uppercase tracking-[0.16em] text-signal-amber">
+              {project.eyebrow}
+            </p>
+            <h3 className="mt-2 text-xl font-semibold text-white">
+              {project.title}
+            </h3>
+          </div>
+          {project.href ? (
+            <a
+              href={project.href}
+              className="inline-flex min-h-9 shrink-0 items-center justify-center gap-1.5 rounded-[8px] border border-signal-teal/35 bg-signal-teal/[0.12] px-3 text-sm font-medium text-signal-teal transition hover:border-signal-lime/45 hover:bg-signal-lime/[0.1] hover:text-signal-lime focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {project.cta ?? "Open link"}
+              <span className="sr-only">(opens in a new tab)</span>
+              <ArrowUpRight className="size-3.5" />
+            </a>
+          ) : null}
+        </div>
+        <p className="mt-4 text-base leading-7 text-white/[0.68]">
+          {project.description}
+        </p>
+      </div>
+
+      <div className="mt-6">
+        <div className="grid gap-4 md:grid-cols-2">
+          <ProjectDetailNote title="Ownership" text={project.ownership} />
+          <ProjectDetailNote title="Impact" text={project.impact} />
+        </div>
+        {project.confidentialityNote ? (
+          <p className="mt-4 rounded-[8px] border border-signal-amber/20 bg-signal-amber/[0.06] p-3 text-sm leading-6 text-signal-amber/80">
+            {project.confidentialityNote}
+          </p>
+        ) : null}
+        <div className="mt-5 flex flex-wrap gap-1.5">
+          <ChipList items={project.technologies} />
+        </div>
       </div>
     </article>
   );
