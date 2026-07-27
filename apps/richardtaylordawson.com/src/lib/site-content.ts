@@ -299,19 +299,23 @@ export const experience: ExperienceItem[] = [
       ],
       scopeHighlights: [
         "Primary engineering owner for marketing and revenue-adjacent web systems.",
-        "Public website, CMS, design system, forms, quoting software, CRM workflows, and related internal tools.",
-        "Cross-functional partner to demand generation, design, sales, revenue operations, and content stakeholders.",
+        "Public website, CMS, design system, forms, quoting software, learning content, CRM workflows, and related internal tools.",
+        "Cross-functional partner to demand generation, design, sales, revenue operations, content, and learning stakeholders.",
         "Effectively a one-person engineering team for this surface area, balancing speed, independence, maintainability, and stakeholder alignment.",
       ],
       ownershipHighlights: [
         "Translated ambiguous business and operational needs into practical technical plans.",
         "Owned implementation across frontend, CMS modeling, platform architecture, deployment workflows, and internal integrations.",
+        "Modeled CMS-powered learning content around the components, quiz patterns, embedded media, and structured data needs of real course production.",
+        "Partnered with strategy and design on multiple scanner rebuilds that balanced end-user accessibility results with high-intent demo and trial conversion paths.",
         "Kept accessibility and editor experience central while modernizing the underlying platform.",
         "Protected confidential workflows by describing internal systems at a high level while still making the engineering scope clear.",
       ],
       impactHighlights: [
         "Modernized the public web platform and content operations stack.",
         "Improved editor quality of life and gave content teams more control without requiring engineering support for every change.",
+        "Helped turn accessibility education into a public, CMS-managed course experience with reusable foundations for ongoing content production.",
+        "Improved the marketing scanner experience through multiple iterations focused on clearer results and stronger lead capture.",
         "Created reusable foundations for scanner experiences across public and partner-facing surfaces.",
         "Used AI-assisted internal tooling to speed up operational workflows in systems teams already use.",
       ],
@@ -343,6 +347,27 @@ export const experience: ExperienceItem[] = [
           cta: "Read the case study",
         },
         {
+          title: "AudioEye Learning",
+          eyebrow: "CMS-powered course platform",
+          description:
+            "Built the headless CMS foundation for AudioEye Learning, a public course experience for accessibility education, laws, and related training content. The work moved LMS-style course production into the same CMS ecosystem as the broader web platform.",
+          ownership:
+            "Worked closely with content and design to model the components needed for course pages, in-course quiz questions, embedded video content, and structured schema for LLMs and search engines.",
+          impact:
+            "Gave content teams a reusable way to publish accessibility courses without a separate LMS implementation, while preserving the flexibility needed for rich course content and discoverability.",
+          technologies: [
+            "Storyblok",
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Structured Data",
+            "CMS Architecture",
+            "Accessibility",
+          ],
+          href: "https://www.audioeye.com/courses/",
+          cta: "View courses",
+        },
+        {
           title: "AI Translation Layer",
           eyebrow: "Localized content operations",
           description:
@@ -357,6 +382,24 @@ export const experience: ExperienceItem[] = [
             "Localization",
             "CMS Architecture",
             "TypeScript",
+          ],
+        },
+        {
+          title: "Marketing Scanner Rebuilds",
+          eyebrow: "Lead generation product experience",
+          description:
+            "Helped rebuild AudioEye's marketing scanner into multiple new versions over time. Each iteration was aimed at giving end users better accessibility scan results while creating stronger paths for high-intent visitors to request a demo or start a trial.",
+          ownership:
+            "Worked closely with strategy and design through planning and implementation, translating conversion goals, result presentation, and scanner UX decisions into production experiences.",
+          impact:
+            "Improved a key marketing product surface by making scan results more useful to visitors and better connected to revenue-focused demo and trial forms.",
+          technologies: [
+            "React",
+            "TypeScript",
+            "Lead Generation",
+            "Forms",
+            "Accessibility",
+            "Product Strategy",
           ],
         },
         {
