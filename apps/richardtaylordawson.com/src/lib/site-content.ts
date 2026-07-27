@@ -633,9 +633,7 @@ export const experience: ExperienceItem[] = [
           technologies: [
             "Responsive UI",
             "Product UI",
-            "CSS",
-            "PHP",
-            "CRUD apps",
+            "Bootstrap",
           ],
         },
         {
