@@ -299,13 +299,14 @@ export const experience: ExperienceItem[] = [
       ],
       scopeHighlights: [
         "Primary engineering owner for marketing and revenue-adjacent web systems.",
-        "Public website, CMS, design system, forms, quoting software, learning content, HubSpot migrations, CRM workflows, and related internal tools.",
-        "Cross-functional partner to demand generation, design, sales, revenue operations, content, and learning stakeholders.",
+        "Public website, CMS, design system, forms, quoting software, contract lifecycle workflows, learning content, HubSpot migrations, CRM workflows, and related internal tools.",
+        "Cross-functional partner to demand generation, design, sales, revenue operations, content, learning, and contract operations stakeholders.",
         "Effectively a one-person engineering team for this surface area, balancing speed, independence, maintainability, and stakeholder alignment.",
       ],
       ownershipHighlights: [
         "Translated ambiguous business and operational needs into practical technical plans.",
         "Owned implementation across frontend, CMS modeling, platform architecture, deployment workflows, and internal integrations.",
+        "Worked closely with revenue operations to connect internal CPQ output to HubSpot and Conga contract creation workflows.",
         "Modeled CMS-powered learning content around the components, quiz patterns, embedded media, and structured data needs of real course production.",
         "Partnered with strategy and design on multiple scanner rebuilds that balanced end-user accessibility results with high-intent demo and trial conversion paths.",
         "Wrote migration scripts that moved acquired BOIA website content between HubSpot instances as part of account consolidation and infrastructure cleanup.",
@@ -315,6 +316,7 @@ export const experience: ExperienceItem[] = [
       impactHighlights: [
         "Modernized the public web platform and content operations stack.",
         "Improved editor quality of life and gave content teams more control without requiring engineering support for every change.",
+        "Helped reduce manual contract workflow handoffs by moving quote and contract data from internal systems into HubSpot and Conga.",
         "Helped turn accessibility education into a public, CMS-managed course experience with reusable foundations for ongoing content production.",
         "Improved the marketing scanner experience through multiple iterations focused on clearer results and stronger lead capture.",
         "Reduced platform overhead by helping consolidate BOIA content into AudioEye's HubSpot infrastructure.",
@@ -440,6 +442,26 @@ export const experience: ExperienceItem[] = [
             "Accessibility",
             "Lead Generation",
           ],
+        },
+        {
+          title: "Conga Contract Lifecycle",
+          eyebrow: "Revenue operations workflow",
+          description:
+            "Built workflow support around Conga, a contract lifecycle management platform used to generate, route, execute, and manage contracts. The project connected AudioEye's internal CPQ system to the downstream systems revenue teams used to move a quote into a signable contract.",
+          ownership:
+            "Worked closely with revenue operations to define the process, move quote and contract data into HubSpot, and create the corresponding contract in Conga ready for signing.",
+          impact:
+            "Reduced manual handoffs between quoting, CRM, and contract systems while giving revenue teams a clearer path from configured quote to executable contract.",
+          technologies: [
+            "Conga",
+            "HubSpot",
+            "CPQ",
+            "Contract Lifecycle Management",
+            "Revenue Operations",
+            "Internal Tools",
+          ],
+          confidentialityNote:
+            "Specific CPQ, contract, and revenue operations workflows are described at a high level.",
         },
         {
           title: "Custom MCP Servers",
