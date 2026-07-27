@@ -273,7 +273,7 @@ export const experience: ExperienceItem[] = [
       "TypeScript",
       "Vercel",
       "Storyblok",
-      "HubSpot",
+      "Hubspot",
       "Internal Apps",
       "Agentic Workflows",
       "AI Automation",
@@ -299,27 +299,27 @@ export const experience: ExperienceItem[] = [
       ],
       scopeHighlights: [
         "Primary engineering owner for marketing and revenue-adjacent web systems.",
-        "Public website, CMS, design system, forms, quoting software, contract lifecycle workflows, learning content, HubSpot migrations, CRM workflows, and related internal tools.",
+        "Public website, CMS, design system, forms, quoting software, contract lifecycle workflows, learning content, Hubspot migrations, CRM workflows, and related internal tools.",
         "Cross-functional partner to demand generation, design, sales, revenue operations, content, learning, and contract operations stakeholders.",
         "Effectively a one-person engineering team for this surface area, balancing speed, independence, maintainability, and stakeholder alignment.",
       ],
       ownershipHighlights: [
         "Translated ambiguous business and operational needs into practical technical plans.",
         "Owned implementation across frontend, CMS modeling, platform architecture, deployment workflows, and internal integrations.",
-        "Worked closely with revenue operations to connect internal CPQ output to HubSpot and Conga contract creation workflows.",
+        "Worked closely with revenue operations to connect internal CPQ output to Hubspot and Conga contract creation workflows.",
         "Modeled CMS-powered learning content around the components, quiz patterns, embedded media, and structured data needs of real course production.",
         "Partnered with strategy and design on multiple scanner rebuilds that balanced end-user accessibility results with high-intent demo and trial conversion paths.",
-        "Wrote migration scripts that moved acquired BOIA website content between HubSpot instances as part of account consolidation and infrastructure cleanup.",
+        "Wrote migration scripts that moved acquired BOIA website content between Hubspot instances as part of account consolidation and infrastructure cleanup.",
         "Kept accessibility and editor experience central while modernizing the underlying platform.",
         "Protected confidential workflows by describing internal systems at a high level while still making the engineering scope clear.",
       ],
       impactHighlights: [
         "Modernized the public web platform and content operations stack.",
         "Improved editor quality of life and gave content teams more control without requiring engineering support for every change.",
-        "Helped reduce manual contract workflow handoffs by moving quote and contract data from internal systems into HubSpot and Conga.",
+        "Helped reduce manual contract workflow handoffs by moving quote and contract data from internal systems into Hubspot and Conga.",
         "Helped turn accessibility education into a public, CMS-managed course experience with reusable foundations for ongoing content production.",
         "Improved the marketing scanner experience through multiple iterations focused on clearer results and stronger lead capture.",
-        "Reduced platform overhead by helping consolidate BOIA content into AudioEye's HubSpot infrastructure.",
+        "Reduced platform overhead by helping consolidate BOIA content into AudioEye's Hubspot infrastructure.",
         "Created reusable foundations for scanner experiences across public and partner-facing surfaces.",
         "Used AI-assisted internal tooling to speed up operational workflows in systems teams already use.",
       ],
@@ -409,14 +409,14 @@ export const experience: ExperienceItem[] = [
           title: "Custom MCP Servers",
           eyebrow: "AI-assisted operations",
           description:
-            "Built custom MCP servers for internal HubSpot and Storyblok workflows before first-party options were available. Even after first-party servers emerged, the custom HubSpot work remained useful because the team's account manager and contract workflows needed deeper functionality.",
+            "Built custom MCP servers for internal Hubspot and Storyblok workflows before first-party options were available. Even after first-party servers emerged, the custom Hubspot work remained useful because the team's account manager and contract workflows needed deeper functionality.",
           ownership:
             "Designed and implemented the bridge between AI-assisted workflows and the real systems used by marketing, sales, and operations teams.",
           impact:
             "Helped internal teams use AI against practical business workflows while keeping system-specific behavior accurate and controlled.",
           technologies: [
             "MCP",
-            "HubSpot",
+            "Hubspot",
             "Storyblok",
             "AI Automation",
             "Internal Tools",
@@ -428,19 +428,17 @@ export const experience: ExperienceItem[] = [
           description:
             "Built workflow support around Conga, a contract lifecycle management platform used to generate, route, execute, and manage contracts. The project connected AudioEye's internal CPQ system to the downstream systems revenue teams used to move a quote into a signable contract.",
           ownership:
-            "Worked closely with revenue operations to define the process, move quote and contract data into HubSpot, and create the corresponding contract in Conga ready for signing.",
+            "Worked closely with revenue operations to define the process, move quote and contract data into Hubspot, and create the corresponding contract in Conga ready for signing.",
           impact:
             "Reduced manual handoffs between quoting, CRM, and contract systems while giving revenue teams a clearer path from configured quote to executable contract.",
           technologies: [
             "Conga",
-            "HubSpot",
+            "Hubspot",
             "CPQ",
             "Contract Lifecycle Management",
             "Revenue Operations",
             "Internal Tools",
           ],
-          confidentialityNote:
-            "Specific CPQ, contract, and revenue operations workflows are described at a high level.",
         },
         {
           title: "Marketing Scanner Rebuilds",
@@ -462,16 +460,16 @@ export const experience: ExperienceItem[] = [
         },
         {
           title: "BOIA Migration",
-          eyebrow: "HubSpot content migration",
+          eyebrow: "Hubspot content migration",
           description:
-            "Migrated BOIA.org, an acquired accessibility website that was running in a separate HubSpot instance, into AudioEye's own HubSpot infrastructure as part of account consolidation and cost reduction.",
+            "Migrated BOIA.org, an acquired accessibility website that was running in a separate Hubspot instance, into AudioEye's own Hubspot infrastructure as part of account consolidation and cost reduction.",
           ownership:
-            "Wrote migration scripts with the HubSpot SDK to read content from BOIA's HubSpot account and recreate it under AudioEye's HubSpot account, preserving the site content while moving it into the shared infrastructure.",
+            "Wrote migration scripts with the Hubspot SDK to read content from BOIA's Hubspot account and recreate it under AudioEye's Hubspot account, preserving the site content while moving it into the shared infrastructure.",
           impact:
-            "Helped reduce operating costs and simplify platform ownership by bringing acquired website content under a single AudioEye-managed HubSpot account.",
+            "Helped reduce operating costs and simplify platform ownership by bringing acquired website content under a single AudioEye-managed Hubspot account.",
           technologies: [
-            "HubSpot",
-            "HubSpot SDK",
+            "Hubspot",
+            "Hubspot SDK",
             "Migration Scripts",
             "Content Migration",
             "CMS",
