@@ -47,7 +47,7 @@ export function ProjectSection({
         {visibleItems.map((item, index) => (
           <ProjectCard
             className={cn(
-              mobileLimit && index >= mobileLimit ? "hidden lg:block" : null
+              mobileLimit && index >= mobileLimit ? "hidden lg:flex" : null
             )}
             item={item}
             key={item.title}

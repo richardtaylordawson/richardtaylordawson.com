@@ -347,7 +347,7 @@
   }
 
   .project-card {
-    @apply relative block overflow-hidden rounded-[8px] border border-white/10 bg-white/[0.045] p-3 transition duration-300 hover:border-primary/35 hover:bg-white/[0.065] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary;
+    @apply relative flex h-full flex-col overflow-hidden rounded-[8px] border border-white/10 bg-white/[0.045] p-3 transition duration-300 hover:border-primary/35 hover:bg-white/[0.065] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary;
   }
 
   .project-preview {

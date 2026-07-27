@@ -60,7 +60,7 @@ export function ProjectCard({
           </div>
         )}
       </div>
-      <div className="p-3 pb-4 pt-5 sm:p-5 sm:pb-5">
+      <div className="flex flex-1 flex-col p-3 pb-4 pt-5 sm:p-5 sm:pb-5">
         {item.year ? (
           <div className="flex flex-wrap items-center gap-2">
             <span className="project-year">Built {item.year}</span>
@@ -74,7 +74,7 @@ export function ProjectCard({
         <p className="mt-3 max-w-xl text-sm leading-6 text-white/[0.62]">
           {item.text}
         </p>
-        <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-signal-teal">
+        <span className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-medium text-signal-teal">
           {item.cta}
           <span className="sr-only">(opens in a new tab)</span>
           <ExternalLink className="size-3.5" />
