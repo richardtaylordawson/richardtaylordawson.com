@@ -282,6 +282,23 @@ function ProjectDetailCard({ project }: { project: ExperienceProject }) {
       <p className="mt-4 text-base leading-7 text-white/[0.68]">
         {project.description}
       </p>
+      {project.media?.type === "video" ? (
+        <div className="mt-5 overflow-hidden rounded-[8px] border border-white/10 bg-black/30">
+          <video
+            aria-label={project.media.label}
+            className="aspect-video w-full bg-black object-contain"
+            controls
+            playsInline
+            preload="metadata"
+          >
+            <source
+              src={project.media.src}
+              type={project.media.contentType}
+            />
+            Your browser does not support embedded videos.
+          </video>
+        </div>
+      ) : null}
       <div className="mt-5 grid gap-4 md:grid-cols-2">
         <ProjectDetailNote title="Ownership" text={project.ownership} />
         <ProjectDetailNote title="Impact" text={project.impact} />

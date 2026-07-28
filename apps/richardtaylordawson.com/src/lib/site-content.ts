@@ -218,6 +218,12 @@ export type ExperienceProject = {
   ownership: string;
   impact: string;
   technologies: string[];
+  media?: {
+    type: "video";
+    src: string;
+    label: string;
+    contentType?: string;
+  };
   confidentialityNote?: string;
   href?: string;
   cta?: string;
@@ -595,6 +601,12 @@ export const experience: ExperienceItem[] = [
             "Built branching form behavior where the next question and total question count could change based on a visitor's previous answers, then integrated that experience with Eloqua despite the constraints of the form CMS.",
           impact:
             "Turned a complex one-off form system into a core Cuttlefish component that could be reused across Performance Marketing sites.",
+          media: {
+            type: "video",
+            src: "/videos/clearlink/mega-forms-functionality.mov",
+            label: "Mega Forms functionality demo",
+            contentType: "video/quicktime",
+          },
           technologies: [
             "Handlebars",
             "JavaScript",
