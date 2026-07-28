@@ -8,7 +8,7 @@ import { Resume } from '@/components/Resume'
 import { SocialLink } from '@/components/SocialLink'
 import { Github, LinkedIn, LinkIcon } from '@/components/Icons'
 
-const siteUrl = 'https://www.richardtaylordawson.com'
+const siteUrl = 'https://v2.richardtaylordawson.com'
 
 const projects = [
   {
@@ -78,7 +78,6 @@ export default function Home() {
           Lake City. I'm a highly motivated, hard working engineer that has a
           knack for finding simple solutions to complex issues"
         />
-        <meta name="robots" content="noindex,follow" />
         <link rel="canonical" href={siteUrl} />
         <meta property="og:url" content={siteUrl} />
       </Head>

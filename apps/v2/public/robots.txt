@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://v2.richardtaylordawson.com/sitemap.xml
