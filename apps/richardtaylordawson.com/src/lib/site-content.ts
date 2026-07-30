@@ -218,6 +218,27 @@ export type ExperienceProject = {
   ownership: string;
   impact: string;
   technologies: string[];
+  images?: {
+    src: string;
+    alt: string;
+    caption: string;
+    width: number;
+    height: number;
+  }[];
+  comparisonGroups?: {
+    title: string;
+    description: string;
+    items: {
+      label: string;
+      src: string;
+      alt: string;
+      caption: string;
+      width: number;
+      height: number;
+    }[];
+  }[];
+  workSites?: string[];
+  workSitesNote?: string;
   media?: {
     type: "video";
     src: string;
@@ -226,6 +247,7 @@ export type ExperienceProject = {
   };
   confidentialityNote?: string;
   href?: string;
+  hrefInMedia?: boolean;
   cta?: string;
 };
 
@@ -353,8 +375,9 @@ export const experience: ExperienceItem[] = [
             "Typescript",
             "Design Systems",
           ],
-          href: "https://www.audioeye.com/bloks/cms-migration-case-study/",
-          cta: "Read the case study",
+          href: "https://www.audioeye.com/",
+          hrefInMedia: true,
+          cta: "Visit AudioEye",
         },
         {
           title: "AI Translation Layer",
@@ -390,6 +413,32 @@ export const experience: ExperienceItem[] = [
             "Structured Data",
             "CMS Architecture",
             "Accessibility",
+          ],
+          images: [
+            {
+              src: "/images/experience/audioeye/audioeye-learning-courses-index.png",
+              alt: "AudioEye courses index page showing course cards, search, and filtering controls.",
+              caption:
+                "AudioEye Learning courses index, including course cards, search, filtering, and resource center navigation.",
+              width: 1643,
+              height: 2416,
+            },
+            {
+              src: "/images/experience/audioeye/audioeye-learning-web-accessibility-101-course.png",
+              alt: "AudioEye Web Accessibility 101 course overview page with chapter cards and course overview content.",
+              caption:
+                "Web Accessibility 101 course overview page, including course metadata, chapter cards, overview content, and CTA sections.",
+              width: 1643,
+              height: 3322,
+            },
+            {
+              src: "/images/experience/audioeye/audioeye-learning-web-accessibility-101-chapter-1.png",
+              alt: "AudioEye Web Accessibility 101 chapter one lesson page with video, quiz cards, statistics, and resources.",
+              caption:
+                "Web Accessibility 101 chapter lesson page, including embedded video, quiz interactions, content sections, FAQ, and resources.",
+              width: 1643,
+              height: 10977,
+            },
           ],
           href: "https://www.audioeye.com/courses/",
           cta: "View courses",
@@ -462,6 +511,101 @@ export const experience: ExperienceItem[] = [
             "Forms",
             "Accessibility",
             "Product Strategy",
+          ],
+          comparisonGroups: [
+            {
+              title: "Scan progress states",
+              description:
+                "V1, V2, and V3 scanner progress screens shown side by side to make the iteration in loading, status, and modal treatment easier to compare.",
+              items: [
+                {
+                  label: "V1 progress",
+                  src: "/images/experience/audioeye/scanner/v1-progress.png",
+                  alt: "Version one AudioEye scanner progress screen with a purple gradient panel and detecting issues progress bar.",
+                  caption:
+                    "V1 progress screen with a centered scanner state, gradient panel, and detecting issues progress bar.",
+                  width: 2484,
+                  height: 1536,
+                },
+                {
+                  label: "V2 progress",
+                  src: "/images/experience/audioeye/scanner/v2-progress.png",
+                  alt: "Version two AudioEye scanner progress screen with a wide purple modal and WCAG test status list.",
+                  caption:
+                    "V2 progress screen with a wider modal layout, scan status text, and WCAG test steps.",
+                  width: 2722,
+                  height: 1496,
+                },
+                {
+                  label: "V3 progress",
+                  src: "/images/experience/audioeye/scanner/v3-progress.png",
+                  alt: "Version three AudioEye scanner progress screen with a compact purple modal and updated scan status layout.",
+                  caption:
+                    "V3 progress screen with a more compact modal, cleaner hierarchy, and updated progress treatment.",
+                  width: 2380,
+                  height: 1488,
+                },
+              ],
+            },
+            {
+              title: "Lead capture forms",
+              description:
+                "V2 and V3 lead capture form treatments shown together to compare messaging, visual weight, and conversion framing.",
+              items: [
+                {
+                  label: "V2 form",
+                  src: "/images/experience/audioeye/scanner/v2-form.png",
+                  alt: "Version two AudioEye scanner lead capture form with split purple results messaging and form fields.",
+                  caption:
+                    "V2 form screen with a split layout, scan complete messaging, and lead capture fields.",
+                  width: 2708,
+                  height: 1420,
+                },
+                {
+                  label: "V3 form",
+                  src: "/images/experience/audioeye/scanner/v3-form.png",
+                  alt: "Version three AudioEye scanner lead capture form with violation summary and form fields.",
+                  caption:
+                    "V3 form screen with clearer risk messaging, a preview image, and a simplified lead capture panel.",
+                  width: 2368,
+                  height: 1508,
+                },
+              ],
+            },
+            {
+              title: "Results pages",
+              description:
+                "V1, V2, and V3 results experiences grouped together to compare how the scanner evolved from a long report into a more focused risk-and-solution presentation.",
+              items: [
+                {
+                  label: "V1 results",
+                  src: "/images/experience/audioeye/scanner/v1-results.png",
+                  alt: "Version one AudioEye scanner results page with accessibility overview cards and long-form issue education.",
+                  caption:
+                    "V1 results page with a long-form accessibility overview, issue categories, and educational content.",
+                  width: 2984,
+                  height: 10074,
+                },
+                {
+                  label: "V2 results",
+                  src: "/images/experience/audioeye/scanner/v2-results.png",
+                  alt: "Version two AudioEye scanner results page with issue summary cards, severity counts, and top issues.",
+                  caption:
+                    "V2 results page with status cards, issue severity, remediation framing, and conversion CTAs.",
+                  width: 2984,
+                  height: 3366,
+                },
+                {
+                  label: "V3 results",
+                  src: "/images/experience/audioeye/scanner/v3-results.png",
+                  alt: "Version three AudioEye scanner results page with risk messaging, issue charts, and lawsuit-risk cards.",
+                  caption:
+                    "V3 results page with a more focused risk narrative, issue charts, solution framing, and persistent CTA.",
+                  width: 2518,
+                  height: 3198,
+                },
+              ],
+            },
           ],
         },
         {
@@ -591,6 +735,41 @@ export const experience: ExperienceItem[] = [
             "Lead Generation",
             "Contentful",
           ],
+          workSites: [
+            "aetnamedicaredirect.com",
+            "att.com/clk",
+            "attexperts.com",
+            "attsavings.com",
+            "business.centurylink.com",
+            "business.providers.com",
+            "centurylinkquote.com",
+            "choosehomsecurity.com",
+            "directvplans.com",
+            "dish.com/availability",
+            "dishlatino.com",
+            "frontierbundles.com",
+            "frontierbusiness.com",
+            "frontierinternetservice.com",
+            "frontpointsecurity.com",
+            "getcenturylink.com",
+            "getwindstream.com",
+            "go.frontier.com",
+            "go.verizon.com",
+            "medicarehealthplans.com",
+            "movearoo.com",
+            "providers.com",
+            "usdirect.com",
+            "usdish.com",
+            "usmedicareplans.com",
+            "verizonbusiness.com",
+            "verizonsmallbusiness.com",
+            "verizonspecials.com",
+            "viasat.com",
+            "vivintsource.com",
+            "yourlocalsecurity.com",
+          ],
+          workSitesNote:
+            "These are examples of sites and routes touched during that work. Some domains or paths may no longer be active, current, or owned by the same organization.",
         },
         {
           title: "Mega Forms",
@@ -603,9 +782,9 @@ export const experience: ExperienceItem[] = [
             "Turned a complex one-off form system into a core Cuttlefish component that could be reused across Performance Marketing sites.",
           media: {
             type: "video",
-            src: "/videos/clearlink/mega-forms-functionality.mov",
+            src: "/videos/clearlink/mega-forms-functionality.mp4",
             label: "Mega Forms functionality demo",
-            contentType: "video/quicktime",
+            contentType: "video/mp4",
           },
           technologies: [
             "Handlebars",
@@ -618,31 +797,62 @@ export const experience: ExperienceItem[] = [
         },
         {
           title: "Frontpoint Security",
-          eyebrow: "Brand site work",
+          eyebrow: "New brand site",
           description:
-            "Project details for Frontpoint Security are coming soon.",
+            "Built Frontpoint Security as my first new brand site at Clearlink, starting with a fresh codebase instead of inheriting an existing site structure.",
           ownership:
-            "Additional ownership details will be added here.",
+            "Took the initiative to define the baseline design system, color approach, and code organization so the team had a clean foundation for building durable components.",
           impact:
-            "Additional impact details will be added here.",
+            "The site became the team's gold standard for a clean, maintainable Performance Marketing codebase and laid the groundwork for the more advanced component page work that followed.",
           technologies: [
             "Handlebars",
+            "Design Systems",
+            "Component Architecture",
             "Lead Generation",
             "Performance Marketing",
+          ],
+          images: [
+            {
+              src: "/images/experience/clearlink/frontpoint-door-window-sensors-desktop.png",
+              alt: "Desktop Frontpoint Security article page titled Your Guide to Door Alarms and Window Sensors.",
+              caption:
+                "Frontpoint Security article page for a door and window sensor guide, including product content and quote CTA sections.",
+              width: 2880,
+              height: 12842,
+            },
+            {
+              src: "/images/experience/clearlink/frontpoint-wireless-outdoor-camera-desktop.png",
+              alt: "Desktop Frontpoint Security article page titled Your Guide to Wireless Outdoor Camera Systems.",
+              caption:
+                "Frontpoint Security article page for a wireless outdoor camera guide, including comparison content and quote CTA sections.",
+              width: 1920,
+              height: 7001,
+            },
+            {
+              src: "/images/experience/clearlink/frontpoint-wireless-indoor-camera-desktop.png",
+              alt: "Desktop Frontpoint Security article page titled A Complete Guide to Wireless Indoor Security Cameras.",
+              caption:
+                "Frontpoint Security article page for a wireless indoor security camera guide, including feature content and quote CTA sections.",
+              width: 2880,
+              height: 14166,
+            },
           ],
         },
         {
           title: "Component Pages",
           eyebrow: "Reusable content pages",
           description:
-            "Project details for Component Pages are coming soon.",
+            "Reworked Clearlink's component page concept into a better organized reference and build tool for teams working across Performance Marketing sites.",
           ownership:
-            "Additional ownership details will be added here.",
+            "Added clear component groupings, headings, dividers, search, and filters that removed irrelevant components from the page. I also built a lightweight page builder that opened in a modal, let users choose the components they needed, and copied the generated Handlebars page code to the clipboard.",
           impact:
-            "Additional impact details will be added here.",
+            "Turned a static component showcase into a practical CMS-lite workflow: teams could start from generated Handlebars, then swap in copy from docs or Figma instead of assembling page scaffolding by hand. It became the gold standard component page on the team.",
           technologies: [
             "Handlebars",
+            "JavaScript",
             "Reusable UI",
+            "Search and Filtering",
+            "Clipboard Workflows",
             "Performance Marketing",
           ],
         },
@@ -660,6 +870,30 @@ export const experience: ExperienceItem[] = [
             "Component Systems",
             "Reusable UI",
           ],
+          images: [
+            {
+              src: "/images/experience/clearlink/cuttlefish-data-table-desktop.png",
+              alt: "Desktop view of a Cuttlefish data table component comparing DIRECTV for Business channel packages.",
+              caption:
+                "Desktop data table layout with sticky channel columns and package comparisons.",
+              width: 2008,
+              height: 615,
+            },
+            {
+              src: "/images/experience/clearlink/cuttlefish-data-table-mobile.png",
+              alt: "Mobile view of a Cuttlefish data table component with horizontally scrollable package columns.",
+              caption:
+                "Mobile data table layout preserving comparison behavior on narrow screens.",
+              width: 354,
+              height: 645,
+            },
+          ],
+          media: {
+            type: "video",
+            src: "/videos/clearlink/cuttlefish-data-table-functionality.mp4",
+            label: "Cuttlefish data table functionality demo",
+            contentType: "video/mp4",
+          },
         },
       ],
     },
@@ -744,6 +978,16 @@ export const experience: ExperienceItem[] = [
             "APIs",
             "Database Migrations",
           ],
+          images: [
+            {
+              src: "/images/experience/calldrip/buy-numbers-desktop.png",
+              alt: "Calldrip Add Numbers modal with options for Phone Number, Dynamic Numbers, and Outbound Tracking.",
+              caption:
+                "Add Numbers walkthrough for choosing the type of tracking number to configure.",
+              width: 1917,
+              height: 873,
+            },
+          ],
         },
         {
           title: "Reporting",
@@ -762,6 +1006,32 @@ export const experience: ExperienceItem[] = [
             "Product UI",
             "Analytics",
           ],
+          images: [
+            {
+              src: "/images/experience/calldrip/dashboard-desktop.png",
+              alt: "Calldrip dashboard showing call totals, attempted rate, connection rate, response time, call duration, and several charts.",
+              caption:
+                "Dashboard view for account-level call activity and response performance.",
+              width: 1917,
+              height: 872,
+            },
+            {
+              src: "/images/experience/calldrip/report-desktop.png",
+              alt: "Calldrip Lead Time report with a leads-by-hour bar chart, total leads, busiest time of day, and a detailed agent table.",
+              caption:
+                "Lead Time report with KPI cards, charts, and agent-level breakdowns.",
+              width: 1918,
+              height: 873,
+            },
+            {
+              src: "/images/experience/calldrip/report-filters.png",
+              alt: "Calldrip report filters modal over the Lead Time report with source search and selectable lead sources.",
+              caption:
+                "Filter modal for narrowing reports by call type, sources, date range, and related criteria.",
+              width: 1917,
+              height: 875,
+            },
+          ],
         },
         {
           title: "Agents Rebuild",
@@ -779,6 +1049,32 @@ export const experience: ExperienceItem[] = [
             "PHP",
             "SQL",
             "Databases",
+          ],
+          images: [
+            {
+              src: "/images/experience/calldrip/agents-desktop.png",
+              alt: "Calldrip Agents list showing agent names, availability, phone numbers, email addresses, and edit or delete actions.",
+              caption:
+                "Rebuilt agents table with searchable records and clear profile actions.",
+              width: 1918,
+              height: 872,
+            },
+            {
+              src: "/images/experience/calldrip/agent-profile-desktop.png",
+              alt: "Calldrip agent profile form for Dustin with profile image, name, phone number, email, text message, timezone, and tabs.",
+              caption:
+                "Agent profile editor with profile image display and account settings.",
+              width: 1917,
+              height: 860,
+            },
+            {
+              src: "/images/experience/calldrip/add-agent.png",
+              alt: "Calldrip Add Agent modal with an agent setup card and support link over the agents table.",
+              caption:
+                "Add Agent modal entry point for creating callable users in the system.",
+              width: 1915,
+              height: 874,
+            },
           ],
         },
         {

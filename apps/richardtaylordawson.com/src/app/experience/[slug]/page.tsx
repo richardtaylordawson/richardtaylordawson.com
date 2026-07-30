@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight, ExternalLink } from "lucide-react";
 
 import { ChipList } from "@/components/chip-list";
+import { ExperienceMediaViewer } from "@/components/experience-media-viewer";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteShell } from "@/components/site-shell";
 import {
@@ -247,7 +248,10 @@ function ExperienceProjects({
       </div>
       <div className="grid gap-4 lg:grid-cols-2">
         {detail.projects.map((project) => (
-          <ProjectDetailCard project={project} key={project.title} />
+          <ProjectDetailCard
+            project={project}
+            key={project.title}
+          />
         ))}
       </div>
     </section>
@@ -255,6 +259,14 @@ function ExperienceProjects({
 }
 
 function ProjectDetailCard({ project }: { project: ExperienceProject }) {
+  const hasProjectWork = Boolean(
+    project.images?.length ||
+      project.comparisonGroups?.length ||
+      project.media ||
+      project.workSites?.length ||
+      project.hrefInMedia,
+  );
+
   return (
     <article className="rounded-[8px] border border-white/10 bg-white/[0.045] p-5">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
@@ -266,7 +278,7 @@ function ProjectDetailCard({ project }: { project: ExperienceProject }) {
             {project.title}
           </h3>
         </div>
-        {project.href ? (
+        {project.href && !hasProjectWork ? (
           <a
             href={project.href}
             className="inline-flex min-h-9 shrink-0 items-center justify-center gap-1.5 rounded-[8px] border border-signal-teal/35 bg-signal-teal/[0.12] px-3 text-sm font-medium text-signal-teal transition hover:border-signal-lime/45 hover:bg-signal-lime/[0.1] hover:text-signal-lime focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
@@ -278,27 +290,28 @@ function ProjectDetailCard({ project }: { project: ExperienceProject }) {
             <ArrowUpRight className="size-3.5" />
           </a>
         ) : null}
+        {hasProjectWork ? (
+          <ExperienceMediaViewer
+            comparisonGroups={project.comparisonGroups}
+            images={project.images}
+            link={
+              project.href
+                ? {
+                    href: project.href,
+                    label: project.cta ?? "Open link",
+                  }
+                : undefined
+            }
+            media={project.media}
+            title={project.title}
+            workSites={project.workSites}
+            workSitesNote={project.workSitesNote}
+          />
+        ) : null}
       </div>
       <p className="mt-4 text-base leading-7 text-white/[0.68]">
         {project.description}
       </p>
-      {project.media?.type === "video" ? (
-        <div className="mt-5 overflow-hidden rounded-[8px] border border-white/10 bg-black/30">
-          <video
-            aria-label={project.media.label}
-            className="aspect-video w-full bg-black object-contain"
-            controls
-            playsInline
-            preload="metadata"
-          >
-            <source
-              src={project.media.src}
-              type={project.media.contentType}
-            />
-            Your browser does not support embedded videos.
-          </video>
-        </div>
-      ) : null}
       <div className="mt-5 grid gap-4 md:grid-cols-2">
         <ProjectDetailNote title="Ownership" text={project.ownership} />
         <ProjectDetailNote title="Impact" text={project.impact} />
