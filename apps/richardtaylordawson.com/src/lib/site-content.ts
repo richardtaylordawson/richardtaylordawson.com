@@ -375,6 +375,24 @@ export const experience: ExperienceItem[] = [
             "Typescript",
             "Design Systems",
           ],
+          images: [
+            {
+              src: "/images/experience/audioeye/cms-migration-case-study-overview.png",
+              alt: "AudioEye CMS migration case study page showing the overview, reasons for the migration, metrics, hardcoding examples, tech stack, and enhancements.",
+              caption:
+                "CMS migration case study page covering the Storyblok rebuild, editor experience, site metrics, hardcoded content cleanup, tech stack, and platform enhancements.",
+              width: 2984,
+              height: 28800,
+            },
+            {
+              src: "/images/experience/audioeye/cms-migration-case-study-conclusion.png",
+              alt: "AudioEye CMS migration case study page showing additional enhancements, conclusion, next steps, and Bloks component inventory.",
+              caption:
+                "CMS migration case study continuation with internationalization, 404 pages, tracking data, branding, firewall improvements, conclusion, and Bloks inventory.",
+              width: 2984,
+              height: 5458,
+            },
+          ],
           href: "https://www.audioeye.com/",
           hrefInMedia: true,
           cta: "Visit AudioEye",
