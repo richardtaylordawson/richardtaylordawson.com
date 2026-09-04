@@ -44,15 +44,6 @@ export const projects = [
     cta: "Play Yahtz",
   },
   {
-    title: "Dawson Dome",
-    tag: "Family hub",
-    year: "2026",
-    text: "A personal family hub for leaderboards, stats, etc of various Dawson Family games",
-    href: "https://dawson-dome.richardtaylordawson.com",
-    image: "https://dawson-dome.richardtaylordawson.com/images/social-share.png",
-    cta: "Open Dawson Dome",
-  },
-  {
     title: "Gaming Trivia",
     tag: "Interactive game",
     year: "2019",
