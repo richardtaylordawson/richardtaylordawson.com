@@ -24,7 +24,7 @@
     "react-helmet": "^5.2.1",
     "react-netlify-form": "^2.1.5",
     "react-scroll": "^1.7.14",
-    "sharp": "^0.35.3"
+    "sharp": "^0.35.4"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
