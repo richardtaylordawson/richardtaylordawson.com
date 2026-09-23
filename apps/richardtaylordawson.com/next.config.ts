@@ -6,9 +6,6 @@ const appRoot = path.dirname(fileURLToPath(import.meta.url));
 const monorepoRoot = path.join(appRoot, "../..");
 
 const nextConfig: NextConfig = {
-  experimental: {
-    viewTransition: true,
-  },
   images: {
     remotePatterns: [
       {
